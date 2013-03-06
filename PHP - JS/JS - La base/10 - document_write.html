@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Document.write</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		Vous avez quel âge ? 
+		<form action="" method="get">
+			<select name="age">
+				<option value="">Choisir</option>
+				<script>
+					for (var i = 16; i < 90; i++) {
+						document.write("<option value='"+i+"'>"+i+"</option>");
+						// document.write ne se fait qu'à l'initialisation de la page
+					}
+				</script>
+			</select>
+		</form>
+	</body>
+</html>

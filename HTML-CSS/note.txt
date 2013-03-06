@@ -1,0 +1,14 @@
+Notes HTML :
+
+    -Position absolute :
+        -
+
+    -Position fixed :
+        - Un élément à position fixe demeure toujours au même endroit
+        - l'élément a une position fixe par rapport à l'écran
+        - top - bottom - right - left
+        
+    -Position relative :
+        - En spécifiant 1 ou 2 propriétés, l'élément se déplacera par rapport à un cadre de référence qui est son emplacement normal.
+        - Interessant pour : placer un élément absolute a l'interieur d'un élément relative pour pouvoir le placer par rapport à lui-même.
+        
