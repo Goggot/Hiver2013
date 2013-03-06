@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Carrés</title>
+		<link rel="stylesheet" href="css/global.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			var listeCube = new Array();
+			
+			window.onload = tick();
+			
+			document.onmousemove = function(event) {
+				listeCube.push(new Carre(event));
+			}
+			
+			function tick(){
+				for (var i=0; i < listeCube.length; i++){
+					listeCube[i].tick();
+					if (listeCube[i].offsetTop <=0){
+						listeCube.slice(i);
+						document.body.removeChild(listeCube[i]);
+					}
+				}
+				setTimeout(tick,30);
+			}
+			
+			function Carre(event){
+				var maDiv = document.createElement("div");
+				maDiv.setAttribute("class","square");
+				
+				maDiv.style.top = event.pageY+"px";
+				maDiv.style.left = event.pageX+"px";
+				
+				document.body.appendChild(maDiv);
+				
+				this.maDiv = maDiv;
+				this.y = event.pageY;
+				
+				this.tick = function(){
+					this.y -= 3;
+					this.maDiv.style.top = this.y+"px";
+				}
+			}
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

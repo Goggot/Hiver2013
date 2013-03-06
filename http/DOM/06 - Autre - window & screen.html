@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Window and Screen</title>
+		<link rel="stylesheet" href="css/global.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			function redirection() {
+				window.location.href="http://www.perdu.com/";
+			}
+			
+			function infoEcran() {
+				alert("Screen : " + screen.width + "x" + screen.height);
+			}
+		</script>
+		
+		<div id="small-container">
+			<h3>Stéréotype informaticien</h3>
+			<ul id="liste">
+				<li>Aimer le badminton</li>
+				<li>Faire du vélo</li>
+				<li>Amateur de cinéma</li>
+			</ul>
+			<div class="small-section">
+				[ <a href="javascript:void(0)" onclick="redirection()">Redirection</a> ] 
+				[ <a href="javascript:void(0)" onclick="infoEcran()">Information écran</a> ]
+			</div>
+		</div>
+	</body>
+</html>
