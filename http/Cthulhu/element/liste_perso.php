@@ -1,0 +1,19 @@
+<?php
+	try
+	{
+		$reponse = $bdd->query('SELECT nom FROM pouet;');
+		while ($donnees = $reponse->fetch())
+		{
+			$nom = $donnees['nom'];
+	?>
+			<a href="./accueil.php?nom=<?php echo $nom ?>"><?php echo htmlspecialchars($donnees['nom']);?></a><br />
+	<?php
+		}
+		
+	$reponse->closeCursor();
+	}
+	catch(Exception $e)
+	{
+		die('Erreur : '.$e->getMessage());
+	}
+?>

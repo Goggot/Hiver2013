@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+a:link {color:black;text-decoration:none;}
+a:visited {color:grey;text-decoration:none;}
+a:hover {color:red;font-size:17px;}
+a:active {color:red;text-decoration:none;}
+
+#legendes2:hover{font-size:17px;}
+
+div
+{
+    float:right;
+    clear:both;
+    margin-left:10px;
+    padding:5px;
+    width:400px;
+}
+
+p
+{
+    text-align:justify;
+}
+

@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+a:link {color:orange;text-decoration:none;}
+a:visited {color:orange;text-decoration:none;}
+a:hover {color:red;text-decoration:none;}
+a:active {color:red;text-decoration:none;}
+
+/*----------body----------*/
+body
+{
+	width:1000px;
+	margin:auto;
+	text-align:center;
+	background-color:grey;
+	font-family:"Copperplate Gothic Light";
+	font-style:italic;
+	color:orange;
+}
+/*----------/body----------*/
+
+
+/*----------#banner----------*/
+#banner
+{
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: auto;
+	background-image:url(../images/simpsons/header.png);
+	margin-bottom:10px;
+}
+/*----------/#banner----------*/
+
+
+/*----------#menuHorizontal----------*/
+#menuHorizontal
+{
+	box-shadow: 0px 0px 5px 10px black;
+	background:black;
+	opacity:0.7;
+	margin-top:-40px;
+	margin-bottom:3%;
+	padding-right:3%;
+	margin-left:15%;
+	margin-right:15%;
+}
+
+#menuHorizontal ul
+{
+	list-style-type:none;
+	text-align:center;
+}
+
+#menuHorizontal li
+{
+	display:inline;
+	padding:0 0.8em;
+}
+/*----------/#menuHorizontal----------*/
+
+
+/*----------#menuRight----------
+#menuRight
+{
+	width:17%;
+	box-shadow: 0px 0px 5px 10px black;
+	background:black;
+	opacity:0.7;
+	font-size:18px;
+	margin-bottom:4%;
+	margin-right:4%;
+	float:right;
+}
+----------/#menuRight----------*/
+
+/*----------#img----------*/
+
+.img
+{float:left;}
+
+#tmp
+{clear:both;}
+
+/*----------#img----------*/
+
+/*----------#txt----------*/
+#txt
+{
+	box-shadow: 0px 0px 5px 10px black;
+	background:black;
+	opacity:0.8;
+	margin-bottom:3%;
+	padding-bottom:5px;
+	margin-left:4%;
+	margin-right:4%;
+	font-size:14px;
+	line-height:150%;
+}
+/*----------/#txt----------*/
+
+/*----------#foot----------*/
+#foot
+{
+	box-shadow: 0px 0px 5px 10px black;
+	background:black;
+	opacity:0.5;
+	font-size:12px;
+	clear:both;
+	margin-bottom:2%;
+	margin-left:8%;
+	margin-right:8%;
+}
+/*----------/#foot----------*/

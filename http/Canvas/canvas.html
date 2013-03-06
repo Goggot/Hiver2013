@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Canvas Demo</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="900" height="680" style="border:1px solid black;">
+			Not gonna happen...
+		</canvas>
+		
+		<script type="text/javascript">
+			var ctx = document.getElementById('canvas').getContext("2d");
+			var show=false;
+			var showImage = false;
+			
+			document.getElementById("canvas").onclick = function() {
+				show = !show;
+			}
+			function tick() {
+				ctx.clearRect(0,0,300,300);
+				
+				/*var degrader = ctx.createLinearGradient(10,10,100,100);	// x debut, y debut, x fin, y fin
+				degrader.addColorStop(0,"black");
+				degrader.addColorStop(0.4,"green");
+				degrader.addColorStop(1,"red");
+				ctx.fillStyle=degrader;
+				ctx.fillRect(10,10,90,90);
+				
+				var degraderRadial = ctx.createRadialGradient(150,150,50,150,150,90);	// centre,centre,rayon,centre,centre,rayon
+				degraderRadial.addColorStop(0,"red");
+				degraderRadial.addColorStop(0.5,"orange");
+				degraderRadial.addColorStop(1,"yellow");
+				ctx.fillStyle=degraderRadial;
+				ctx.fillRect(20,20,260,260);*/
+				
+				var image = new Image();
+				image.onload = function() {
+					showImage = true;
+				}
+				
+				image.src="image/cthulhu.jpg";
+				
+				if (showImage) {
+					ctx.drawImage(image, 0, 0, 900, 560);
+				}
+				
+				if (show){
+					ctx.font="30px Arial";
+					ctx.fillStyle="blue";
+					ctx.fillText("Lorem Ipsum",50,50);
+				}
+				setTimeout(tick,30);
+			}
+			tick();
+		</script>
+		
+	</body>
+</html>

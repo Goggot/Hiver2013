@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+a:link {color:orange;text-decoration:none;}
+a:visited {color:orange;text-decoration:none;}
+a:hover {color:red;text-decoration:none;}
+a:active {color:red;text-decoration:none;}
+
+/*----------body----------*/
+body
+{
+	width:960px;
+	margin:auto;
+	text-align:center;
+	background-color:grey;
+	font-family:"Copperplate Gothic Light";
+	font-style:italic;
+	color:orange;
+}
+/*----------/body----------*/
+
+
+/*----------#banner----------*/
+#banner
+{
+	height:350px;
+	background-image:url(../images/header.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	
+}
+/*----------/#banner----------*/
+
+
+/*----------#txt----------*/
+#txt
+{
+	height:1200px;
+	background-image:url("../images/paper.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: auto;
+	font-size:14px;
+}
+/*----------/#txt----------*/
+
+#left {
+	border-style:dashed;
+	text-align:left;
+	width:150px;
+	float:left;
+	padding:5px;
+	margin-left:3%;
+}

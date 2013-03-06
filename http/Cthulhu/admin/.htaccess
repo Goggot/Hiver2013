@@ -1,0 +1,8 @@
+AuthName "Connexion"
+AuthType Basic
+AuthUserFile /srv/http/Cthulhu/.htpasswd
+Require valid-user
+
+order deny,allow
+deny from all
+require user pouet

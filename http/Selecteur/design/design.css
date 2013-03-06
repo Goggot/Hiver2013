@@ -1,0 +1,16 @@
+@charset "utf-8"
+
+*{}
+body{}
+ul+p{}
+div span{}
+div > span{}
+li>span{}
+span{}
+p{}
+h3,p{}
+ul{}
+.change{background-color:yellow;}
+p[class]{}
+li{}
+div p, ul span{background-color:yellow;}

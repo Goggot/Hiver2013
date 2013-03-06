@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+div
+{
+    float:right;
+    width:150px;
+    margin-left:20px;
+    border-style:solid;
+    padding:15px;
+    background-color:red;
+}
+
+h1
+{
+    background-color:blue;
+    overflow:hidden;
+    color:white;
+}
+
+h2
+{
+    border-bottom-style:solid;
+    border-bottom-color:blue;
+    overflow:hidden;
+}
+
+p
+{
+    text-align:justify;
+}

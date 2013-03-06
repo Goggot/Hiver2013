@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Canvas Demo</title>
+	</head>
+	<body>
+		<canvas onmousemove="creerCarre(event)" id="canvas" width="300" height="300" style="border:1px solid black;">
+			Not gonna happen...
+		</canvas>
+		
+		<script type="text/javascript">
+			var ctx = document.getElementById('canvas').getContext("2d");
+			
+			ctx.fillStyle = "rgba(40,140,0, 0.4)";
+			ctx.fillRect(10,10,30,30); // (x,y, width, height)
+			ctx.fillRect(20,20,30,30); // (x,y, width, height)
+			
+			ctx.strokeStyle = "rgba(0,0,0,1)";
+			ctx.strokeRect(20,20,30,30); // (x,y, width, height)
+			
+			//ctx.clearRect(0,0,300,300);	// tout effacer sur la taille de ce rectangle
+			
+			function creerCarre(event) {
+				ctx.clearRect(0,0,300,300);
+				ctx.strokeRect(event.pageX-32, event.pageY-30, 25,25);
+			}
+		</script>
+		
+	</body>
+</html>
