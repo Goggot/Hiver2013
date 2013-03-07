@@ -19,7 +19,7 @@
 				for (var i=0; i < listeCube.length; i++){
 					listeCube[i].tick();
 					if (listeCube[i].offsetTop <=0){
-						listeCube.slice(i);
+						listeCube.splice(i,1);
 						document.body.removeChild(listeCube[i]);
 					}
 				}

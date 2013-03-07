@@ -98,11 +98,11 @@ function Ball(){
                 }
             }
             
-            if (this.x > 400){
+            if (this.x > 300){
                 
             }
             
-            if (this.x < 100) {
+            if (this.x < 200) {
                 
             }
             

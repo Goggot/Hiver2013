@@ -1,0 +1,44 @@
+body{
+    width:720px;
+    background-color:grey;
+    margin:auto;
+}
+
+#splash{
+    background-image:url("../img/firefly-splash.jpg");
+    background-repeat:no-repeat;
+    height:480px;
+    width:720px;
+    margin-top:25px;
+}
+
+#jeu{
+    height:480px;
+    width:720px;
+    margin-top:25px;
+    background-color:black;
+    display:none;
+}
+
+#vaisseau{
+    height:150px;
+    width:150px;
+    background-image:url("../img/firefly.png");
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.etoile{
+    background-color:white;
+    position:absolute;
+}
+
+#over {
+    height:480px;
+    width:720px;
+    margin-top:25px;
+    background-image:url("../img/game-over.jpg");
+    background-repeat:no-repeat;
+    display:none;
+}
