@@ -1,5 +1,6 @@
 body{
-    width:720px;
+    width:900px;
+    height:900px;
     background-color:grey;
     margin:auto;
 }
@@ -9,15 +10,35 @@ body{
     background-repeat:no-repeat;
     height:480px;
     width:720px;
-    margin-top:25px;
+    margin:auto;
+	margin-top:25px;
 }
 
 #jeu{
-    height:480px;
-    width:720px;
+    height:700px;
+    width:900px;
+    position:relative;
     margin-top:25px;
     background-color:black;
     display:none;
+    overflow:hidden;
+}
+.enterprise {
+    height:150px;
+    width:150px;
+    background-image:url("../img/ship2.png");
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.ship {
+	height:150px;
+    width:150px;
+    background-image:url("../img/ship.png");
+    position:absolute;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 #vaisseau{
@@ -31,6 +52,13 @@ body{
 
 .etoile{
     background-color:white;
+    position:absolute;
+}
+
+.missile{
+    background-color:red;
+	height:12px;
+    width:2px;
     position:absolute;
 }
 
