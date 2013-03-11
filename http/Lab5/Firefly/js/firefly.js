@@ -1,12 +1,7 @@
 var listeEtoile = new Array();
-var listeEnterprise = new Array();
-var listeShip = new Array();
+var listeEnnemis = new Array();
 var listeMissile = new Array();
 var ct=0;
-
-window.onload = function(){
-    
-}
 
 document.onkeypress = keyPressed;
 
@@ -24,63 +19,79 @@ function Vaisseau(){
 }
 
 function Enterprise(){
-	this.enterprise = document.createElement("div");
+    this.ennemi = document.createElement("div");
     this.speed = Math.random() * 2;
     this.x = Math.random()*900;
     this.y = -20;
+    this.vie = 15;
     this.ecran = document.getElementById("jeu");
     this.taille = "150px";
-    this.enterprise.setAttribute("class","enterprise");
+    this.ennemi.setAttribute("class","enterprise");
     
-    this.enterprise.style.height = this.taille;
-    this.enterprise.style.width = this.taille;
+    this.ennemi.style.height = this.taille;
+    this.ennemi.style.width = this.taille;
     
-    this.enterprise.style.top = this.y+"px";
-    this.enterprise.style.left = this.x+"px";
+    this.ennemi.style.top = this.y+"px";
+    this.ennemi.style.left = this.x+"px";
     
-    this.ecran.appendChild(this.enterprise);
+    this.ecran.appendChild(this.ennemi);
 	
     this.tick = function(i) {
         this.y += this.speed;
-        this.enterprise.style.top = this.y+"px";
-		
-		if (this.y >= 700){
-            listeEnterprise.splice(i,1);
-            this.ecran.removeChild(this.enterprise);
+        this.ennemi.style.top = this.y+"px";
+
+	if (this.y >= 700){
+            listeEnnemis.splice(i,1);
+            this.ecran.removeChild(this.ennemi);
+            console.log("VAISSEAU DETRUIT !");
         }
     }
 }
 
 function Ship(){
-    this.ship = document.createElement("div");
+    this.ennemi = document.createElement("div");
     this.speed = Math.random() * 2;
     this.x = Math.random()*900;
     this.y = -20;
+    this.vie = 20;
     this.ecran = document.getElementById("jeu");
     this.taille = "150px";
-    this.ship.setAttribute("class","ship");
+    this.ennemi.setAttribute("class","ship");
     
-    this.ship.style.height = this.taille;
-    this.ship.style.width = this.taille;
+    this.ennemi.style.height = this.taille;
+    this.ennemi.style.width = this.taille;
     
-    this.ship.style.top = this.y+"px";
-    this.ship.style.left = this.x+"px";
+    this.ennemi.style.top = this.y+"px";
+    this.ennemi.style.left = this.x+"px";
     
-    this.ecran.appendChild(this.ship);
+    this.ecran.appendChild(this.ennemi);
 	
     this.tick = function(i) {
         this.y += this.speed;
-        this.ship.style.top = this.y+"px";
+        this.ennemi.style.top = this.y+"px";
 		
-		if (this.y >= 700){
-            listeShip.splice(i,1);
-            this.ecran.removeChild(this.ship);
+	if (this.y >= 700 || this.vie <= 0){
+            listeEnnemis.splice(i,1);
+            this.ecran.removeChild(this.ennemi);
+            console.log("VAISSEAU DETRUIT !");
+        }
+        
+        for (var z=0; z < listeMissile.length; z++) {
+            if (this.x+75 <= listeMissile[z].missile.offsetTop+5){
+                console.log("PRESQUE");
+                if (this.y-20 <= listeMissile[z].missile.offsetLeft && this.y+20 >= listeMissile[z].missile.offsetLeft){
+                    console.log("TOUCHÉ !");
+                    listeMissile.splice(z,1);
+                    this.ecran.removeChild(listeMissile[z].missile);
+                    this.vie -= 3;
+                }
+            }
         }
     }
 }
 
 function Etoiles(){
-	this.etoile = document.createElement("div");
+    this.etoile = document.createElement("div");
     this.speed = Math.random() * 1;
     this.x = Math.random()*900;
     this.y = Math.random()*750-50;
@@ -102,7 +113,7 @@ function Etoiles(){
         this.y += this.speed;
         this.etoile.style.top = this.y+"px";
         
-        if (this.y >= 700){
+        if (this.y >= 700 || this.vie <= 0){
             listeEtoile.splice(i,1);
             this.ecran.removeChild(this.etoile);
         }
@@ -110,9 +121,9 @@ function Etoiles(){
 }
 
 function Missile() {
-	this.missile = document.createElement("div");
+    this.missile = document.createElement("div");
     this.speed = 3;
-	this.vaisseau = document.getElementById("vaisseau");
+    this.vaisseau = document.getElementById("vaisseau");
     this.x = vaisseau.offsetLeft+ (vaisseau.offsetWidth/2);
     this.y = vaisseau.offsetTop + 20;
     this.ecran = document.getElementById("jeu");
@@ -160,25 +171,19 @@ function tick(){
     if (Math.random() < 0.005){
 		var gnagna = Math.random();
 		if (gnagna > 0.5)
-			listeEnterprise.push(new Enterprise());
+			listeEnnemis.push(new Enterprise());
 		else {
-			listeShip.push(new Ship());
+			listeEnnemis.push(new Ship());
 		}
     }
     
     for (var i=0; i < listeEtoile.length; i++){
         listeEtoile[i].tick(i);
     }
-    
-    for (var i=0; i < listeEnterprise.length; i++){
-        listeEnterprise[i].tick(i);
+    for (var i=0; i < listeEnnemis.length; i++){
+        listeEnnemis[i].tick(i);
     }
-	
-	for (var i=0; i < listeShip.length; i++){
-        listeShip[i].tick(i);
-    }
-	
-	for (var i=0; i < listeMissile.length; i++){
+    for (var i=0; i < listeMissile.length; i++){
         listeMissile[i].tick(i);
     }
  
@@ -187,7 +192,6 @@ function tick(){
 
 function keyPressed(event)
 {
-	console.log(event.which);
     if(event.which == 13)
     {
         if(ct==0){
@@ -214,7 +218,6 @@ function keyPressed(event)
         x+=8;
         jet.style.top = y +"px";
         jet.style.left = x +"px";
-		console.log("Droite");
     }
     else if(event.which == 97){
         var jet = document.getElementById("vaisseau");
@@ -223,7 +226,6 @@ function keyPressed(event)
         x -= 8;	
         jet.style.top = y +"px";
         jet.style.left = x +"px";
-		console.log("Gauche");
     }
     else if(event.which == 119){
         var jet = document.getElementById("vaisseau");
@@ -232,7 +234,6 @@ function keyPressed(event)
         y -= 8;
         jet.style.top = y +"px";
         jet.style.left = x +"px";
-		console.log("Haut");
     }
     else if(event.which == 115){
         var jet = document.getElementById("vaisseau");
@@ -241,7 +242,6 @@ function keyPressed(event)
         y += 8;
         jet.style.top = y +"px";
         jet.style.left = x +"px";
-		console.log("Bas");
     }
 	else if (event.which == 102) {
 		listeMissile.push(new Missile());
