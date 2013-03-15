@@ -1,0 +1,8 @@
+match_parent : prend toute la place dispo dans le parent
+wrap_content : prend l'espace donné
+
+gravity: permet d'organiser tous les enfants l'aide de la valeur spécifié
+
+On utilise des DP, et non des PIXELS, ça s'accomode mieux aux écrans.
+
+SP : taille du texte
