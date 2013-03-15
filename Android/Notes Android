@@ -1,0 +1,25 @@
+
+	SWING			Android
+	
+	JLabel			TextView
+	JTextField		EditText
+	JButton			Button
+	
+R.java :
+	Fichier créer automatiquement, NE PAS TOUCHER
+
+Ressources image selon leur résolution et leur densité
+
+.xml :
+	Organisation graphique des widgets sur la fenetre de l'application
+	
+string.xml : permet de stocker les textes pour les utiliser dans le fichier de positionnement xml.
+
+Fichier de publication de l'application : donnée à fournir si publier
+
+Pourquoi en XML ?
+	- Plus facile à lire et à optimiser pour Android
+	- Moins de chance que le langage XML change que Java
+	
+Changer la langue :
+	- Créer un nouveau dossier avec les suffixes -fr, -en, etc.

@@ -35,4 +35,41 @@ a:visited{color:white;}
         text-align:center;
     }
     
-@media screen and (max-width:1000px) and (min-width:480px){}
+@media screen and (max-width:1000px) and (min-width:480px){
+    body {
+        color:white;
+        border-radius:5px;
+        margin:auto;
+    }
+    
+    #banner{
+        padding:20px;
+        background-image:url("../img/background.jpg");
+        background-repeat:no-repeat;
+        text-shadow: 1px 1px 1px #000;
+    }
+    
+    h3 {
+        margin-top:-20px;
+    }
+    
+    #liens {
+        float:left;    
+        background-color:grey;
+        text-align:center;
+    }
+    
+    a{
+        clear:both;
+    }
+    
+    #text {
+        margin:5px;
+        color:black;
+    }
+    
+    footer {
+        color:grey;
+        text-align:center;
+    }
+}

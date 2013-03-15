@@ -17,6 +17,7 @@ pygame.key.set_repeat(15, 15)
 pygame.display.flip()
 
 while continuer:
+    validX = True;
     for event in pygame.event.get():   #On parcours la liste de tous les événements reçus
         if event.type == QUIT:     #Si un de ces événements est de type QUIT
             continuer = False      #On arrête la boucle
@@ -27,9 +28,16 @@ while continuer:
             elif event.key == K_LEFT:
                 pos = pos.move(-3, 0)
             elif event.key == K_DOWN:
-                pos = pos.move(0, 3)
+                if (validX):
+                    pos = pos.move(0, +3)
             elif event.key == K_UP:
+                pos = pos.move(0,-3)
+            elif event.key == K_SPACE:
                 pos = pos.move(0, -3)
+            print(pos)
+
+            if pos[0] == 340:
+                validX = False
 
 
 #Re-collage

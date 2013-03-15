@@ -24,17 +24,17 @@
 	</head>
 
 	<body>
-		<?php 	include("element/connect_sql.php");
-			include("element/entete.php"); 
-			include("element/menuH.php"); 
-			include("element/menuV.php"); 
+		<?php 	require_once("element/connect_sql.php");
+			require_once("element/entete.php"); 
+			require_once("element/menuH.php"); 
+			require_once("element/menuV.php"); 
 			$nom; ?>
 			
 			<div id="txt">
 				<h1 id ="titre">Bienvenue !</h1>
 					<p id=contenu>
 					<?php
-						if (htmlspecialchars($_GET['nom']))
+						if (htmlspecialchars(isset($_GET['nom'])))
 						{	
 							$req = $bdd->prepare('SELECT text FROM pouet WHERE nom = ?');
 							$req -> execute(array($_GET['nom']));
@@ -48,6 +48,6 @@
 						<?php } ?>
 					<p>
 			</div>
-		<?php include("element/pied.php"); ?>
+		<?php require_once("element/pied.php"); ?>
 	</body>
 </html>
