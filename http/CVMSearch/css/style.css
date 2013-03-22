@@ -1,0 +1,66 @@
+body {
+    width:1000px;
+    height:650px;
+    margin:auto;
+}
+
+#principal {
+    margin-top:150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+form {
+    width:400px;
+    margin:auto;
+}
+
+#img {
+    margin-top:250px;
+    width:200px;
+    height:100px;
+    background-image: url('../images/cvm.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    margin:auto;
+}
+
+#img2 {
+    margin-top:25px;
+    width:200px;
+    height:100px;
+    background-image: url('../images/cvm.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    margin-left:25px;
+}
+
+.search {
+    
+}
+
+h3 {
+    width:302px;
+    margin-top:10px;
+    margin-bottom:20px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#bouton {
+    width:100px;
+    margin-bottom:20px;
+    margin-left:auto;
+}
+
+.recherche {
+    height:15px;
+    width:400px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.footer {
+    width:250px;
+    margin:auto;
+}

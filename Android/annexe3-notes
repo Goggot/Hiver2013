@@ -1,0 +1,5 @@
+Annexe 3 
+Ex1
+	Interface-ecouteur : ArrayAdapter
+	Méthode : setOnItemClickListener
+	3 ou 4 paramètres : parent, item selectionne, position, id

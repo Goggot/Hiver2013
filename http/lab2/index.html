@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head>
+        <title>Vérification</title>
+        <link href="css/global.css" rel="stylesheet" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/javascript.js"></script>
+    </head>
+    <body>
+		<div class="sectionAuthentification">
+			<h1>
+				Authentification nécessaire
+			</h1>
+			<form action="http://www.perdu.com" method="post" onsubmit="return valider()">
+				<div class="formLabel" id="divCourriel"><label for="courriel"> Courriel : </label></div>
+				<div class="formInput"><input type="text" name="champCourriel" id="courriel" /></div>
+				<div class="formSeparator"></div>
+				
+				<div class="formLabel" id="divMDP"><label for="pwd"> Mot de passe : </label> </div>
+				<div class="formInput"><input type="password" name="champMotDePasse" id="pwd" /> <img src="images/help.png" id="help" alt="Aide" /> </div>
+				<div class="formSeparator"></div>
+				
+				<div class="formLabel">&nbsp;</div>
+				<div class="formInput"><input type="image" src="images/submit.png" /></div>
+				<div class="formSeparator"></div>
+			</form>
+		</div>
+		<div id="informationBox">
+			Le mot de passe doit contenir 6 caractères minimum			
+		</div>
+    </body>
+</html>
