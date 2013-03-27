@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les popups</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			var age=prompt("Quel est ton age ?", 20);
+			// si on fait annuler dans le popup, la valeur de retour est NULL
+			
+			if (age<25){
+				alert("Trop Jeune ");
+			}
+			else{
+				var resultat=confirm("Avez-vous pensé à la retraite ?"); // confirm retourne un boolean
+				if (!resultat){
+					alert("Vous devriez...")
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+Dossier racine/
+
+        action/
+                indexAction.php
+                ...
+            
+        javascript/
+                projet.js
+                ...
+                
+        css/
+                design.css
+            
+        images/
+                image.png
+                ...
+        
+        element/
+        	header.php
+        	footer.php
+        
