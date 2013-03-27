@@ -11,7 +11,7 @@
         <h3>L'engin de recherche par excellence !</h3>
         
         <form action="index.php" method="get">
-            <textarea class="recherche"></textarea>
+            <textarea name="recherche"></textarea>
             <input id="bouton" type="submit" value="Rechercher !" />
         </form>
     </div>

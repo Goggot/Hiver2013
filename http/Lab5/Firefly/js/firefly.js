@@ -12,7 +12,7 @@ function Vaisseau(){
     this.ecran = document.getElementById("jeu");
     this.x=250 +"px;";
     this.y=450 +"px;";
-    this.vaisseau.setAttribute("style", "top:"+ this.y+"left:"+this.x);
+    this.vaisseau.setAttribute("style", "top:"+this.y + "left:"+this.x);
     this.vaisseau.id="vaisseau";
     
     this.ecran.appendChild(this.vaisseau);
@@ -211,40 +211,30 @@ function keyPressed(event)
             newOne.style.display="block";
         }
     }
-    else if(event.which == 100){
+    else {
         var jet = document.getElementById("vaisseau");
-        var x = document.getElementById("vaisseau").offsetLeft;
-        var y =	document.getElementById("vaisseau").offsetTop;
-        x+=8;
-        jet.style.top = y +"px";
-        jet.style.left = x +"px";
+        var x = jet.offsetLeft;
+        var y = jet.offsetTop;
+        
+        if(event.which == 100){
+            x+=8;
+            jet.style.left = x +"px";
+        }
+        else if(event.which == 97){
+            x -= 8;
+            jet.style.left = x +"px";
+        }
+        else if(event.which == 119){
+            y -= 8;
+            jet.style.top = y +"px";
+        }
+        else if(event.which == 115){
+            y += 8;
+            jet.style.top = y +"px";
+        }
+            else if (event.which == 102) {
+                    listeMissile.push(new Missile());
+                    console.log("FIRE !");
+            }
     }
-    else if(event.which == 97){
-        var jet = document.getElementById("vaisseau");
-        var x = document.getElementById("vaisseau").offsetLeft;
-        var y =	document.getElementById("vaisseau").offsetTop;
-        x -= 8;	
-        jet.style.top = y +"px";
-        jet.style.left = x +"px";
-    }
-    else if(event.which == 119){
-        var jet = document.getElementById("vaisseau");
-        var x = document.getElementById("vaisseau").offsetLeft;
-        var y =	document.getElementById("vaisseau").offsetTop;
-        y -= 8;
-        jet.style.top = y +"px";
-        jet.style.left = x +"px";
-    }
-    else if(event.which == 115){
-        var jet = document.getElementById("vaisseau");
-        var x = document.getElementById("vaisseau").offsetLeft;
-        var y =	document.getElementById("vaisseau").offsetTop;
-        y += 8;
-        jet.style.top = y +"px";
-        jet.style.left = x +"px";
-    }
-	else if (event.which == 102) {
-		listeMissile.push(new Missile());
-		console.log("FIRE !");
-	}
 }
