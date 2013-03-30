@@ -1,9 +1,111 @@
 import random
 
+
 class Fred():
     def __init__(self):
         self.vie = 20
+        self.direction = 'G'
+        self.vitesse = 3
+        self.etat
+        self.position[2]
+        self.objectList = []
+
+    def bouge(self):
+        pass
+
+    def changerEtat(self):
+        pass
+
+    def attaque(self):
+        pass
+
+    def mourrir(self):
+        pass
+
+    def tick(self):
+        pass
+
+
+class Robot():
+    def __init__(self):
+        self.id
+        self.direction
+        self.position[2]
+        self.etat = 0     # Etat d'alerte -> 0=RAS, 1=Suspect, 2=Alerte
+
+    def detection(self):
+        pass
+
+
+class camera(Robot):
+    def __init__(self):
+        self.portee = 30
+
+    def tick(self):
+        pass
+
+
+class droneS(Robot):
+    def __init__(self):
+        self.vitesse = 2
+        self.energie = 5
+        self.posInitial[2]
+        self.portee = 20
+
+    def bouge(self):
+        pass
+
+    def mourrir(self):
+        pass
+
+    def tick(self):
+        pass
+
+
+class droneA(Robot):
+    def __init__(self):
+        self.vitesse = 3
+        self.energie = 10
+        self.posInitial[2]
+        self.portee = 10
+        self.degats = 1
+
+    def bouge(self):
+        pass
+
+    def attaque(self):
+        pass
+
+    def mourrir(self):
+        pass
+
+    def tick(self):
+        pass
+
+
+class Piege():
+    def __init__(self):
+        self.id
         self.position[2]
 
-    def avancer(self):
-        self.position[0] -= 2
+    def tick(self):
+        pass
+
+
+class laser(Piege):
+    def __init__(self):
+        self.degats = 0.5
+
+
+class detecteur(Piege):
+    def __init__(self):
+        self.degats = 0.5
+        self.portee = 15
+
+
+class Prison():
+    def __init__(self):
+        self.robotList = {"camera": [], "droneS": [], "droneA": []}
+        self.trapList = {"laser": [], "detecteur": []}
+        self.objectList = []
+        self.niveauEnCours = 1
