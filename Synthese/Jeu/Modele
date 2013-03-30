@@ -1,0 +1,9 @@
+import random
+
+class Fred():
+    def __init__(self):
+        self.vie = 20
+        self.position[2]
+
+    def avancer(self):
+        self.position[0] -= 2
