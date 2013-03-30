@@ -17,21 +17,21 @@ pygame.key.set_repeat(15, 15)
 pygame.display.flip()
 
 while continuer:
-    validX = True;
-    for event in pygame.event.get():   #On parcours la liste de tous les événements reçus
-        if event.type == QUIT:     #Si un de ces événements est de type QUIT
-            continuer = False      #On arrête la boucle
+    validX = True
+    for event in pygame.event.get():    #On parcours la liste de tous les evenements recus
+        if event.type == QUIT:          #Si un de ces evenements est de type QUIT
+            continuer = False           #On arrete la boucle
 
-        elif event.type == KEYDOWN:     # si une touche du clavier est appuyée
+        elif event.type == KEYDOWN:     # si une touche du clavier est appuyee
             if event.key == K_RIGHT:
                 pos = pos.move(3, 0)
             elif event.key == K_LEFT:
                 pos = pos.move(-3, 0)
             elif event.key == K_DOWN:
-                if (validX):
+                if validX:
                     pos = pos.move(0, +3)
             elif event.key == K_UP:
-                pos = pos.move(0,-3)
+                pos = pos.move(0, -3)
             elif event.key == K_SPACE:
                 pos = pos.move(0, -3)
             print(pos)
@@ -39,9 +39,8 @@ while continuer:
             if pos[0] == 340:
                 validX = False
 
-
 #Re-collage
-    fenetre.blit(fond, (0,0))
+    fenetre.blit(fond, (0, 0))
     fenetre.blit(perso, pos)
 
 #Rafraichissement

@@ -6,8 +6,8 @@ class Fred():
         self.vie = 20
         self.direction = 'G'
         self.vitesse = 3
-        self.etat
-        self.position[2]
+        self.etat = 0        # 0=Debout, 1=baisse, 2=en saut
+        self.position = [0, 0]
         self.objectList = []
 
     def bouge(self):
@@ -109,3 +109,14 @@ class Prison():
         self.trapList = {"laser": [], "detecteur": []}
         self.objectList = []
         self.niveauEnCours = 1
+
+
+class Modele():
+    def __init__(self):
+        self.fred = Fred()
+
+    def initPartie(self):
+        pass
+
+    def tick(self):
+        pass
