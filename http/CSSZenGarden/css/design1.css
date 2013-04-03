@@ -19,35 +19,38 @@ body {
 	margin: 4%;
 	height: auto;
 	width:auto;
-	background-image:url("../img/cthulhu5.jpg");
+	background-image:url("../img/shadow.jpg");
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center;
-	color:orange;
+	background-size:125%;
+	color:#66FF00;
+	text-align: center;
 	}
 p {
 	margin-top: 0;
-	text-align: justify;
+	color:#66FF00;
+	text-shadow: #66FF00;
 	}
 h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 0;
-	color: #7D775C;
+	color: #FFFF00;
 	}
 a:link {
 	font-weight: bold; 
 	text-decoration: none; 
-	color:black;
+	color:#FF9900;
 	}
 a:visited {
 	font-weight: bold; 
 	text-decoration: none; 
-	color: grey;
+	color:#FF9900;
 	}
 a:hover, a:active {
 	text-decoration: underline; 
-	color: black;
+	color: #FF9900;
 	}
 acronym {
 	border-bottom: none;
@@ -58,16 +61,18 @@ acronym {
 #container {
 	position: relative;
 	padding:20px;
-	background-image:url("../img/paper.jpg");
-	background-position: center;
+	background-color:black;
 	box-shadow: 0px 0px 5px 10px black;
 	overflow:hidden;
-	color:black;
-	opacity:0.5;
+	opacity:0.9;
 	}
 
 #intro { 
 	min-width: 470px;
+	background-image:url("../img/banner.png");
+	background-repeat: no-repeat;
+	background-position:top right;
+	padding:10px;
 	}
 
 /* using an image to replace text in an h1. This trick courtesy Douglas Bowman, http://www.stopdesign.com/articles/css/replace-text/ */
@@ -116,10 +121,15 @@ acronym {
 	padding-left: 10px;
 	margin-left:18%;
 	text-align:center;
+	background-image:url("../img/footer.png");
+	background-repeat: no-repeat;
+	background-position: bottom;
 	}
 
 #footer {
 	text-align:center;
+	margin-top:120px;
+	padding-bottom: 120px;
 	}
 #footer a:link, #footer a:visited { 
 	margin-right: 20px; 
