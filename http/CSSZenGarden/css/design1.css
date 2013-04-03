@@ -1,0 +1,192 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	margin: 4%;
+	height: auto;
+	width:auto;
+	background-image:url("../img/cthulhu5.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	color:orange;
+	}
+p {
+	margin-top: 0;
+	text-align: justify;
+	}
+h3 {
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	color: #7D775C;
+	}
+a:link {
+	font-weight: bold; 
+	text-decoration: none; 
+	color:black;
+	}
+a:visited {
+	font-weight: bold; 
+	text-decoration: none; 
+	color: grey;
+	}
+a:hover, a:active {
+	text-decoration: underline; 
+	color: black;
+	}
+acronym {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+#container {
+	position: relative;
+	padding:20px;
+	background-image:url("../img/paper.jpg");
+	background-position: center;
+	box-shadow: 0px 0px 5px 10px black;
+	overflow:hidden;
+	color:black;
+	opacity:0.5;
+	}
+
+#intro { 
+	min-width: 470px;
+	}
+
+/* using an image to replace text in an h1. This trick courtesy Douglas Bowman, http://www.stopdesign.com/articles/css/replace-text/ */
+#pageHeader h1 {
+	margin-top: 10px; 
+	width: 219px; 
+	height: 87px; 
+	float: left;
+	}
+#pageHeader h1 span {
+	display:none
+	}
+#pageHeader h2 {
+	margin-top: 58px; 
+	margin-bottom: 40px; 
+	width: 200px; 
+	height: 18px; 
+	float: right;
+	}
+#pageHeader h2 span {
+	display:none
+	}
+#pageHeader {
+	padding-top: 20px;
+}
+
+#quickSummary {
+	clear:both;
+	margin-right:3%;
+	width: 160px;
+	margin-top:-10%;
+	float: left;
+	}
+#quickSummary p {
+	font: italic 10pt/22pt georgia; 
+	text-align:center;
+	}
+
+#preamble {
+	clear: right;
+	margin-left:18%;
+	padding: 0px 10px 0 10px;
+	}
+	
+#supportingText {	
+	padding-left: 10px;
+	margin-left:18%;
+	text-align:center;
+	}
+
+#footer {
+	text-align:center;
+	}
+#footer a:link, #footer a:visited { 
+	margin-right: 20px; 
+	}
+
+#linkList {
+	clear:both;
+	margin-right:3%;
+	text-align:center;
+	margin-bottom:25px;
+	width: 160px; 
+	float: left;
+	}
+#linkList2 { 
+	font: 10px verdana, sans-serif;
+	}
+#linkList h3.select span {
+	display:none
+	}
+#linkList h3.favorites { 
+	background: transparent url(h4.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width: 60px; 
+	height: 18px; 
+	}
+#linkList h3.favorites span {
+	display:none
+	}
+#linkList h3.archives { 
+	background: transparent url(h5.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+	}
+#linkList h3.archives span {
+	display:none
+	}
+#linkList h3.resources { 
+	background: transparent url(h6.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+	}
+#linkList h3.resources span {
+	display:none
+	}
+
+
+#linkList ul {
+	margin: 0;
+	padding: 0;
+	}
+#linkList li {
+	line-height: 2.5ex; 
+	background: transparent url(cr1.gif) no-repeat top center; 
+	display: block; 
+	padding-top: 5px;
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+#linkList li a:link {
+	color: #988F5E;
+	}
+#linkList li a:visited {
+	color: #B3AE94;
+	}
+
+.accesskey {
+	text-decoration: underline;
+	}
