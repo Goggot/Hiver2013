@@ -15,8 +15,9 @@ class Controleur():
 
     def tick(self):
         self.rep = self.modele.fred.tick()
-        self.modele.droneS.tick()
-        self.modele.droneA.tick()
+        for key, item in self.modele.prison.robotList.items():
+            if item:
+                item.tick()
         return self.rep
 
 

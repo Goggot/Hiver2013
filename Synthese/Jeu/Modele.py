@@ -168,7 +168,8 @@ class detecteur(Piege):
 
 
 class Prison():
-    def __init__(self):
+    def __init__(self, parent):
+        self.parent = parent
         self.robotList = {"camera": [], "droneS": [], "droneA": []}
         self.trapList = {"laser": [], "detecteur": []}
         self.objectList = []
@@ -184,9 +185,12 @@ class Modele():
         self.droneS = droneS(self)
         self.droneA = droneA(self)
         self.piege = Piege(self)
+        self.prison = Prison(self)
 
     def initPartie(self):
-        pass
+        # Ajout des ennemis
+        self.prison.robotList.get("droneA").append(droneA(self))
+        self.prison.robotList.get("droneS").append(droneS(self))
 
     def backToTheFuture(self):
         print("YAHOUUU ! BACK TO THE FUTUUURE !")
