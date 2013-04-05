@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4dec65af-a706-4515-ba24-d62d0da458d4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur.py" afterPath="$PROJECT_DIR$/Controleur.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele.py" afterPath="$PROJECT_DIR$/Modele.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue.py" afterPath="$PROJECT_DIR$/Vue.py" />
-    </list>
+    <list default="true" id="4dec65af-a706-4515-ba24-d62d0da458d4" name="Default" comment="" />
     <ignored path="Jeu.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365115991624" ignored="false" />
@@ -32,19 +28,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Modele.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Modele.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="12" selection-start="2295" selection-end="2299" vertical-scroll-proportion="-1.4422843">
+            <state line="184" column="30" selection-start="4996" selection-end="4996" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controleur.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Controleur.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controleur.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="20" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
+            <state line="32" column="23" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.5289256">
               <folding />
             </state>
           </provider>
@@ -257,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1280" height="998" extended-state="7" />
+    <frame x="0" y="26" width="1280" height="998" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -413,13 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="20" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="22" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
@@ -429,7 +418,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="12" selection-start="2295" selection-end="2299" vertical-scroll-proportion="-1.4422843">
+        <state line="184" column="30" selection-start="4996" selection-end="4996" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="23" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.5289256">
           <folding />
         </state>
       </provider>
