@@ -64,14 +64,14 @@ acronym {
 	background-color:black;
 	box-shadow: 0px 0px 5px 10px black;
 	overflow:hidden;
-	opacity:0.8;
+	opacity:0.9;
 	}
 
 #intro { 
 	min-width: 470px;
 	background-image:url("../img/banner.png");
 	background-repeat: no-repeat;
-	background-position:top right 33%;
+	background-position:top right;
 	padding:10px;
 	}
 
@@ -128,17 +128,16 @@ acronym {
 
 #footer {
 	text-align:center;
-	padding-bottom:190px;
-	margin-bottom: -90px;
+	margin-top:120px;
+	padding-bottom: 120px;
 	}
 #footer a:link, #footer a:visited { 
-	margin-right: 20px;
-	
+	margin-right: 20px; 
 	}
 
 #linkList {
 	clear:both;
-	margin-left:1%;
+	margin-right:3%;
 	text-align:center;
 	margin-bottom:25px;
 	width: 160px; 
@@ -163,7 +162,7 @@ acronym {
 	background: transparent url(h5.gif) no-repeat top left; 
 	margin: 25px 0 5px 0; 
 	width:57px; 
-	height: 14px;
+	height: 14px; 
 	}
 #linkList h3.archives span {
 	display:none
@@ -172,7 +171,7 @@ acronym {
 	background: transparent url(h6.gif) no-repeat top left; 
 	margin: 25px 0 5px 0; 
 	width:63px; 
-	height: 10px;
+	height: 10px; 
 	}
 #linkList h3.resources span {
 	display:none
@@ -192,10 +191,10 @@ acronym {
 	list-style-type: none;
 	}
 #linkList li a:link {
-	color: #FF9500;
+	color: #988F5E;
 	}
 #linkList li a:visited {
-	color: #FF9500;
+	color: #B3AE94;
 	}
 
 .accesskey {
