@@ -5,6 +5,7 @@ from threading import *
 
 class Fred():
     def __init__(self, parent):
+        print("FRED")
         self.parent = parent
         self.vie = 20
         self.direction = 'G'
@@ -50,6 +51,7 @@ class Fred():
 
 class Robot():
     def __init__(self):
+        print("ROBOT")
         self.id = 0
         self.direction = "H"
         self.etat = 0     # Etat d'alerte -> 0=RAS, 1=Suspect, 2=Alerte
@@ -64,6 +66,7 @@ class Robot():
 
 class camera(Robot):
     def __init__(self, parent):
+        print("CAMERA")
         self.parent = parent
         self.portee = 30
 
@@ -73,6 +76,7 @@ class camera(Robot):
 
 class droneS(Robot):
     def __init__(self, parent):
+        print("DRONES")
         self.position = [950, 380]
         self.direction = "H"
         self.parent = parent
@@ -115,6 +119,7 @@ class droneS(Robot):
 
 class droneA(Robot):
     def __init__(self, parent):
+        print("DRONEA")
         self.parent = parent
         self.position = [460, 40]
         self.vitesse = 3
@@ -148,6 +153,7 @@ class droneA(Robot):
 
 class Piege():
     def __init__(self, parent):
+        print("PIEGE")
         self.parent = parent
         self.id = 0
         self.posInitial = [0, 0]
@@ -158,17 +164,20 @@ class Piege():
 
 class laser(Piege):
     def __init__(self):
+        print("LASER")
         self.degats = 0.5
 
 
 class detecteur(Piege):
     def __init__(self):
+        print("DETECTEUR")
         self.degats = 0.5
         self.portee = 15
 
 
 class Prison():
     def __init__(self, parent):
+        print("PRISON")
         self.parent = parent
         self.robotList = {"camera": [], "droneS": [], "droneA": []}
         self.trapList = {"laser": [], "detecteur": []}
@@ -178,6 +187,7 @@ class Prison():
 
 class Modele():
     def __init__(self, parent):
+        print("MODELE")
         self.parent = parent
         self.listeEvenement = []
         self.fred = Fred(self)
@@ -186,11 +196,6 @@ class Modele():
         self.droneA = droneA(self)
         self.piege = Piege(self)
         self.prison = Prison(self)
-
-    def initPartie(self):
-        # Ajout des ennemis
-        self.prison.robotList.get("droneA").append(droneA(self))
-        self.prison.robotList.get("droneS").append(droneS(self))
 
     def backToTheFuture(self):
         print("YAHOUUU ! BACK TO THE FUTUUURE !")
