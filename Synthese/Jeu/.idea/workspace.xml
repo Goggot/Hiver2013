@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4dec65af-a706-4515-ba24-d62d0da458d4" name="Default" comment="" />
+    <list default="true" id="4dec65af-a706-4515-ba24-d62d0da458d4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur.py" afterPath="$PROJECT_DIR$/Controleur.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele.py" afterPath="$PROJECT_DIR$/Modele.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue.py" afterPath="$PROJECT_DIR$/Vue.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Jeu.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365115991624" ignored="false" />
+    <file path="/Dummy.txt" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365178415985" ignored="false" />
     <file path="/Modele" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364666778677" ignored="false" />
     <file path="/test.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364667926311" ignored="false" />
     <file path="/Vue" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364669623608" ignored="false" />
     <file path="/Controleur" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364670106487" ignored="false" />
-    <file path="/Controleur.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365121525192" ignored="false" />
-    <file path="/Vue.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365118770388" ignored="false" />
-    <file path="/Modele.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365118635363" ignored="false" />
+    <file path="/Controleur.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365181746797" ignored="false" />
+    <file path="/Vue.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365176367705" ignored="false" />
+    <file path="/Modele.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365179528232" ignored="false" />
+    <file path="/start_script.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365178598396" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +37,7 @@
       <file leaf-file-name="Modele.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="30" selection-start="4996" selection-end="4996" vertical-scroll-proportion="0.0">
+            <state line="109" column="0" selection-start="3130" selection-end="3130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -40,7 +46,7 @@
       <file leaf-file-name="Controleur.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controleur.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="23" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.5289256">
+            <state line="23" column="18" selection-start="772" selection-end="772" vertical-scroll-proportion="0.37196764">
               <folding />
             </state>
           </provider>
@@ -49,35 +55,10 @@
       <file leaf-file-name="Vue.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="22" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orion_2011_client.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="58" selection-start="7712" selection-end="7714" vertical-scroll-proportion="-9.36">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orion_2011_modele.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_modele.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="717" column="11" selection-start="27128" selection-end="27131" vertical-scroll-proportion="-7.56">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orion_2011_vue.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_vue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="535" column="31" selection-start="25863" selection-end="25863" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="38" column="44" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,16 +86,32 @@
         <option value="$PROJECT_DIR$/Vue" />
         <option value="$PROJECT_DIR$/Controleur" />
         <option value="/mnt/Lustucru/cosmic-war/Orion/orion_2011_modele.py" />
-        <option value="$PROJECT_DIR$/Modele.py" />
         <option value="$PROJECT_DIR$/Vue.py" />
+        <option value="$PROJECT_DIR$/Modele.py" />
         <option value="$PROJECT_DIR$/Controleur.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="26" />
-    <option name="width" value="1280" />
-    <option name="height" value="998" />
+    <option name="x" value="-5" />
+    <option name="width" value="1034" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -146,15 +143,18 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Python" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test PyGame/test.py" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <PyConsoleSettings />
+      <PyConsoleSettings>
+        <option name="mySdkHome" value="/usr/bin/python3.3" />
+        <option name="myModuleName" value="Jeu" />
+      </PyConsoleSettings>
     </option>
     <option name="myDjangoConsoleState">
       <PyConsoleSettings />
@@ -253,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1280" height="998" extended-state="6" />
+    <frame x="-5" y="0" width="1034" height="773" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -264,8 +264,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22875817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25677267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.094228506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -274,6 +273,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.094228506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -332,35 +332,87 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Vue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="19" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="30" selection-start="5194" selection-end="5194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="30" selection-start="5194" selection-end="5194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="30" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="23" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="22" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Test PyGame/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="25" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="78" selection-start="5100" selection-end="5100" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_vue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="22" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_modele.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_serveur.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3876063" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
@@ -368,64 +420,30 @@
         <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Test PyGame/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="25" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.3/site-packages/pyglet/media/riff.py">
+    <entry file="file://$PROJECT_DIR$/Modele.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="0" selection-start="6409" selection-end="6409" vertical-scroll-proportion="0.33222592" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3.3/site-packages/pyglet/media/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="590" column="20" selection-start="18046" selection-end="18046" vertical-scroll-proportion="0.70600414" />
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_vue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="535" column="31" selection-start="25863" selection-end="25863" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="58" selection-start="7712" selection-end="7714" vertical-scroll-proportion="-9.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///mnt/Lustucru/cosmic-war/Orion/orion_2011_modele.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="717" column="11" selection-start="27128" selection-end="27131" vertical-scroll-proportion="-7.56">
+        <state line="109" column="0" selection-start="3130" selection-end="3130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modele.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="30" selection-start="4996" selection-end="4996" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="38" column="44" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="23" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.5289256">
+        <state line="23" column="18" selection-start="772" selection-end="772" vertical-scroll-proportion="0.37196764">
           <folding />
         </state>
       </provider>

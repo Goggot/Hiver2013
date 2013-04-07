@@ -71,7 +71,7 @@ class camera(Robot):
         self.portee = 30
 
     def tick(self):
-        pass
+        return True
 
 
 class droneS(Robot):
@@ -105,6 +105,7 @@ class droneS(Robot):
         self.audio = False
 
     def tick(self):
+        print("COUCOU")
         self.bouge()
         if self.detection():
             self.parent.parent.vue.jabba = pygame.image.load("img/jabba_HO100.png").convert_alpha()

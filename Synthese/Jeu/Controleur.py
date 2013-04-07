@@ -2,7 +2,6 @@ import pygame
 from pygame.locals import *
 from Modele import *
 from Vue import *
-import pyglet
 
 
 class Controleur():
@@ -11,6 +10,7 @@ class Controleur():
             # Pour acceder aux modeles et vues,
             # utiliser ces deux variable comportant le self du controleur pour un transit dans les deux sens
         self.modele = Modele(self)
+        self.robotList = self.modele.prison.robotList
         self.vue = Vue(self)
         self.rep = 1
         self.init = True
@@ -18,24 +18,26 @@ class Controleur():
     def initPartie(self):
         print("INITPARTIE")
         # Ajout des ennemis
-        self.modele.prison.robotList.get("droneA").append(droneA(self))
-        self.modele.prison.robotList.get("droneS").append(droneS(self))
-        self.modele.prison.robotList.get("camera").append(camera(self))
-        print(self.modele.prison.robotList)
+        self.robotList.get("droneA").append(droneA(self.modele))
+        self.robotList.get("droneS").append(droneS(self.modele))
+        self.robotList.get("camera").append(camera(self.modele))
+        print(self.robotList)
 
     def tick(self):
         print("TICK")
         self.rep = self.modele.fred.tick()
-        for key, item in self.modele.prison.robotList.items():
-            if item:
-                print(key, item)
-                item.tick()
+        for key in self.robotList:
+            for item in self.robotList[key]:
+                if item:
+                    print(key, item)
+                    item.tick()
         return self.rep
 
 
 if __name__ == '__main__':
     print("MAIN")
     c = Controleur()
+    c.modele.droneS.tick()
     init = True
     if init:
         c.initPartie()

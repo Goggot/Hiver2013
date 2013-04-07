@@ -14,7 +14,7 @@ class Vue():
         self.listeDrA = []
         self.listeDrS = []
         self.robotList = self.parent.modele.prison.robotList
-        self.fenetre = pygame.display.set_mode((1280, 816), RESIZABLE)
+        self.fenetre = pygame.display.set_mode((1024, 768), RESIZABLE)
         self.fond = pygame.image.load("img/falcon.jpg").convert()
         self.solo = pygame.image.load("img/han-solo75.png").convert_alpha()
         self.posSolo = self.solo.get_rect()
