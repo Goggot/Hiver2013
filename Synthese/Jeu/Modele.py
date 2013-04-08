@@ -1,5 +1,6 @@
 from Controleur import *
 import pygame
+import random
 from threading import *
 
 
@@ -69,9 +70,27 @@ class camera(Robot):
         print("CAMERA")
         self.parent = parent
         self.portee = 30
+        self.position = [600, 500]
+        self.audio = False
+
+    def temps(self):
+        self.audio = False
 
     def tick(self):
-        return True
+        if self.detection():
+            if not self.audio:
+                self.audio = True
+                song = random.randrange(1, 4)
+                if song == 1:
+                    pygame.mixer.music.load('music/r2d2/1.mp3')
+                elif song == 2:
+                    pygame.mixer.music.load('music/r2d2/2.mp3')
+                elif song == 3:
+                    pygame.mixer.music.load('music/r2d2/3.mp3')
+                elif song == 4:
+                    pygame.mixer.music.load('music/r2d2/4.mp3')
+                pygame.mixer.music.play()
+                Timer(4.0, self.temps).start()
 
 
 class droneS(Robot):
@@ -105,17 +124,13 @@ class droneS(Robot):
         self.audio = False
 
     def tick(self):
-        print("COUCOU")
         self.bouge()
         if self.detection():
-            self.parent.parent.vue.jabba = pygame.image.load("img/jabba_HO100.png").convert_alpha()
             if not self.audio:
                 self.audio = True
                 pygame.mixer.music.load('music/jabba.mp3')
                 pygame.mixer.music.play()
                 Timer(6.0, self.temps).start()
-        else:
-            self.parent.parent.vue.jabba = pygame.image.load("img/jabba100.png").convert_alpha()
 
 
 class droneA(Robot):
