@@ -14,11 +14,12 @@ class Vue():
         self.listeDrA = []
         self.listeDrS = []
         self.robotList = self.parent.modele.prison.robotList
-        self.fenetre = pygame.display.set_mode((1280, 860), RESIZABLE)
+        self.fenetre = pygame.display.set_mode((1024, 768), RESIZABLE)
         self.fond = pygame.image.load("img/falcon.jpg").convert()
         self.solo = pygame.image.load("img/han-solo75.png").convert_alpha()
         self.posSolo = self.solo.get_rect()
 
+    def initGraph(self):
         for key in self.robotList:
             for item in self.robotList[key]:
                 if item:
@@ -35,17 +36,16 @@ class Vue():
         posSolo = self.parent.modele.fred.position
         self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
 
-        for item in self.listeDrA:
-            self.droneA = item.get_rect()
-            for item in self.parent.modele.prison.robotList["droneA"]:
-                posDroneA = item.position
-            self.fenetre.blit(self.droneA, (posDroneA[0], posDroneA[1]))
+        for item1 in self.listeDrA:
+            self.droneA = item1.get_rect()
+            for item2 in self.parent.modele.prison.robotList["droneA"]:
+                posDroneA = item2.position
+            self.fenetre.blit(item1, (posDroneA[0], posDroneA[1]))
 
-        for item in self.listeDrS:
-            self.droneS = item.get_rect()
-            print(self.droneS)
-            for item in self.parent.modele.prison.robotList["droneA"]:
-                posDroneS = item.position
-            self.fenetre.blit(self.droneS, (posDroneS[0], posDroneS[1]))
+        for item1 in self.listeDrS:
+            self.droneS = item1.get_rect()
+            for item2 in self.parent.modele.prison.robotList["droneS"]:
+                posDroneS = item2.position
+            self.fenetre.blit(item1, (posDroneS[0], posDroneS[1]))
 
         pygame.display.flip()

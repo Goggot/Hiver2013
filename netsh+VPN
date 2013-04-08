@@ -4,3 +4,7 @@ Connexion à distance :
 	ancien : connexion à la demande, à travers une ligne téléphonique de type data
 	maintenant : VPN -> fait croire au serveur que les ordis distant sont physiquement connectés au réseau
 			-> n'est pas crypté de base
+			-> UOAD = contrôle des utilisateurs (aucun utilisateurs autorisés par defaut)
+			-> GPO NPS = Network Policy Server
+			
+			--> avantage de l'UOAD par rapport au NPS : permet de faire une réservation d'adresse IP simplement

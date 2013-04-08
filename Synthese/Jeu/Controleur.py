@@ -21,6 +21,7 @@ class Controleur():
         self.robotList.get("droneA").append(droneA(self.modele))
         self.robotList.get("droneS").append(droneS(self.modele))
         self.robotList.get("camera").append(camera(self.modele))
+        c.vue.initGraph()
 
     def tick(self):
         print("TICK")
@@ -35,7 +36,6 @@ class Controleur():
 if __name__ == '__main__':
     print("MAIN")
     c = Controleur()
-    c.modele.droneS.tick()
     init = True
     if init:
         c.initPartie()
