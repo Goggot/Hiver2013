@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">611bab42-0ad7-4c09-bde8-d5fa16fac0a0</identifier>
+  </ID>
+  <name>A_AUDITEURS</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">569ce558-3237-4ddc-a14a-3b18ae11616c</identifier>
+      </ID>
+      <name>ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">91b885d3-670d-4bae-b4e4-e6eb0c36f10b</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">460c7750-6040-431d-b07b-7dd7276db6c8</identifier>
+      </ID>
+      <name>CAT_AGE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">7e90cc7b-8415-4cd8-8e4b-7ee201944ed8</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">04a54bbb-9fa5-4d04-8788-1a1d9d1d8498</identifier>
+      </ID>
+      <name>NOM</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">06d8a5a3-1978-4bb0-9da2-76d4b68fb166</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">93f6dd01-0a15-46a9-ae66-bea5349635f5</identifier>
+      </ID>
+      <name>NOM_ATELIER_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">202e2122-17d2-4da7-8dea-08de9a98ebcf</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">404755dc-8f75-4634-868d-e7b62cc15ec1</identifier>
+      </ID>
+      <name>A_AUDITEURS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID</name>
+          <identifier class="java.lang.String">569ce558-3237-4ddc-a14a-3b18ae11616c</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_AUDITEURS</name>
+            <identifier class="java.lang.String">611bab42-0ad7-4c09-bde8-d5fa16fac0a0</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_AUDITEURS_PK</name>
+        <identifier class="java.lang.String">ae57541a-94bd-4584-a708-24ae761a6153</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_AUDITEURS</name>
+          <identifier class="java.lang.String">611bab42-0ad7-4c09-bde8-d5fa16fac0a0</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">ae57541a-94bd-4584-a708-24ae761a6153</identifier>
+      </ID>
+      <name>A_AUDITEURS_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">db36e764-195d-4464-8d94-cc664c6a5a0c</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">a8ae91ef-c5f2-416f-a208-0e3ed9f94bb3</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID</name>
+              <identifier class="java.lang.String">569ce558-3237-4ddc-a14a-3b18ae11616c</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>A_AUDITEURS</name>
+                <identifier class="java.lang.String">611bab42-0ad7-4c09-bde8-d5fa16fac0a0</identifier>
+                <schemaName>DB_LAB_FINAL</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DB_LAB_FINAL</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DB_LAB_FINAL</name>
+  </schema>
+</table>

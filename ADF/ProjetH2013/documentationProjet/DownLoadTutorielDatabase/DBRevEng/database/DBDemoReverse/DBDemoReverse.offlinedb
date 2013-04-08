@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <hash n="dataTypeSettings">
+      <value n="sourceKey" v="oracle.javatools.db.ora.Oracle11g"/>
+   </hash>
+   <value n="id" v="332e2f17-8728-4826-9d23-65d20077d483"/>
+   <value n="name" v="DBDemoReverse"/>
+   <value n="offlineDBSchema" v="DBDEMO"/>
+</ProviderSettings>

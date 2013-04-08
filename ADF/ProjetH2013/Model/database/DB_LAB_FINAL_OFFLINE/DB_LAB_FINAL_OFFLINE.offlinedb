@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <value n="id" v="8bccf23c-d24e-4088-bda4-1055cdb22a26"/>
+   <value n="name" v="DB_LAB_FINAL_OFFLINE"/>
+   <value n="offlineDBSchema" v="DB_LAB_FINAL"/>
+</ProviderSettings>

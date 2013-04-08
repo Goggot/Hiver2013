@@ -1,0 +1,683 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">7c7f46cf-a548-40ae-95b2-e4f1ab3ab547</identifier>
+  </ID>
+  <name>ORDERS</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">cbebd37a-b8f5-4972-b835-89e30e972b0e</identifier>
+      </ID>
+      <name>ORDER_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">2d0f4f08-f988-43ce-a434-4ea41d5d79b7</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ORDER_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS</name>
+                  <identifier class="java.math.BigDecimal">71561</identifier>
+                  <schemaName>DBDEMO</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ORDER_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">c08157b5-d854-4a42-9183-bbca4591472c</identifier>
+      </ID>
+      <name>ORDER_DATE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">7e5f90c8-9120-4fff-a0a3-cccd99927e85</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>DATE</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ORDER_DATE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS</name>
+                  <identifier class="java.math.BigDecimal">71561</identifier>
+                  <schemaName>DBDEMO</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ORDER_DATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">7c16e270-654a-4bb5-b1e5-4f9048907332</identifier>
+      </ID>
+      <name>ORDER_TOTAL</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">c0e26704-8c34-4f31-b836-b611f7afccd4</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ORDER_TOTAL</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS</name>
+                  <identifier class="java.math.BigDecimal">71561</identifier>
+                  <schemaName>DBDEMO</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ORDER_TOTAL</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">4875b6c6-a619-4910-aa73-6e19aa7f37a2</identifier>
+      </ID>
+      <name>PERSON_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">6aca0227-4e8a-43af-8aab-09c4bbed44ed</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>PERSON_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS</name>
+                  <identifier class="java.math.BigDecimal">71561</identifier>
+                  <schemaName>DBDEMO</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PERSON_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">24fe464b-899c-4d80-ad04-847df2191808</identifier>
+      </ID>
+      <name>ORDERS_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>PERSON_ID</name>
+          <identifier class="java.lang.String">4875b6c6-a619-4910-aa73-6e19aa7f37a2</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>ORDERS</name>
+            <identifier class="java.lang.String">7c7f46cf-a548-40ae-95b2-e4f1ab3ab547</identifier>
+            <schemaName>DBDEMO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBDEMO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ORDERS_FK1</name>
+            <childObjectNames>
+              <childObjectName>PERSON_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PERSONS_PK</name>
+        <identifier class="java.lang.String">04868487-3846-4019-bb05-1c6c12857961</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PERSONS</name>
+          <identifier class="java.lang.String">d957b8cf-6f00-4487-ad76-ad5474677bef</identifier>
+          <schemaName>DBDEMO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBDEMO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e4033f69-bc7e-4a6d-bdef-5814fd1200cc</identifier>
+      </ID>
+      <name>ORDERS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ORDER_ID</name>
+          <identifier class="java.lang.String">cbebd37a-b8f5-4972-b835-89e30e972b0e</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>ORDERS</name>
+            <identifier class="java.lang.String">7c7f46cf-a548-40ae-95b2-e4f1ab3ab547</identifier>
+            <schemaName>DBDEMO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBDEMO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>ORDERS_PK</name>
+        <identifier class="java.lang.String">20730326-379e-4f7b-b2e2-09118e900276</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>ORDERS</name>
+          <identifier class="java.lang.String">7c7f46cf-a548-40ae-95b2-e4f1ab3ab547</identifier>
+          <schemaName>DBDEMO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBDEMO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ORDERS_PK</name>
+            <childObjectNames>
+              <childObjectName>ORDER_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">20730326-379e-4f7b-b2e2-09118e900276</identifier>
+      </ID>
+      <name>ORDERS_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">72d880fb-8b5c-4d9d-9d60-a10af9f363f7</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">565122cd-87f9-490c-bd62-775ecc7a526d</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ORDER_ID</name>
+              <identifier class="java.lang.String">cbebd37a-b8f5-4972-b835-89e30e972b0e</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>ORDERS</name>
+                <identifier class="java.lang.String">7c7f46cf-a548-40ae-95b2-e4f1ab3ab547</identifier>
+                <schemaName>DBDEMO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBDEMO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>ORDERS_PK</name>
+                      <identifier class="java.lang.Integer">71564</identifier>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <name>ORDERS</name>
+                        <identifier class="java.math.BigDecimal">71561</identifier>
+                        <schemaName>DBDEMO</schemaName>
+                        <type>TABLE</type>
+                      </parent>
+                      <schemaName>DBDEMO</schemaName>
+                      <type>INDEX</type>
+                    </parent>
+                    <type>IndexObject</type>
+                  </parent>
+                  <type>SQLFragment</type>
+                </value>
+              </entry>
+            </properties>
+            <qualified>true</qualified>
+          </expression>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS_PK</name>
+                  <identifier class="java.lang.Integer">71564</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>ORDERS</name>
+                    <identifier class="java.math.BigDecimal">71561</identifier>
+                    <schemaName>DBDEMO</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>DBDEMO</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ORDERS_PK</name>
+            <identifier class="java.lang.Integer">71564</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>ORDERS</name>
+              <identifier class="java.math.BigDecimal">71561</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DBDEMO</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">df78c7d2-2c35-46e3-aa89-fd43587021a8</identifier>
+            </ID>
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>2147483645</maxExtent>
+            <minExtent>1</minExtent>
+            <nextExtent>1048576</nextExtent>
+            <percentFree>10</percentFree>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>ORDERS_PK</name>
+                    <identifier class="java.lang.Integer">71564</identifier>
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>ORDERS</name>
+                      <identifier class="java.math.BigDecimal">71561</identifier>
+                      <schemaName>DBDEMO</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>DBDEMO</schemaName>
+                    <type>INDEX</type>
+                  </parent>
+                  <type>OracleStorageProperties</type>
+                </value>
+              </entry>
+            </properties>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>DBDEMO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">DBDemoConn</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>ORDERS</name>
+        <identifier class="java.math.BigDecimal">71561</identifier>
+        <schemaName>DBDEMO</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">692899d5-fbf2-4e30-97bf-2c4c346c5ebf</identifier>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initrans>1</initrans>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ORDERS</name>
+                <identifier class="java.math.BigDecimal">71561</identifier>
+                <schemaName>DBDEMO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTablePartitions</key>
+      <value class="oracle.javatools.db.ora.OracleTablePartitions">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a2eeb986-e039-45c2-aeb1-bbcab385a9d2</identifier>
+        </ID>
+        <objectType>PARTITION</objectType>
+        <partitionColumns>
+          <partitionColumn class="oracle.javatools.db.IdentifierBasedID">
+            <name>ORDER_DATE</name>
+            <identifier class="java.lang.String">c08157b5-d854-4a42-9183-bbca4591472c</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>ORDERS</name>
+              <identifier class="java.lang.String">7c7f46cf-a548-40ae-95b2-e4f1ab3ab547</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DBDEMO</schemaName>
+            <type>COLUMN</type>
+          </partitionColumn>
+        </partitionColumns>
+        <partitionType>RANGE</partitionType>
+        <partitions>
+          <partition>
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">1705c501-3817-4d60-b00d-af54f01525ca</identifier>
+            </ID>
+            <name>ORDERS_PRE_2007</name>
+            <compression>NOCOMPRESS</compression>
+            <objectType>PARTITION</objectType>
+            <partitionType>RANGE</partitionType>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS_PRE_2007</name>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>ORDERS</name>
+                      <identifier class="java.math.BigDecimal">71561</identifier>
+                      <schemaName>DBDEMO</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <type>PARTITION MODEL</type>
+                  </parent>
+                  <type>PARTITION</type>
+                </value>
+              </entry>
+            </properties>
+            <segmentAttributes>
+              <ID class="oracle.javatools.db.IdentifierBasedID">
+                <identifier class="java.lang.String">ad34f03b-4466-451e-b827-496e5bb9daec</identifier>
+              </ID>
+              <bufferMode>DEFAULT</bufferMode>
+              <initialExtent>65536</initialExtent>
+              <initrans>1</initrans>
+              <logging>true</logging>
+              <maxExtent>2147483645</maxExtent>
+              <minExtent>1</minExtent>
+              <nextExtent>1048576</nextExtent>
+              <percentFree>10</percentFree>
+              <properties>
+                <entry>
+                  <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                  <value class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>ORDERS_PRE_2007</name>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <parent class="oracle.javatools.db.ReferenceID">
+                          <name>ORDERS</name>
+                          <identifier class="java.math.BigDecimal">71561</identifier>
+                          <schemaName>DBDEMO</schemaName>
+                          <type>TABLE</type>
+                        </parent>
+                        <type>PARTITION MODEL</type>
+                      </parent>
+                      <type>PARTITION</type>
+                    </parent>
+                    <type>OracleStorageProperties</type>
+                  </value>
+                </entry>
+              </properties>
+              <tablespaceID class="oracle.javatools.db.ReferenceID">
+                <name>USERS</name>
+                <type>TABLESPACE</type>
+              </tablespaceID>
+            </segmentAttributes>
+            <values>
+              <value class="java.lang.String">TO_DATE(&apos; 2007-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</value>
+            </values>
+          </partition>
+          <partition>
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">4c2d391d-1f9d-4b11-9506-17878071c154</identifier>
+            </ID>
+            <name>ORDERS_2007</name>
+            <compression>NOCOMPRESS</compression>
+            <objectType>PARTITION</objectType>
+            <partitionType>RANGE</partitionType>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <name>ORDERS_2007</name>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>ORDERS</name>
+                      <identifier class="java.math.BigDecimal">71561</identifier>
+                      <schemaName>DBDEMO</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <type>PARTITION MODEL</type>
+                  </parent>
+                  <type>PARTITION</type>
+                </value>
+              </entry>
+            </properties>
+            <segmentAttributes>
+              <ID class="oracle.javatools.db.IdentifierBasedID">
+                <identifier class="java.lang.String">28af5afa-5eac-4c54-b7cd-7ecb21eb26d7</identifier>
+              </ID>
+              <bufferMode>DEFAULT</bufferMode>
+              <initialExtent>65536</initialExtent>
+              <initrans>1</initrans>
+              <logging>true</logging>
+              <maxExtent>2147483645</maxExtent>
+              <minExtent>1</minExtent>
+              <nextExtent>1048576</nextExtent>
+              <percentFree>10</percentFree>
+              <properties>
+                <entry>
+                  <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                  <value class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>ORDERS_2007</name>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <parent class="oracle.javatools.db.ReferenceID">
+                          <name>ORDERS</name>
+                          <identifier class="java.math.BigDecimal">71561</identifier>
+                          <schemaName>DBDEMO</schemaName>
+                          <type>TABLE</type>
+                        </parent>
+                        <type>PARTITION MODEL</type>
+                      </parent>
+                      <type>PARTITION</type>
+                    </parent>
+                    <type>OracleStorageProperties</type>
+                  </value>
+                </entry>
+              </properties>
+              <tablespaceID class="oracle.javatools.db.ReferenceID">
+                <name>USERS</name>
+                <type>TABLESPACE</type>
+              </tablespaceID>
+            </segmentAttributes>
+            <values>
+              <value class="java.lang.String">TO_DATE(&apos; 2008-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</value>
+            </values>
+          </partition>
+        </partitions>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ORDERS</name>
+                <identifier class="java.math.BigDecimal">71561</identifier>
+                <schemaName>DBDEMO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>PARTITION MODEL</type>
+            </value>
+          </entry>
+        </properties>
+      </value>
+    </entry>
+    <entry>
+      <key>PARTITIONED TABLE</key>
+      <value class="java.lang.Boolean">true</value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBDEMO</name>
+  </schema>
+</table>

@@ -21,7 +21,6 @@ class Controleur():
         self.robotList.get("droneA").append(droneA(self.modele))
         self.robotList.get("droneS").append(droneS(self.modele))
         self.robotList.get("camera").append(camera(self.modele))
-        print(self.robotList)
 
     def tick(self):
         print("TICK")
@@ -29,7 +28,6 @@ class Controleur():
         for key in self.robotList:
             for item in self.robotList[key]:
                 if item:
-                    print(key, item)
                     item.tick()
         return self.rep
 

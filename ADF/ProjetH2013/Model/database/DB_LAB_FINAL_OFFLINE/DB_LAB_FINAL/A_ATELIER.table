@@ -1,0 +1,398 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+  </ID>
+  <name>A_ATELIER</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5c492283-bca6-408b-b0cf-4517eb492bbb</identifier>
+      </ID>
+      <name>NOM_ATELIER_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">dfd17807-0f3c-4346-af14-88fd7f8010a5</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">d75f929b-bbab-44ea-9220-1df8d263f5a9</identifier>
+      </ID>
+      <name>TYPE_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">3ff37479-612d-4fdc-a23c-c47da586aceb</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e448ef7a-6181-49e5-9d8b-daa27604948a</identifier>
+      </ID>
+      <name>NOM_CATEGORIE_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">9e9da6e2-6762-42c2-b769-2ac2d1aa8b10</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">c5474b01-27af-43fd-8b03-0819ea6db21e</identifier>
+      </ID>
+      <name>LANGUE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">686a9482-f617-4fc4-b7cb-3ac6344b343c</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b26d42b6-d556-42e6-95f8-e79911d10bf7</identifier>
+      </ID>
+      <name>AUDITEUR_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">9369e318-16e5-452e-8c61-673648815738</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5526cb74-dc4e-48bc-af91-db3043881e04</identifier>
+      </ID>
+      <name>CRITERE_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">d91ea613-eb3d-4db4-8186-3b5299864a41</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">0f098a17-a500-41cd-9c7b-ce1c1d124dae</identifier>
+      </ID>
+      <name>A_ATELIER_A_CATEGORIE_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOM_CATEGORIE_ID</name>
+          <identifier class="java.lang.String">e448ef7a-6181-49e5-9d8b-daa27604948a</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_CATEGORIE_PK</name>
+        <identifier class="java.lang.String">6c27a62c-dbe9-43bc-9bdb-eb90f7bdd687</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_CATEGORIE</name>
+          <identifier class="java.lang.String">883fc0a0-5927-4154-ab0e-8c2a7de9dbcf</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e5bb2f9e-fb97-4629-af03-260c577c2d75</identifier>
+      </ID>
+      <name>A_ATELIER_A_MEMBRE_JURY_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOM_ATELIER_ID</name>
+          <identifier class="java.lang.String">5c492283-bca6-408b-b0cf-4517eb492bbb</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>AUDITEUR_ID</name>
+          <identifier class="java.lang.String">b26d42b6-d556-42e6-95f8-e79911d10bf7</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_MEMBRE_JURY_PK</name>
+        <identifier class="java.lang.String">250385b5-2ba7-4f79-ac99-9cb01ac8cbea</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_MEMBRE_JURY</name>
+          <identifier class="java.lang.String">c7ca3b05-1420-452a-b215-9ee7afc2b6ba</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">adc0d43c-e6b9-44ec-a11e-03e3cd97eded</identifier>
+      </ID>
+      <name>A_ATELIER_A_TYPE_ATELIER_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TYPE_ID</name>
+          <identifier class="java.lang.String">d75f929b-bbab-44ea-9220-1df8d263f5a9</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_TYPE_ATELIER_PK</name>
+        <identifier class="java.lang.String">16dc2c09-d17d-406d-a849-21345861f620</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_TYPE_ATELIER</name>
+          <identifier class="java.lang.String">913acb12-c6bb-460f-b8b7-d85ea6816706</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">65e6bea5-fea9-4611-b6ae-f655ce1d5366</identifier>
+      </ID>
+      <name>A_ATELIER_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOM_ATELIER_ID</name>
+          <identifier class="java.lang.String">5c492283-bca6-408b-b0cf-4517eb492bbb</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TYPE_ID</name>
+          <identifier class="java.lang.String">d75f929b-bbab-44ea-9220-1df8d263f5a9</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOM_CATEGORIE_ID</name>
+          <identifier class="java.lang.String">e448ef7a-6181-49e5-9d8b-daa27604948a</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_ATELIER</name>
+            <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_ATELIER_PK</name>
+        <identifier class="java.lang.String">613d7bb6-b039-485d-99ed-5f9b98262616</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_ATELIER</name>
+          <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">613d7bb6-b039-485d-99ed-5f9b98262616</identifier>
+      </ID>
+      <name>A_ATELIER_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">64a8ebac-5cff-4482-90f7-da14e2a92ad2</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">c58ccc14-fb33-47e0-860f-7092dd410f65</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>NOM_ATELIER_ID</name>
+              <identifier class="java.lang.String">5c492283-bca6-408b-b0cf-4517eb492bbb</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>A_ATELIER</name>
+                <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+                <schemaName>DB_LAB_FINAL</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">c752be92-7c13-401c-8770-bf1e004972ba</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">457ffd80-b29e-42b5-921c-037e56e6a7b5</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>TYPE_ID</name>
+              <identifier class="java.lang.String">d75f929b-bbab-44ea-9220-1df8d263f5a9</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>A_ATELIER</name>
+                <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+                <schemaName>DB_LAB_FINAL</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">d0c84aaa-300b-42de-aebc-544ba43fa5e8</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">e4319cc1-8300-4c60-8663-3c990c9be732</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>NOM_CATEGORIE_ID</name>
+              <identifier class="java.lang.String">e448ef7a-6181-49e5-9d8b-daa27604948a</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>A_ATELIER</name>
+                <identifier class="java.lang.String">b9ae8f96-407c-4124-9146-42d57532a06b</identifier>
+                <schemaName>DB_LAB_FINAL</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DB_LAB_FINAL</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DB_LAB_FINAL</name>
+  </schema>
+</table>

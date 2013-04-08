@@ -1,0 +1,6 @@
+netsh routing dump
+
+Connexion à distance : 
+	ancien : connexion à la demande, à travers une ligne téléphonique de type data
+	maintenant : VPN -> fait croire au serveur que les ordis distant sont physiquement connectés au réseau
+			-> n'est pas crypté de base

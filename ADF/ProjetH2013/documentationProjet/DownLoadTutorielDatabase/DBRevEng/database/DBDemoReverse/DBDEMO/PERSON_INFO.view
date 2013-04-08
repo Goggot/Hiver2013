@@ -1,0 +1,265 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<view xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">659ae6b6-f742-4354-9546-b99de66bc1a9</identifier>
+  </ID>
+  <name>PERSON_INFO</name>
+  <SQLQuery class="oracle.javatools.db.sql.NonDeclarativeSQLQuery">
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <identifier class="java.lang.String">c0986125-a5f1-41fb-9c8b-623db2f4cb29</identifier>
+    </ID>
+    <SQLText>SELECT 
+    PERSONS.FIRST_NAME FIRST_NAME, 
+    PERSONS.LAST_NAME LAST_NAME, 
+    PERSONS.GENDER GENDER, 
+    ADDRESSES.ADDRESS_LINE1 ADDRESS_LINE1, 
+    ADDRESSES.ADDRESS_ID ADDRESS_ID, 
+    ADDRESSES.ADDRESS_LINE2 ADDRESS_LINE2 
+FROM 
+    ADDRESSES JOIN PERSONS USING (PERSON_ID)</SQLText>
+    <distinct>false</distinct>
+    <orderSiblings>false</orderSiblings>
+    <selectObjects>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">b51ec10c-be2e-4062-994a-9a4e5b0b7257</identifier>
+        </ID>
+        <alias>FIRST_NAME</alias>
+        <expression class="oracle.javatools.db.sql.SimpleSQLFragment">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">86d8f29f-ae6f-4486-8c92-4cf911509eaf</identifier>
+          </ID>
+          <SQLText>null</SQLText>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">c0308284-ad25-4a01-8f87-727dd0cb9a48</identifier>
+        </ID>
+        <alias>LAST_NAME</alias>
+        <expression class="oracle.javatools.db.sql.SimpleSQLFragment">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">38ffe1c5-d9d9-4a0a-af94-638cda977ef2</identifier>
+          </ID>
+          <SQLText>null</SQLText>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f71aee3b-cd15-42b3-a509-930548a9317f</identifier>
+        </ID>
+        <alias>GENDER</alias>
+        <expression class="oracle.javatools.db.sql.SimpleSQLFragment">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">83e78b3c-e287-4956-b9e4-09594f6c1c4e</identifier>
+          </ID>
+          <SQLText>null</SQLText>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">1fbddd86-0676-4dec-8a3f-9a0d57d25c7f</identifier>
+        </ID>
+        <alias>ADDRESS_LINE1</alias>
+        <expression class="oracle.javatools.db.sql.SimpleSQLFragment">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">e66765b6-ace6-488f-b3bb-9662c1b61263</identifier>
+          </ID>
+          <SQLText>null</SQLText>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a50efdf5-c2b3-4823-8f53-8abefaa0dff6</identifier>
+        </ID>
+        <alias>ADDRESS_ID</alias>
+        <expression class="oracle.javatools.db.sql.SimpleSQLFragment">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">8cbd1fa8-edbf-4c77-821d-35a2af612a6d</identifier>
+          </ID>
+          <SQLText>null</SQLText>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">cfe46f18-2b6f-446b-8128-9bc9ffa5153f</identifier>
+        </ID>
+        <alias>ADDRESS_LINE2</alias>
+        <expression class="oracle.javatools.db.sql.SimpleSQLFragment">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">09d7fa41-3d2b-4667-a6e8-23938b8387a3</identifier>
+          </ID>
+          <SQLText>null</SQLText>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+    </selectObjects>
+    <queryString>SELECT 
+    PERSONS.FIRST_NAME FIRST_NAME, 
+    PERSONS.LAST_NAME LAST_NAME, 
+    PERSONS.GENDER GENDER, 
+    ADDRESSES.ADDRESS_LINE1 ADDRESS_LINE1, 
+    ADDRESSES.ADDRESS_ID ADDRESS_ID, 
+    ADDRESSES.ADDRESS_LINE2 ADDRESS_LINE2 
+FROM 
+    ADDRESSES JOIN PERSONS USING (PERSON_ID)</queryString>
+  </SQLQuery>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">f7c02101-54d9-4e48-8adf-fea49e52e035</identifier>
+      </ID>
+      <name>FIRST_NAME</name>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>FIRST_NAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PERSON_INFO</name>
+              <identifier class="java.math.BigDecimal">71567</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>VIEW</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">fb6bcab2-0c60-494a-a1ca-1a14ab525608</identifier>
+      </ID>
+      <name>LAST_NAME</name>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LAST_NAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PERSON_INFO</name>
+              <identifier class="java.math.BigDecimal">71567</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>VIEW</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">590420e1-9237-4001-b536-187f3408f272</identifier>
+      </ID>
+      <name>GENDER</name>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>GENDER</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PERSON_INFO</name>
+              <identifier class="java.math.BigDecimal">71567</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>VIEW</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">9c3e59ec-32b8-440f-967b-fd54b2bceb1a</identifier>
+      </ID>
+      <name>ADDRESS_LINE1</name>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ADDRESS_LINE1</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PERSON_INFO</name>
+              <identifier class="java.math.BigDecimal">71567</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>VIEW</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">3da0923f-559a-4fd2-b4cb-a058445d1027</identifier>
+      </ID>
+      <name>ADDRESS_ID</name>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ADDRESS_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PERSON_INFO</name>
+              <identifier class="java.math.BigDecimal">71567</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>VIEW</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">4b902744-3aa7-4e75-8770-5c0f3daaa40b</identifier>
+      </ID>
+      <name>ADDRESS_LINE2</name>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ADDRESS_LINE2</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PERSON_INFO</name>
+              <identifier class="java.math.BigDecimal">71567</identifier>
+              <schemaName>DBDEMO</schemaName>
+              <type>VIEW</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <forceOnCreate>false</forceOnCreate>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">DBDemoConn</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>PERSON_INFO</name>
+        <identifier class="java.math.BigDecimal">71567</identifier>
+        <schemaName>DBDEMO</schemaName>
+        <type>VIEW</type>
+      </value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBDEMO</name>
+  </schema>
+</view>

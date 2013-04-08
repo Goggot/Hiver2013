@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">54097628-1bcd-40f6-8652-428da96faed7</identifier>
+  </ID>
+  <name>A_EXPOSITION</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">d15b22ba-c640-4566-b899-fd19b42c0f9f</identifier>
+      </ID>
+      <name>NOM_ECOLE_ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">611edfd3-2906-4cf5-9051-997043fa93dd</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">15</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">6d0dc73d-1b00-4494-affb-a312dacdb426</identifier>
+      </ID>
+      <name>A_EXPOSITION_A_ÉCOLE_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOM_ECOLE_ID</name>
+          <identifier class="java.lang.String">d15b22ba-c640-4566-b899-fd19b42c0f9f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_EXPOSITION</name>
+            <identifier class="java.lang.String">54097628-1bcd-40f6-8652-428da96faed7</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_ÉCOLE_PK</name>
+        <identifier class="java.lang.String">ee78c8a1-3396-445b-88c7-e1d35bbc1473</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_ÉCOLE</name>
+          <identifier class="java.lang.String">695915e6-4a77-4cff-ab4b-b05af376e68d</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">89b2c849-1f94-430f-a18f-063b04e3aa80</identifier>
+      </ID>
+      <name>A_EXPOSITION_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOM_ID</name>
+          <identifier class="java.lang.String">d15b22ba-c640-4566-b899-fd19b42c0f9f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>A_EXPOSITION</name>
+            <identifier class="java.lang.String">54097628-1bcd-40f6-8652-428da96faed7</identifier>
+            <schemaName>DB_LAB_FINAL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>A_EXPOSITION_PK</name>
+        <identifier class="java.lang.String">53fc8f19-9bf1-411f-881b-57be2997f360</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>A_EXPOSITION</name>
+          <identifier class="java.lang.String">54097628-1bcd-40f6-8652-428da96faed7</identifier>
+          <schemaName>DB_LAB_FINAL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DB_LAB_FINAL</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">53fc8f19-9bf1-411f-881b-57be2997f360</identifier>
+      </ID>
+      <name>A_EXPOSITION_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">cd144e07-a211-4b55-b1e8-25ddc8c69e7e</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">2afba836-ab82-4d68-9b18-b99c0c70eeac</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>NOM_ID</name>
+              <identifier class="java.lang.String">d15b22ba-c640-4566-b899-fd19b42c0f9f</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>A_EXPOSITION</name>
+                <identifier class="java.lang.String">54097628-1bcd-40f6-8652-428da96faed7</identifier>
+                <schemaName>DB_LAB_FINAL</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DB_LAB_FINAL</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DB_LAB_FINAL</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DB_LAB_FINAL</name>
+  </schema>
+</table>
