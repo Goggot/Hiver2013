@@ -1,0 +1,32 @@
+body {
+	background-image:url("../img/background.png");
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+
+#container {
+		width:400px;
+		background-color:white;
+		border:solid thin;
+		border-color:black;
+		margin:auto;
+		margin-top:50px;
+		font-size:14px;
+}
+
+p {
+	margin:auto;
+	color:#777;
+}
+
+@media screen and (max-width:400px){
+	#container {
+		width:90%;
+		background-color:white;
+		border:solid thin;
+		border-color:black;
+		margin:auto;
+		margin-top:50px;
+		font-size:22px;
+	}
+}

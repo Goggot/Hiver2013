@@ -1,0 +1,5 @@
+"OU=Test,DC=DALLAS,DC=B64"
+
+DC -> Domaine
+OU -> Unite d'organisation
+CN -> Common name

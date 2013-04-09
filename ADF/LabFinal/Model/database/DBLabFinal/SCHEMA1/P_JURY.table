@@ -1,0 +1,256 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+  </ID>
+  <name>P_JURY</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">712f665b-ac0c-453a-bdb7-c4c80fb0dca9</identifier>
+      </ID>
+      <name>ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">aad6b48e-496a-42cb-9cab-73048f5bc303</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">f4f3db3a-42cb-4994-88ad-9755e53594a2</identifier>
+      </ID>
+      <name>ID_AUDITEUR</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">5902e000-0fd8-47c0-8901-b0193a748798</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">0897afff-f0a9-4d2a-85e7-dcefd004ed69</identifier>
+      </ID>
+      <name>ATELIER</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">612b54bc-d6b1-4948-8324-1e0b36c49217</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">6284564e-771c-4ba8-b41c-c9dc785e3655</identifier>
+      </ID>
+      <name>P_JURY_P_AUDITEURS_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_AUDITEUR</name>
+          <identifier class="java.lang.String">f4f3db3a-42cb-4994-88ad-9755e53594a2</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>P_JURY</name>
+            <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>P_AUDITEURS_PK</name>
+        <identifier class="java.lang.String">02140509-c377-4145-8fb4-ea19ffb94588</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>P_AUDITEURS</name>
+          <identifier class="java.lang.String">6ab221cb-3272-41ba-be42-79859411c214</identifier>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">9ab5249e-cda8-48eb-bdf7-1315f609caea</identifier>
+      </ID>
+      <name>P_JURY_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID</name>
+          <identifier class="java.lang.String">712f665b-ac0c-453a-bdb7-c4c80fb0dca9</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>P_JURY</name>
+            <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID_AUDITEUR</name>
+          <identifier class="java.lang.String">f4f3db3a-42cb-4994-88ad-9755e53594a2</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>P_JURY</name>
+            <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ATELIER</name>
+          <identifier class="java.lang.String">0897afff-f0a9-4d2a-85e7-dcefd004ed69</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>P_JURY</name>
+            <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>P_JURY_PK</name>
+        <identifier class="java.lang.String">74470fd3-8ed6-4bc9-a566-5158363ec684</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>P_JURY</name>
+          <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">74470fd3-8ed6-4bc9-a566-5158363ec684</identifier>
+      </ID>
+      <name>P_JURY_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">0f1002d4-a1b9-49f4-8717-138a965ccac6</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">b41f5c68-58e2-47c2-b633-d87e63ef0f7f</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID</name>
+              <identifier class="java.lang.String">712f665b-ac0c-453a-bdb7-c4c80fb0dca9</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>P_JURY</name>
+                <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+                <schemaName>SCHEMA1</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>SCHEMA1</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">8a57c373-735a-4ee4-bb8e-594e8b0ed45b</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">fc57ed28-28fc-4f4e-8c32-4e41bb41f206</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID_AUDITEUR</name>
+              <identifier class="java.lang.String">f4f3db3a-42cb-4994-88ad-9755e53594a2</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>P_JURY</name>
+                <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+                <schemaName>SCHEMA1</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>SCHEMA1</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">4d9fb15a-fe33-4040-9fd5-31444d75fda1</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">56fac9eb-ae21-47fd-b66c-469fca30ba0a</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ATELIER</name>
+              <identifier class="java.lang.String">0897afff-f0a9-4d2a-85e7-dcefd004ed69</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>P_JURY</name>
+                <identifier class="java.lang.String">7ca33a61-018f-4cf0-aed3-2e9eea16db1d</identifier>
+                <schemaName>SCHEMA1</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>SCHEMA1</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>SCHEMA1</name>
+  </schema>
+</table>

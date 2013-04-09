@@ -1,0 +1,26 @@
+* {
+	margin:0;
+	padding:0;	
+}
+
+body, html {
+	background-color:white;
+}
+
+#container {
+	margin:30px auto;
+	width:700px;
+	height:400px;
+	background-color:#33aadd;	
+	position:relative;
+	overflow:hidden;
+	border:1px solid #888;
+}
+
+.nuage {
+	width:175px;
+	height:109px;
+	background-image:url("../images/nuage.png");
+	background-repeat:no-repeat;
+	position:absolute;
+}

@@ -1,0 +1,42 @@
+aParent;aOU;aDesc
+OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Magasins;Tous les magasins
+OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Kiosque;Les ordinateurs kiosques
+OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Serv_Info;Les ressources informatiques
+OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Corpo;Tous les services corporatifs
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Caisses;Les ordinateurs des caisses
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Directeurs;Directeurs des magasins
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Caissiers;Les utilisateurs des postes caisses
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Utilisateurs_tempo;Utilisateurs temporaires et stagiaires
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Portables;Les portables des magasins
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Serveurs;Serveurs des magasins
+OU=Magasins,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Ordinateurs;Ordinateurs des magasins autre que les caisses
+OU=Kiosque,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Mag_spec;Les ordinateurs kiosques dans les magasins speciaux
+OU=Serv_Info,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Developpeurs;Les utilisateus - developpeurs
+OU=Serv_Info,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Support_corpo;Utilisateurs du support bureautique pour les services corporatifs autre que les magasins
+OU=Serv_Info,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Support_mag;Utilisateurs du support bureautique pour les magasins
+OU=Serv_Info,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Utilisateurs_tempo;Utilisateurs temporaires stagiaires et conseillers externes
+OU=Serv_Info,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Ordinateurs;Les ordinateurs des ressources informatiques
+OU=Serv_Info,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Portables;Les portables des ressources informatiques
+OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Siege_social;Siege social
+OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Savanette;Savanette
+OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Moron;Moron
+OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Tiburon;Tiburon
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Ventes;Les utilisateurs du service de ventes
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Dev_comm;les utilisateurs du service de Developpement Commercial
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;RH;Les utilisateurs du service de Ressources Humaines
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Serveurs;Les serveurs du siege social
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Ordinateurs;Les ordinateurs du siege social
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Portables;Les portables du siege social
+OU=Siege_social,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Utilisateurs_tempo;Les utilisateurs temporaires et stagiaires du siege social
+OU=Savanette,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;ordinateurs;Les ordinateurs de Savanette
+OU=Savanette,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Portables;Les portables de Savanette
+OU=Savanette,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Serveurs;Les serveurs de Savanette
+OU=Savanette,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Utilisateurs_tempo;Les utilisateurs temporaires et stagiaires de Savanette
+OU=Moron,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;ordinateurs;Les ordinateurs de Moron
+OU=Moron,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Portables;Les portables de Moron
+OU=Moron,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Serveurs;Les serveurs de Moron
+OU=Moron,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Utilisateurs_tempo;Les utilisateurs temporaires et stagiaires de Moron
+OU=Tiburon,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;ordinateurs;Les ordinateurs de Tiburon
+OU=Tiburon,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Portables;Les portables de Tiburon
+OU=Tiburon,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Serveurs;Les serveurs de Tiburon
+OU=Tiburon,OU=Corpo,OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64;Utilisateurs_tempo;Les utilisateurs temporaires et stagiaires de Tiburon 
