@@ -18,9 +18,12 @@ class Controleur():
     def initPartie(self):
         print("INITPARTIE")
         # Ajout des ennemis
-        self.robotList.get("droneA").append(droneA(self.modele))
-        self.robotList.get("droneS").append(droneS(self.modele))
-        self.robotList.get("camera").append(camera(self.modele))
+        self.robotList.get("droneA").append([1, droneA(self.modele, [460, 40])])
+        self.robotList.get("droneS").append([2, droneS(self.modele, [950, 380])])
+        self.robotList.get("camera").append([3, camera(self.modele, [600, 500])])
+        self.robotList.get("camera").append([4, camera(self.modele, [400, 300])])
+        self.robotList.get("droneA").append([5, droneA(self.modele, [460, 250])])
+        self.robotList.get("droneS").append([6, droneS(self.modele, [650, 380])])
         c.vue.initGraph()
 
     def tick(self):
@@ -29,7 +32,7 @@ class Controleur():
         for key in self.robotList:
             for item in self.robotList[key]:
                 if item:
-                    item.tick()
+                    item[1].tick()
         return self.rep
 
 

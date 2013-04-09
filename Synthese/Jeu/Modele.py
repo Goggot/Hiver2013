@@ -66,11 +66,11 @@ class Robot():
 
 
 class camera(Robot):
-    def __init__(self, parent):
+    def __init__(self, parent, pos):
         print("CAMERA")
         self.parent = parent
         self.portee = 30
-        self.position = [600, 500]
+        self.position = pos
         self.audio = False
 
     def temps(self):
@@ -94,14 +94,14 @@ class camera(Robot):
 
 
 class droneS(Robot):
-    def __init__(self, parent):
+    def __init__(self, parent, pos):
         print("DRONES")
-        self.position = [950, 380]
+        self.position = pos
         self.direction = "H"
         self.parent = parent
         self.vitesse = 2
         self.energie = 5
-        self.posInitial = [500, 800]
+        self.posInitial = pos
         self.portee = 20
         self.audio = False
 
@@ -134,13 +134,13 @@ class droneS(Robot):
 
 
 class droneA(Robot):
-    def __init__(self, parent):
+    def __init__(self, parent, pos):
         print("DRONEA")
         self.parent = parent
-        self.position = [460, 40]
+        self.position = pos
         self.vitesse = 3
         self.energie = 10
-        self.posInitial = [460, 50]
+        self.posInitial = pos
         self.portee = 10
         self.degats = 1
         self.audio = False
@@ -207,10 +207,6 @@ class Modele():
         self.parent = parent
         self.listeEvenement = []
         self.fred = Fred(self)
-        self.camera = camera(self)
-        self.droneS = droneS(self)
-        self.droneA = droneA(self)
-        self.piege = Piege(self)
         self.prison = Prison(self)
 
     def backToTheFuture(self):
