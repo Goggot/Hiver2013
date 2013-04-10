@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">00277ccd-e488-4f93-88c7-28a9c26bf47d</identifier>
+  </ID>
+  <name>EA_EXPOSITIONS_SEQ</name>
+  <cycleFlag>false</cycleFlag>
+  <orderFlag>false</orderFlag>
+  <schema>
+    <name>SCHEMA1</name>
+  </schema>
+</sequence>

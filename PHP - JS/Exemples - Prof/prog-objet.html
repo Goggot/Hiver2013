@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS - Objet</title>
+	</head>
+	<body>
+		<script>
+			function Personne(nom, prenom) {
+				this.nom = nom;
+				this.prenom = prenom;
+				
+				this.afficher = function (prefix) {
+					console.log(prefix + " " + this.prenom + " " + this.nom);
+				}
+			}
+			
+			
+			var derek = new Personne("Tremblay", "Derek");
+			var po = new Personne("Octave", "PO");
+			derek.afficher("M.");
+			po.afficher("Mme.");
+			
+			var personneList = new Array();
+			personneList.push(derek);
+			personneList.push(po);
+			personneList.push(new Personne("D", "F"));
+			
+			for (var i = 0; i < personneList.length; i++) {
+				personneList[i].afficher("");
+			}
+			
+			console.log(derek.nom);
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">96f6261c-7bff-4a7a-ba91-c6f87f2a27f0</identifier>
+  </ID>
+  <name>EA_CRITERES_SEQ</name>
+  <cycleFlag>false</cycleFlag>
+  <orderFlag>false</orderFlag>
+  <schema>
+    <name>SCHEMA1</name>
+  </schema>
+</sequence>
