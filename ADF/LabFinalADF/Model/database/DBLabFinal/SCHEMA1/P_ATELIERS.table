@@ -60,12 +60,11 @@
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">20</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
-          <typeName>VARCHAR2</typeName>
+          <typeName>CHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -150,8 +149,480 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">73f1278e-2d37-4622-b301-908d243f46b7</identifier>
+      </ID>
+      <name>DUREE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">7c6f9af9-1447-4a13-813d-7a7640f535bc</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">26136c7d-7028-411d-9bc2-ff53d38d8135</identifier>
+      </ID>
+      <name>PORTABLE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">ac3d72e6-8fdf-4cad-8875-22540c3f43da</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">c9da2697-74ce-452b-9208-d367a3ad5951</identifier>
+      </ID>
+      <name>ACETATE_ELEC</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f9b9ad0d-5423-42dd-8b93-def03d2881eb</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">852f62ad-abba-4e21-961d-0566ed173318</identifier>
+      </ID>
+      <name>P_ATELIERS_CHK_ACETATE_ELEC</name>
+      <checkConditionFragment class="oracle.javatools.db.sql.WhereObject">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">99a6471c-94d1-4d12-94a5-f29c3984689a</identifier>
+        </ID>
+        <arguments>
+          <argument class="oracle.javatools.db.sql.WhereObject">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">3479391e-5162-4348-a4f1-bdb76a8be321</identifier>
+            </ID>
+            <arguments>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">fb8aa96a-b09e-4556-9aba-71fbed9f3cb8</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">bfcccd40-abc1-4a68-8a00-a07bbecb4e34</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>ACETATE_ELEC</name>
+                    <identifier class="java.lang.String">c9da2697-74ce-452b-9208-d367a3ad5951</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">143f0aa3-eab8-49ab-abaf-552ed639ec25</identifier>
+                  </ID>
+                  <SQLText>0</SQLText>
+                </rightExpression>
+              </argument>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">b7173a02-68a9-4992-9a1a-a41f68515ee9</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">5def05b2-98d2-4abc-b996-5207e5f42765</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>ACETATE_ELEC</name>
+                    <identifier class="java.lang.String">c9da2697-74ce-452b-9208-d367a3ad5951</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">00fdaddc-e532-4166-a676-4143cfb30bfa</identifier>
+                  </ID>
+                  <SQLText>1</SQLText>
+                </rightExpression>
+              </argument>
+            </arguments>
+            <operator>373</operator>
+          </argument>
+        </arguments>
+        <operator>372</operator>
+      </checkConditionFragment>
+      <deferrableState>DEFER_INIT_IMMEDIATE</deferrableState>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">411288ff-4629-436d-8110-50f0baf09abf</identifier>
+      </ID>
+      <name>P_ATELIERS_CHK_DUREE</name>
+      <checkConditionFragment class="oracle.javatools.db.sql.WhereObject">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">09b9c209-8818-4451-9718-0af4bd106013</identifier>
+        </ID>
+        <arguments>
+          <argument class="oracle.javatools.db.sql.WhereObject">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">db961b80-adad-4858-a1dd-1c4fcce29469</identifier>
+            </ID>
+            <arguments>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">da5ed312-5573-4710-8284-6cc8ddab93cc</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">3b863454-a427-4be4-91a3-c6af5c7ce297</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>DUREE</name>
+                    <identifier class="java.lang.String">73f1278e-2d37-4622-b301-908d243f46b7</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">f5aac8f4-e9c3-4015-9dac-2de4835a4eed</identifier>
+                  </ID>
+                  <SQLText>30</SQLText>
+                </rightExpression>
+              </argument>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">0db46225-6b86-4682-a928-6b7ec1786113</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">35afcb04-1b0b-4046-bc28-a7db114e3def</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>DUREE</name>
+                    <identifier class="java.lang.String">73f1278e-2d37-4622-b301-908d243f46b7</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">af4e6606-639b-40d1-8fd2-95276cfbb759</identifier>
+                  </ID>
+                  <SQLText>45</SQLText>
+                </rightExpression>
+              </argument>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">3692adf9-bbb5-4402-8f58-4c4fa05d3f46</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">0899f8ce-998a-47aa-be51-0bcc2130e435</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>DUREE</name>
+                    <identifier class="java.lang.String">73f1278e-2d37-4622-b301-908d243f46b7</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">75942745-501a-488f-88b0-0492a648ea65</identifier>
+                  </ID>
+                  <SQLText>60</SQLText>
+                </rightExpression>
+              </argument>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">e569e447-2d5b-46fb-8df5-ea40d3b22744</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">0a74a81e-b0bf-4d2f-86f8-4ba02ad313ef</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>DUREE</name>
+                    <identifier class="java.lang.String">73f1278e-2d37-4622-b301-908d243f46b7</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">a67e0464-017e-4628-a521-74b06a7ea70b</identifier>
+                  </ID>
+                  <SQLText>90</SQLText>
+                </rightExpression>
+              </argument>
+            </arguments>
+            <operator>373</operator>
+          </argument>
+        </arguments>
+        <operator>372</operator>
+      </checkConditionFragment>
+      <deferrableState>DEFER_INIT_IMMEDIATE</deferrableState>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">7f66a915-082b-479c-bcfc-ef3f0b5601aa</identifier>
+      </ID>
+      <name>P_ATELIERS_CHK_LANGUE</name>
+      <checkConditionFragment class="oracle.javatools.db.sql.WhereObject">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f2017d70-3212-4a54-bc50-65a54b9f0699</identifier>
+        </ID>
+        <arguments>
+          <argument class="oracle.javatools.db.sql.WhereObject">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">0bcabff7-2638-4244-99ee-2bc1e59598c4</identifier>
+            </ID>
+            <arguments>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">f7249d1b-c2a6-41b8-a37f-61dcade574dd</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">f40d28d2-930d-4448-86ec-babfd71dcc65</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>LANGUE</name>
+                    <identifier class="java.lang.String">391decab-d2d7-4f3b-9eb7-db738dba17d7</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">aaf300c7-014b-48c8-83f8-6bcf326a3f9a</identifier>
+                  </ID>
+                  <SQLText>&apos;F&apos;</SQLText>
+                </rightExpression>
+              </argument>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">5a1a1d2a-9149-41cf-830b-bb1b99166c81</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">71d75513-699b-4eca-8b2b-104d6a7b0306</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>LANGUE</name>
+                    <identifier class="java.lang.String">391decab-d2d7-4f3b-9eb7-db738dba17d7</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">f3bc2237-7cc2-4930-922b-50769cf1830c</identifier>
+                  </ID>
+                  <SQLText>&apos;A&apos;</SQLText>
+                </rightExpression>
+              </argument>
+            </arguments>
+            <operator>373</operator>
+          </argument>
+        </arguments>
+        <operator>372</operator>
+      </checkConditionFragment>
+      <deferrableState>DEFER_INIT_IMMEDIATE</deferrableState>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">c8946468-568d-4587-9056-c3418cc9c371</identifier>
+      </ID>
+      <name>P_ATELIERS_CHK_PORTABLE</name>
+      <checkConditionFragment class="oracle.javatools.db.sql.WhereObject">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">590b6689-66aa-4b84-b5ef-0f518a0177e4</identifier>
+        </ID>
+        <arguments>
+          <argument class="oracle.javatools.db.sql.WhereObject">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">f806edf4-3a4d-4e1b-8ccd-0822cbd452c9</identifier>
+            </ID>
+            <arguments>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">c32fe4bd-d536-4329-9841-c005d53fcdc1</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">e8a11657-8aa9-44e9-8f7f-d3a73e69034f</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>PORTABLE</name>
+                    <identifier class="java.lang.String">26136c7d-7028-411d-9bc2-ff53d38d8135</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">6177d71d-26d4-4430-88fe-cd4ba4759989</identifier>
+                  </ID>
+                  <SQLText>0</SQLText>
+                </rightExpression>
+              </argument>
+              <argument class="oracle.javatools.db.sql.Comparison">
+                <ID class="oracle.javatools.db.IdentifierBasedID">
+                  <identifier class="java.lang.String">fee59cae-edfb-41f2-a186-7cf3a996c395</identifier>
+                </ID>
+                <comparator>5</comparator>
+                <leftExpression class="oracle.javatools.db.sql.ColumnUsage">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">3834d13c-34b9-491a-950d-3c19270aba79</identifier>
+                  </ID>
+                  <objectID class="oracle.javatools.db.IdentifierBasedID">
+                    <name>PORTABLE</name>
+                    <identifier class="java.lang.String">26136c7d-7028-411d-9bc2-ff53d38d8135</identifier>
+                    <parent class="oracle.javatools.db.IdentifierBasedID">
+                      <name>P_ATELIERS</name>
+                      <identifier class="java.lang.String">4e5ff1b9-f0c3-4977-bf05-b1949c0b8d0b</identifier>
+                      <schemaName>SCHEMA1</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>SCHEMA1</schemaName>
+                    <type>COLUMN</type>
+                  </objectID>
+                  <outerJoin>false</outerJoin>
+                  <qualified>false</qualified>
+                </leftExpression>
+                <priorOnLeft>false</priorOnLeft>
+                <priorOnRight>false</priorOnRight>
+                <rightExpression class="oracle.javatools.db.sql.SimpleSQLFragment">
+                  <ID class="oracle.javatools.db.IdentifierBasedID">
+                    <identifier class="java.lang.String">05ef72ce-f913-42c1-af5b-7192074a910b</identifier>
+                  </ID>
+                  <SQLText>1</SQLText>
+                </rightExpression>
+              </argument>
+            </arguments>
+            <operator>373</operator>
+          </argument>
+        </arguments>
+        <operator>372</operator>
+      </checkConditionFragment>
+      <deferrableState>DEFER_INIT_IMMEDIATE</deferrableState>
+      <enabled>true</enabled>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <ID class="oracle.javatools.db.IdentifierBasedID">
         <identifier class="java.lang.String">db85b92d-8f5e-4353-b203-42f51a63875e</identifier>
@@ -167,7 +638,6 @@
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -200,7 +670,6 @@
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -233,7 +702,6 @@
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -266,7 +734,6 @@
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -309,7 +776,6 @@
                 <schemaName>SCHEMA1</schemaName>
                 <type>TABLE</type>
               </parent>
-              <schemaName>SCHEMA1</schemaName>
               <type>COLUMN</type>
             </objectID>
             <outerJoin>false</outerJoin>
