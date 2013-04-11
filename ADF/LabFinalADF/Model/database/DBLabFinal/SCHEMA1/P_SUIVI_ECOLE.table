@@ -3,7 +3,7 @@
   <ID class="oracle.javatools.db.IdentifierBasedID">
     <identifier class="java.lang.String">b9f0fe84-d54e-4f49-a849-aca88f65597e</identifier>
   </ID>
-  <name>AE_SUIVI_ECOLE</name>
+  <name>P_SUIVI_ECOLE</name>
   <columns>
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
@@ -82,12 +82,11 @@
           <name>ID_ECOLE</name>
           <identifier class="java.lang.String">cf81657c-77f0-4de4-88ab-d3089ab8d2e5</identifier>
           <parent class="oracle.javatools.db.IdentifierBasedID">
-            <name>AE_SUIVI_ECOLE</name>
+            <name>P_SUIVI_ECOLE</name>
             <identifier class="java.lang.String">b9f0fe84-d54e-4f49-a849-aca88f65597e</identifier>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
