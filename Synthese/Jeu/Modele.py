@@ -12,7 +12,7 @@ class Fred():
         self.direction = 'G'
         self.vitesse = 3
         self.etat = 0        # 0=Debout, 1=baisse, 2=en saut
-        self.position = [500, 150]
+        self.position = [735, 75]
         self.objectList = []
 
     def bouge(self, event):
