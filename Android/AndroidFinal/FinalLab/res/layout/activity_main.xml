@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/muenchen"
+    android:background="@drawable/munich1"
     tools:context=".MainActivity" >
 
     <ImageView
@@ -14,25 +14,27 @@
         android:src="@drawable/munich" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonResto"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_marginBottom="44dp"
-        android:alpha="0.7"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:textSize="15sp"
+        android:alpha="0.80"
         android:background="#000000"
         android:text="Restaurants"
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonHotel"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="59dp"
-        android:alpha="0.7"
+        android:layout_marginBottom="20dp"
+        android:textSize="15sp"
+        android:alpha="0.80"
         android:background="#000000"
         android:text="Hotels"
         android:textColor="#FFFFFF" />
