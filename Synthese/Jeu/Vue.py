@@ -9,7 +9,6 @@ pygame.key.set_repeat(15, 15)
 
 class Vue():
     def __init__(self, parent):
-        print("VUE")
         self.parent = parent
         self.listeEnnemis = {"camera": [], "droneS": [], "droneA": []}
         self.robotList = self.parent.modele.prison.robotList
@@ -33,7 +32,6 @@ class Vue():
                         self.listeEnnemis.get("camera").append([item[0], self.camera])
 
     def refresh(self):
-        print("REFRESH")
         self.fenetre.blit(self.fond, (0, 0))
         posSolo = self.parent.modele.fred.position
         self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
@@ -41,7 +39,6 @@ class Vue():
         for key in self.listeEnnemis:
             if key == "droneA":
                 for item1 in self.listeEnnemis[key]:
-                    print("ACKBAR")
                     self.droneA = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.robotList["droneA"]:
                         if item2[0] == item1[0]:
@@ -49,7 +46,6 @@ class Vue():
                     self.fenetre.blit(item1[1], (posDroneA[0], posDroneA[1]))
             elif key == "droneS":
                 for item1 in self.listeEnnemis[key]:
-                    print("JABBA")
                     self.droneS = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.robotList["droneS"]:
                         if item2[0] == item1[0]:
@@ -57,7 +53,6 @@ class Vue():
                     self.fenetre.blit(item1[1], (posDroneS[0], posDroneS[1]))
             elif key == "camera":
                 for item1 in self.listeEnnemis[key]:
-                    print("R2D2")
                     self.camera = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.robotList["camera"]:
                         if item2[0] == item1[0]:

@@ -35,10 +35,9 @@ class Fred():
         pass
 
     def tick(self):
-        self.rep = 1
         for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
             if event.type == QUIT:              # Si un de ces evenements est de type QUIT
-                self.rep = 0                    # On arrete la boucle
+                exit()                          # On arrete la boucle
             else:
                 self.parent.listeEvenement.append(event)
                 if event.type == KEYDOWN:       # si une touche du clavier est appuyee
@@ -47,12 +46,10 @@ class Fred():
                         self.bouge(event)
                     elif event.key == 304:
                         self.parent.backToTheFuture()
-        return self.rep
 
 
 class Robot():
     def __init__(self):
-        print("ROBOT")
         self.id = 0
         self.direction = "H"
         self.etat = 0     # Etat d'alerte -> 0=RAS, 1=Suspect, 2=Alerte
@@ -67,7 +64,6 @@ class Robot():
 
 class camera(Robot):
     def __init__(self, parent, pos):
-        print("CAMERA")
         self.parent = parent
         self.portee = 30
         self.position = pos
@@ -94,10 +90,9 @@ class camera(Robot):
 
 
 class droneS(Robot):
-    def __init__(self, parent, pos):
-        print("DRONES")
+    def __init__(self, parent, pos, direction):
         self.position = pos
-        self.direction = "H"
+        self.direction = direction
         self.parent = parent
         self.vitesse = 2
         self.energie = 5
@@ -135,7 +130,6 @@ class droneS(Robot):
 
 class droneA(Robot):
     def __init__(self, parent, pos):
-        print("DRONEA")
         self.parent = parent
         self.position = pos
         self.vitesse = 3
@@ -169,7 +163,6 @@ class droneA(Robot):
 
 class Piege():
     def __init__(self, parent):
-        print("PIEGE")
         self.parent = parent
         self.id = 0
         self.posInitial = [0, 0]
@@ -180,20 +173,17 @@ class Piege():
 
 class laser(Piege):
     def __init__(self):
-        print("LASER")
         self.degats = 0.5
 
 
 class detecteur(Piege):
     def __init__(self):
-        print("DETECTEUR")
         self.degats = 0.5
         self.portee = 15
 
 
 class Prison():
     def __init__(self, parent):
-        print("PRISON")
         self.parent = parent
         self.robotList = {"camera": [], "droneS": [], "droneA": []}
         self.trapList = {"laser": [], "detecteur": []}
@@ -203,11 +193,18 @@ class Prison():
 
 class Modele():
     def __init__(self, parent):
-        print("MODELE")
         self.parent = parent
-        self.listeEvenement = []
+        self.listeEvenement = [50 * [2]]
         self.fred = Fred(self)
         self.prison = Prison(self)
+        self.robotList = self.prison.robotList
+
+    def tickGeneral(self):
+        self.listeEvenement.append(["fred", self.fred.tick()])
+        for key in self.robotList:
+            for item in self.robotList[key]:
+                if item:
+                    self.listeEvenement.append([item[0], item[1].tick()])
 
     def backToTheFuture(self):
         print("YAHOUUU ! BACK TO THE FUTUUURE !")
