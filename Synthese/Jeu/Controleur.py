@@ -13,6 +13,7 @@ class Controleur():
         self.vue = Vue(self)
         self.rep = 1
         self.init = True
+        self.pause = False
 
     def initPartie(self):
         # Ajout des ennemis
@@ -31,5 +32,8 @@ if __name__ == '__main__':
         c.initPartie()
         init = False
     while 1:
-        c.modele.tickGeneral()
+        if c.pause:
+            c.modele.backToTheFuture()
+        else:
+            c.modele.tickGeneral()
         c.vue.refresh()

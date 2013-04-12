@@ -1,6 +1,7 @@
 from Controleur import *
 import pygame
 import random
+import time
 from threading import *
 
 
@@ -45,7 +46,8 @@ class Fred():
                     if event.key == K_UP or event.key == K_SPACE or event.key == K_DOWN or event.key == K_LEFT or event.key == K_RIGHT:
                         self.bouge(event)
                     elif event.key == 304:
-                        self.parent.backToTheFuture()
+                        self.parent.parent.pause = True
+        return
 
 
 class Robot():
@@ -207,4 +209,11 @@ class Modele():
                     self.listeEvenement.append([item[0], item[1].tick()])
 
     def backToTheFuture(self):
+        self.count = 50
+        while self.count >= 0:
+            eve = self.listeEvenement.pop(self.count)
+            print(eve)
+            self.count -= 1
+        self.parent.pause = False
+
         print("YAHOUUU ! BACK TO THE FUTUUURE !")
