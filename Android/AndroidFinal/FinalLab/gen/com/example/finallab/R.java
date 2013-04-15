@@ -20,8 +20,8 @@ public final class R {
         public static final int adresse=0x7f070005;
         public static final int buttonHotel=0x7f070002;
         public static final int buttonResto=0x7f070001;
-        public static final int desc=0x7f070007;
-        public static final int description=0x7f070008;
+        public static final int desc=0x7f070008;
+        public static final int description=0x7f070007;
         public static final int imageView1=0x7f070000;
         public static final int listeHotels=0x7f070009;
         public static final int listeRestos=0x7f07000a;
