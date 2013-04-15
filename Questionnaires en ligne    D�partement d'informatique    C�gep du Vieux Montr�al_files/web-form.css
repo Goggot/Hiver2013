@@ -1,0 +1,241 @@
+.info-msg {
+	border:3px solid #333;
+	border-radius:5px;
+	background-color:#ddd;
+	color:#333;
+	padding:15px;
+	margin-bottom:10px;
+}
+
+#form-admin-page input{
+	margin:5px;
+	margin-left:0px;
+}
+
+#form-admin-page {
+	font-family:Arial;
+}
+
+#form-admin-page .form-section {
+	border:1px solid #777;
+	border-radius:5px;
+	margin:20px 5px;
+	padding:5px;
+	min-height:30px;
+}
+
+#form-admin-page .form-section-title {
+	border-bottom:1px solid #777;
+	color:#777;
+}
+
+#form-admin-page .form {
+	margin-top:2px;
+	border-radius:5px;
+	font-size:0.9em;
+	color:#777;
+	padding-right:5px;
+	padding-left:40px;
+	padding-top:5px;
+	line-height:25px;
+	background-image:url('/images/web-forms/angle-arrow.png');
+	background-repeat:no-repeat;
+	background-position: 5px 5px;
+}
+
+#form-admin-page .form-name {
+	float:left;
+}
+
+#form-admin-page .form-action {
+	float:right;
+	width:200px;
+	text-align:right;
+}
+
+#form-admin-page .form-float-left {
+	float:left;
+}
+
+#form-admin-page .form-float-right {
+	float:right;
+}
+
+#form-admin-page .form-clear {
+	clear:both;
+}
+
+#form-admin-page .form-title {
+	font-size:1.3em;
+	color:#777;
+	margin-bottom:10px;
+}
+
+#form-admin-page .form-questions {
+	border:1px solid #777;
+	border-radius:5px;
+	padding:10px;
+}
+
+#form-admin-page .label {
+	color:#777;
+	float:left;
+	width:200px;
+	margin-right:10px;
+}
+
+#form-admin-page .errorLabel {
+	color:#dd2222;
+	font-weight:bold;
+}
+
+#form-admin-page .question-clear {
+	clear:both;
+	height:10px;
+}
+
+#form-admin-page .input {
+	color:#777;
+	float:left;
+	width:535px;
+}
+
+#form-admin-page .input .medium-input{
+	width:300px;
+}
+
+#form-admin-page .question-info {
+	margin-top:2px;
+	padding:5px;
+	border-radius:5px;
+}
+
+#form-admin-page .form-button {
+	background-image:url('/images/web-forms/button.png');
+	width:192px;
+	height:64px;
+	border:0;
+	background-color:transparent;
+	color:#eee;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+#form-admin-page .form-small-button {
+	background-image:url('/images/web-forms/small-button.png');
+	width:128px;
+	height:43px;
+	border:0;
+	background-color:transparent;
+	color:#eee;
+	font-weight:bold;
+	cursor:pointer;
+	margin-top:40px;
+}
+
+#form-admin-page .form-back-link {
+	margin-bottom:15px;
+	font-size:1.1em;
+}
+
+#form-admin-page #question-choices {
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-top:20px;
+	border-top:1px solid #888;
+	border-bottom:1px solid #888;
+}
+
+#form-admin-page #choice-container {
+	margin-top:10px;
+}
+
+#form-admin-page .attendee-list {
+	padding:5px;
+	border:1px solid #888;
+	width:400px;
+}
+
+#form-admin-page .new-attendee {
+	float:left;
+	width:175px;
+	font-size:0.9em;
+}
+
+#form-admin-page .floating-button{
+	position:fixed;
+	bottom:10px;
+	margin-left:650px;
+	width:150px;
+	text-align:right;
+}
+
+/* ======================================= */
+/* Form page*/
+
+#form-page h1 {
+	margin-bottom:15px;
+}
+
+#form-page .question {
+	border-radius:3px;
+	border:1px solid #ddd;
+	margin-bottom:20px;
+	padding:10px;
+}
+
+#form-page h2 {
+	font-size:1.0em;
+	color:#444;
+}
+
+#form-page .info-msg {
+	background-color:#eee;
+}
+
+#form-page .submit-btn {
+	margin-top:20px;
+}
+
+#form-page .answer-title {
+	margin-top:20px;
+	color:#888;
+}
+
+#form-page .answer-container {
+	border-top:1px solid #eee;
+	padding-top:5px;
+}
+
+#form-page ul.form-list {
+	margin-left:20px;
+}
+
+#form-page .questionWeighting {
+	float:left;
+	width:40px;
+}
+
+#form-page .multiple-question {
+	float:left;
+	width:600px;
+}
+
+#form-page .multiple-answer {
+	float:left;
+	width:100px;
+}
+
+#form-page .multiple-question-section {
+	padding:5px;
+}
+
+@media print {
+	.privateMenuSection {
+		display:none;
+	}
+	
+	#siteHeader  {
+		display:none
+	}
+}
