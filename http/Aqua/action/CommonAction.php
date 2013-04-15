@@ -1,9 +1,6 @@
 <?php
 	session_start();
 	
-	require_once("action/Constants.php");
-	require_once("action/DAO/Connection.php");
-	
 	abstract class CommonAction {
 		public static $VISIBILITY_PUBLIC = 0;
 		public static $VISIBILITY_MEMBER = 1;
@@ -34,8 +31,6 @@
 			
 			// execution de l'enfant...
 			$this->executeAction();
-			
-			Connection::closeConnection();
 		}
 		
 		public function getUsername() {
@@ -49,6 +44,15 @@
 		}
 		
 		public function isLoggedIn() {
+			/*$connected = false;
+			
+			if ($_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC) {
+				$connected = true;
+			}
+			
+			return $connected;
+			*/
+			// Variance
 			return $_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC;
 		}
 	
