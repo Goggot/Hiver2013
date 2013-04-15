@@ -17,8 +17,20 @@
 	       <div class="clear"></div>
 	  </div>
 	  <div class="page-content">
-	       <textarea></textarea>
-	       <button onclick="exportText()">Sauvegarder</button>
+			 <?php $tab = $action->executeAction();
+             	
+                foreach ($tab as $ligne){
+                    for ($i = 0; $i < 4; $i++){
+                        echo $ligne[$i];
+						?>
+                        <?php
+                    }
+					?>
+					</br>
+                    <?php
+                }
+              ?>
+          
 	  </div>
      </div>
 </div>

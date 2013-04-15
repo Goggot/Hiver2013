@@ -1,6 +1,5 @@
 <?php
-	session_start();
-	
+	session_start();	
 	require_once("action/Constants.php");
 	require_once("action/DAO/Connection.php");
 	
@@ -34,7 +33,6 @@
 			
 			// execution de l'enfant...
 			$this->executeAction();
-			
 			Connection::closeConnection();
 		}
 		
@@ -49,6 +47,15 @@
 		}
 		
 		public function isLoggedIn() {
+			/*$connected = false;
+			
+			if ($_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC) {
+				$connected = true;
+			}
+			
+			return $connected;
+			*/
+			// Variance
 			return $_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC;
 		}
 	

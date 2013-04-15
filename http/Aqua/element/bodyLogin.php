@@ -11,6 +11,7 @@
 			 <li><a href="images.php">Galerie photos</a></li>
 			 <li><a href="contact.php">Contactez-nous</a></li>
 			    <li><a href="login.php">Connexion</a></li>
+                <li><a href="produit.php">Produit</a></li>
 		    </ul>
 	       </div>
 	       <div class="clear"></div>

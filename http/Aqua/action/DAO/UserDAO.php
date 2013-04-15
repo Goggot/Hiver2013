@@ -3,7 +3,8 @@
 
 	class UserDAO {	
 	
-		public static function authenticate($username, $password) {
+		public static function authenticate($username, $password)
+		 {
 			$connection = Connection::getConnection();
 			
 			$password = sha1($password);
