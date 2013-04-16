@@ -3,6 +3,7 @@ package com.example.finallab;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -11,16 +12,11 @@ public class MainActivity extends Activity {
 
 	Button bResto;
 	Button bHotel;
-	Resto resto;
-	Hotel hotel;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		// Remplissage des databases
-		fillDB();
 		
 		bResto = (Button)findViewById(R.id.buttonResto);
 		bHotel = (Button)findViewById(R.id.buttonHotel);
@@ -43,38 +39,5 @@ public class MainActivity extends Activity {
 				startActivity(i);
 			}
 		}
-	}
-	
-	public void fillDB(){
-		hotel = new Hotel("NH Muenchen Deutscher Kaiser",
-							"Arnulfstrasse 2, München, D-80335, Allemagne", 
-							"4988954530", 
-							"Cet original édifice datant de 1920 a été agrandi dans les années 60 avec une tour de 13 étages en complément des trois étages d’origine. Édifice le plus élevé du quartier, l’hôtel offre une vue magnifique sur Munich depuis la plupart des chambres.", 
-							100);
-		hotel = new Hotel("Sofitel Munich Bayerpost", 
-							"Bayerstrasse 12, 80335 MUENCHEN GERMANY", 
-							"06995307594", 
-							"Construit dans le style wilhelmien, notre hôtel 5 étoiles allie hospitalité de qualité, architecture intérieure d'avant-garde et décoration suivant l'art de vivre français. Venez découvrir l'un des plus beaux hôtels munichois dans toute sa splendeur.", 
-							254);
-		hotel = new Hotel("Eurostars Grand Central", 
-							"Arnulfstr. 35, Munich, BY 80636 Allemagne ", 
-							"0825213372", 
-							"Avant-garde. Style. Architecture innovante. Plus de 16 000 mètres carrés de confort et de design. 257 chambres. 8 suites. Lits XXL. Salles de bain XXL. 10 appartements de long séjour. Restaurant d'une capacité de plus d'une centaine de personnes. Quatre salles de conférences d'un total de 700 mètres carrés et d'une capacité de 10 à 350 personnes, selon vos besoins. Bain turc. Piscine intérieure. Gymnase. Sauna. ", 
-							109);
-		
-		resto = new Resto("Dallmayr", 
-							"Dienerstr. 14 D - 80331 München", "0892135100", 
-							"While it is all hustle and bustle amid the heavily laden shelves of the delicatessen downstairs, on the first floor chef Diethard Urbansky reinvents classics dishes including calves‘ kidneys and pears Belle Hélène. For the perfect wine recommendation (there are a fine selection of Rieslings) who better than sommelier Andrej Grunert?", 
-							130);
-		resto = new Resto("Tantris", 
-							"Johann-Fichte-Str. 7 D - 80805 Schwabing", 
-							"0893619590", 
-							"Tantris has become as renowned for its legendary 1970s charm as it is for Hans Haas‘s classic cuisine. His guests‘ enthusiasm for his undisputed culinary skills remains as keen as it ever was.", 
-							100);
-		resto = new Resto("Schuhbecks in den Südtiroler Stuben", 
-							"Platzl 6 D - 80331 München", 
-							"0892166900", 
-							"The atmosphere at the Platzl Hotel is pleasant and lively and this feeling extends into Alfons Schuhbeck‘s elegant Alpine restaurant. Patrick Raaß offers two menus (‘Schuhbeck‘s Classics‘ and ‘World of Spices‘). Next door, the restaurant‘s own shops sell ice cream, chocolate, spices and wine.", 
-							75);
 	}
 }

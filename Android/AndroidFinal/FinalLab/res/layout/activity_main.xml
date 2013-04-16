@@ -11,7 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/munich" />
+        android:contentDescription="Munich"
+        android:src="@drawable/munich"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/buttonResto"
@@ -20,11 +22,12 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
-        android:textSize="15sp"
         android:alpha="0.80"
         android:background="#000000"
         android:text="Restaurants"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/buttonHotel"
@@ -33,10 +36,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:textSize="15sp"
         android:alpha="0.80"
         android:background="#000000"
         android:text="Hotels"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
