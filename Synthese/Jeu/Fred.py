@@ -33,6 +33,7 @@ class Fred():
         pass
 
     def tick(self):
+        self.ev = 0
         for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
             if event.type == QUIT:              # Si un de ces evenements est de type QUIT
                 exit()                          # On arrete la boucle
@@ -44,4 +45,4 @@ class Fred():
                         self.bouge(event)
                     elif event.key == 304:
                         self.parent.parent.pause = True
-        return
+                    return event.key

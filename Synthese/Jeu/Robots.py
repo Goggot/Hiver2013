@@ -42,6 +42,7 @@ class camera(Robot):
                     pygame.mixer.music.load('music/r2d2/4.mp3')
                 pygame.mixer.music.play()
                 Timer(4.0, self.temps).start()
+        return
 
 
 class droneS(Robot):
@@ -49,23 +50,23 @@ class droneS(Robot):
         self.position = pos
         self.direction = direction
         self.parent = parent
-        self.vitesse = 2
         self.energie = 5
         self.posInitial = pos
         self.portee = 20
         self.audio = False
+        self.vitesse = 0.2
 
     def bouge(self):
         if self.direction == "H":
-            if self.position[1] <= 250:
+            if self.position[1] <= (self.posInitial[1] - 50):
                 self.direction = "B"
             else:
-                self.position[1] -= 0.2
+                self.position[1] -= self.vitesse
         else:
-            if self.position[1] >= 450:
+            if self.position[1] >= (self.posInitial[1] + 50):
                 self.direction = "H"
             else:
-                self.position[1] += 0.2
+                self.position[1] += self.vitesse
 
     def mourrir(self):
         pass
@@ -81,13 +82,15 @@ class droneS(Robot):
                 pygame.mixer.music.load('music/jabba.mp3')
                 pygame.mixer.music.play()
                 Timer(6.0, self.temps).start()
+        return self.direction
 
 
 class droneA(Robot):
-    def __init__(self, parent, pos):
+    def __init__(self, parent, pos, direction):
         self.parent = parent
         self.position = pos
-        self.vitesse = 3
+        self.direction = direction
+        self.vitesse = 0.5
         self.energie = 10
         self.posInitial = pos
         self.portee = 10
@@ -95,7 +98,16 @@ class droneA(Robot):
         self.audio = False
 
     def bouge(self):
-        pass
+        if self.direction == "G":
+            if self.position[0] <= (self.posInitial[0] - 50):
+                self.direction = "D"
+            else:
+                self.position[0] -= self.vitesse
+        else:
+            if self.position[0] >= (self.posInitial[0] + 50):
+                self.direction = "G"
+            else:
+                self.position[0] += self.vitesse
 
     def attaque(self):
         pass
@@ -114,3 +126,4 @@ class droneA(Robot):
                 pygame.mixer.music.load('music/ackbar.mp3')
                 pygame.mixer.music.play()
                 Timer(1.0, self.temps).start()
+        return self.direction

@@ -16,7 +16,7 @@ class Controleur():
 
     def initPartie(self):
         # Ajout des ennemis
-        self.robotList.get("droneA").append([1, droneA(self.modele, [460, 40])])
+        self.robotList.get("droneA").append([1, droneA(self.modele, [500, 40], 'G')])
         self.robotList.get("droneS").append([2, droneS(self.modele, [950, 380], 'H')])
         self.robotList.get("camera").append([3, camera(self.modele, [600, 500])])
         self.robotList.get("camera").append([4, camera(self.modele, [450, 300])])
