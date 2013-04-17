@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/home/pouet/Hiver2013/Android/.metadata/.plugins/org.eclipse.jdt.core
+3205380468.index
+1056726100.index
+186371546.index

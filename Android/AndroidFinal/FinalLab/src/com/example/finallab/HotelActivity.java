@@ -21,9 +21,9 @@ public class HotelActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hotels);
-		h.put("Hotel1", R.drawable.munich);
+		h.put("Hotel1", "test");
 		vecteur.add(h);
-		h.put("Hotel2", R.drawable.munich1);
+		h.put("Hotel2", "test2");
 		vecteur.add(h);
 		
 		listeHotel = (ListView)findViewById(R.id.listeHotels);

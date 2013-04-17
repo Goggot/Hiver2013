@@ -1,16 +1,15 @@
-import pygame
-from pygame.locals import *
-from Modele import *
-from Vue import *
+import Modele
+import Vue
+from Robots import *
 
 
 class Controleur():
     def __init__(self):
             # Pour acceder aux modeles et vues,
             # utiliser ces deux variable comportant le self du controleur pour un transit dans les deux sens
-        self.modele = Modele(self)
+        self.modele = Modele.Modele(self)
         self.robotList = self.modele.prison.robotList
-        self.vue = Vue(self)
+        self.vue = Vue.Vue(self)
         self.rep = 1
         self.init = True
         self.pause = False

@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
 
 	Button bResto;
 	Button bHotel;
-	
+	Operations operation = new Operations(this);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

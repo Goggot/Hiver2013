@@ -1,4 +1,3 @@
-import os
 import pygame
 import pygame.mixer
 from pygame.locals import *
