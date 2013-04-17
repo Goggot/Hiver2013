@@ -1,0 +1,665 @@
+* { margin:0; padding:0;}
+
+html {
+	background-color:#ff9d2a;		
+	color:#444444;
+	background-image:url('/images/top-band.png');
+	background-repeat:repeat-x;
+}
+
+body { 
+	font-size:12px; 
+	font-family:Arial; 	
+}
+
+img {
+	border:0; 
+}
+
+a {
+	text-decoration:underline; 
+	color:#fc8a24;
+}
+
+a:hover {
+	text-decoration:none; 
+}
+
+a:visited {
+	color:#fc8a24;
+}
+
+a.siteMenuLink {
+	font-weight:bold;
+	font-variant:small-caps;
+	text-decoration:none; 
+}
+
+a.siteMenuLinkPrivate {
+	color:#ff6410;
+}
+
+a.siteMenuLink:hover {
+	text-decoration:underline; 
+}
+
+a.siteMenuSelected {
+	color:#555555;	
+}
+
+p {
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+h2 {
+	color:#fc8a24;
+	
+}
+h1{
+	text-align:center;
+	color:#fc8a24;
+}
+
+.clear { 
+	clear:both;
+}
+#siteCenter {
+	margin:40px auto; 
+	text-align:left; 
+	width:980px;
+}
+
+#siteTop {
+	background-image:url('/images/site-top.gif');	
+	width:980px;
+	height:25px;
+}
+
+#siteBottom {
+	background-image:url('/images/site-bottom.gif');	
+	width:980px;
+	height:25px;
+}
+
+#siteContent {
+	min-height:400px;
+	background-color:white;	
+	padding-right:20px;
+	padding-left:20px;
+}
+
+#siteHeader {
+	padding-bottom:20px;	
+}
+
+#siteLogo {
+	float:left;
+	width:300px;	
+}
+
+.logoImg {
+	float:left;
+	width:60px;
+	height:50px;
+}
+
+.siteTitle {
+	float:left;
+	width:230px;
+}
+
+.siteTitle h1 {
+	padding-top:5px;
+	font-size:17px;
+	color:#888;
+	text-align:left;
+	font-weight:normal;
+}
+
+.siteTitle h4 {
+	color:#888;
+	font-weight:normal;
+}
+
+#siteMenu {
+	float:left;
+	width:640px;	
+	text-align:right;
+	margin-top:8px;
+}
+
+#siteMenu ul li {
+	display:inline;	
+	padding:5px;
+}
+
+.formLabel {
+	float:left;
+	width:150px;
+	text-align:right;
+	padding-right:10px;
+}
+
+.formInput {
+	float:left;
+	width:140px;
+}
+
+.formInput input[type="password"],
+.formInput input[type="text"]{
+	width:130px;
+}
+
+input[type="submit"],
+input[type="button"]{
+	padding-left:10px;
+	padding-right:10px;
+	height:30px;
+	background-image:url('/images/btn-background.png');
+	border:1px solid #999;
+	cursor:pointer;
+	color:#444;
+}
+
+.formSeparator {
+	clear:both;
+	height:10px;
+}
+
+.smallerFormLabel {
+	font-size:0.9em;
+}
+
+.formSpacer {
+	clear:both;
+	height:10px;
+}
+
+.errorMsg {
+	border:1px solid #992222;
+	background-color:#ff9999;
+	padding:5px;
+	margin-bottom:15px;
+	color:#000;
+}
+
+.successMsg {
+	border:1px solid #55ff55;
+	background-color:#ddffdd;
+	padding:5px;
+	margin-bottom:15px;
+	color:#080;
+}
+
+.errorInput {
+	font-weight:bold;
+	color:#aa0000;
+}
+
+.separator {
+	margin-bottom:10px;
+}
+
+.privateMenuSection {
+	float:left;
+	width:120px;
+	padding-left:10px;
+	min-height:330px;
+	border-right:1px solid #ddd;
+	margin-right:20px;
+}
+
+.privateMenu li {
+	margin-bottom:5px;
+}
+
+.privateMenu li ul{
+	margin-left:20px;
+}
+
+.privateContentSection {
+	float:left;
+	width:770px;
+}
+
+.privateContentSection h2 {
+	margin-bottom:15px;
+}
+
+/* ===================== Index page ====================== */
+
+#pageIndex .leftColumn {
+	float:left;
+	width:650px;
+	margin-right:10px;
+	padding:5px;
+	min-height:250px;
+}
+
+#pageIndex .rightColumn {
+	float:left;
+	width:260px;
+	padding:5px;
+	min-height:250px;
+}
+
+#pageIndex .flashSection {
+	margin-bottom:10px;
+}
+
+#pageIndex .newsFeed {
+	min-height:400px;
+}
+
+#pageIndex .newsElement {
+	margin-top:10px;	
+}
+
+#pageIndex .importantElement {
+	border:1px solid #777777;
+	padding:10px;
+	margin-bottom:10px;
+}
+
+#pageIndex .importantElement .elementTitle {
+	font-weight:bold;
+	margin-bottom:4px;
+}
+
+#pageIndex .elementLink {
+	font-size:11px;	
+	color:#aaaaaa;
+}
+
+#pageIndex .elementDate {
+	font-size:11px;	
+	color:#aaaaaa;
+}
+
+#pageIndex .seeAllNews {
+	margin-top:10px;	
+}
+
+#pageIndex .contactSection {
+	margin-top:30px;
+	border:1px solid #dddddd;
+	padding:5px;
+}
+
+#pageIndex .textContent p {
+	margin-bottom:5px;
+	margin-top:15px;
+}
+
+#pageIndex .textContent ul {
+	padding-left:35px;
+}
+
+#pageIndex .omnivoxDivision {
+	margin-top:10px;
+}
+
+/* ===================== Teachers page ====================== */
+
+#pageTeachers .teacherDiv {
+	float:left;
+	width:450px;	
+	margin-bottom:30px;
+	margin-right:10px;
+}
+
+#pageTeachers .teacherImg {
+	width:100px;
+	height:100px;
+	border:1px solid #dddddd;
+	float:left;
+	margin-right:10px;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+
+#pageTeachers .teacherDetails {
+	width:335px;
+	float:left;
+}
+
+#pageTeachers .teacherDesc {
+	height:85px;
+}
+
+#pageTeachers .teacherContact {
+	font-size:0.95em;
+}
+
+#pageTeachers .teacherDetails a {
+	color:#333333;
+}
+
+#pageTeachers h3 {
+	color:#fc8a24;
+	font-size:13px; 
+}
+
+#pageTeachers h4{
+	color:#000000;
+	font-size:12px;
+}
+
+
+/* ===================== page Travaux ====================== */
+
+#pageTravaux .travauxDiv {
+	float:left;
+	width:460px;	
+	margin-bottom:30px;
+	margin-right:10px;
+	margin-top:5px;
+}
+
+#pageTravaux .travauxImg {
+	width:100px;
+	height:100px;
+	border:1px solid #dddddd;
+	float:left;
+	margin-right:10px;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+
+#pageTravaux  h3 a{
+	text-decoration:none;
+}
+
+#pageTravaux .travauxDetails {
+	width:335px;
+	float:left;
+}
+
+#pageTravaux .travauxDesc {
+	height:85px;
+}
+
+#pageTravaux .travauxContact {
+	font-size:0.95em;
+}
+
+#pageTravaux .travauxDetails a {
+	color:#333333;
+}
+
+#pageTravaux h3 {
+	color:#fc8a24;
+}
+
+#pageTravaux .tag{
+    color:#fc8a24;
+	font-weight:bold;
+}
+
+/* ===================== page Intensif ====================== */
+#pageIntensif .leftColumn {
+	float:left;
+	width:600px;
+	margin-right:65px;
+	padding:5px;
+	min-height:250px;
+}
+
+#pageIntensif .rightColumn {
+	float:left;
+	width:260px;
+	margin-top:55px;
+	min-height:250px;
+}
+
+#pageIntensif .flashSection {
+	margin-bottom:10px;
+}
+
+#pageIntensif .newsFeed {
+	min-height:400px;
+}
+
+#pageIntensif .newsElement {
+	margin-top:10px;	
+}
+
+#pageIntensif .importantElement {
+	border:1px solid #777777;
+	padding:10px;
+	margin-bottom:10px;
+}
+
+#pageIntensif .importantElement .elementTitle {
+	font-weight:bold;
+	margin-bottom:4px;
+}
+
+#pageIntensif .important{
+color:#fc8a24;
+font-weight:bold;
+}
+
+#pageIntensif .elementDate {
+	font-size:10px;	
+	color:#aaaaaa;
+}
+
+#pageIntensif .seeAllNews {
+	margin-top:10px;	
+}
+
+#pageIntensif .contactSection {
+	margin-top:30px;
+	border:1px solid #dddddd;
+	padding:5px;
+}
+
+#pageIntensif .textContent p {
+	margin-bottom:5px;
+	margin-top:15px;
+}
+
+#pageIntensif .textContent ul {
+	padding-left:35px;
+}
+
+/* ===================== page Contact ====================== */
+
+#pageContact {
+	background-image:url('/images/cvm.png');
+	background-repeat:no-repeat;
+	background-position:bottom right;
+}
+
+#pageContact .leftColumn {
+	float:left;
+	width:460px;
+}
+
+#pageContact .rightColumn {
+	float:left;
+	width:250px;
+}
+
+/* ===================== Portail page ====================== */
+
+#pagePortail .loginBox {
+	border:1px solid gray;
+	background-color:#eee;
+	padding:10px;
+	width:350px;
+	margin:0px auto;
+}
+
+#pagePortail {
+	background-image:url('/images/cvm.png');
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	padding-top:50px;
+	min-height:300px;
+}
+
+#pagePortail a {
+	font-size:0.9em;
+}
+
+/* ===================== Passwd page ====================== */
+
+#pagePasswd .loginBox {
+	border:1px solid gray;
+	background-color:#eee;
+	padding:10px;
+	width:350px;
+	margin:0px auto;
+}
+
+#pagePasswd {
+	background-image:url('/images/cvm.png');
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	padding-top:50px;
+	min-height:300px;
+}
+
+#pagePasswd .submitDiv {
+	margin-left:160px;
+}
+
+/* ===================== First time page ====================== */
+#pageFirstTime h4 {
+	margin-bottom:10px;
+	margin-top:15px;
+}
+
+#pageFirstTime .infoBox {
+	border:1px solid gray;
+	background-color:#eee;
+	padding:10px;
+	width:650px;
+	margin:0px auto;
+	padding:10px;
+}
+
+#pageFirstTime .termsOfUse {
+	height:300px;
+	overflow-y:auto;
+	border:1px solid #333;
+	padding:5px;
+	margin-bottom:5px;
+	margin-top:10px;
+}
+
+#pageFirstTime .submitBtn {
+	margin-top:20px;
+	text-align:center;
+}
+
+#pageFirstTime .termsOfUse .italic {
+	font-style:italic;
+	font-size:1.1em;
+}
+
+#pageFirstTime .termsOfUse .title {
+	font-weight:bold;
+}
+
+#pageFirstTime .termsOfUse ul {
+	margin-left:15px;
+}
+
+/* ===================== Member list page ====================== */
+
+#pageMembers .memberTable {
+	margin-top:15px;
+	font-size:0.8em;
+}
+
+#pageMembers .memberTable tr td{
+	border:1px solid #ddd;
+	padding:5px;
+}
+
+#pageMembers .memberTable tr th {
+	border:1px solid #ddd;
+	padding:5px;
+	background-color: #eee;
+	text-align:center;
+}
+
+/* ===================== Members export page ====================== */
+
+#pageMembersExport ul {
+	margin-top:10px;
+	margin-left:20px;
+}
+
+#pageMembersExport ul li{
+	margin-bottom:5px;
+}
+
+/* ===================== Members import page ====================== */
+
+#pageMembersImport ul{
+	list-style-position:inside;
+}
+
+#pageMembersImport h4{
+	margin-top:10px;
+}
+
+#pageMembersImport .submitBtn {
+	margin-top:15px;
+}
+
+#pageMembersImport .separator {
+	height:2px;
+	background-color:#ddd;
+	margin:20px;
+}
+
+/* ===================== Private home page ====================== */
+
+#pagePrivateHome {
+	background-image:url('/images/cvm.png');
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	min-height:350px;
+}
+
+#pagePrivateHome .userType {
+	font-weight:bold;
+	color:#292;
+}
+
+/* ===================== Home box page ====================== */
+#pageHomeBox  .editorBox{
+	margin:10px auto;
+	width:420px;
+}
+
+#pageHomeBox .submitBtn {
+	text-align:center;
+	margin-top:20px;
+}
+
+/* ===================== Oracle page ====================== */
+#pageOracle .oracle-box {
+	border-radius:3px;
+	border:1px solid #555;
+	padding:15px;
+}
+
+#pageOracle .oracle-box h4{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#pageOracle .oracle-box #status {
+	font-weight:bold;
+}
+
+.oracle-box #connexionCount {
+	font-weight:bold;
+}
