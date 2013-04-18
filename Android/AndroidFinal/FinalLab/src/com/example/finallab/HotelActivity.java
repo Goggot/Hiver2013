@@ -4,35 +4,36 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.SimpleAdapter;
 
 public class HotelActivity extends Activity{
 	
-	ListView listeHotel;
-	Hashtable h = new Hashtable();
-	Vector<Hashtable> vecteur;
+	private ListView listeHotel;
+	private Vector <Hashtable<String, String>> listeItemHotel = new Vector <Hashtable<String, String>>(); 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hotels);
-		h.put("Hotel1", "test");
-		vecteur.add(h);
-		h.put("Hotel2", "test2");
-		vecteur.add(h);
-		
+		Log.i("Erwan", "Liste vide");
+		listeItemHotel = (new Operations(this)).extraireHotel();
+		Log.i("Erwan", "Liste remplie");
+		Log.i("Erwan", listeItemHotel.toString());
 		listeHotel = (ListView)findViewById(R.id.listeHotels);
 		
-		ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_list_item_1, vecteur);
+		SimpleAdapter adapteur = new SimpleAdapter(this, listeItemHotel, R.layout.canvas, new String[] {"img", "nom", "adresse"},new int[]{R.id.imgCa, R.id.nomCa, R.id.descriptionCa} );
 		
 		listeHotel.setChoiceMode(2);
 		listeHotel.setTextFilterEnabled(true);
-		listeHotel.setAdapter(aa);
+		listeHotel.setAdapter(adapteur);
 		
 		Ecouteur ec = new Ecouteur();
 		
@@ -41,6 +42,9 @@ public class HotelActivity extends Activity{
 	private class Ecouteur implements OnItemClickListener{
 		@Override
 		public void onItemClick(AdapterView<?> parent, View itemSelec, int position, long id) {
+			//if (v.get)
+			Intent i = new Intent(HotelActivity.this, DetailsActivity.class);
+			startActivity(i);
 			
 		}
 	}
