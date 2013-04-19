@@ -1,0 +1,1 @@
+c1.getString(cursor.getColumnIndex("pic"));

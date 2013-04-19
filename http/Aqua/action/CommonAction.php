@@ -2,7 +2,6 @@
 	session_start();	
 	require_once("action/Constants.php");
 	require_once("action/DAO/Connection.php");
-	require_once("action/Translator.php");
 	
 	abstract class CommonAction {
 		public static $VISIBILITY_PUBLIC = 0;
@@ -28,7 +27,7 @@
 			}
 		
 			if ($_SESSION["loggedIn"] < $this->pageVisibility) {
-				header("location:login.php");
+				header("location:index.php");
 				exit;
 			}
 			
@@ -48,27 +47,18 @@
 		}
 		
 		public function isLoggedIn() {
+			/*$connected = false;
+			
+			if ($_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC) {
+				$connected = true;
+			}
+			
+			return $connected;
+			*/
+			// Variance
 			return $_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC;
-		}
-		
-		public function translate($page, $node){
-			$lang = "fr"; // langue par défaut du site
-	
-			if (!isset($_SESSION["lang"])) {
-				$_SESSION["lang"] = $lang;
-			}
-			else {
-				$lang = $_SESSION["lang"];
-			}
-			
-			if (isset($_GET["lang"])) {
-				$lang = $_GET["lang"];
-				$_SESSION["lang"] = $lang;
-			}
-			
-			$translator = new Translator($lang);
-			return $result = $translator->read($page, $node);
 		}
 	
 		protected abstract function executeAction();
+	
 	}
