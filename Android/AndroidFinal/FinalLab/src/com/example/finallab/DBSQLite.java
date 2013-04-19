@@ -7,24 +7,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBSQLite extends SQLiteOpenHelper{
 
 	public DBSQLite(Context context) {
-		super(context, "db", null, 1);
+		super(context, "db5", null, 1);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATE TABLE hotels(id INTEGER PRIMARY KEY AUTOINCREMENT," +
-										"nom TEXT," +
-										"adresse TEXT," +
-										"tel TEXT" +
-										"description TEXT," +
-										"prix INTEGER)");
+		db.execSQL("CREATE TABLE hotels(id INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT,adresse TEXT,tel TEXT,description TEXT);");
 		
-		db.execSQL("CREATE TABLE restos(id INTEGER PRIMARY KEY AUTOINCREMENT," +
-										"nom TEXT," +
-										"adresse TEXT," +
-										"tel TEXT" +
-										"description TEXT," +
-										"prix INTEGER)");
+		db.execSQL("CREATE TABLE restos(id INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT,adresse TEXT,tel TEXT,description TEXT);");
 	}
 
 	@Override
@@ -33,5 +23,4 @@ public class DBSQLite extends SQLiteOpenHelper{
 		db.execSQL("DROP TABLE IF EXIST restos");
 		onCreate(db);
 	}
-
 }

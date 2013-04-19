@@ -1,7 +1,11 @@
 package com.example.finallab;
 
+import java.util.Hashtable;
+import java.util.Vector;
+
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -12,7 +16,6 @@ public class Operations {
 	public Operations(Context c){
 		dbsqlite = new DBSQLite(c);
 		openDB();
-		fillDB();
 	}
 	
 	public void openDB(){
@@ -29,7 +32,7 @@ public class Operations {
 		cv.put("adresse", r.getAdresse());
 		cv.put("tel", r.getTel());
 		cv.put("description", r.getDescription());
-		cv.put("prix", r.getPrix());
+		//cv.put("prix", r.getPrix());
 		
 		database.insert("restos",null,cv);
 	}
@@ -40,7 +43,7 @@ public class Operations {
 		cv.put("adresse", h.getAdresse());
 		cv.put("tel", h.getTel());
 		cv.put("description", h.getDescription());
-		cv.put("prix", h.getPrix());
+		//cv.put("prix", h.getPrix());
 		
 		database.insert("hotels",null,cv);
 	}
@@ -82,5 +85,53 @@ public class Operations {
 							"The atmosphere at the Platzl Hotel is pleasant and lively and this feeling extends into Alfons Schuhbeck�s elegant Alpine restaurant. Patrick Raa� offers two menus (�Schuhbeck�s Classics� and �World of Spices�). Next door, the restaurant�s own shops sell ice cream, chocolate, spices and wine.", 
 							75));
 		Log.i("Erwan", "6eme ajout");
+	}
+	
+	public Vector <Hashtable<String, String>> extraireHotel(){
+		Cursor hotel = database.rawQuery("SELECT * FROM hotels", null);
+		Vector <Hashtable<String, String>> listeItemHotel = new Vector <Hashtable<String, String>>();
+		Hashtable <String, String> item;
+		String img = new String();
+		hotel.moveToFirst();
+		
+		while (!hotel.isAfterLast()){
+			item = new Hashtable <String, String>();
+			if (hotel.getString(1) == "NH Muenchen Deutscher Kaiser")
+				img = String.valueOf(R.drawable.munich);
+			else if (hotel.getString(1) == "Sofitel Munich Bayerpost")
+				img = String.valueOf(R.drawable.munich1);
+			else
+				img = String.valueOf(R.drawable.muenchen);
+			item.put("img", img);
+			item.put("nom", hotel.getString(1));
+			item.put("adresse", hotel.getString(2));
+			listeItemHotel.add(item);
+			hotel.moveToNext();
+		}
+		return listeItemHotel;
+	}
+	
+	public Vector <Hashtable<String, String>> extraireResto(){
+		Cursor resto = database.rawQuery("SELECT * FROM restos", null);
+		Vector <Hashtable<String, String>> listeItemResto = new Vector <Hashtable<String, String>>();
+		Hashtable <String, String> item;
+		String img = new String();
+		resto.moveToFirst();
+		
+		while (!resto.isAfterLast()){
+			item = new Hashtable <String, String>();
+			if (resto.getString(1) == "Dallmayr")
+				img = String.valueOf(R.drawable.munich);
+			else if (resto.getString(1) == "Tantris")
+				img = String.valueOf(R.drawable.munich1);
+			else
+				img = String.valueOf(R.drawable.muenchen);
+			item.put("img", img);
+			item.put("nom", resto.getString(1));
+			item.put("adresse", resto.getString(2));
+			listeItemResto.add(item);
+			resto.moveToNext();
+		}
+		return listeItemResto;
 	}
 }
