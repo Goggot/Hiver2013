@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">a86da8ff-b98e-460b-9826-bf26269b6e3c</identifier>
+  </ID>
+  <name>SEQ_INSC_ARCH</name>
+  <cacheFlag>false</cacheFlag>
+  <cycleFlag>false</cycleFlag>
+  <orderFlag>false</orderFlag>
+  <schema>
+    <name>SCHEMA1</name>
+  </schema>
+</sequence>

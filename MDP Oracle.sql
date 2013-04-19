@@ -1,0 +1,1 @@
+alter user H12PALANER identified by Gainsbar91;
