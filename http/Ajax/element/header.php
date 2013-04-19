@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>AJAX</title>
         <link href="css/design.css" rel="stylesheet" type="text/css" media="screen" />
+		<script src="js/index.js"></script>
     </head>
     <body>
 		<div id="header">
