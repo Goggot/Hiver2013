@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<langText>
+	<index>
+		<menu1>Home</menu1>
+		<menu2>Images</menu2>
+		<menu3>Contacts</menu3>
+		<menu4>Products</menu4>
+		<menu5>Logout</menu5>
+		<menu6>Login</menu6>
+	</index>
+	
+	<services>
+		<sectionIci></sectionIci>
+	</services>
+	
+</langText>

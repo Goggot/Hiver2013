@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Sha1</title>
+        <link href="css/global.css" rel="stylesheet" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+		<script>
+			function convertir() {
+				var texte = document.getElementById("texte").value;
+				var salt = document.getElementById("grain-de-sel").value;
+				
+				// var data = "texte=" + texte + "&salt=" + salt;
+				
+				var data = new Array();
+				data[0] = texte;
+				data[1] = salt;
+				
+				data = JSON.stringify(data); 
+				
+				$.ajax({
+				   type   : "GET",
+				   url    : "convertir.php",
+				   data   : "donnees=" + data,
+				   success: function(msg){
+						msg = JSON.parse(msg);
+						var resultSection = document.getElementById("result");
+						
+						var nouveauDiv = "<div>Résultat : " + msg[2] + "</div>";
+						
+						resultSection.innerHTML += nouveauDiv;
+				   }
+				 });
+			}
+			
+			window.onload = function () {
+				$(".sectionAuthentification").fadeIn(2000);
+			}
+		</script>
+	
+		<div class="sectionKey"></div>
+		<div class="sectionAuthentification" style="display:none">
+			<h1>
+				Sha1 Converter
+			</h1>
+
+			<div class="formLabel"><label for="texte"> Texte : </label></div>
+			<div class="formInput"><input type="text" onkeyup="convertir()" name="texte" id="texte" /></div>
+			<div class="formSeparator"></div>
+			
+			<div class="formLabel"><label for="grain-de-sel"> Grain de sel : </label> </div>
+			<div class="formInput"><input type="text" onkeyup="convertir()" name="grain-de-sel" id="grain-de-sel" /></div>
+			<div class="formSeparator"></div>
+
+			<div id="result"></div>
+		</div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

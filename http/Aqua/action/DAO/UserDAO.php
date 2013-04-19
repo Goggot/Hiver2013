@@ -1,8 +1,5 @@
 <?php
-	
-
-	class UserDAO {	
-	
+	class UserDAO {
 		public static function authenticate($username, $password)
 		 {
 			$connection = Connection::getConnection();
@@ -37,7 +34,6 @@
 			$query = "SELECT * FROM USERS";
 			$statement = oci_parse($connection, $query);
 			
-			
 			oci_execute($statement);
 			
 			$userList = array();
@@ -48,34 +44,4 @@
 			
 			return $userList;
 		}
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

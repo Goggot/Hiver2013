@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Lire message</title>
+		<meta charset="utf-8" />
+		<script src="js/jquery.min.js"></script>
+		<script>
+			function requestVisitsFor(course) {
+				$.ajax({
+				   type: "GET",
+				   data: "course=" + course,
+				   dataType: 'jsonp',
+				   url: 'http://www.notes-de-cours.com/request-visits.php',
+				   success: function(data) {
+					$("#visitContainer").html(data);
+				  }
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div id="visitContainer" style="border:1px solid green;border-radius:4px;background-color:#6d6;padding:20px;line-height:20px;min-height:20px;"></div>
+		<div>Quelle est le nombre de visites sur notes-de-cours.com ?</div>
+		<ul>
+			<li><a href="javascript:void(0)" onclick="requestVisitsFor('Web')">Web</a></li>
+			<li><a href="javascript:void(0)" onclick="requestVisitsFor('DBA')">DBA</a></li>
+			<li><a href="javascript:void(0)" onclick="requestVisitsFor('Linux')">Linux</a></li>
+			<li><a href="javascript:void(0)" onclick="requestVisitsFor('DB')">DB</a></li>
+		</ul>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

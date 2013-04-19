@@ -1,0 +1,20 @@
+body{
+	background-color:black;
+}
+
+#main{
+	width:600px;
+	height:700px;
+	background-color:white;
+	margin:auto;
+}
+
+#question{
+	
+}
+
+#header{
+	width:50px;
+	color:white;
+	margin:auto;
+}
