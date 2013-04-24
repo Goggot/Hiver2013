@@ -1,10 +1,10 @@
 Indent Android
 
 Activité départ :
-	startActivityForResult(Indent,4)
+	startActivityForResult(Intent,4)
 
 Activité arrivé :
-	Indent retourAuDepart = new Indent("_____");
-	retourAuDepart.setData(Uri.parse("______");
+	Indent retourAuDepart = new Intent("_____");
+	retourAuDepart.setData(Uri.parse("______"));
 	setResult(RESULT_OK,retourAuDepart);
 	finish();
