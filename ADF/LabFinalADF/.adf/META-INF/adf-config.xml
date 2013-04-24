@@ -14,4 +14,7 @@
   <adf:adf-properties-child xmlns="http://xmlns.oracle.com/adf/config/properties">
     <adf-property name="adfAppUID" value="LabFinal-1697"/>
   </adf:adf-properties-child>
+  <adf-adfm-config xmlns="http://xmlns.oracle.com/adfm/config">
+    <defaults changeEventPolicy="ppr"/>
+  </adf-adfm-config>
 </adf-config>

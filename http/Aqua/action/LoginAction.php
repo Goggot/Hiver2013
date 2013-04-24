@@ -18,7 +18,7 @@
 					$_SESSION["loggedIn"] = $userInfo["visibility"];
 					$_SESSION["username"] = $userInfo["real_name"];
 					
-					header("location:modif.php");
+					header("location:produit.php");
 					exit;
 				}
 				else {
