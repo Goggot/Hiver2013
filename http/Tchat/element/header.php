@@ -7,4 +7,4 @@
 	<script src="js/jquery.js"></script>
     </head>
     <body>
-	<div class="search">
+	<div class="main">
