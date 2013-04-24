@@ -1,0 +1,6 @@
+CRYPTAGE
+
+symetrique : même clé qui sert à encoder / décoder
+asymétrique : une clé d'encodage + une clé de décodage (public / privée)
+
+SSL / TLS(Transport Layer Security)
