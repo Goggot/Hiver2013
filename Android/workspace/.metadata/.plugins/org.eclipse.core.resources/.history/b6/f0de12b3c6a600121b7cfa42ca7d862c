@@ -1,0 +1,44 @@
+package com.example.finallab;
+
+import java.util.Hashtable;
+import java.util.Vector;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class HotelActivity extends Activity{
+	
+	ListView listeHotel;
+	Vector<Hashtable> vecteur;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.hotels);
+		Hashtable h = {"test",1};
+		vecteur.add(h);
+		
+		listeHotel = (ListView)findViewById(R.id.listeHotels);
+		
+		ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_list_item_1, vecteur);
+		
+		listeHotel.setChoiceMode(2);
+		listeHotel.setTextFilterEnabled(true);
+		listeHotel.setAdapter(aa);
+		
+		Ecouteur ec = new Ecouteur();
+		
+		listeHotel.setOnItemClickListener(ec);
+	}
+	private class Ecouteur implements OnItemClickListener{
+		@Override
+		public void onItemClick(AdapterView<?> parent, View itemSelec, int position, long id) {
+			
+		}
+	}
+}

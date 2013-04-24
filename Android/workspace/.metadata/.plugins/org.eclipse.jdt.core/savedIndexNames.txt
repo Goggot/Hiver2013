@@ -1,0 +1,25 @@
+INDEX VERSION 1.126+/home/pouet/Documents/android-developer/workspace/.metadata/.plugins/org.eclipse.jdt.core
+186371546.index
+2882999104.index
+2747666509.index
+3569426651.index
+2058149658.index
+4214540810.index
+986661367.index
+1772504174.index
+3587410908.index
+1083267903.index
+666206817.index
+3787075625.index
+1034061294.index
+1252373880.index
+333199764.index
+4061308272.index
+2762724436.index
+117918605.index
+992192534.index
+353845600.index
+3067368184.index
+2426608379.index
+657637367.index
+1152539461.index

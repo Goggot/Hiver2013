@@ -1,0 +1,53 @@
+package com.example.annexe4c;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class MainActivity extends Activity {
+
+	Button web;
+	Button tel;
+	Button map;
+	Button mail;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		web = (Button)findViewById(R.id.button1);
+		tel = (Button)findViewById(R.id.button2);
+		map = (Button)findViewById(R.id.button3);
+		mail = (Button)findViewById(R.id.button4);
+		
+		Ecouteur ec = new Ecouteur();
+		
+		web.setOnClickListener(ec);
+		tel.setOnClickListener(ec);
+		map.setOnClickListener(ec);
+		mail.setOnClickListener(ec);
+	}
+	
+	private class Ecouteur implements OnClickListener {
+		@Override
+		public void onClick(View v) {
+			if (v.getId() == R.id.button1) {
+				startActivity(new Intent());
+			}
+			else if (v.getId() == R.id.button2) {
+				
+			}
+			else if (v.getId() == R.id.button3) {
+							
+			}
+			else {
+				
+			}
+		}
+	}
+}

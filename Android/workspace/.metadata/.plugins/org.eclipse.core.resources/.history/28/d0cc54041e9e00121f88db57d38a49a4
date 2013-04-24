@@ -1,0 +1,29 @@
+package com.example.annexe5;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	TextView nom;
+	TextView moyenne;
+	TextView arena;
+	EditText reponse;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		nom = (TextView)findViewById(R.id.reponseNomArena);
+		moyenne = (TextView)findViewById(R.id.reponseMoyenne);
+		arena = (TextView)findViewById(R.id.reponseArena);
+		reponse = (EditText)findViewById(R.id.reponse);
+		
+		Ecouteur ec = new Ecouteur();
+		nom
+	}
+}
