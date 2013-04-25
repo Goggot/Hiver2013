@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PLocalView"
+  Version="11.1.2.60.81"
+  SelectList="PLocal.NOLOCAL, 
+       PLocal.NOEXPO, 
+       PLocal.CAPACITE"
+  FromList="P_LOCAL PLocal"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="PLocal"
+    Entity="model.entities.assoc.PLocal"/>
+  <ViewAttribute
+    Name="Nolocal"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Nolocal"
+    EntityUsage="PLocal"
+    AliasName="NOLOCAL"/>
+  <ViewAttribute
+    Name="Noexpo"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Noexpo"
+    EntityUsage="PLocal"
+    AliasName="NOEXPO"/>
+  <ViewAttribute
+    Name="Capacite"
+    PrecisionRule="true"
+    EntityAttrName="Capacite"
+    EntityUsage="PLocal"
+    AliasName="CAPACITE"/>
+</ViewObject>
