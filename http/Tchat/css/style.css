@@ -16,7 +16,7 @@ body{
     background-color:#222222;
     margin-top:20px;
     margin-bottom:20px;
-    padding-top:200px;
+    padding-top:150px;
 }
 
 .footer{
@@ -27,7 +27,30 @@ body{
     padding:5px;
 }
 
+#login {
+	margin-left:25%;
+	height:0px;
+}
+
+#logout {
+	width:25px;
+	height:25px;
+	background-image:url("../images/logout.png");
+	background-repeat:no-repeat;
+	background-size:100%;
+	float:right;
+}
+
 #connection{
+    position:relative;
+    width:350px;
+    margin:auto;
+    border-radius:10px;
+    background-color:#111111;
+    padding:10px;
+}
+
+#inscription{
     position:relative;
     width:350px;
     margin:auto;

@@ -55,11 +55,8 @@ class droneS(Robot):
         self.energie = 5
         self.portee = 20
         self.audio = False
-        self.posInitial = None
+        self.posInitial = pos[:]
         self.vitesse = 0.2
-
-        if self.posInitial == None:
-            self.posInitial = pos
 
     def bouge(self):
         if self.direction == "H":
@@ -100,12 +97,9 @@ class droneA(Robot):
         self.energie = 10
         self.portee = 10
         self.alert = False
-        self.posInitial = None
+        self.posInitial = pos[:]
         self.degats = 1
         self.audio = False
-
-        if self.posInitial == None:
-            self.posInitial = pos
 
     def bouge(self):        # position[0] = axe Y
         if not self.alert:

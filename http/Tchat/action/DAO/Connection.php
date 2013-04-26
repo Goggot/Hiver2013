@@ -11,7 +11,7 @@
 				$key = $soapClient->call('connecter', array('nomUsager' => $login, 'motDePasse' => md5($passwd)));
 				
 				if ($key == "INVALID_USERNAME_PASSWORD" || $key == "USER_IS_BANNED"){
-					echo "FUCK U";
+					echo "FUCK YOU";
 				}
 				else{
 					$_SESSION["loggedIn"] = 1;

@@ -11,12 +11,11 @@
 				$key = $soapClient->call('enregistrer', array('matricule' => $matricule, 'prenom' => $prenom, 'nom' => $nom, 'nomUsager' => $login, 'motDePasse' => md5($passwd)));
 				
 				if ($key == "USERNAME_ALREADY_IN_USE" || $key == "INVALID_STUDENT_CODE"){
-					echo "FUCK U";
+					echo "FUCK YOU ";
 				}
 				else{
 					$_SESSION["loggedIn"] = 1;
 					$_SESSION["username"] = $_POST["login"];
-					header("location:tchat.php");
 					exit;
 				}
 				
@@ -24,6 +23,5 @@
 					$error = "(" . $soapClient->faultcode . ") " . $soapClient->faultstring;
 				}
 			}
-			
 		}
 	}
