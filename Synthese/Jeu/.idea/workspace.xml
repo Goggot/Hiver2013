@@ -2,24 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dec65af-a706-4515-ba24-d62d0da458d4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android/.metadata/.log" afterPath="$PROJECT_DIR$/../../Android/.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur.py" afterPath="$PROJECT_DIR$/Controleur.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fred.py" afterPath="$PROJECT_DIR$/Fred.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Projectile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Jeu.iml" afterPath="$PROJECT_DIR$/.idea/Jeu.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele.py" afterPath="$PROJECT_DIR$/Modele.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prison.py" afterPath="$PROJECT_DIR$/Prison.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Robots.py" afterPath="$PROJECT_DIR$/Robots.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\Hiver2013\http\Tchat\action\indexAction.php" afterPath="$PROJECT_DIR$/../../http/Tchat/action/IndexAction.php" />
     </list>
     <ignored path="Jeu.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366163768574" ignored="false" />
+    <file path="/Dummy.txt" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366934473398" ignored="false" />
     <file path="/Modele" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364666778677" ignored="false" />
     <file path="/test.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364667926311" ignored="false" />
     <file path="/Vue" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364669623608" ignored="false" />
     <file path="/Controleur" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1364670106487" ignored="false" />
     <file path="/Controleur.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366164370887" ignored="false" />
-    <file path="/Vue.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365741270254" ignored="false" />
-    <file path="/Modele.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366075645635" ignored="false" />
+    <file path="/Vue.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366325946407" ignored="false" />
+    <file path="/Modele.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366944480225" ignored="false" />
     <file path="/start_script.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1365178598396" ignored="false" />
-    <file path="/Fred.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366164532828" ignored="false" />
-    <file path="/Robots.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366164915987" ignored="false" />
+    <file path="/Fred.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366934347521" ignored="false" />
+    <file path="/Robots.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366941060237" ignored="false" />
+    <file path="C:/Python33/Lib/threading.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366318498999" ignored="false" />
+    <file path="/Projectile.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366944151277" ignored="false" />
+    <file path="/Prison.py" changelist="4dec65af-a706-4515-ba24-d62d0da458d4" time="1366944323370" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +41,16 @@
     <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Jeu" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Controleur.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="81" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state line="31" column="20" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,16 +58,18 @@
       <file leaf-file-name="Fred.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fred.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="36" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="20" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Modele.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Modele.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="22" selection-start="704" selection-end="704" vertical-scroll-proportion="0.5903399">
+            <state line="20" column="65" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,7 +87,7 @@
       <file leaf-file-name="Prison.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prison.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="5" column="30" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,7 +96,18 @@
       <file leaf-file-name="Robots.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Robots.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="20" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
+            <state line="2" column="23" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Projectile.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Projectile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.123188406">
               <folding />
             </state>
           </provider>
@@ -95,7 +116,7 @@
       <file leaf-file-name="Vue.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="31" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
+            <state line="5" column="29" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,11 +140,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Test PyGame/test.py" />
-        <option value="$PROJECT_DIR$/Vue" />
         <option value="$PROJECT_DIR$/Controleur" />
         <option value="/mnt/Lustucru/cosmic-war/Orion/orion_2011_modele.py" />
-        <option value="$PROJECT_DIR$/Vue.py" />
         <option value="$PROJECT_DIR$/Modele/pieges.py" />
         <option value="$PROJECT_DIR$/Modele/prison.py" />
         <option value="$PROJECT_DIR$/Modele/Modele.py" />
@@ -131,17 +149,21 @@
         <option value="$PROJECT_DIR$/Modele/fred.py" />
         <option value="$PROJECT_DIR$/Vue/Vue.py" />
         <option value="$PROJECT_DIR$/Controleur/Controleur.py" />
-        <option value="$PROJECT_DIR$/Modele.py" />
-        <option value="$PROJECT_DIR$/Fred.py" />
         <option value="$PROJECT_DIR$/Controleur.py" />
+        <option value="$PROJECT_DIR$/Vue.py" />
+        <option value="$PROJECT_DIR$/Fred.py" />
         <option value="$PROJECT_DIR$/Robots.py" />
+        <option value="$PROJECT_DIR$/Projectile.py" />
+        <option value="$PROJECT_DIR$/Prison.py" />
+        <option value="$PROJECT_DIR$/Modele.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="1002" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -173,7 +195,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -184,36 +206,15 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jeu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jeu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jeu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test PyGame/test.py" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Python32/App/python.exe" />
+    <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -238,6 +239,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jeu" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controleur.py" />
@@ -257,6 +260,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jeu" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
@@ -270,6 +275,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jeu" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
@@ -294,7 +301,7 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -304,7 +311,6 @@
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
@@ -321,19 +327,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="1002" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19199346" sideWeight="0.6850117" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.1993517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22875817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31418523" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.094228506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31381732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -342,6 +347,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.094228506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -370,7 +376,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -380,6 +386,10 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -393,16 +403,26 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Modele.py">
+    <entry file="file://$PROJECT_DIR$/Prison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="70" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -424,7 +444,9 @@
     <entry file="file://$PROJECT_DIR$/Robots.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -435,19 +457,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Test PyGame/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="25" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Test PyGame/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="25" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="uml://Python/#/home/pouet/Hiver2013/Synthese/Jeu/Modele/Modele.py">
@@ -473,17 +485,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prison.py">
+    <entry file="file://$PROJECT_DIR$/Fred.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="20" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -494,32 +501,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur.py">
+    <entry file="file://$PROJECT_DIR$/Vue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="81" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Robots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="20" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
+        <state line="5" column="29" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fred.py">
+    <entry file="file://$PROJECT_DIR$/Controleur.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="36" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.0">
+        <state line="31" column="20" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="30" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="22" selection-start="704" selection-end="704" vertical-scroll-proportion="0.5903399">
+        <state line="20" column="65" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Robots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="23" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projectile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.123188406">
           <folding />
         </state>
       </provider>
