@@ -1,4 +1,3 @@
-<p><?php if(isset($_SESSION["loggedIn"]) &&  ?></p>
 <div id="tchat">
     <form action="tchat.php" method="post">
             <p>
