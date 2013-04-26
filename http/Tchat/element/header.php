@@ -4,8 +4,8 @@
         <title>Tchat</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
         <script src="js/javascript.js"></script>
-	<script src="js/jquery.js"></script>
-	<?php echo $action->getUsername(); ?>
+		<script src="js/jquery.js"></script>
+		<?php echo $action->getUsername(); ?></br>
     </head>
     <body>
-	<div class="main">
+		<div class="main">

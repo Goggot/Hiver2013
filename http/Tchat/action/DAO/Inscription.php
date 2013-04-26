@@ -1,16 +1,16 @@
 <?php
-    require_once('action/lib/nusoap.php');
+	require_once('action/lib/nusoap.php');
 
-    class Connection{
-		public static function getConnection($login, $passwd){
+    class Inscription{
+		public static function getConnection($login, $passwd, $matricule, $prenom, $nom){
 			$soapClient = new nusoap_client('http://b63server.notes-de-cours.com/services.php', false);
 			$error = $soapClient->getError();
 			$key = null;
 			
 			if (empty($error)) {
-				$key = $soapClient->call('connecter', array('nomUsager' => $login, 'motDePasse' => md5($passwd)));
+				$key = $soapClient->call('enregistrer', array('matricule' => $matricule, 'prenom' => $prenom, 'nom' => $nom, 'nomUsager' => $login, 'motDePasse' => md5($passwd)));
 				
-				if ($key == "INVALID_USERNAME_PASSWORD" || $key == "USER_IS_BANNED"){
+				if ($key == "USERNAME_ALREADY_IN_USE" || $key == "INVALID_STUDENT_CODE"){
 					echo "FUCK U";
 				}
 				else{

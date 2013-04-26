@@ -3,11 +3,11 @@
     require_once('action/lib/nusoap.php');
     require_once('action/CommonAction.php');
 
-    class TchatAction {
-
+    class TchatAction extends CommonAction{
         public function __construct() {
+			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
         }
         
-        function execute() {
+        public function executeAction() {
         }
     }
