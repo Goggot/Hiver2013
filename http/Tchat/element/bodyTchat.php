@@ -11,8 +11,8 @@
 
 <div id="tchat">
     <div id="text">
-        <h1>Tchat PHP</h1></br>
-        <span id="messages"></span>
+        <h1 style="text-align:center;">Tchat PHP</h1></br>
+        <p id="messages"></p>
     </div>
         <p>
            <input id="conv" type="text" name="conv" />

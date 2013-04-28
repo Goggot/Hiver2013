@@ -8,10 +8,6 @@
     class TchatAction extends CommonAction{
         public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
-			if (isset($_POST["msg"]))
-				TchatAction::getMessages();
-			if (isset($_POST["membre"]))
-				TchatAction::getListeMembre();
         }
         
         public function executeAction() {
@@ -19,12 +15,4 @@
 				Delete::getDelete($_SESSION["key"]);
 			}
         }
-		
-		public function getListeMembre(){
-			echo Transaction::getListeConnecte($_SESSION["key"]);
-		}
-		
-		public function getMessages(){
-			echo Transaction::getMessages($_SESSION["key"]);
-		}
     }

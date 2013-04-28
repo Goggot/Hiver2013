@@ -10,7 +10,7 @@
 			
 			if (empty($error)) {
 				$liste = $soapClient->call('listeDesMembres', array('clef' => $key));
-				
+				$_SESSION["msg"] = $liste;
 				if ($soapClient->fault) {
 					$error = "(" . $soapClient->faultcode . ") " . $soapClient->faultstring;
 				}

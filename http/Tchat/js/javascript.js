@@ -2,9 +2,16 @@ function verifierMessages() {
 	$.ajax({
 		url: 'getMessages.php',
 		success: function(data){
-			console.log(JSON.parse(data));
-			console.log(data);
-			document.getElementById('messages').innerHTML = JSON.parse(data);
+			var tab = JSON.parse(data);
+			var nom;
+			var msg;
+			$.each(tab,function(i,val){
+				nom = val.nomUsager;
+				msg = val.message;
+			});
+			if (tab != "") {
+				document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + nom + " --> " + msg + "</br>";
+			}
 			setTimeout(verifierMessages, 3000);
 		}
 	});
@@ -14,8 +21,12 @@ function verifierMembres() {
 	$.ajax({
 		url: 'getMembres.php',
 		success: function(data) {
-			console.log(JSON.parse(data));
-			document.getElementById('membres').innerHTML = JSON.parse(data);
+			var tab = JSON.parse(data);
+			var liste = "";
+			for (var i=0; i<tab.length; i++) {
+				liste = liste + (tab[i]+"</br>");
+			}
+			document.getElementById('membres').innerHTML = liste;
 			setTimeout(verifierMembres, 3000);
 		}
 	});
@@ -31,5 +42,6 @@ function envoieMessage(){
 		data: 'message='+message
 	});
 	console.log("Envoie terminé...");
-	document.getElementById('conv').innerHTML = " ";
+	document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + " --> " + message + "</br>";
+	document.getElementById('conv').innerHTML = "";
 }
