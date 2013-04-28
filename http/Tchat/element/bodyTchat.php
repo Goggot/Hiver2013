@@ -1,8 +1,21 @@
+<script>
+    setTimeout(verifierMembres, 1000);
+    setTimeout(verifierMessages, 1000);
+</script>
+
+<div id="liste">
+    <p id="membres"></p></br>
+    <a href="?logout=1">Logout</a></br>
+    <a href="?delete=1" style="color:red;">Delete Account</a>
+</div>
+
 <div id="tchat">
-    <form action="tchat.php" method="post">
-            <p>
-               <input type="text" name="conv" />
-               <input type="submit" value="Valider" />
-            </p>
-    </form>
+    <div id="text">
+        <h1>Tchat PHP</h1></br>
+        <span id="messages"></span>
+    </div>
+        <p>
+           <input id="conv" type="text" name="conv" />
+           <button onclick="envoieMessage();"/>Envoyer</button>
+        </p>
 </div>

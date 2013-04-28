@@ -1,5 +1,6 @@
 import pygame
 import random
+from Projectile import *
 from threading import *
 
 
@@ -100,6 +101,7 @@ class droneA(Robot):
         self.posInitial = pos[:]
         self.degats = 1
         self.audio = False
+        self.tirer = False
 
     def bouge(self):        # position[0] = axe Y
         if not self.alert:
@@ -115,38 +117,45 @@ class droneA(Robot):
                     self.position[0] += self.vitesse
 
     def attaque(self):
-        if (self.position[0] - 50) <= (self.parent.fred.position[0]) and (self.position[0] + 50) >= (self.parent.fred.position[0]):
-            self.poursuivre()
+        taille = len(self.parent.prison.projectilList) + 1
+        self.parent.prison.projectilList.append([taille, Projectile(self,self.position[:])])
 
     def poursuivre(self):
-        if self.position[0] - self.parent.fred.position[0] >= self.position[1] - self.parent.fred.position[1]:
-            if self.position[0] <= self.parent.fred.position[0]:
-                self.position[0] += self.vitesse
-            else:
-                self.position[0] -= self.vitesse
-        else:
-            if self.position[0] <= self.parent.fred.position[0]:
-                self.position[1] += self.vitesse
-            else:
-                self.position[1] -= self.vitesse
+        if self.position[0] < self.parent.fred.position[0]:
+            self.position[0] += self.vitesse
+        if self.position[0] > self.parent.fred.position[0]:
+            self.position[0] -= self.vitesse
+        if self.position[1] < self.parent.fred.position[1]:
+            self.position[1] += self.vitesse
+        if self.position[1] > self.parent.fred.position[1]:
+            self.position[1] -= self.vitesse
 
     def mourrir(self):
         pass
 
-    def temps(self):
+    def son(self):
         self.audio = False
+
+    def tireF(self):
+        self.tirer = False
 
     def tick(self):
         self.bouge()
         if self.detection():
             print("DETECTE")
+            self.poursuivre()
             self.alert = True
-            self.attaque()
+
+            if not self.tirer:
+                self.tirer = True
+                self.attaque()
+                Timer(2.0, self.tireF).start()
+
             if not self.audio:
                 self.audio = True
                 pygame.mixer.music.load('music/ackbar.mp3')
                 pygame.mixer.music.play()
-                Timer(1.0, self.temps).start()
+                Timer(1.0, self.son).start()
         else:
             self.alert = False
         return self.direction

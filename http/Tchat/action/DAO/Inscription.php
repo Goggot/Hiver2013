@@ -1,5 +1,6 @@
 <?php
 	require_once('action/lib/nusoap.php');
+	require_once('Connection.php');
 
     class Inscription{
 		public static function getConnection($login, $passwd, $matricule, $prenom, $nom){
@@ -15,7 +16,8 @@
 				}
 				else{
 					$_SESSION["loggedIn"] = 1;
-					$_SESSION["username"] = $_POST["login"];
+					$_SESSION["username"] = $login;
+					Connection::getConnection($login,$passwd);
 					exit;
 				}
 				

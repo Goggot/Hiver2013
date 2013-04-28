@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once("action/DAO/Connection.php");
+	require_once("action/DAO/Deconnection.php");
     
     abstract class CommonAction {
 		public static $VISIBILITY_PUBLIC = 0;
@@ -14,6 +15,7 @@
 
 		public function execute() {
 			if (isset($_GET["logout"])) {
+				Deconnection::getDeconnected($_SESSION["key"]);
 				session_unset();
 				session_destroy();
 				session_start();
@@ -30,7 +32,6 @@
 			
 			// execution de l'enfant...
 			$this->executeAction();
-			Connection::closeConnection();
 		}
 	
 		public function getUsername() {

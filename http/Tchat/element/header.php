@@ -5,10 +5,6 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
         <script src="js/javascript.js"></script>
 		<script src="js/jquery.js"></script>
-		<p id="login">
-			<?php echo $action->getUsername(); ?>
-			<p id="logout"></p>
-		</p>
     </head>
     <body>
 		<div class="main">

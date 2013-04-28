@@ -15,10 +15,22 @@
 				$.ajax({
 				  url: 'lire-nb-courriels.php',
 				  success: function(data) {
-  					document.getElementById('contenantCourriels').innerHTML = JSON.parse(data);
+  					document.getElementById('contenantCourriels').innerHTML = data;
 					setTimeout(verifierCourriels, 2000);
 				  }
 				});
+				
+			/*
+				$.ajax({
+				   type: "POST",
+				   url: "lireNbCourriels.php",
+				   data: "mon-paremetre=ma-valeur&param2=blabla",
+				   success: function(msg){
+  					document.getElementById('contenantCourriels').innerHTML = msg;
+					setTimeout(verifierCourriels, 2000);
+				   }
+				 });
+				*/
 				
 			}
 		
