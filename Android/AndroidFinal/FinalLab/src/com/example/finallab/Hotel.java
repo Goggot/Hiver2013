@@ -5,9 +5,9 @@ public class Hotel {
 	private String adresse;
 	private String tel;
 	private String description;
-	private int prix;
+	private String prix;
 	
-	public Hotel (String nom, String adr, String tel, String descr, int prix){
+	public Hotel (String nom, String adr, String tel, String descr, String prix){
 		this.nom = nom;
 		this.adresse = adr;
 		this.tel = tel;
@@ -47,11 +47,11 @@ public class Hotel {
 		this.description = description;
 	}
 
-	public int getPrix() {
+	public String getPrix() {
 		return prix;
 	}
 
-	public void setPrix(int prix) {
+	public void setPrix(String prix) {
 		this.prix = prix;
 	}
 	

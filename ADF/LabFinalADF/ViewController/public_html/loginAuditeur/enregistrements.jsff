@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+  <af:pageTemplate viewId="/templateGeneral.jsf" id="pt1">
+    <f:facet name="main">
+      <af:panelFormLayout id="pfl1">
+        <f:facet name="footer"/>
+        <af:inputText label="CodeAuditeur:" id="it1"/>
+        <af:inputText label="MotDePasse:" id="it2"/>
+        <af:inputText label="Nom " id="it3"/>
+        <af:inputText label="Prenom" id="it4"/>
+        <af:inputText label="Rue" id="it5"/>
+        <af:inputText label="Ville" id="it6"/>
+        <af:inputText label="CodePostal" id="it7"/>
+        <af:inputText label="Noregion" id="it8"/>
+        <af:inputText label="Telephone" id="it9"/>
+        <af:inputText label="Courriel" id="it10"/>
+        <af:inputText label="Statut" id="it11"/>
+        <af:panelGroupLayout id="pgl1" layout="horizontal">
+          <h:button value="Reninitialiser" id="b1"/>
+          <h:button value="Annuler" id="b2"/>
+          <h:button value="Enregistrer" id="b3"/>
+        </af:panelGroupLayout>
+      </af:panelFormLayout>
+    </f:facet>
+  </af:pageTemplate>
+</ui:composition>

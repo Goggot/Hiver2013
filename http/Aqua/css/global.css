@@ -27,6 +27,27 @@ p {
 	margin-top:10px;
 }
 
+#sup {
+	width:15px;
+	height:15px;
+	background-image:url("../images/delete.png");
+	background-repeat:no-repeat;
+	background-size:100%;
+	margin-left:5px;
+	margin-right:5px;
+	float:left;
+}
+#modif {
+	width:15px;
+	height:15px;
+	background-image:url("../images/edit.png");
+	background-repeat:no-repeat;
+	background-size:100%;
+	margin-left:5px;
+	margin-right:5px;
+	float:left;
+}
+
 a {
 	color:#5e5e5e;
 }

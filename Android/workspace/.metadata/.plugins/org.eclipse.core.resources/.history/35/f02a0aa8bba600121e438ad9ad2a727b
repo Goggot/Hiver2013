@@ -1,0 +1,79 @@
+package com.example.finallab;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class MainActivity extends Activity {
+
+	Button bResto;
+	Button bHotel;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		// Remplissage des databases
+		fillDB();
+		
+		bResto = (Button)findViewById(R.id.buttonResto);
+		bHotel = (Button)findViewById(R.id.buttonHotel);
+		
+		Ecouteur ec = new Ecouteur();
+		
+		bResto.setOnClickListener(ec);
+		bHotel.setOnClickListener(ec);
+	}
+	
+	public class Ecouteur implements OnClickListener{
+		@Override
+		public void onClick(View v){
+			if (v.getId() == R.id.buttonHotel){
+				Intent i = new Intent(MainActivity.this, HotelActivity.class);
+				startActivity(i);
+			}
+			else{
+				Intent i = new Intent(MainActivity.this, RestoActivity.class);
+				startActivity(i);
+			}
+		}
+	}
+	
+	public void fillDB(){
+		ajoutResto(new Hotel("NH Muenchen Deutscher Kaiser",
+							"Arnulfstrasse 2, M�nchen, D-80335, Allemagne", 
+							"4988954530", 
+							"Cet original �difice datant de 1920 a �t� agrandi dans les ann�es 60 avec une tour de 13 �tages en compl�ment des trois �tages d�origine. �difice le plus �lev� du quartier, l�h�tel offre une vue magnifique sur Munich depuis la plupart des chambres.", 
+							100);)
+		hotel = new Hotel("Sofitel Munich Bayerpost", 
+							"Bayerstrasse 12, 80335 MUENCHEN GERMANY", 
+							"06995307594", 
+							"Construit dans le style wilhelmien, notre h�tel 5 �toiles allie hospitalit� de qualit�, architecture int�rieure d'avant-garde et d�coration suivant l'art de vivre fran�ais. Venez d�couvrir l'un des plus beaux h�tels munichois dans toute sa splendeur.", 
+							254);
+		hotel = new Hotel("Eurostars Grand Central", 
+							"Arnulfstr. 35, Munich, BY 80636 Allemagne ", 
+							"0825213372", 
+							"Avant-garde. Style. Architecture innovante. Plus de 16 000 m�tres carr�s de confort et de design. 257 chambres. 8 suites. Lits XXL. Salles de bain XXL. 10 appartements de long s�jour. Restaurant d'une capacit� de plus d'une centaine de personnes. Quatre salles de conf�rences d'un total de 700 m�tres carr�s et d'une capacit� de 10 � 350 personnes, selon vos besoins. Bain turc. Piscine int�rieure. Gymnase. Sauna. ", 
+							109);
+		
+		resto = new Resto("Dallmayr", 
+							"Dienerstr. 14 D - 80331 M�nchen", "0892135100", 
+							"While it is all hustle and bustle amid the heavily laden shelves of the delicatessen downstairs, on the first floor chef Diethard Urbansky reinvents classics dishes including calves� kidneys and pears Belle H�l�ne. For the perfect wine recommendation (there are a fine selection of Rieslings) who better than sommelier Andrej Grunert?", 
+							130);
+		resto = new Resto("Tantris", 
+							"Johann-Fichte-Str. 7 D - 80805 Schwabing", 
+							"0893619590", 
+							"Tantris has become as renowned for its legendary 1970s charm as it is for Hans Haas�s classic cuisine. His guests� enthusiasm for his undisputed culinary skills remains as keen as it ever was.", 
+							100);
+		resto = new Resto("Schuhbecks in den S�dtiroler Stuben", 
+							"Platzl 6 D - 80331 M�nchen", 
+							"0892166900", 
+							"The atmosphere at the Platzl Hotel is pleasant and lively and this feeling extends into Alfons Schuhbeck�s elegant Alpine restaurant. Patrick Raa� offers two menus (�Schuhbeck�s Classics� and �World of Spices�). Next door, the restaurant�s own shops sell ice cream, chocolate, spices and wine.", 
+							75);
+	}
+}

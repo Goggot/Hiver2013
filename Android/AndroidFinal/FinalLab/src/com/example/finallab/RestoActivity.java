@@ -23,10 +23,10 @@ public class RestoActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hotels);
 		
-		listeItemResto = (new Operations(this)).extraireResto();
+		listeItemResto = (new Operations(this)).extraireListe("resto");
 		listeResto = (ListView)findViewById(R.id.listeHotels);
 		
-		SimpleAdapter adapteur = new SimpleAdapter(this, listeItemResto, R.layout.canvas, new String[] {"img", "nom", "adresse"},new int[]{R.id.imgCa, R.id.nomCa, R.id.descriptionCa} );
+		SimpleAdapter adapteur = new SimpleAdapter(this, listeItemResto, R.layout.canvas, new String[] {"img", "nom", "adresse"}, new int[]{R.id.imgCa, R.id.nomCa, R.id.descriptionCa});
 		
 		listeResto.setChoiceMode(2);
 		listeResto.setTextFilterEnabled(true);
@@ -39,8 +39,9 @@ public class RestoActivity extends Activity{
 	private class Ecouteur implements OnItemClickListener{
 		@Override
 		public void onItemClick(AdapterView<?> parent, View itemSelec, int position, long id) {
-			//intent ok
 			Intent i = new Intent(RestoActivity.this, DetailsActivity.class);
+			int num = position+1;
+			i.putExtra("id", String.valueOf(num)+";resto");
 			startActivity(i);
 		}
 	}

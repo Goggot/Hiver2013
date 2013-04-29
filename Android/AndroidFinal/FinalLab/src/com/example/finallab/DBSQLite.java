@@ -7,14 +7,24 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBSQLite extends SQLiteOpenHelper{
 
 	public DBSQLite(Context context) {
-		super(context, "db5", null, 1);
+		super(context, "abeassfc", null, 1);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATE TABLE hotels(id INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT,adresse TEXT,tel TEXT,description TEXT);");
+		db.execSQL("CREATE TABLE hotels(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+					"nom TEXT," +
+					"adresse TEXT," +
+					"tel TEXT," +
+					"description TEXT," +
+					"prix TEXT);");
 		
-		db.execSQL("CREATE TABLE restos(id INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT,adresse TEXT,tel TEXT,description TEXT);");
+		db.execSQL("CREATE TABLE restos(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+					"nom TEXT," +
+					"adresse TEXT," +
+					"tel TEXT," +
+					"description TEXT," +
+					"prix TEXT);");
 	}
 
 	@Override

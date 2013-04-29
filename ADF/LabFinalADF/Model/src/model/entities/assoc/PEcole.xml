@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PEcole"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="P_ECOLE"
+  AliasName="PEcole"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="Noecole"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="NOECOLE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_ECOLE"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Nomecole"
+    Precision="100"
+    ColumnName="NOMECOLE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_ECOLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Tuteur"
+    Precision="50"
+    ColumnName="TUTEUR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_ECOLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nocoord"
+    Precision="5"
+    Scale="0"
+    ColumnName="NOCOORD"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_ECOLE"/>
+  <AccessorAttribute
+    Name="PCoordonnees"
+    Association="model.entities.PEcoleCoordonneesFkAssoc"
+    AssociationEnd="model.entities.PEcoleCoordonneesFkAssoc.PCoordonnees"
+    AssociationOtherEnd="model.entities.PEcoleCoordonneesFkAssoc.PEcole"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PExposant"
+    Association="model.entities.PExposantEcoleFkAssoc"
+    AssociationEnd="model.entities.PExposantEcoleFkAssoc.PExposant"
+    AssociationOtherEnd="model.entities.PExposantEcoleFkAssoc.PEcole"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PEcoleNoecolePk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="P_ECOLE_NOECOLE_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.assoc.PEcole.Noecole"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PEcoleCoordonneesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="P_COORDONNÉES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="P_ECOLE_COORDONNEES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.assoc.PEcole.Nocoord"/>
+    </AttrArray>
+  </Key>
+</Entity>

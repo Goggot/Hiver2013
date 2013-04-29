@@ -26,8 +26,6 @@
 					$_SESSION["loggedIn"] = null;
 				}
 			}
-			
-			
 		}
 	
 		public function getResultMessage() {

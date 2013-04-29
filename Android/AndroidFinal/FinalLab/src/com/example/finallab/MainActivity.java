@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		Operations operation = new Operations(this);
 		operation.fillDB();
+		
 		bResto = (Button)findViewById(R.id.buttonResto);
 		bHotel = (Button)findViewById(R.id.buttonHotel);
 		

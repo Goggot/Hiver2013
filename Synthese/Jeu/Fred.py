@@ -15,13 +15,13 @@ class Fred():
 
     def bouge(self, event):
         if event.key == K_UP or event.key == K_SPACE:
-            self.position[1] -= 3
+            self.position[1] -= self.vitesse
         elif event.key == K_DOWN:
-            self.position[1] += 3
+            self.position[1] += self.vitesse
         elif event.key == K_LEFT:
-            self.position[0] -= 3
+            self.position[0] -= self.vitesse
         elif event.key == K_RIGHT:
-            self.position[0] += 3
+            self.position[0] += self.vitesse
 
     def changerEtat(self):
         pass

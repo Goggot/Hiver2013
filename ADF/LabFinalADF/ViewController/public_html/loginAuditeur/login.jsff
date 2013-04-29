@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+  <!--oracle-jdev-comment:preferred-managed-bean-name:LoginBean-->
+  <af:panelFormLayout id="pfl1">
+    <af:inputText label="Login usager" id="it1"
+                  validator="#{LoginBean.it1_validator}"
+                  value="#{PageFlowScope.login}"/>
+    <af:inputText label="Mot de passe" id="it2"
+                  value="#{PageFlowScope.mdp}"/>
+    <af:panelGroupLayout id="pgl1">
+      <h:button value="Login" id="b1"/>
+      <h:link value="S'enregistrer" id="l1" style="font-size:medium;"/>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl2" layout="horizontal">
+      <af:outputText value=" code ou mot de passe  invalide" id="ot1"
+                     visible="false"/>
+    </af:panelGroupLayout>
+  </af:panelFormLayout>
+</ui:composition>

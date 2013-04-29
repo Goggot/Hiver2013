@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PExpo"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="P_EXPO"
+  AliasName="PExpo"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="Noexpo"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="NOEXPO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_EXPO"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DateDebut"
+    ColumnName="DATE_DEBUT"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="P_EXPO"/>
+  <Attribute
+    Name="DateFin"
+    ColumnName="DATE_FIN"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="P_EXPO"/>
+  <Attribute
+    Name="Nomhotel"
+    Precision="30"
+    ColumnName="NOMHOTEL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_EXPO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nocoord"
+    Precision="5"
+    Scale="0"
+    ColumnName="NOCOORD"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_EXPO"/>
+  <Attribute
+    Name="Creepar"
+    Precision="30"
+    ColumnName="CREEPAR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_EXPO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="PCoordonnees"
+    Association="model.entities.PExpoCoordonneesFkAssoc"
+    AssociationEnd="model.entities.PExpoCoordonneesFkAssoc.PCoordonnees"
+    AssociationOtherEnd="model.entities.PExpoCoordonneesFkAssoc.PExpo"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PAtelier"
+    Association="model.entities.PAtelierExpoFkAssoc"
+    AssociationEnd="model.entities.PAtelierExpoFkAssoc.PAtelier"
+    AssociationOtherEnd="model.entities.PAtelierExpoFkAssoc.PExpo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="PLocal"
+    Association="model.entities.PLocalRegionFkAssoc"
+    AssociationEnd="model.entities.PLocalRegionFkAssoc.PLocal"
+    AssociationOtherEnd="model.entities.PLocalRegionFkAssoc.PExpo"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PExpoNoexpoPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="P_EXPO_NOEXPO_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.assoc.PExpo.Noexpo"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PExpoCoordonneesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="P_COORDONNÉES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="P_EXPO_COORDONNEES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.assoc.PExpo.Nocoord"/>
+    </AttrArray>
+  </Key>
+</Entity>

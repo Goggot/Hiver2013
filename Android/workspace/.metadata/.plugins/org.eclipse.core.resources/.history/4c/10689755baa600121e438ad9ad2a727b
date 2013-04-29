@@ -1,0 +1,22 @@
+package com.example.finallab;
+
+import java.util.Hashtable;
+import java.util.Vector;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ListView;
+
+public class HotelActivity extends Activity{
+	
+	ListView listeHotel;
+	Vector<Hashtable> vecteur;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.hotels);
+		
+		listeHotel = (ListView)findViewById(R.id.listeHotels);
+	}
+}
