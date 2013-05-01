@@ -3,18 +3,17 @@ function verifierMessages() {
 		url: 'getMessages.php',
 		success: function(data){
 			var tab = JSON.parse(data);
-			var nom;
-			var msg;
-			$.each(tab,function(i,val){
-				nom = val.nomUsager;
-				msg = val.message;
+			
+			var msg = "";
+			
+			$.each(tab, function(i,val){
+				msg = msg + val.nomUsager + " --> " + val.message + "</br>";
 			});
-			if (tab != "") {
-				document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + nom + " --> " + msg + "</br>";
+			
+			document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + msg;
+			setTimeout(verifierMessages, 1000);
 			}
-			setTimeout(verifierMessages, 3000);
-		}
-	});
+		});
 }
 
 function verifierMembres() {
@@ -27,21 +26,21 @@ function verifierMembres() {
 				liste = liste + (tab[i]+"</br>");
 			}
 			document.getElementById('membres').innerHTML = liste;
-			setTimeout(verifierMembres, 3000);
+			setTimeout(verifierMembres, 1000);
 		}
 	});
+	//$.ajax( {jdsbvgdas, asjcfasdf} );
 }
 
 function envoieMessage(){
 	console.log("Envoie en cours...");
 	var message = $('#conv').val();
-	console.log(message);
+
 	$.ajax({
 		url: 'envoieMessage.php',
 		type: 'POST',
 		data: 'message='+message
 	});
-	console.log("Envoie terminé...");
+	
 	document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + " --> " + message + "</br>";
-	document.getElementById('conv').innerHTML = "";
 }
