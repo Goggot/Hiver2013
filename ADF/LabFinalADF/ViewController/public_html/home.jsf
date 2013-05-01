@@ -4,7 +4,10 @@
   <af:document title="home.jsf" id="d1">
     <af:form id="f1">
       <af:pageTemplate viewId="/templateGeneral.jsf" id="pt1">
-        <f:facet name="main"/>
+        <f:facet name="main">
+          <af:region value="#{bindings.taskflowdefinition1.regionModel}"
+                     id="r1"/>
+        </f:facet>
       </af:pageTemplate>
     </af:form>
   </af:document>

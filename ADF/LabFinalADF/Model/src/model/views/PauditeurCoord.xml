@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PauditeurCoord"
+  Version="11.1.2.60.81"
+  SelectList="PAuditeur.CODEAUDITEUR, 
+       PAuditeur.NOAUDITEUR, 
+       PAuditeur.MOTDEPASSE, 
+       PAuditeur.NOM, 
+       PAuditeur.PRENOM, 
+       PCoordonnees.RUE, 
+       PCoordonnees.NOCOORD, 
+       PCoordonnees.VILLE, 
+       PCoordonnees.TELEPHONE, 
+       PCoordonnees.CODE_POSTAL, 
+       PCoordonnees.NOREGION, 
+       PAuditeur.STATUT, 
+       PCoordonnees.COURRIEL, 
+       PAuditeur.NOCOORD AS NOCOORD1"
+  FromList="P_AUDITEUR PAuditeur, P_COORDONNEES PCoordonnees"
+  Where="PAuditeur.NOCOORD = PCoordonnees.NOCOORD"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.views.PauditeurCoord_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <EntityUsage
+    Name="PAuditeur"
+    Entity="model.entities.PAuditeur"/>
+  <EntityUsage
+    Name="PCoordonnees"
+    Entity="model.entities.PCoordonnees"
+    Association="model.entities.assoc.PAuditeurCoordonneesFkAssoc"
+    AssociationEnd="model.entities.assoc.PAuditeurCoordonneesFkAssoc.PCoordonnees"
+    SourceUsage="model.views.PauditeurCoord.PAuditeur"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.entities.PAuditeur.Nocoord"/>
+      </AttrArray>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.entities.PCoordonnees.Nocoord"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="Codeauditeur"
+    PrecisionRule="true"
+    EntityAttrName="Codeauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="CODEAUDITEUR"/>
+  <ViewAttribute
+    Name="Noauditeur"
+    IsUpdateable="while_insert"
+    PrecisionRule="true"
+    EntityAttrName="Noauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="NOAUDITEUR"/>
+  <ViewAttribute
+    Name="Motdepasse"
+    PrecisionRule="true"
+    EntityAttrName="Motdepasse"
+    EntityUsage="PAuditeur"
+    AliasName="MOTDEPASSE"/>
+  <ViewAttribute
+    Name="Nom"
+    PrecisionRule="true"
+    EntityAttrName="Nom"
+    EntityUsage="PAuditeur"
+    AliasName="NOM"/>
+  <ViewAttribute
+    Name="Prenom"
+    PrecisionRule="true"
+    EntityAttrName="Prenom"
+    EntityUsage="PAuditeur"
+    AliasName="PRENOM"/>
+  <ViewAttribute
+    Name="Rue"
+    PrecisionRule="true"
+    EntityAttrName="Rue"
+    EntityUsage="PCoordonnees"
+    AliasName="RUE"/>
+  <ViewAttribute
+    Name="Nocoord"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PCoordonnees"
+    AliasName="NOCOORD"/>
+  <ViewAttribute
+    Name="Ville"
+    PrecisionRule="true"
+    EntityAttrName="Ville"
+    EntityUsage="PCoordonnees"
+    AliasName="VILLE"/>
+  <ViewAttribute
+    Name="Telephone"
+    PrecisionRule="true"
+    EntityAttrName="Telephone"
+    EntityUsage="PCoordonnees"
+    AliasName="TELEPHONE"/>
+  <ViewAttribute
+    Name="CodePostal"
+    PrecisionRule="true"
+    EntityAttrName="CodePostal"
+    EntityUsage="PCoordonnees"
+    AliasName="CODE_POSTAL"/>
+  <ViewAttribute
+    Name="Noregion"
+    PrecisionRule="true"
+    EntityAttrName="Noregion"
+    EntityUsage="PCoordonnees"
+    AliasName="NOREGION"/>
+  <ViewAttribute
+    Name="Statut"
+    PrecisionRule="true"
+    EntityAttrName="Statut"
+    EntityUsage="PAuditeur"
+    AliasName="STATUT"/>
+  <ViewAttribute
+    Name="Courriel"
+    PrecisionRule="true"
+    EntityAttrName="Courriel"
+    EntityUsage="PCoordonnees"
+    AliasName="COURRIEL"/>
+  <ViewAttribute
+    Name="Nocoord1"
+    IsUpdateable="while_insert"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PAuditeur"
+    AliasName="NOCOORD1"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

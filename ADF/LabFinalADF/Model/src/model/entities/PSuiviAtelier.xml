@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PSuiviAtelier"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="P_SUIVI_ATELIER"
+  AliasName="PSuiviAtelier"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="NoSuiviAtel"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="NO_SUIVI_ATEL"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_SUIVI_ATELIER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="NoAtel"
+    Precision="4"
+    Scale="0"
+    ColumnName="NO_ATEL"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_SUIVI_ATELIER"/>
+  <Attribute
+    Name="NoAncienLocal"
+    Precision="10"
+    ColumnName="NO_ANCIEN_LOCAL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_SUIVI_ATELIER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="PSuiviAtelierPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="P_SUIVI_ATELIER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.PSuiviAtelier.NoSuiviAtel"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -5,7 +5,7 @@
     <afc:component>
       <afc:display-name>templateDef1</afc:display-name>
       <afc:facet>
-        <afc:description>zone &eacute;ditable</afc:description>
+        <afc:description></afc:description>
         <afc:facet-name>main</afc:facet-name>
       </afc:facet>
     </afc:component>

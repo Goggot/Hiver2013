@@ -13,7 +13,9 @@
     <view id="enregistrements">
       <page>/loginAuditeur/enregistrements.jsff</page>
     </view>
-    <method-call id="auditeurConnecte"></method-call>
+    <method-call id="auditeurConnecte">
+      <method>#{requestScope.LoginBean.it1_validator}</method>
+    </method-call>
     <method-call id="CreateInsert"></method-call>
     <router id="decisionConnecte"></router>
     <task-flow-call id="TF_menuAdministrateur"></task-flow-call>

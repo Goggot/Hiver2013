@@ -5,12 +5,13 @@
   <af:panelFormLayout id="pfl1">
     <af:inputText label="Login usager" id="it1"
                   validator="#{LoginBean.it1_validator}"
-                  value="#{PageFlowScope.login}"/>
+                  value="#{pageFlowScope.login}"/>
     <af:inputText label="Mot de passe" id="it2"
-                  value="#{PageFlowScope.mdp}"/>
+                  value="#{pageFlowScope.mdp}"/>
     <af:panelGroupLayout id="pgl1">
-      <h:button value="Login" id="b1"/>
-      <h:link value="S'enregistrer" id="l1" style="font-size:medium;"/>
+      <af:commandButton text="Connexion" id="cb1"
+                        action="*executeAuditeurConnecte"/>
+      <af:commandLink text="S'enregistrer" id="cl1" action="*nouveau"/>
     </af:panelGroupLayout>
     <af:panelGroupLayout id="pgl2" layout="horizontal">
       <af:outputText value=" code ou mot de passe  invalide" id="ot1"
