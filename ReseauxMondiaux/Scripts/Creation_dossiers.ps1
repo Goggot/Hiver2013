@@ -43,8 +43,6 @@ foreach($item in $ftext){
     icacls.exe $p2 /grant "Administrateurs:(OI)(CI)(F)"
     icacls.exe $p1 /grant "Système:(OI)(CI)(F)"
     icacls.exe $p2 /grant "Système:(OI)(CI)(F)"
-    icacls.exe $p1 /grant "Utilisateurs authentifiés:(OI)(CI)(F)"
-    icacls.exe $p2 /grant "Utilisateurs authentifiés:(OI)(CI)(F)"
     write-host Affectation des droits Admin sur $l
     icacls.exe $p1 /grant "Erwan:(OI)(CI)(F)"
     icacls.exe $p2 /grant "Erwan:(OI)(CI)(F)"
