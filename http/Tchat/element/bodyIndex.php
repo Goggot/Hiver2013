@@ -6,4 +6,5 @@
                <input type="submit" value="Valider" />
             </p>
     </form>
+	<a href="inscription.php">S'enregistrer</a>
 </div>

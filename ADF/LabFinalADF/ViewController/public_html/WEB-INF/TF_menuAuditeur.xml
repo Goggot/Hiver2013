@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="TF_menuAuditeur">
+    <default-activity>menu</default-activity>
+    <view id="menu"></view>
+    <view id="infoPersonnel"></view>
+    <view id="changerMotDePasse"></view>
+    <view id="evaluationAtelier"></view>
+    <view id="inscription"></view>
+    <view id="devenirJuge"></view>
+    <control-flow-rule id="__1">
+      <from-activity-id>infoPersonnel</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>versMenuInfosPersonnelles</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>menu</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>versInfoPersonnelles</from-outcome>
+        <to-activity-id>infoPersonnel</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>versInscriptiom</from-outcome>
+        <to-activity-id>inscription</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>versChangerMDP</from-outcome>
+        <to-activity-id>changerMotDePasse</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__13">
+        <from-outcome>versDevenirJuge</from-outcome>
+        <to-activity-id>devenirJuge</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>versEvaluationAteliers</from-outcome>
+        <to-activity-id>evaluationAtelier</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>inscription</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>versMenuInscription</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>changerMotDePasse</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>versMenuChangerMDP</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id>devenirJuge</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>versMenuDevenirJuge</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__15">
+      <from-activity-id>evaluationAtelier</from-activity-id>
+      <control-flow-case id="__16">
+        <from-outcome>versMenuEvalutaionAtelier</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

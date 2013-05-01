@@ -4,7 +4,7 @@
         <title>Tchat</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
         <script src="js/javascript.js"></script>
-	<script src="js/jquery.js"></script>
+		<script src="js/jquery.js"></script>
     </head>
     <body>
-	<div class="main">
+		<div class="main">

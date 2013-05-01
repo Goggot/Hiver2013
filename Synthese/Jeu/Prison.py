@@ -3,5 +3,6 @@ class Prison():
         self.parent = parent
         self.robotList = {"camera": [], "droneS": [], "droneA": []}
         self.trapList = {"laser": [], "detecteur": []}
+        self.projectilList = []
         self.objectList = []
         self.niveauEnCours = 1
