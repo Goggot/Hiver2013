@@ -45,7 +45,7 @@ class camera(Robot):
                     pygame.mixer.music.load('music/r2d2/4.mp3')
                 pygame.mixer.music.play()
                 Timer(4.0, self.temps).start()
-        return
+        return False
 
 
 class droneS(Robot):
@@ -60,6 +60,7 @@ class droneS(Robot):
         self.vitesse = 0.2
 
     def bouge(self):
+        pos = self.position[:]
         if self.direction == "H":
             if self.position[1] <= (self.posInitial[1] - 50):
                 self.direction = "B"
@@ -70,6 +71,8 @@ class droneS(Robot):
                 self.direction = "H"
             else:
                 self.position[1] += self.vitesse
+        object = [pos, self.position[:]]
+        return object
 
     def mourrir(self):
         pass
@@ -78,7 +81,7 @@ class droneS(Robot):
         self.audio = False
 
     def tick(self):
-        self.bouge()
+        object = self.bouge()
         if self.detection():
             print("DETECTE")
             if not self.audio:
@@ -86,7 +89,7 @@ class droneS(Robot):
                 pygame.mixer.music.load('music/jabba.mp3')
                 pygame.mixer.music.play()
                 Timer(6.0, self.temps).start()
-        return self.direction
+        return object
 
 
 class droneA(Robot):
@@ -104,6 +107,7 @@ class droneA(Robot):
         self.tirer = False
 
     def bouge(self):        # position[0] = axe Y
+        pos = self.position[:]
         if not self.alert:
             if self.direction == "G":
                 if self.position[0] <= (self.posInitial[0] - 50):
@@ -115,10 +119,12 @@ class droneA(Robot):
                     self.direction = "G"
                 else:
                     self.position[0] += self.vitesse
+        object = [pos, self.position[:]]
+        return object
 
     def attaque(self):
         taille = len(self.parent.prison.projectilList) + 1
-        self.parent.prison.projectilList.append([taille, Projectile(self,self.position[:])])
+        self.parent.prison.projectilList.append([taille, Projectile(self, self.position[:])])
 
     def poursuivre(self):
         if self.position[0] < self.parent.fred.position[0]:
@@ -140,7 +146,7 @@ class droneA(Robot):
         self.tirer = False
 
     def tick(self):
-        self.bouge()
+        object = self.bouge()
         if self.detection():
             print("DETECTE")
             self.poursuivre()
@@ -158,4 +164,4 @@ class droneA(Robot):
                 Timer(1.0, self.son).start()
         else:
             self.alert = False
-        return self.direction
+        return object
