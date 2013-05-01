@@ -10,12 +10,12 @@
 </div>
 
 <div id="tchat">
+    <h1 style="text-align:center;">Tchat PHP</h1>
     <div id="text">
-        <h1 style="text-align:center;">Tchat PHP</h1></br>
         <p id="messages"></p>
     </div>
         <p>
-           <input id="conv" type="text" name="conv" />
+           <input id="conv" type="text" name="conv" onkeypress="texte(event);" />
            <button onclick="envoieMessage();"/>Envoyer</button>
         </p>
 </div>

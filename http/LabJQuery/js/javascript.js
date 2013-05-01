@@ -7,5 +7,5 @@ function menu(){
 		$("#item"+i).slideDown(700,menu);
 		i++;
 	}
-	console.log("Foncton menu");
+	console.log("Fonction menu");
 }

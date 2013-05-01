@@ -70,10 +70,12 @@ body{
 #text{
 	border-radius:10px;
 	margin:10px;
-	height:700px;
+	height:400px;
 	padding:10px;
 	text-align:left;
 	background-color:#111111;
+	overflow-y:auto;
+	overflow-x:hidden;
 }
 #messages{
 	width:660px;
