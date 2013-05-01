@@ -1,6 +1,7 @@
 import pygame
 import pygame.mixer
 from pygame.locals import *
+
 pygame.init()
 pygame.mixer.init(44100)
 pygame.key.set_repeat(15, 15)
