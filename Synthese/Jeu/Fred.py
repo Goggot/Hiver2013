@@ -38,11 +38,16 @@ class Fred():
             if event.type == QUIT:              # Si un de ces evenements est de type QUIT
                 exit()                          # On arrete la boucle
             else:
-                self.parent.listeEvenement.append(event)
                 if event.type == KEYDOWN:       # si une touche du clavier est appuyee
                     #print(event.key)
                     if event.key == K_UP or event.key == K_SPACE or event.key == K_DOWN or event.key == K_LEFT or event.key == K_RIGHT:
                         self.bouge(event)
                     elif event.key == 304:
                         self.parent.parent.pause = True
-                    return event.key
+        return self.position
+
+    def clone(self):
+        class Clone(object):
+            pass
+
+        return Clone

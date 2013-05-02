@@ -38,9 +38,11 @@ class Vue():
             self.listImgEnnemis.get("projectile").append([item[0], self.projectile])
 
     def refresh(self):
+        print("REFRESH")
         self.fenetre.blit(self.fond, (0, 0))
-        posSolo = self.parent.modele.fred.position
-        self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
+        #print(self.parent.modele.fred.position)
+        #posSolo = self.parent.modele.fred.position
+        #self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
 
         for key in self.listImgEnnemis:
             if key == "droneA":

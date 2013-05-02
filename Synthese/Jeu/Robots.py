@@ -18,6 +18,12 @@ class Robot():
                 self.etat = True
         return alert
 
+    def clone(self):
+        class Clone(object):
+            pass
+
+        return Clone
+
 
 class camera(Robot):
     def __init__(self, parent, pos):

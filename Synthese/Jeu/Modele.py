@@ -5,29 +5,33 @@ import Prison
 class Modele():
     def __init__(self, parent):
         self.parent = parent
-        self.listeEvenement = [50 * [2]]
+        self.listeEvenement = [500 * [2]]
         self.fred = Fred.Fred(self)
         self.prison = Prison.Prison(self)
         self.robotList = self.prison.robotList
         self.projectilList = self.prison.projectilList
 
     def tickGeneral(self):
-        self.listeEvenement.append(["fred", self.fred.tick()])
+        self.listeEvenement.append([0, self.fred.clone, self.fred.position, self.fred.tick()])
         for key in self.robotList:
             for item in self.robotList[key]:
                 if item:
-                    self.listeEvenement.append([item[0], item[1], item[1].tick()])
-        for item in self.projectilList:
-            print(item[0], item[1])
-            self.listeEvenement.append(["projectile", item[1], item[1].tick()])
+                    self.listeEvenement.append([item[0], item[1].clone, item[1].tick()])
+        #for item in self.projectilList:
+            #print(item[0], item[1])
+            #self.listeEvenement.append(["projectile", item[1][:], item[1].tick()])
 
     def backToTheFuture(self):
-        self.count = 50
-        while self.count > 0:
+        self.count = 500
+        if self.count > 0:
             eve = self.listeEvenement.pop(self.count)
             print(eve)
-
+            if eve[0] == 0:
+                self.fred = eve[1]
+            else:
+                self.robotList[eve[0]] = eve[1]
             self.count -= 1
-        self.parent.pause = False
+        else:
+            self.parent.pause = False
 
         print("YAHOUUU ! BACK TO THE FUTUUURE !")
