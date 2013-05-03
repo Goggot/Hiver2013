@@ -16,6 +16,6 @@
     </div>
         <p>
            <input id="conv" type="text" name="conv" onkeypress="texte(event);" />
-           <button onclick="envoieMessage();"/>Envoyer</button>
+           <button onclick="envoieMessage(null);"/>Envoyer</button>
         </p>
 </div>

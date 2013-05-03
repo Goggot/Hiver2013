@@ -7,6 +7,9 @@ function verifierMessages() {
 			var msg = "";
 			
 			$.each(tab, function(i,val){
+				if (val.message.indexOf("<script>") || val.message.indexOf("<?php")){
+					setTimeout(500,envoieMessage(val.nomUsager + " essai du XSS, vous êtes prévenu !"));
+				}
 				msg = msg + val.nomUsager + " --> " + val.message + "</br>";
 			});
 			
@@ -33,10 +36,16 @@ function verifierMembres() {
 	});
 }
 
-function envoieMessage(){
+function envoieMessage(textXSS){
 	console.log("Envoie en cours...");
-	var message = $('#conv').val();
-
+	var message;
+	if (textXSS){
+		message = textXSS;
+	}
+	else{
+		message = $('#conv').val();
+	}
+	
 	$.ajax({
 		url: 'envoieMessage.php',
 		type: 'POST',
