@@ -7,10 +7,23 @@ function verifierMessages() {
 			var msg = "";
 			
 			$.each(tab, function(i,val){
-				if (val.message.indexOf("<script>") || val.message.indexOf("<?php")){
-					setTimeout(500,envoieMessage(val.nomUsager + " essai du XSS, vous êtes prévenu !"));
-				}
-				msg = msg + val.nomUsager + " --> " + val.message + "</br>";
+				var message = val.message;
+				var script = message.search("<script>");
+				var php = message.search("<?php");
+				
+				if (script >= 0 || php >= 0)
+					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
+						var msgPerso;
+						if (script >= 0 && php < 0)
+							msgPerso = " essai des injections XSS : ";
+						else if (script < 0 && php >= 0)
+							msgPerso = " essai des injections PHP : ";
+						else
+							msgPerso = " essai des injections PHP et XSS : ";
+						message = escape(message);
+						setTimeout(500,envoieMessage(val.nomUsager + msgPerso + message));
+					}
+				msg = msg + val.nomUsager + " --> " + message + "</br>";
 			});
 			
 			document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + msg;
