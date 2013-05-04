@@ -1,5 +1,5 @@
 <?php
-    date_default_timezone_set('America/New_York');
+    #date_default_timezone_set('America/New_York');
     require_once('action/lib/nusoap.php');
     require_once('action/CommonAction.php');
 	require_once('action/DAO/Connection.php');
