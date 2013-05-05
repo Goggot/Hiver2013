@@ -23,6 +23,13 @@ class Controleur():
         self.robotList.get("droneS").append([6, droneS(self.modele, [650, 380], 'B')])
         c.vue.initGraph()
 
+    def partie(self):
+        if self.pause:
+            self.modele.backToTheFuture()
+        else:
+            self.modele.tickGeneral()
+        self.vue.refresh()
+
 
 if __name__ == '__main__':
     c = Controleur()
@@ -31,8 +38,4 @@ if __name__ == '__main__':
         c.initPartie()
         init = False
     while 1:
-        if c.pause:
-            c.modele.backToTheFuture()
-        else:
-            c.modele.tickGeneral()
-        c.vue.refresh()
+        c.partie()

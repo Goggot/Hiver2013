@@ -10,6 +10,7 @@ class Modele():
         self.prison = Prison.Prison(self)
         self.robotList = self.prison.robotList
         self.projectilList = self.prison.projectilList
+		self.count = 500
 
     def tickGeneral(self):
         self.listeEvenement.append([0, self.fred.clone, self.fred.position, self.fred.tick()])
@@ -22,7 +23,6 @@ class Modele():
             #self.listeEvenement.append(["projectile", item[1][:], item[1].tick()])
 
     def backToTheFuture(self):
-        self.count = 500
         if self.count > 0:
             eve = self.listeEvenement.pop(self.count)
             print(eve)

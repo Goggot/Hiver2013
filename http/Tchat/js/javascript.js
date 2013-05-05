@@ -16,7 +16,7 @@ function verifierMessages() {
 				
 				if (script >= 0 || php >= 0 || sc >=0)
 					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
-						var msgPerso = "";
+						var msgPerso = " essai des injections ";
 						if (script >= 0 && php < 0)
 							msgPerso = " essai des injections XSS : ";
 						else if (script < 0 && php >= 0)
