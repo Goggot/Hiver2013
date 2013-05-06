@@ -1,7 +1,6 @@
-
 class Projectile():
     def __init__(self, parent, pos):
-        self.vitesse=1
+        self.vitesse = 1
         self.robot = parent
         self.position = pos
 
