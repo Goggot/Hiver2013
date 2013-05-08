@@ -1,4 +1,5 @@
 import pygame
+import copy
 from pygame.locals import *
 
 
@@ -50,4 +51,4 @@ class Fred():
         class Clone(object):
             pass
 
-        return Clone
+        return copy.deepcopy(Clone)

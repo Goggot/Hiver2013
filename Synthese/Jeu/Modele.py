@@ -1,5 +1,6 @@
 import Fred
 import Prison
+import copy
 
 
 class Modele():
@@ -29,10 +30,9 @@ class Modele():
             if eve[0] == 0:
                 self.fred = eve[1]
             else:
-                aa = self.robotList[eve[0]][1]
-                print(aa[0])
-                self.robotList[eve[0]][eve[1]] = eve[2]
-
+                aa = self.robotList[eve[0]][eve[1]][1]
+                print(aa)
+                self.robotList[eve[0]][eve[1]][1] = copy.deepcopy(eve[2])
             self.count -= 1
             self.parent.vue.initGraph()
         else:

@@ -1,5 +1,6 @@
 import pygame
 import random
+import copy
 from Projectile import *
 from threading import *
 
@@ -22,7 +23,7 @@ class Robot():
         class Clone(object):
             pass
 
-        return Clone
+        return copy.deepcopy(Clone)
 
 
 class camera(Robot):

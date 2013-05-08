@@ -1,4 +1,6 @@
 <?php
+
+    #date_default_timezone_set('America/New_York');
     session_start();
     require_once("action/DAO/Connection.php");
     require_once("action/DAO/Deconnection.php");
