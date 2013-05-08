@@ -8,9 +8,7 @@ foreach($item in $fcsv)
 {
     $passwd = convertto-securestring "AAAaaa111" -asplaintext -force
     $path = $item.Chemin+",OU=Haiti,OU=Erwan,DC=DALLAS,DC=B64"
-    $ppath = "\\407P34\Haiti_Profil$\"+$login
-    $hpath = "\\407P34\Haiti_Home$\"+$login
-
+    
     if($item.sn -eq "AU")
     {
         $login = ("H_" + $item.sn.Substring(0,2) + $item.givenName.Substring(0,2))
@@ -19,12 +17,16 @@ foreach($item in $fcsv)
     {
         $login = ("H_" + $item.sn.Substring(0,3) + $item.givenName.Substring(0,2))
     }
+	
+	$ppath = "\\407P34\Haiti_Profil\"+$login
+    $hpath = "\\407P34\Haiti_Home\"+$login
 
     Remove-ADUser -Identity $login
     write-host Suppression de $login
 
     New-ADUser `
     -Name $login `
+	-DisplayName ($line.sn + " " + $line.givenName) `
     -SamAccountName $login `
     -UserPrincipalName $login@DALLAS.B64 `    -GivenName $item.givenName `    -AccountPassword $passwd `    -Path $path `    -profilePath $ppath `    -Enabled $true `    -HomeDirectory $hpath  `    -HomeDrive "X:" `    -PasswordNeverExpires $true `    -CannotChangePassword $true `    -Country "HA" `    -otherattributes @{telephoneNumber = $item.telephoneNumber; `
                        streetAddress = $item.streetAddress; `

@@ -51,12 +51,9 @@
       <string v="oracle.mds.internal.dt.ide.MDSADFLibVirtualNodeCSProvider/mdsLibVirtualNodeContentSet"/>
    </list>
    <value n="defaultPackage" v="model"/>
-   <value n="jbo.JpxName" v="model.Model"/>
-   <value n="JboProject" v="true"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADFbc"/>
-         <string v="ADFbc-Modeling"/>
          <string v="Database"/>
          <string v="Database-Modeling"/>
          <string v="Java"/>
@@ -64,29 +61,7 @@
          <string v="XML"/>
       </list>
    </hash>
-   <value n="oracle.jbo.SavedPreferences" v="true"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
-      <list n="copyRes">
-         <string v=".cpx"/>
-         <string v=".dcx"/>
-         <string v=".ejx"/>
-         <string v=".gif"/>
-         <string v=".ini"/>
-         <string v=".jpeg"/>
-         <string v=".jpg"/>
-         <string v=".png"/>
-         <string v=".properties"/>
-         <string v=".sva"/>
-         <string v=".tag"/>
-         <string v=".tld"/>
-         <string v=".wsdl"/>
-         <string v=".xcfg"/>
-         <string v=".xlf"/>
-         <string v=".xml"/>
-         <string v=".xsd"/>
-         <string v=".xsl"/>
-         <string v=".jpx"/>
-      </list>
       <value n="internalEncoding" v="Cp1252"/>
       <list n="Javac.commandline.optionlist">
          <string v="-g"/>
@@ -169,17 +144,6 @@
          </list>
       </hash>
    </hash>
-   <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
-      <hash n="offlineDBContentSet">
-         <list n="pattern-filters">
-            <string v="-DBLabFinal/SCHEMA1/P_RESPONSABLE.1.trigger"/>
-            <string v="+**"/>
-         </list>
-         <list n="url-path">
-            <url path="database/"/>
-         </list>
-      </hash>
-   </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
          <hash n="Default">
@@ -225,14 +189,6 @@
             <value n="id" v="Oracle JDBC"/>
             <value n="isJDK" v="false"/>
          </hash>
-         <hash>
-            <value n="id" v="Resource Bundle Support"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF Common Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -265,14 +221,6 @@
          </hash>
          <hash>
             <value n="id" v="Oracle JDBC"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Resource Bundle Support"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF Common Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
