@@ -32,7 +32,7 @@ class Modele():
             else:
                 aa = self.robotList[eve[0]][eve[1]][1]
                 print(aa)
-                self.robotList[eve[0]][eve[1]][1] = copy.deepcopy(eve[2])
+                self.robotList[eve[0]][eve[1]][1] = eve[2]
             self.count -= 1
             self.parent.vue.initGraph()
         else:

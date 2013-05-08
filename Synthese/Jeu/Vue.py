@@ -50,6 +50,7 @@ class Vue():
                     self.droneA = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.robotList["droneA"]:
                         if item2[0] == item1[0]:
+                            print(item2[1])
                             posDroneA = item2[1].position
                     self.fenetre.blit(item1[1], (posDroneA[0], posDroneA[1]))
             elif key == "droneS":
@@ -57,6 +58,7 @@ class Vue():
                     self.droneS = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.robotList["droneS"]:
                         if item2[0] == item1[0]:
+                            print(item2[1])
                             posDroneS = item2[1].position
                     self.fenetre.blit(item1[1], (posDroneS[0], posDroneS[1]))
             elif key == "camera":
@@ -64,6 +66,7 @@ class Vue():
                     self.camera = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.robotList["camera"]:
                         if item2[0] == item1[0]:
+                            print(item2[1])
                             posCamera = item2[1].position
                     self.fenetre.blit(item1[1], (posCamera[0], posCamera[1]))
             elif key == "projectile":
@@ -71,6 +74,7 @@ class Vue():
                     self.projectile = item1[1].get_rect()
                     for item2 in self.parent.modele.prison.projectilList:
                         if item2[0] == item1[0]:
+                            print(item2[1])
                             posProjectile = item2[1].position
                     self.fenetre.blit(item1[1], (posProjectile[0], posProjectile[1]))
                     print("PROJECTILE AFFICHE")

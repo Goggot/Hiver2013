@@ -22,8 +22,7 @@ class Robot():
     def clone(self):
         class Clone(object):
             pass
-
-        return copy.deepcopy(Clone)
+        return Robot
 
 
 class camera(Robot):
