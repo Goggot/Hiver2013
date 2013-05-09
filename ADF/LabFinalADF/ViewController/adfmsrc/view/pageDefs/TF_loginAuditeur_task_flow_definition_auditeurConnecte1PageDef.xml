@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81"
+                id="TF_loginAuditeur_task_flow_definition_auditeurConnecte1PageDef"
+                Package="view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <action id="auditeurConnecte" RequiresUpdateModel="true"
+            Action="invokeMethod" MethodName="auditeurConnecte"
+            IsViewObjectMethod="true" DataControl="AppModuleDataControl"
+            InstanceName="data.AppModuleDataControl.PAuditeurView1"
+            ReturnName="data.AppModuleDataControl.methodResults.auditeurConnecte_AppModuleDataControl_PAuditeurView1_auditeurConnecte_result">
+      <NamedData NDName="login" NDValue="#{pageFlowScope.login}"
+                 NDType="java.lang.String"/>
+      <NamedData NDName="mdp" NDValue="#{pageFlowScope.mdp}"
+                 NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>
