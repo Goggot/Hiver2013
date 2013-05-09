@@ -1,5 +1,4 @@
 import pygame
-import copy
 from pygame.locals import *
 
 
@@ -45,10 +44,3 @@ class Fred():
                         self.bouge(event)
                     elif event.key == 304:
                         self.parent.parent.pause = True
-        return self.position
-
-    def clone(self):
-        class Clone(object):
-            pass
-
-        return copy.deepcopy(Clone)

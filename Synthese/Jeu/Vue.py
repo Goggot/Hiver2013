@@ -38,43 +38,39 @@ class Vue():
             self.listImgEnnemis.get("projectile").append([item[0], self.projectile])
 
     def refresh(self):
-        print("REFRESH")
+        #self.robotList = self.parent.modele.prison.robotList
+        self.pause = self.parent.pause
         self.fenetre.blit(self.fond, (0, 0))
-        #print(self.parent.modele.fred.position)
-        #posSolo = self.parent.modele.fred.position
-        #self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
-
+        posSolo = self.parent.modele.fred.position
+        self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
+        #print(self.robotList)
         for key in self.listImgEnnemis:
             if key == "droneA":
                 for item1 in self.listImgEnnemis[key]:
-                    self.droneA = item1[1].get_rect()
-                    for item2 in self.parent.modele.prison.robotList["droneA"]:
+                    self.projectile = item1[1].get_rect()
+                    for item2 in self.robotList["droneA"]:
                         if item2[0] == item1[0]:
-                            print(item2[1])
                             posDroneA = item2[1].position
                     self.fenetre.blit(item1[1], (posDroneA[0], posDroneA[1]))
             elif key == "droneS":
                 for item1 in self.listImgEnnemis[key]:
-                    self.droneS = item1[1].get_rect()
-                    for item2 in self.parent.modele.prison.robotList["droneS"]:
+                    self.projectile = item1[1].get_rect()
+                    for item2 in self.robotList["droneS"]:
                         if item2[0] == item1[0]:
-                            print(item2[1])
                             posDroneS = item2[1].position
                     self.fenetre.blit(item1[1], (posDroneS[0], posDroneS[1]))
             elif key == "camera":
                 for item1 in self.listImgEnnemis[key]:
-                    self.camera = item1[1].get_rect()
-                    for item2 in self.parent.modele.prison.robotList["camera"]:
+                    self.projectile = item1[1].get_rect()
+                    for item2 in self.robotList["camera"]:
                         if item2[0] == item1[0]:
-                            print(item2[1])
                             posCamera = item2[1].position
                     self.fenetre.blit(item1[1], (posCamera[0], posCamera[1]))
             elif key == "projectile":
                 for item1 in self.listImgEnnemis[key]:
                     self.projectile = item1[1].get_rect()
-                    for item2 in self.parent.modele.prison.projectilList:
+                    for item2 in self.projectilList:
                         if item2[0] == item1[0]:
-                            print(item2[1])
                             posProjectile = item2[1].position
                     self.fenetre.blit(item1[1], (posProjectile[0], posProjectile[1]))
                     print("PROJECTILE AFFICHE")

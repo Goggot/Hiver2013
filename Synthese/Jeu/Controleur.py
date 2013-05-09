@@ -13,6 +13,7 @@ class Controleur():
         self.rep = 1
         self.init = True
         self.pause = False
+        self.count = 0
 
     def initPartie(self):
         # Ajout des ennemis
@@ -29,9 +30,16 @@ class Controleur():
 
     def partie(self):
         if self.pause:
-            self.modele.backToTheFuture()
+            self.modele.backToTheFuture(self.count)
+            self.count -= 1
+            if self.count == 0:
+                self.pause = False
+            print(self.count)
         else:
             self.modele.tickGeneral()
+            if self.count < 500:
+                self.count += 1
+
         self.vue.refresh()
         Timer(0.0030, self.partie).start()
 

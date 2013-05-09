@@ -1,6 +1,5 @@
 import pygame
 import random
-import copy
 from Projectile import *
 from threading import *
 
@@ -13,16 +12,11 @@ class Robot():
 
     def detection(self):
         alert = False
-        if (self.position[0] - 120) <= (self.parent.fred.position[0]+30) and (self.position[0] + 120) >= (self.parent.fred.position[0]-30):
-            if (self.position[1] - 120) <= (self.parent.fred.position[1]+30) and (self.position[1] + 120) >= (self.parent.fred.position[1]-30):
+        if (self.position[0] - 120) <= (self.parent.fred.position[0] + 30) and (self.position[0] + 120) >= (self.parent.fred.position[0]-30):
+            if (self.position[1] - 120) <= (self.parent.fred.position[1] + 30) and (self.position[1] + 120) >= (self.parent.fred.position[1]-30):
                 alert = True
                 self.etat = True
         return alert
-
-    def clone(self):
-        class Clone(object):
-            pass
-        return Robot
 
 
 class camera(Robot):
@@ -51,7 +45,6 @@ class camera(Robot):
                     pygame.mixer.music.load('music/r2d2/4.mp3')
                 pygame.mixer.music.play()
                 Timer(4.0, self.temps).start()
-        return False
 
 
 class droneS(Robot):
@@ -66,7 +59,6 @@ class droneS(Robot):
         self.vitesse = 0.2
 
     def bouge(self):
-        pos = self.position[:]
         if self.direction == "H":
             if self.position[1] <= (self.posInitial[1] - 50):
                 self.direction = "B"
@@ -77,8 +69,6 @@ class droneS(Robot):
                 self.direction = "H"
             else:
                 self.position[1] += self.vitesse
-        object = [pos, self.position[:]]
-        return object
 
     def mourrir(self):
         pass
@@ -87,7 +77,7 @@ class droneS(Robot):
         self.audio = False
 
     def tick(self):
-        object = self.bouge()
+        self.bouge()
         if self.detection():
             print("DETECTE")
             if not self.audio:
@@ -95,7 +85,6 @@ class droneS(Robot):
                 pygame.mixer.music.load('music/jabba.mp3')
                 pygame.mixer.music.play()
                 Timer(6.0, self.temps).start()
-        return object
 
 
 class droneA(Robot):
@@ -113,7 +102,6 @@ class droneA(Robot):
         self.tirer = False
 
     def bouge(self):        # position[0] = axe Y
-        pos = self.position[:]
         if not self.alert:
             if self.direction == "G":
                 if self.position[0] <= (self.posInitial[0] - 50):
@@ -125,8 +113,6 @@ class droneA(Robot):
                     self.direction = "G"
                 else:
                     self.position[0] += self.vitesse
-        object = [pos, self.position[:]]
-        return object
 
     def attaque(self):
         taille = len(self.parent.prison.projectilList) + 1
@@ -152,7 +138,7 @@ class droneA(Robot):
         self.tirer = False
 
     def tick(self):
-        object = self.bouge()
+        self.bouge()
         if self.detection():
             print("DETECTE")
             self.poursuivre()
@@ -170,4 +156,3 @@ class droneA(Robot):
                 Timer(1.0, self.son).start()
         else:
             self.alert = False
-        return object

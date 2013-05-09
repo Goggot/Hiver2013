@@ -13,6 +13,3 @@ class Projectile():
             self.position[1] += self.vitesse
         if self.position[1] > self.robot.parent.fred.position[1]:
             self.position[1] -= self.vitesse
-
-    def reverseTick(self, pos):
-        self.position = pos
