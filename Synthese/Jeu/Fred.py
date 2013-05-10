@@ -44,3 +44,12 @@ class Fred():
                         self.bouge(event)
                     elif event.key == 304:
                         self.parent.parent.pause = True
+
+    def clone(self):
+        dict = []
+        dict.append(self.position[:])
+        dict.append(self.direction[:])
+        dict.append(self.etat[:])
+        dict.append(self.vie[:])
+        dict.append(self.objectList[:])
+        return dict

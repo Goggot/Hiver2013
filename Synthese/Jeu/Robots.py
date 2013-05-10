@@ -8,7 +8,7 @@ class Robot():
     def __init__(self):
         self.id = 0
         self.direction = "H"
-        self.etat = 0     # Etat d'alerte -> false=RAS, true=alert
+        
 
     def detection(self):
         alert = False
@@ -46,12 +46,16 @@ class camera(Robot):
                 pygame.mixer.music.play()
                 Timer(4.0, self.temps).start()
 
+    def clone(self):
+        pass
+
 
 class droneS(Robot):
     def __init__(self, parent, pos, direction):
         self.position = pos
         self.direction = direction
         self.parent = parent
+        self.etat = 0     # Etat d'alerte -> false=RAS, true=alert
         self.energie = 5
         self.portee = 20
         self.audio = False
@@ -86,14 +90,21 @@ class droneS(Robot):
                 pygame.mixer.music.play()
                 Timer(6.0, self.temps).start()
 
+    def clone(self):
+        dict = []
+        dict.append(self.position[:])
+        dict.append(self.direction[:])
+        dict.append(self.etat)
+        return dict
+
 
 class droneA(Robot):
     def __init__(self, parent, pos, direction):
         self.parent = parent
         self.position = pos
         self.direction = direction
+        self.etat = 0     # Etat d'alerte -> false=RAS, true=alert
         self.vitesse = 0.5
-        self.energie = 10
         self.portee = 10
         self.alert = False
         self.posInitial = pos[:]
@@ -156,3 +167,11 @@ class droneA(Robot):
                 Timer(1.0, self.son).start()
         else:
             self.alert = False
+
+    def clone(self):
+        dict = []
+        dict.append(self.position[:])
+        dict.append(self.direction[:])
+        dict.append(self.etat)
+        dict.append(self.alert)
+        return dict

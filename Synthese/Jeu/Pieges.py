@@ -11,7 +11,7 @@ class Piege():
 class laser(Piege):
     def __init__(self):
         self.degats = 0.5
-
+        
 
 class detecteur(Piege):
     def __init__(self):
