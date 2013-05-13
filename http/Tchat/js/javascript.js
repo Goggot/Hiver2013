@@ -13,8 +13,10 @@ function verifierMessages() {
 				var sc = message.search("<");
 				var php = message.search("<?php");
 				var script = message.search("<script");
+				var balise = message.search("&#139;script");
+				var bb = message.search("&lt;script");
 				
-				if (script >= 0 || php >= 0 || sc >=0)
+				if (script >= 0 || php >= 0 || sc >=0 || balise >= 0 || bb >= 0)
 					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
 						var msgPerso = " essai des injections ";
 						if (script >= 0 && php < 0)
@@ -23,9 +25,9 @@ function verifierMessages() {
 							msgPerso = " essai des injections PHP : ";
 						
 						console.log("Script détecté");
-						message = escape(message);
 						textXSS = val.nomUsager + msgPerso + message;
 						setTimeout(envoieMessage, 500);
+						message = escape(message);
 					}
 				send = send + val.nomUsager + " -- " + message + "</br>";
 			});
