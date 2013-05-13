@@ -28,7 +28,7 @@ foreach($item in $fcsv)
     -Name $login `
 	-DisplayName ($line.sn + " " + $line.givenName) `
     -SamAccountName $login `
-    -UserPrincipalName $login@DALLAS.B64 `    -GivenName $item.givenName `    -AccountPassword $passwd `    -Path $path `    -profilePath $ppath `    -Enabled $true `    -HomeDirectory $hpath  `    -HomeDrive "X:" `    -PasswordNeverExpires $true `    -CannotChangePassword $true `    -Country "HA" `    -otherattributes @{telephoneNumber = $item.telephoneNumber; `
+    -UserPrincipalName $login@DALLAS.B64 `    -GivenName $item.givenName `    -AccountPassword $passwd `    -Path $path `    -profilePath $ppath `    -Enabled $true `    -HomeDirectory $hpath `    -HomeDrive "X:" `    -PasswordNeverExpires $true `    -CannotChangePassword $true `    -Country "HA" `    -otherattributes @{telephoneNumber = $item.telephoneNumber; `
                        streetAddress = $item.streetAddress; `
                        l = $item.l; `
                        sn = $item.sn; `
