@@ -1,4 +1,4 @@
-##### Jonction DM et création Admin perso
+##### Jonction DM et création Admin perso #####
 
 ##### Rejoindre le Controleur de domaine #####
 Add-Computer -DomainName THETHRONE.PRO -ComputerName 407PF4
@@ -10,4 +10,5 @@ $login = "Erwan"
 New-ADUser `
     -Name $login `
     -SamAccountName $login `
-    -UserPrincipalName $login@THETHRONE.PRO `    -GivenName $login `    -DisplayName $login `    -AccountPassword $passwd `    -Path "ou=Users,dc=THETHRONE,dc=PRO" `    -PasswordNeverExpires $true `    -Enabled $trueAdd-ADGroupMember -Identity "Administrateurs" -Members $loginAdd-ADGroupMember -Identity "Administrateurs de l’entreprise" -Members $loginAdd-ADGroupMember -Identity "Administrateurs du schéma" -Members $loginAdd-ADGroupMember -Identity "Admins du domaine" -Members $loginAdd-ADGroupMember -Identity "Utilisateurs du domaine" -Members $login
+    -UserPrincipalName $login@THETHRONE.PRO `    -GivenName $login `    -DisplayName $login `    -AccountPassword $passwd `    -Path "cn=Users,dc=THETHRONE,dc=PRO" `    -PasswordNeverExpires $true `    -Enabled $trueAdd-ADGroupMember -Identity "Administrateurs" -Members $loginAdd-ADGroupMember -Identity "Administrateurs de l’entreprise" -Members $loginAdd-ADGroupMember -Identity "Administrateurs du schéma" -Members $loginAdd-ADGroupMember -Identity "Admins du domaine" -Members $login
+Add-ADGroupMember -Identity "Propriétaires créateurs de la stratégie de groupe" -Members $login
