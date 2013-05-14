@@ -1,0 +1,454 @@
+
+/* ---------------------------------------------------
+ *					                  
+ *    Projet synthèse : H2013		        
+ *    Fait Par : Erwan Palanque & Augustin Paiement 			        
+ *					                   
+ *--------------------------------------------------- */
+
+/* -------------------------------------------------------------------- */
+/* Généralité                                                          */
+/* -------------------------------------------------------------------- */
+
+body{
+margin:auto;
+}
+
+
+
+
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+html {
+	font-family:Verdana;
+	font-size:13px;
+	color:#333;
+	background-color:white;
+}
+ul{
+text-decoration:none;
+list-style-type:none;
+color:#00CC33;
+font-weight:bolder;
+font-style:oblique;
+}
+h1 {
+	font-size:1.3em;
+}
+
+h2 {
+	margin-top:20px;
+	font-size:1.1em;
+}
+
+p {
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+#sup {
+	width:15px;
+	height:15px;
+	background-image:url("../images/delete.png");
+	background-repeat:no-repeat;
+	background-size:100%;
+	margin-left:5px;
+	margin-right:5px;
+	float:left;
+}
+#modif {
+	width:15px;
+	height:15px;
+	background-image:url("../images/edit.png");
+	background-repeat:no-repeat;
+	background-size:100%;
+	margin-left:5px;
+	margin-right:5px;
+	float:left;
+}
+
+a {
+	color:#5e5e5e;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.clear {
+	clear:both;
+}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.block{display:block;}
+.site-container {
+}
+
+.page-container {
+	min-height:610px;
+	width:864px;
+	background-repeat:no-repeat;
+	padding:20px;
+	margin:20px auto;
+}
+
+.page-content {
+	margin-top:30px;
+	border:solid 3px black;
+}
+
+.page-title-section {
+	float:left;
+	width:400px;
+	padding-left:130px;
+	padding-top:25px;
+	height:95px;
+	background-position:0% 50%;
+	background-repeat:no-repeat;
+}
+
+.menu-section {
+	float:right;
+	width:300px;
+	margin-top:25px;
+	text-align:right;
+}
+
+.menu-section ul  li{
+	display:inline;
+	list-style-type:none;
+}
+
+.bandeDuBas{
+width:1000px;
+height:65px;
+background-image:url(../images/bande_marge_bas.gif);
+background-position:center;
+background-repeat:no-repeat;
+background-size:100%;
+position:relative;
+bottom:-50px;
+}
+.iPad_Bas200{
+margin-top:185px;
+}
+.dateBox{
+width:25px;
+height:25px;
+}
+.grDate{
+display:block;
+}
+.iPad_Rapport{
+padding-left:90px;
+padding-top:25px;
+}
+.iPad_L_Rapport{
+margin-left:150px;
+margin-top:50px;
+}
+.elem_menuR{
+width:76.28px;
+height:35.96px;
+background-image:url(../images/rapport/bckg_boutonMenu.gif);
+background-position:center;
+background-repeat:no-repeat;
+background-size:100%;
+}
+.iPad_1menu{
+margin-left:150px;
+margin-top:35px;
+}
+.iPad_menuL{margin-left:35px;
+margin-top:35px;}
+#t1_rapport{ 
+margin-left:50px;
+ }
+/* -------------------------------------------------------------------- */
+/*Page Index   : LOGIN                                                      */
+/* -------------------------------------------------------------------- */
+
+.main_frame{
+
+background-image:url(../images/login/bckg_login.gif);
+background-position:center;
+background-repeat:no-repeat;
+background-size:100%;
+width:1000px;
+height:1000px;
+}
+.bckg_pan_login{
+width:365.318px;
+height:220.454px;
+background-image:url(../images/login/bckg_1.gif);
+background-position:center;
+background-repeat:no-repeat;
+background-size:100%;
+position:relative;
+top:385px;
+left:307px;
+}
+#login_title{
+position:relative;
+top:-130%;
+left:-30%;
+width:100px;
+height:auto;
+}
+#them_titre_login
+{
+font-size:24px;
+font-weight:bolder;
+}
+.grT_Login{
+margin-left:50px;
+margin-top:50px;
+ }
+.grLogin{ 
+margin-right:50px;
+margin-top:50px;
+}
+.pad_15{ margin-bottom:15px;}
+.gr_submit{ 
+margin:50px 100px ; 
+}
+
+/* -------------------------------------------------------------------- */
+/* Page Accueil                                                         */
+/* -------------------------------------------------------------------- */
+
+.frame_bck1{ 
+background-image:url(../images/main_bckg.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:1000px; 
+height:1500px;
+
+}
+.frame_bck2{
+background-image:url(../images/Accueil/bckg_pano_Home.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:786.3px;
+height:959.5px;
+position:relative;
+top:220px;
+left:145px;
+}
+.frame_bck3
+{
+background-image:url(../images/Accueil/bckg_ficheAccueil.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:500px;
+height:300px;
+position:absolute; 
+top:350px;
+left:140px;
+
+}
+
+.mainTitre{
+position:relative;
+top:75px;
+left:100px;
+}
+.them_titre_template
+{
+font-size:25px;
+font-weight:bolder;
+}
+.menuAccueil{
+width:150px;
+height:auto;
+position:relative;
+bottom:350px;
+left:0px;
+}
+.bckg_CF{ 
+background-image:url(../images/autre/bckg_Principal_CF.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:900px;
+height:928px;
+margin-left:50px;
+margin-top:220px;
+}
+.bckg_info_Clients
+{
+background-image:url(../images/autre/bckg_fiche2.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width: 503px;
+height:412px;
+margin-top:35px;
+margin-left:75px;
+float:left;
+}
+.elementMenu{
+width:125px;
+height:40px;
+background-color:#CCCCCC;
+border-bottom:solid 6px  #FFFFFF;
+margin:10px 10px;
+padding-top:0.1px;
+}
+.elem_option_CF{width:200px; background-color:#CCCCCC; margin:20px; text-align:center;padding:20px 0 ; border-radius:2px;}
+.option_CF{float:right; margin:20px 35px;}
+.bckg_resultat_CF{ 
+width:780px; 
+height:350px;
+position:relative;
+top:485px;
+left:75px;
+background-image:url(../images/autre/bckg_fiche3.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+
+}
+
+/*
+*OPTION DE PADDING
+*/
+.iPad_titre_CF{ position:relative; top:20px; left:75px;}
+.iPad_Top10{margin-top:10px;}
+
+/* -------------------------------------------------------------------- */
+/* Rapport page                                                           */
+/* -------------------------------------------------------------------- */
+#bandeMenu{ 
+width:1000px; 
+height:100px; 
+border-top: solid 3px white;
+border-bottom:solid 3px white;
+position:relative;
+top:150px;
+}
+.box_rapport{
+background-image:url(../images/rapport/bckg_pano_rapport.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:900px;
+height:850px;
+position:relative;
+top:190px;
+left:50px;
+}
+#bande_rapport{
+background-image:url(../images/rapport/bckg_bande_haut.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+weight:900px;
+height:100px;
+position:relative;
+top:60px;
+}
+.boxR{
+background-image:url(../images/rapport/bckg_fiche.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:400px; 
+height:600px;
+position:relative;
+top:25px;
+}
+.marginL_15{margin-left:20px;}
+.marginR_15{margin-right:20px;}
+.margin_both15{
+margin-left:15px;
+margin-right:15px;
+}
+
+#ligneR{
+width: 750px;
+height:auto;
+border:solid 2px #CCCCCC; 
+position:relative;
+top: 600px;
+left:75px;
+}
+#boutonMenu{
+background-image:url(../images/rapport/bckg_fiche.gif);
+background-position:center;
+background-repeat:no-repeat;
+bacrkground-size:100%;
+width:85px;
+height:50px;
+}
+.iPad_BR{padding-top:25px;}
+.grMenu{ }
+/* -------------------------------------------------------------------- */
+/*                                                            */
+/* -------------------------------------------------------------------- */
+
+#page-index img {
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+	border:1px solid #333;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* Images page                                                          */
+/* -------------------------------------------------------------------- */
+
+#page-images {
+	
+}
+
+#page-images ul { 
+	list-style: none; 
+}
+
+#page-images ul li { 
+	display: inline; 
+}
+#page-images ul img {
+	border: 5px solid #3e3e3e;
+	border-width: 5px 5px 20px;
+}
+
+#page-images ul a:hover img {
+	border: 5px solid #fff;
+	border-width: 5px 5px 20px;
+	color: #fff;
+}
+
+#page-images ul a:hover { 
+	color: #fff; 
+}
+
+/* -------------------------------------------------------------------- */
+/* Contact page                                                         */
+/* -------------------------------------------------------------------- */
+
+#page-contact {
+	padding-right:300px;
+	height:350px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
