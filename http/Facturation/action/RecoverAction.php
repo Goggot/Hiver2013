@@ -32,7 +32,7 @@
 			}
 		}
 
-		public function getSession(){
+		private function getSession(){
 			if (isset($_GET["forgot_key"])){
 				$user = ClientDAO::findVisibility($_GET["forgot_key"])
 				if ($user[0] != FALSE){

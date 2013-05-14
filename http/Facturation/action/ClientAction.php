@@ -22,7 +22,8 @@
 		}
 		
 		public function ajoutClient(){
-			if (!empty($_POST["username"]) && !empty($_POST["pwd"])){
+			if (!empty($_POST["username"]) && !empty($_POST["pwd"]) && !empty($_POST["nom"]) 
+				&& !empty($_POST["prenom"]) && !empty($_POST["adresse"]) && !empty($_POST["compagnie"])){
 				ClientDAO::ajoutClient($_POST["pwd"], 
 										$_POST["username"], 
 										$_POST["nom"], 

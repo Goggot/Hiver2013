@@ -14,10 +14,6 @@ body{
 margin:auto;
 }
 
-
-
-
-
 * {
 	margin:0px;
 	padding:0px;
@@ -225,7 +221,7 @@ margin:50px 100px ;
 background-image:url(../images/main_bckg.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:1000px; 
 height:1500px;
 
@@ -234,7 +230,7 @@ height:1500px;
 background-image:url(../images/Accueil/bckg_pano_Home.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:786.3px;
 height:959.5px;
 position:relative;
@@ -246,7 +242,7 @@ left:145px;
 background-image:url(../images/Accueil/bckg_ficheAccueil.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:500px;
 height:300px;
 position:absolute; 
@@ -276,7 +272,7 @@ left:0px;
 background-image:url(../images/autre/bckg_Principal_CF.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:900px;
 height:928px;
 margin-left:50px;
@@ -287,7 +283,7 @@ margin-top:220px;
 background-image:url(../images/autre/bckg_fiche2.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width: 503px;
 height:412px;
 margin-top:35px;
@@ -313,8 +309,7 @@ left:75px;
 background-image:url(../images/autre/bckg_fiche3.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
-
+background-size:100%;
 }
 
 /*
@@ -338,7 +333,7 @@ top:150px;
 background-image:url(../images/rapport/bckg_pano_rapport.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:900px;
 height:850px;
 position:relative;
@@ -349,8 +344,8 @@ left:50px;
 background-image:url(../images/rapport/bckg_bande_haut.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
-weight:900px;
+background-size:100%;
+width:900px;
 height:100px;
 position:relative;
 top:60px;
@@ -359,7 +354,7 @@ top:60px;
 background-image:url(../images/rapport/bckg_fiche.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:400px; 
 height:600px;
 position:relative;
@@ -384,7 +379,7 @@ left:75px;
 background-image:url(../images/rapport/bckg_fiche.gif);
 background-position:center;
 background-repeat:no-repeat;
-bacrkground-size:100%;
+background-size:100%;
 width:85px;
 height:50px;
 }
@@ -440,15 +435,3 @@ height:50px;
 	padding-right:300px;
 	height:350px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
