@@ -102,13 +102,22 @@
 
 			if ($row = oci_fetch_array($statement)) {
 				$key = encrypt();
+
+				$queryTemp = "UPDATE EA_CLIENTS SET recover_key = :key WHERE email = :email";
+				$statementTemp = oci_parse($connection, $queryTemp);
+				oci_bind_by_name($statementTemp, ":email", $email);
+				oci_bind_by_name($statementTemp, ":key", $key);
+				oci_execute($statementTemp);
+
 				$url = "localhost/recover.php?forgot_key=" . $key;
-				$msg = 
-				"Bonjour,<br>
+				$msg = "Bonjour,<br>
 				Une demande a été envoyée récemment pour modifier le mot de passe de votre compte.<br>
 				Si vous avez demandé cette modification de mot de passe,</br>
 				définissez un nouveau mot de passe en suivant le lien ci-dessous : <br>" . $url
 				. "<br>Si vous ne souhaitez pas modifier votre mot de passe, ignorez simplement ce message. ";
+				$valid = mail($row["EMAIL"], 'Confirmation de la réinitialisation du mot de passe', $msg);
+				if (!$valid)
+					$message = "Erreur système :(";
 			}
 			else {
 				$message = "Adresse email inexistante :(";
@@ -116,7 +125,7 @@
 			return $message;
 		}
 
-		private function encrypt(){
+		private static function encrypt(){
 			$key = NULL;
 			for ($i = 0; $i < 20; $i++){
 				$l = "qwertyuiopmnbvcxzasdflkjhg0123456789";
