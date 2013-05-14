@@ -37,7 +37,7 @@
 			}
 		
 			if ($_SESSION["loggedIn"] < $this->pageVisibility) {
-				header("location:login.php");
+				header("location:index.php");
 				exit;
 			}
 			

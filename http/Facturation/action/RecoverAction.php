@@ -14,7 +14,7 @@
 
 	class RecoverAction extends CommonAction {
 		public function __construct(){
-			getSession();
+			#getSession();
 			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
 		}
 		

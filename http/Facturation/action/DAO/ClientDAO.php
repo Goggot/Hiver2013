@@ -72,7 +72,7 @@
 		public static function findVisibility($key){
 			$valid = [FALSE, 0];
 			$connection = Connection::getConnection();
-			$query = "SELECT * FROM EA_CLIENTS WHERE recover_key = :reco";
+			$query = "SELECT * FROM EA_CLIENTS WHERE recovery_key = :reco";
 			$statement = oci_parse($connection, $query);
 			oci_bind_by_name($statement, ":reco", $key);
 			oci_execute($statement);
