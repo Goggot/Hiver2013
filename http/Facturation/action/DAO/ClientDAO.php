@@ -35,21 +35,22 @@
 			return $userInfo;
 		}
 		
-		public static function ajoutClient($password){
+		public static function ajoutClient($password, $pseudo, $nom, $prenom, $adresse, $compagnie){
 			$connection = Connection::getConnection();
 			
 			// ENCRYPTER LE MOT DE PASSE AVANT L'ENVOIE EN PARAMÈTRE
 			
-			$query = "INSERT INTO EA_CLIENTS VALUES(EA_CLIENTS_SEQ.nextVal, :pseudo, :nom, :prenom, :adresse, :compagnie, :mdp, :visibility)";
+			$query = "INSERT INTO EA_CLIENTS 
+						VALUES(EA_CLIENTS_SEQ.nextVal, :pseudo, :nom, :prenom, :adresse, :compagnie, :mdp, :visibility)";
 			$statement = oci_parse($connection, $query);
 			
-			oci_bind_by_name($statement, ":pseudo", $_POST["pseudo"]);
-			oci_bind_by_name($statement, ":nom", $_POST["nom"]);
-			oci_bind_by_name($statement, ":prenom", $_POST["prenom"]);
-			oci_bind_by_name($statement, ":adresse", $_POST["adresse"]);
-			oci_bind_by_name($statement, ":compagnie", $_POST["compagnie"]);
+			oci_bind_by_name($statement, ":pseudo", $pseudo);
+			oci_bind_by_name($statement, ":nom", $nom);
+			oci_bind_by_name($statement, ":prenom", $prenom);
+			oci_bind_by_name($statement, ":adresse", $dresse);
+			oci_bind_by_name($statement, ":compagnie", $compagnie);
 			oci_bind_by_name($statement, ":mdp", $password);
-			oci_bind_by_name($statement, ":visibility", $_POST["visibility"]);
+			oci_bind_by_name($statement, ":visibility", 1);
 			oci_execute($statement);
 		}
 
@@ -85,10 +86,11 @@
 
 		public static function recoverPasswd($passwd, $username){
 			$connection = Connection::getConnection();
-			$query = "UPDATE EA_CLIENTS SET MDP = :passwd WHERE username = :username";
+			$query = "UPDATE EA_CLIENTS SET MDP = :passwd, RECOVER_KEY =  WHERE username = :username";
 			$statement = oci_parse($connection, $query);
 			oci_bind_by_name($statement, ":passwd", $passwd);
 			oci_bind_by_name($statement, ":username", $username);
+			oci_bind_by_name($statement, ":reco", "");
 			oci_execute($statement);
 		}
 

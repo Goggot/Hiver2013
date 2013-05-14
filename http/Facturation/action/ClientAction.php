@@ -23,7 +23,12 @@
 		
 		public function ajoutClient(){
 			if (!empty($_POST["username"]) && !empty($_POST["pwd"])){
-				ClientDAO::ajoutClient();
+				ClientDAO::ajoutClient($_POST["pwd"], 
+										$_POST["username"], 
+										$_POST["nom"], 
+										$_POST["prenom"], 
+										$_POST["adresse"], 
+										$_POST["compagnie"]);
 				header("location:client.php");
 				exit;
 			}
