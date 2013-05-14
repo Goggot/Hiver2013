@@ -19,9 +19,16 @@
 		}
 		
 		protected function executeAction(){
-			if (isset($_SESSION["usernameRecover"]) && isset($_POST["newPasswd"])){
-				$passwd = $_POST["newPasswd"];
-				ClientDAO::recoverPasswd($passwd, $_SESSION["usernameRecover"]);
+			if (isset($_SESSION["usernameRecover"]) && isset($_POST["newPasswd"]) && isset($_POST["newPasswd2"])){
+				if ($_POST["newPasswd"] === $_POST["newPasswd2"]){
+					$passwd = $_POST["newPasswd"];
+					ClientDAO::recoverPasswd($passwd, $_SESSION["usernameRecover"])
+					header('location:index.php&logout=true');
+					echo "Changement réussi !";
+					exit;
+				}
+				else
+					echo "Les mots de passes ne concordent pas...";
 			}
 		}
 
