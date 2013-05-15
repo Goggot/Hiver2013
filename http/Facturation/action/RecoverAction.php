@@ -21,7 +21,7 @@
 		protected function executeAction(){
 			if (isset($_SESSION["usernameRecover"]) && isset($_POST["newPasswd"]) && isset($_POST["newPasswd2"])){
 				if ($_POST["newPasswd"] === $_POST["newPasswd2"]){
-					$passwd = $_POST["newPasswd"];
+					$passwd = sha1($_POST["newPasswd"] . GUERANDE);
 					ClientDAO::recoverPasswd($passwd, $_SESSION["usernameRecover"]);
 					header('location:index.php&logout=true');
 					echo "Changement réussi !";

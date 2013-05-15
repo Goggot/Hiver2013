@@ -21,7 +21,7 @@
 		
 		protected function executeAction(){
 			if (!empty($_POST["nomLogin"]) && !empty($_POST["mdpLogin"])){
-				$password = sha1($_POST["mdpLogin"]);
+				$password = sha1($_POST["mdpLogin"] . GUERANDE);
 				$userInfo = ClientDAO::authenticate($_POST["nomLogin"], $password);
 				
 				if (isset($userInfo)){

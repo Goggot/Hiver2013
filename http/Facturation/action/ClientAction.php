@@ -24,7 +24,8 @@
 		public function ajoutClient(){
 			if (!empty($_POST["username"]) && !empty($_POST["pwd"]) && !empty($_POST["nom"]) 
 				&& !empty($_POST["prenom"]) && !empty($_POST["adresse"]) && !empty($_POST["compagnie"])){
-				ClientDAO::ajoutClient($_POST["pwd"], 
+				$password = sha1($_POST["pwd"] . GUERANDE);
+				ClientDAO::ajoutClient($password, 
 										$_POST["username"], 
 										$_POST["nom"], 
 										$_POST["prenom"], 

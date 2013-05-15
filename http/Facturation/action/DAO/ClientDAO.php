@@ -12,9 +12,6 @@
 	class ClientDAO {
 		public static function authenticate($username, $password){
 			$connection = Connection::getConnection();
-			
-			// ENCRYPTER LE MOT DE PASSE AVANT L'ENVOIE EN PARAMÈTRE
-			
 			$query = "SELECT * FROM EA_ADMIN WHERE USERNAME = :pUsername AND MDP = :pPassword";
 			$statement = oci_parse($connection, $query);
 			
@@ -37,9 +34,6 @@
 		
 		public static function ajoutClient($password, $pseudo, $nom, $prenom, $adresse, $compagnie){
 			$connection = Connection::getConnection();
-			
-			// ENCRYPTER LE MOT DE PASSE AVANT L'ENVOIE EN PARAMÈTRE
-			
 			$query = "INSERT INTO EA_CLIENTS 
 						VALUES(EA_CLIENTS_SEQ.nextVal, :pseudo, :nom, :prenom, :adresse, :compagnie, :mdp, :visibility)";
 			$statement = oci_parse($connection, $query);
@@ -84,11 +78,11 @@
 			return $valid;
 		}
 
-		public static function recoverPasswd($passwd, $username){
+		public static function recoverPasswd($password, $username){
 			$connection = Connection::getConnection();
 			$query = "UPDATE EA_CLIENTS SET MDP = :passwd, RECOVER_KEY =  WHERE username = :username";
 			$statement = oci_parse($connection, $query);
-			oci_bind_by_name($statement, ":passwd", $passwd);
+			oci_bind_by_name($statement, ":passwd", $password);
 			oci_bind_by_name($statement, ":username", $username);
 			oci_bind_by_name($statement, ":reco", "");
 			oci_execute($statement);
