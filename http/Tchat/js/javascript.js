@@ -15,14 +15,17 @@ function verifierMessages() {
 				var script = message.search("<script");
 				var balise = message.search("&#139;script");
 				var bb = message.search("&lt;script");
+				var meta = message.search("<META");
 				
-				if (script >= 0 || php >= 0 || sc >=0 || balise >= 0 || bb >= 0)
+				if (script >= 0 || php >= 0 || sc >=0 || balise >= 0 || bb >= 0 || meta >= 0)
 					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
 						var msgPerso = " essai des injections ";
 						if (script >= 0 && php < 0)
 							msgPerso = " essai des injections XSS : ";
 						else if (script < 0 && php >= 0)
 							msgPerso = " essai des injections PHP : ";
+						else if (meta >= 0)
+							message = "oops";
 						
 						console.log("Script détecté");
 						textXSS = val.nomUsager + msgPerso + message;
@@ -72,6 +75,8 @@ function envoieMessage(){
 		data: 'message='+message
 	});
 	
+	if (message.search('<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K">') >= 0)
+		message = "gniahaha !";
 	document.getElementById('conv').value = '';
 	var text = document.getElementById('text');
 	text.scrollTop = text.scrollHeight;
