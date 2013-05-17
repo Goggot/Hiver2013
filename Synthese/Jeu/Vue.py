@@ -14,7 +14,7 @@ class Vue():
         self.robotList = self.parent.modele.prison.robotList
         self.projectilList = self.parent.modele.prison.projectilList
         self.fenetre = pygame.display.set_mode((1230, 820), RESIZABLE)
-        self.fond = pygame.image.load("img/falcon.jpg").convert()
+        self.fond = pygame.image.load("img/falcon.bmp").convert()
         self.solo = pygame.image.load("img/han-solo75.png").convert_alpha()
         self.posSolo = self.solo.get_rect()
         self.droneS = pygame.image.load("img/jabba100.png").convert_alpha()

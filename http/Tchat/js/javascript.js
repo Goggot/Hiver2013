@@ -5,7 +5,6 @@ function verifierMessages() {
 		url: 'getMessages.php',
 		success: function(data){
 			var tab = JSON.parse(data);
-			
 			var send = "";
 			
 			$.each(tab, function(i,val){
@@ -15,20 +14,18 @@ function verifierMessages() {
 				var script = message.search("<script");
 				var balise = message.search("&#139;script");
 				var bb = message.search("&lt;script");
-				var meta = message.search("<META");
+				var meta = message.search("<META HTTP-EQUIV='refresh'");
 				
 				if (script >= 0 || php >= 0 || sc >=0 || balise >= 0 || bb >= 0 || meta >= 0)
 					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
-						var msgPerso = " essai des injections ";
+						var msgPerso = "Incoming Injection : ";
 						if (script >= 0 && php < 0)
-							msgPerso = " essai des injections XSS : ";
+							msgPerso = "Incoming XSS Injection : ";
 						else if (script < 0 && php >= 0)
-							msgPerso = " essai des injections PHP : ";
-						else if (meta >= 0)
-							message = "oops";
+							msgPerso = "Incoming PHP Injection : ";
 						
 						console.log("Script détecté");
-						textXSS = val.nomUsager + msgPerso + message;
+						textXSS = msgPerso + message;
 						setTimeout(envoieMessage, 500);
 						message = escape(message);
 					}
@@ -74,9 +71,11 @@ function envoieMessage(){
 		type: 'POST',
 		data: 'message='+message
 	});
-	
-	if (message.search('<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K">') >= 0)
+	var meta1 = message.search('<META HTTP-EQUIV="refresh"');
+	if (meta1 >= 0){
 		message = "gniahaha !";
+		textXSS = message;
+	}
 	document.getElementById('conv').value = '';
 	var text = document.getElementById('text');
 	text.scrollTop = text.scrollHeight;

@@ -32,7 +32,7 @@
 				exit;
 			}
 			
-			// execution de l'enfant...
+			// execution de l'enfant
 			$this->executeAction();
 		}
 	
