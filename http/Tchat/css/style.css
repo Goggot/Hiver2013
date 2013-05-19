@@ -1,19 +1,25 @@
 a{
-	color:#66FF00;
+	color:orange;
 }
 
 body{
     background-color:black;
-    color:#66FF00;
+    background-image:url("../images/bg.jpg");
+    background-size:100%;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    color:orange;
     text-align:center;
+    opacity:0.8;
+    font-size:small;
 }
 
 .main{
     margin:auto;
-    width:900px;
-    height:auto;
+    width:auto;
+    height:780px;
     border-radius:10px;
-    background-color:#222222;
     margin-top:20px;
     margin-bottom:20px;
 	padding:20px;
@@ -21,7 +27,7 @@ body{
 
 .footer{
     margin:auto;
-    width:250px;
+    width:400px;
     background-color:#111111;
     border-radius:10px;
     padding:5px;
@@ -34,7 +40,7 @@ body{
     border-radius:10px;
     background-color:#111111;
     padding:10px;
-	margin-top:100px;
+	margin-top:350px;
 	margin-bottom:120px;
 }
 
@@ -59,8 +65,8 @@ body{
 }
 
 #tchat{
-	width:700px;
-	margin-left:10px;
+	width:500px;
+	margin-left:29.5%;
 }
 
 #conv{
@@ -70,7 +76,7 @@ body{
 #text{
 	border-radius:10px;
 	margin:10px;
-	height:400px;
+	height:700px;
 	padding:10px;
 	text-align:left;
 	background-color:#111111;

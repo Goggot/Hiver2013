@@ -10,7 +10,6 @@
 </div>
 
 <div id="tchat">
-    <h1 style="text-align:center;">Tchat PHP</h1>
     <div id="text">
         <p id="messages"></p>
     </div>
