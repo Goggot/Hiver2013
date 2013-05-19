@@ -15,7 +15,7 @@ body{
     font-size:small;
 }
 
-.main{
+#main{
     margin:auto;
     width:auto;
     height:780px;
@@ -23,14 +23,20 @@ body{
     margin-top:20px;
     margin-bottom:20px;
 	padding:20px;
+    display:none;
 }
 
-.footer{
+#footer{
     margin:auto;
     width:400px;
     background-color:#111111;
     border-radius:10px;
     padding:5px;
+    display:none;
+}
+
+#themes{
+
 }
 
 #connection{
@@ -40,7 +46,7 @@ body{
     border-radius:10px;
     background-color:#111111;
     padding:10px;
-	margin-top:350px;
+	margin-top:300px;
 	margin-bottom:120px;
 }
 
@@ -62,11 +68,12 @@ body{
 	clear:both;
 	background-color:#111111;
 	padding:10px;
+    z-index:2;
 }
 
 #tchat{
-	width:550px;
-	margin-left:27.5%;
+	width:800px;
+	margin-left:17%;
 }
 
 #conv{
@@ -83,6 +90,206 @@ body{
 	overflow-y:auto;
 	overflow-x:auto;
 }
+
 #messages{
-	width:660px;
+	width:600px;
 }
+
+
+
+/*////////////////////////////////////////*/
+/*////////////// ANIMATIONS //////////////*/
+/*////////////////////////////////////////*/
+
+#anim{
+    z-index:1;
+}
+
+    /*//////////////////////////////////////*/
+    /*////////////// ACCUEIL ///////////////*/
+
+    /*               LEFT                   */
+
+#animLeftAccueil1{
+    width:250px;
+    height:250px;
+    float:left;
+    margin-left:10.5%;
+    margin-top:-1.5%;
+}
+#animLeftAccueil2{
+    width:250px;
+    height:250px;
+    float:left;
+    margin-left:10.5%;
+    margin-top:-1.5%;
+}
+#animLeftAccueil3{
+    width:250px;
+    height:250px;
+    float:left;
+    margin-left:10.5%;
+    margin-top:-1.5%;
+}
+#animLeftAccueil4{
+    width:250px;
+    height:250px;
+    float:left;
+    margin-left:10.5%;
+    margin-top:-1.5%;
+}
+#animLeftAccueil5{
+    width:250px;
+    height:250px;
+    float:left;
+    margin-left:10.5%;
+    margin-top:-1.5%;
+}
+#animLeftAccueil6{
+    width:250px;
+    height:250px;
+    float:left;
+    margin-left:10.5%;
+    margin-top:-1.5%;
+}
+    /*               RIGHT                  */
+
+#animRightAccueil1{
+    width:250px;
+    height:250px;
+    float:right;
+    margin-right:10%;
+    margin-top:-1.5%;
+}
+#animRightAccueil2{
+    width:250px;
+    height:250px;
+    float:right;
+    margin-right:10%;
+    margin-top:-1.5%;
+}
+#animRightAccueil3{
+    width:250px;
+    height:250px;
+    float:right;
+    margin-right:10%;
+    margin-top:-1.5%;
+}
+#animRightAccueil4{
+    width:250px;
+    height:250px;
+    float:right;
+    margin-right:10%;
+    margin-top:-1.5%;
+}
+#animRightAccueil5{
+    width:250px;
+    height:250px;
+    float:right;
+    margin-right:10%;
+    margin-top:-1.5%;
+}
+#animRightAccueil6{
+    width:250px;
+    height:250px;
+    float:right;
+    margin-right:10%;
+    margin-top:-1.5%;
+}
+
+
+    /*////////////////////////////////////*/
+    /*////////////// TCHAT ///////////////*/
+
+    /*               LEFT                 */
+
+#animLeftTchat1{
+    width:200px;
+    height:200px;
+    float:left;
+    margin-left:12.5%;
+    margin-top:-15.2%;
+}
+#animLeftTchat2{
+    width:100px;
+    height:100px;
+    float:left;
+    margin-left:-263px;
+    margin-top:-220px;
+}
+#animLeftTchat3{
+    width:130px;
+    height:130px;
+    float:left;
+    margin-left:-345px;
+    margin-top:-320px;
+}
+#animLeftTchat4{
+    width:150px;
+    height:150px;
+    float:left;
+    margin-left:-330px;
+    margin-top:-458px;
+}
+#animLeftTchat5{
+    width:140px;
+    height:140px;
+    float:left;
+    margin-left:-340px;
+    margin-top:-589px;
+}
+#animLeftTchat6{
+    width:150px;
+    height:150px;
+    float:left;
+    margin-left:-270px;
+    margin-top:-710px;
+}
+    /*               RIGHT                */
+
+#animRightTchat1{
+    width:200px;
+    height:200px;
+    float:right;
+    margin-right:145px;
+    margin-top:-185px;
+}
+#animRightTchat2{
+    width:100px;
+    height:100px;
+    float:right;
+    margin-right:-263px;
+    margin-top:-220px;
+}
+#animRightTchat3{
+    width:130px;
+    height:130px;
+    float:right;
+    margin-right:-345px;
+    margin-top:-320px;
+}
+#animRightTchat4{
+    width:150px;
+    height:150px;
+    float:right;
+    margin-right:-330px;
+    margin-top:-458px;
+}
+#animRightTchat5{
+    width:140px;
+    height:140px;
+    float:right;
+    margin-right:-340px;
+    margin-top:-589px;
+}
+#animRightTchat6{
+    width:150px;
+    height:150px;
+    float:right;
+    margin-right:-260px;
+    margin-top:-700px;
+}
+
+/*////////////////////////////////////////*/
+/*////////////// ANIMATIONS //////////////*/
+/*////////////////////////////////////////*/
