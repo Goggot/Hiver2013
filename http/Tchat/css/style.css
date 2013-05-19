@@ -92,7 +92,8 @@ body{
 }
 
 #messages{
-	width:600px;
+	width:auto;
+    text-align:center;
 }
 
 
