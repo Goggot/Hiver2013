@@ -65,8 +65,8 @@ body{
 }
 
 #tchat{
-	width:500px;
-	margin-left:29.5%;
+	width:550px;
+	margin-left:27.5%;
 }
 
 #conv{
@@ -81,7 +81,7 @@ body{
 	text-align:left;
 	background-color:#111111;
 	overflow-y:auto;
-	overflow-x:hidden;
+	overflow-x:auto;
 }
 #messages{
 	width:660px;

@@ -74,7 +74,6 @@ function envoieMessage(){
 	var meta1 = message.search('<META HTTP-EQUIV="refresh"');
 	if (meta1 >= 0){
 		message = "gniahaha !";
-		textXSS = message;
 	}
 	document.getElementById('conv').value = '';
 	var text = document.getElementById('text');
@@ -84,6 +83,6 @@ function envoieMessage(){
 
 function texte(event){
 	if (event.keyCode == 13) {
-            envoieMessage();
-        };
+        envoieMessage();
+    };
 }
