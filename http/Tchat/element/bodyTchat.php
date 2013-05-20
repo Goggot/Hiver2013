@@ -32,3 +32,5 @@
     <img id="animLeftTchat6" src="images/sp2.png" />
     <img id="animRightTchat6" src="images/sp2.png" />
 </div>
+
+<audio id="audio" src="sounds/gear.wav" preload="auto"></audio>

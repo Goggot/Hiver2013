@@ -18,5 +18,5 @@
 <img id="animRightAccueil4" src="images/sp3.png" />
 <img id="animLeftAccueil5" src="images/sp4.png" />
 <img id="animRightAccueil5" src="images/sp4.png" />
-<img id="animLeftAccueil6" src="images/sp2png" />
+<img id="animLeftAccueil6" src="images/sp2.png" />
 <img id="animRightAccueil6" src="images/sp2.png" />

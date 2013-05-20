@@ -4,13 +4,35 @@ var temps = 30000;
 window.onload = function(){
 	$('#main').fadeIn("slow");
 	$('#footer').fadeIn("slow");
+	play();
 	animateLeft();
 	animateRight();
+}
+
+function play() {
+	setTimeout(play,75000);
+ 	document.getElementById('audio').play();
+ 	console.log("Play");
 }
 
 function animateLeft(){
 	$('#animLeftAccueil1').transition({rotate: '-500deg'},temps);
 	$('#animLeftAccueil1').transition({rotate: '500deg'},temps);
+
+	$('#animLeftAccueil2').transition({rotate: '500deg'},temps);
+	$('#animLeftAccueil2').transition({rotate: '-500deg'},temps);
+
+	$('#animLeftAccueil3').transition({rotate: '-500deg'},temps);
+	$('#animLeftAccueil3').transition({rotate: '500deg'},temps);
+
+	$('#animLeftAccueil4').transition({rotate: '500deg'},temps);
+	$('#animLeftAccueil4').transition({rotate: '-500deg'},temps);
+
+	$('#animLeftAccueil5').transition({rotate: '-500deg'},temps);
+	$('#animLeftAccueil5').transition({rotate: '500deg'},temps);
+
+	$('#animLeftAccueil6').transition({rotate: '500deg'},temps);
+	$('#animLeftAccueil6').transition({rotate: '-500deg'},temps);
 
 
 	$('#animLeftTchat1').transition({rotate: '-500deg'},temps);
@@ -38,6 +60,21 @@ function animateLeft(){
 function animateRight(){
 	$('#animRightAccueil1').transition({rotate: '500deg'},temps);
 	$('#animRightAccueil1').transition({rotate: '-500deg'},temps);
+
+	$('#animRightAccueil2').transition({rotate: '-500deg'},temps);
+	$('#animRightAccueil2').transition({rotate: '500deg'},temps);
+
+	$('#animRightAccueil3').transition({rotate: '500deg'},temps);
+	$('#animRightAccueil3').transition({rotate: '-500deg'},temps);
+
+	$('#animRightAccueil4').transition({rotate: '-500deg'},temps);
+	$('#animRightAccueil4').transition({rotate: '500deg'},temps);
+
+	$('#animRightAccueil5').transition({rotate: '500deg'},temps);
+	$('#animRightAccueil5').transition({rotate: '-500deg'},temps);
+
+	$('#animRightAccueil6').transition({rotate: '-500deg'},temps);
+	$('#animRightAccueil6').transition({rotate: '500deg'},temps);
 
 
 	$('#animRightTchat1').transition({rotate: '500deg'},temps);
@@ -93,7 +130,7 @@ function verifierMessages() {
 											document.getElementById('messages').innerHTML 
 															+ "Incoming Unknown Injection!"+"</br>";
 						}
-						console.log("Script détecté");
+						console.log("Script dÃ©tectÃ©");
 						if (msgPerso != null){
 							textXSS = msgPerso + message;
 							setTimeout(envoieMessage, 500);

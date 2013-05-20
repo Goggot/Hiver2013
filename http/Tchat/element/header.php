@@ -9,6 +9,7 @@
 	        <script src="js/javascript.js"></script>
 			<script src="js/jquery.js"></script>
 			<script src="js/jquery.transit.min.js"></script>
+			<audio id="audio" src="sounds/gear.wav" preload="auto"></audio>
 	    </head>
 	    <body>
 			<div id="main">
