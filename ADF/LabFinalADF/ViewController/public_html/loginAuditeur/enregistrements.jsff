@@ -5,27 +5,41 @@
                 xmlns:h="http://java.sun.com/jsf/html">
   <af:panelFormLayout id="pfl1">
     <af:inputText label="CodeAuditeur:" id="it1"
-                  value="#{pageFlowScope.codeauditeur}"/>
+                  value="#{pageFlowScope.codeauditeur}"
+                  showRequired="true"/>
     <af:inputText label="MotDePasse:" id="it2"
-                  value="#{pageFlowScope.motdepasse}"/>
+                  value="#{pageFlowScope.motdepasse}" showRequired="true"
+                  secret="true"/>
     <af:inputText label="Nom " id="it3" value="#{pageFlowScope.nom}"/>
     <af:inputText label="Prenom" id="it4" value="#{pageFlowScope.prenom}"/>
     <af:inputText label="Rue" id="it5" value="#{pageFlowScope.rue}"/>
     <af:inputText label="Ville" id="it6" value="#{pageFlowScope.ville}"/>
+    <af:selectOneChoice value="#{bindings.Noregion.inputValue}"
+                        label="#{bindings.Noregion.label}"
+                        required="#{bindings.Noregion.hints.mandatory}"
+                        shortDesc="#{bindings.Noregion.hints.tooltip}"
+                        id="soc2">
+      <f:selectItems value="#{bindings.Noregion.items}" id="si2"/>
+    </af:selectOneChoice>
     <af:inputText label="CodePostal" id="it7"
                   value="#{pageFlowScope.codepostal}"/>
-    <af:inputText label="Noregion" id="it8"
-                  value="#{pageFlowScope.noregion}"/>
     <af:inputText label="Telephone" id="it9"
                   value="#{pageFlowScope.telephone}"/>
     <af:inputText label="Courriel" id="it10"
                   value="#{pageFlowScope.courriel}"/>
-    <af:inputText label="Statut" id="it11" value="#{PageFlowScope.statut}"/>
+    <af:selectOneChoice value="#{bindings.Statut.inputValue}"
+                        label="#{bindings.Statut.label}"
+                        required="#{bindings.Statut.hints.mandatory}"
+                        shortDesc="#{bindings.Statut.hints.tooltip}"
+                        id="soc1">
+      <f:selectItems value="#{bindings.Statut.items}" id="si1"/>
+    </af:selectOneChoice>
     <af:panelGroupLayout id="pgl1" layout="horizontal">
       <af:commandButton text="Réinitialiser" id="cb1"/>
       <af:commandButton text="Annuler" id="cb2" action="*annuler"/>
-      <af:commandButton text="Enregistrer" id="cb3"
-                        action="terminerNouveau"/>
+      <af:commandButton actionListener="#{bindings.Commit.execute}"
+                        text="Enregistrer" disabled="#{!bindings.Commit.enabled}"
+                        id="cb3" action="terminerNouveau"/>
     </af:panelGroupLayout>
   </af:panelFormLayout>
 </ui:composition>

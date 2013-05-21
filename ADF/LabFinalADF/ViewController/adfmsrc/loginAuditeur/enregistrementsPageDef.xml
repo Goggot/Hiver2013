@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="enregistrementsPageDef"
+                Package="loginAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PauditeurCoord3" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PauditeurCoord3Iterator"/>
+    <iterator Binds="PRegionView1" RangeSize="-1"
+              DataControl="AppModuleDataControl" id="PRegionView1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="PauditeurCoord3Iterator" id="Statut"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="true">
+      <AttrNames>
+        <Item Value="Statut"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="A"/>
+        <Item Value="J"/>
+      </ValueList>
+    </list>
+    <list IterBinding="PauditeurCoord3Iterator" id="Noregion"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="PRegionView1Iterator">
+      <AttrNames>
+        <Item Value="Noregion"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="Noregion"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Noregion"/>
+      </ListDisplayAttrNames>
+    </list>
+    <action id="Commit" RequiresUpdateModel="true"
+            Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

@@ -7,7 +7,7 @@
       <property
          name="activityId">menu</property>
       <property
-         name="page">/menu.jsff</property>
+         name="page">/menuAuditeur/menu.jsff</property>
       <property
          name="start">true</property>
       <property
@@ -17,16 +17,16 @@
       <property
          name="y">340.24707</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">345.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <View
       id="View3">
       <property
          name="activityId">infoPersonnel</property>
       <property
-         name="page">/infoPersonnel.jsff</property>
+         name="page">/menuAuditeur/infoPersonnel.jsff</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>infoPersonnel&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -34,16 +34,16 @@
       <property
          name="y">74.19531</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">480.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <View
       id="View4">
       <property
          name="activityId">changerMotDePasse</property>
       <property
-         name="page">/changerMotDePasse.jsff</property>
+         name="page">/menuAuditeur/changerMotDePasse.jsff</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>changerMotDePasse&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -51,16 +51,16 @@
       <property
          name="y">331.14355</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">660.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <View
       id="View5">
       <property
          name="activityId">evaluationAtelier</property>
       <property
-         name="page">/evaluationAtelier.jsff</property>
+         name="page">/menuAuditeur/evaluationAtelier.jsff</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>evaluationAtelier&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -68,16 +68,16 @@
       <property
          name="y">599.49414</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">348.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <View
       id="View6">
       <property
          name="activityId">inscription</property>
       <property
-         name="page">/inscription.jsff</property>
+         name="page">/menuAuditeur/inscription.jsff</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>inscription&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -85,16 +85,16 @@
       <property
          name="y">85.896484</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">120.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <View
       id="View7">
       <property
          name="activityId">devenirJuge</property>
       <property
-         name="page">/devenirJuge.jsff</property>
+         name="page">/menuAuditeur/devenirJuge.jsff</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>devenirJuge&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -102,9 +102,9 @@
       <property
          name="y">338.49414</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">68.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <ControlFlowCase
       islink="true"

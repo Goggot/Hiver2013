@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <f:facet name="footer"/>
+    <af:outputText value="Candidature Juge" id="ot1"/>
+    <af:panelFormLayout id="pfl2">
+      <f:facet name="footer">
+        <af:group id="g1">
+          <af:outputText value="Asssignation en tant que juge en date dU:" id="ot2"/>
+          <af:commandButton text="Annuler ma candidature " id="cb2"/>
+        </af:group>
+      </f:facet>
+    </af:panelFormLayout>
+    <af:commandButton text="Retour" id="cb1"/>
+  </af:panelFormLayout>
+</ui:composition>

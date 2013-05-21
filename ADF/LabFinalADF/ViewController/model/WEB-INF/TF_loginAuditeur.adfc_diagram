@@ -3,25 +3,6 @@
    <OverallProperties
       id="OverallProperties1"/>
    <View
-      id="View2">
-      <property
-         name="activityId">login</property>
-      <property
-         name="page">/loginAuditeur/login.jsff</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>login&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="y">336.68945</property>
-      <property
-         name="x">160.0</property>
-      <property
-         name="pageFragment">true</property>
-   </View>
-   <View
       id="View4">
       <property
          name="activityId">enregistrements</property>
@@ -38,19 +19,6 @@
       <property
          name="pageFragment">true</property>
    </View>
-   <MethodCall
-      id="MethodCall6">
-      <property
-         name="activityId">CreateInsert</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="y">598.0918</property>
-      <property
-         name="x">159.0</property>
-   </MethodCall>
    <Router
       id="Router7">
       <property
@@ -79,43 +47,13 @@
    </TaskFlowCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase10"
-      from="Router7"
-      to="View2">
-      <property
-         name="fromOutcome">*echec</property>
-      <property
-         name="sdm:polyPoints">L54,382.0,84.94238,163.5,282.33887,T56</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
-      from="View2"
-      to="MethodCall19">
-      <property
-         name="fromOutcome">*executeAuditeurConnecte</property>
-      <property
-         name="sdm:polyPoints">T44,156.5,280.78265,156.7041,28.097656,B50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase12"
-      from="View2"
-      to="MethodCall6">
-      <property
-         name="fromOutcome">*nouveau</property>
-      <property
-         name="sdm:polyPoints">B50,160.0,390.33887,159.0,543.7412,T50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
       id="ControlFlowCase13"
-      from="MethodCall6"
+      from="MethodCall138"
       to="View4">
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,200.0,597.7412,462.0,482.14355,L58</property>
+         name="sdm:polyPoints">R50,191.01465,572.3965,462.0,482.14355,L58</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -125,7 +63,7 @@
       <property
          name="fromOutcome">*succes</property>
       <property
-         name="sdm:polyPoints">B50,423.0,135.44238,423.36035,211.99414,T50</property>
+         name="sdm:polyPoints">B50,423.0,135.44238,423.36035,211.64355,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -140,46 +78,13 @@
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase16"
-      from="MethodCall19"
+      from="MethodCall139"
       to="Router7">
       <property
-         name="fromOutcome">*decision</property>
+         name="fromOutcome">auditeurConnecte</property>
       <property
-         name="sdm:polyPoints">R50,197.7041,-25.902344,382.0,77.94238,L46</property>
+         name="sdm:polyPoints">R50,161.36719,-24.304688,382.0,77.94238,L46</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase17"
-      from="View4"
-      to="View2">
-      <property
-         name="fromOutcome">*annuler</property>
-      <property
-         name="sdm:polyPoints">L42,462.0,468.14355,202.70659,332.83887,R46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase18"
-      from="View4"
-      to="View2">
-      <property
-         name="fromOutcome">terminerNouveau</property>
-      <property
-         name="sdm:polyPoints">L50,460.28842,475.14355,201.0,339.83887,R54</property>
-   </ControlFlowCase>
-   <MethodCall
-      id="MethodCall19">
-      <property
-         name="activityId">auditeurConnecte1</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>auditeurConnecte1&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="y">-25.551758</property>
-      <property
-         name="x">156.7041</property>
-   </MethodCall>
    <TaskFlowCall
       id="TaskFlowCall20">
       <property
@@ -197,4 +102,99 @@
       <property
          name="x">423.36035</property>
    </TaskFlowCall>
+   <View
+      id="View127">
+      <property
+         name="activityId">login</property>
+      <property
+         name="page">/loginAuditeur/login.jsff</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>login&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">263.44824</property>
+      <property
+         name="x">15.5</property>
+      <property
+         name="pageFragment">true</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase133"
+      from="Router7"
+      to="View127">
+      <property
+         name="fromOutcome">*echec</property>
+      <property
+         name="sdm:polyPoints">L54,382.0,84.94238,56.5,256.09766,R42</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase134"
+      from="View4"
+      to="View127">
+      <property
+         name="fromOutcome">*annuler</property>
+      <property
+         name="sdm:polyPoints">L42,462.0,468.14355,58.17226,263.09766,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase135"
+      from="View4"
+      to="View127">
+      <property
+         name="fromOutcome">terminerNouveau</property>
+      <property
+         name="sdm:polyPoints">L50,460.3308,475.14355,56.5,270.09766,R58</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase136"
+      from="View127"
+      to="MethodCall139">
+      <property
+         name="fromOutcome">*executeAuditeurConnecte</property>
+      <property
+         name="sdm:polyPoints">T50,15.5,209.09766,120.36719,29.695312,B50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase137"
+      from="View127"
+      to="MethodCall138">
+      <property
+         name="fromOutcome">*nouveau</property>
+      <property
+         name="sdm:polyPoints">B50,15.5,317.09766,150.01465,518.3965,T50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall138">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">572.7471</property>
+      <property
+         name="x">150.01465</property>
+   </MethodCall>
+   <MethodCall
+      id="MethodCall139">
+      <property
+         name="activityId">auditeurConnecte</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>auditeurConnecte&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">-23.954102</property>
+      <property
+         name="x">120.36719</property>
+   </MethodCall>
 </SDM>

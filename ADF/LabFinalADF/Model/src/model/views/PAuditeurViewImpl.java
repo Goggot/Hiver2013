@@ -59,13 +59,19 @@ public class PAuditeurViewImpl
   public int auditeurConnecte(String login, String mdp)
   {
     this.setloginBind(login);
-    this.setloginBind(mdp);
+    this.setmdpBind(mdp);
     this.executeQuery();
     int retour = 0;
+    
+    System.out.println(login+" - "+mdp);
+    System.out.println(this.getRowCount());
+    
     if (this.getRowCount() > 0)
     {
+      System.out.println("passé");
       this.next();
       int admin = ((PAuditeurViewRowImpl)this.getCurrentRow()).getAdmin();
+      System.out.println(admin);
       if(admin == 1)
       {
         retour = admin;

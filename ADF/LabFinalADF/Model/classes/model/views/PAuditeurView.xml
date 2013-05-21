@@ -20,7 +20,7 @@
   CustomQuery="false"
   PageIterMode="Full"
   UseGlueCode="false"
-  Where=":loginBind = NOM AND :mdpBind = MOTDEPASSE"
+  Where=":loginBind = CODEAUDITEUR AND :mdpBind = MOTDEPASSE"
   ComponentClass="model.views.PAuditeurViewImpl"
   RowClass="model.views.PAuditeurViewRowImpl"
   ComponentInterface="model.views.common.PAuditeurView"

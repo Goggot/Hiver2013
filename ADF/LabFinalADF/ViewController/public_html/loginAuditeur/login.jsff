@@ -4,10 +4,9 @@
   <!--oracle-jdev-comment:preferred-managed-bean-name:LoginBean-->
   <af:panelFormLayout id="pfl1">
     <af:inputText label="Login usager" id="it1"
-                  validator="#{LoginBean.it1_validator}"
                   value="#{pageFlowScope.login}"/>
     <af:inputText label="Mot de passe" id="it2"
-                  value="#{pageFlowScope.mdp}"/>
+                  value="#{pageFlowScope.mdp}" secret="true"/>
     <af:panelGroupLayout id="pgl1">
       <af:commandButton text="Connexion" id="cb1"
                         action="*executeAuditeurConnecte"/>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1"
+                      binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.pfl1}">
+    <af:outputText value="Changement de mot de passe" id="ot1"
+                   binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.ot1}"
+                   inlineStyle="font-size:xx-large;"/>
+  </af:panelFormLayout>
+  <af:separator id="s1"
+                binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.s1}"/>
+  <af:panelFormLayout id="pfl2"
+                      binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.pfl2}">
+    <af:inputText label="Mot de passe actuel" id="it1"
+                  binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.it1}"
+                  secret="true"/>
+    <af:inputText label="Nouveau mot de passe" id="it2"
+                  binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.it2}"
+                  secret="true"/>
+    <af:inputText label="Confirmation nouveau mot de passe" id="it3"
+                  binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.it3}"
+                  secret="true"/>
+    <af:panelGroupLayout id="pgl1"
+                         binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.pgl1}">
+      <af:commandButton text="effacer" id="cb1"
+                        binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.cb1}"/>
+      <af:commandButton text="retour" id="cb2"
+                        binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.cb2}"
+                        action="versMenuChangerMDP"/>
+      <af:commandButton
+                        text="Changer"
+                        id="cb3"
+                        binding="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.cb3}"
+                        action="#{backingBeanScope.backing_menuAuditeur_changerMotDePasse.cb3_action}"/>
+    </af:panelGroupLayout>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_menuAuditeur_changerMotDePasse-->
+</ui:composition>

@@ -2,23 +2,29 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="TF_menuAuditeur">
     <default-activity>menu</default-activity>
+    <managed-bean id="__17">
+      <managed-bean-name>backing_menuAuditeur_changerMotDePasse</managed-bean-name>
+      <managed-bean-class>view.backing.menuAuditeur.ChangerMotDePasse</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1menuAuditeur/changerMotDePasse.jsff-->
+    </managed-bean>
     <view id="menu">
-      <page>/menu.jsff</page>
+      <page>/menuAuditeur/menu.jsff</page>
     </view>
     <view id="infoPersonnel">
-      <page>/infoPersonnel.jsff</page>
+      <page>/menuAuditeur/infoPersonnel.jsff</page>
     </view>
     <view id="changerMotDePasse">
-      <page>/changerMotDePasse.jsff</page>
+      <page>/menuAuditeur/changerMotDePasse.jsff</page>
     </view>
     <view id="evaluationAtelier">
-      <page>/evaluationAtelier.jsff</page>
+      <page>/menuAuditeur/evaluationAtelier.jsff</page>
     </view>
     <view id="inscription">
-      <page>/inscription.jsff</page>
+      <page>/menuAuditeur/inscription.jsff</page>
     </view>
     <view id="devenirJuge">
-      <page>/devenirJuge.jsff</page>
+      <page>/menuAuditeur/devenirJuge.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>infoPersonnel</from-activity-id>

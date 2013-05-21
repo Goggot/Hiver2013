@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
                 version="11.1.2.60.81"
-                id="TF_loginAuditeur_task_flow_definition_auditeurConnecte1PageDef"
+                id="TF_loginAuditeur_task_flow_definition_auditeurConnectePageDef"
                 Package="view.pageDefs" SkipValidation="true">
   <parameters/>
   <executables/>

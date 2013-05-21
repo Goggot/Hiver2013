@@ -22,4 +22,7 @@
     <CredentialStoreContext credentialStoreClass="oracle.adf.share.security.providers.jps.CSFCredentialStore"
                             credentialStoreLocation="../../src/META-INF/jps-config.xml"/>
   </sec:adf-security-child>
+  <adf-adfm-config xmlns="http://xmlns.oracle.com/adfm/config">
+    <defaults changeEventPolicy="ppr"/>
+  </adf-adfm-config>
 </adf-config>

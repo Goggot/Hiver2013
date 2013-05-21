@@ -8,16 +8,36 @@
   </definitionFactories>
   <pageMap>
     <page path="/home.jsf" usageId="view_homePageDef"/>
-    <page path="/WEB-INF/TF_loginAuditeur.xml#task-flow-definition@auditeurConnecte1"
-          usageId="view_TF_loginAuditeur_task_flow_definition_auditeurConnecte1PageDef"/>
+    <page path="/WEB-INF/TF_loginAuditeur.xml#task-flow-definition@CreateInsert"
+          usageId="view_TF_loginAuditeur_task_flow_definition_CreateInsertPageDef"/>
+    <page path="/WEB-INF/TF_loginAuditeur.xml#task-flow-definition@auditeurConnecte"
+          usageId="view_TF_loginAuditeur_task_flow_definition_auditeurConnectePageDef"/>
+    <page path="/loginAuditeur/enregistrements.jsff"
+          usageId="view_enregistrementsPageDef"/>
+    <page path="/menuAuditeur/changerMotDePasse.jsff"
+          usageId="view_changerMotDePassePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_homePageDef" path="view.pageDefs.homePageDef"/>
-    <page id="view_TF_loginAuditeur_task_flow_definition_auditeurConnecte1PageDef"
-          path="view.pageDefs.TF_loginAuditeur_task_flow_definition_auditeurConnecte1PageDef"/>
+    <page id="view_TF_loginAuditeur_task_flow_definition_CreateInsertPageDef"
+          path="view.pageDefs.TF_loginAuditeur_task_flow_definition_CreateInsertPageDef"/>
+    <page id="view_TF_loginAuditeur_task_flow_definition_auditeurConnectePageDef"
+          path="view.pageDefs.TF_loginAuditeur_task_flow_definition_auditeurConnectePageDef"/>
+    <page id="view_enregistrementsPageDef"
+          path="loginAuditeur.enregistrementsPageDef"/>
+    <page id="view_changerMotDePassePageDef"
+          path="menuAuditeur.changerMotDePassePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl1"
+                     Package="model.applicationModule"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
                      SupportsTransactions="true" SupportsFindMode="true"
                      SupportsRangesize="true" SupportsResetState="true"

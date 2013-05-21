@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelFormLayout id="pfl1">
+    <af:panelList id="pl1">
+      <af:commandLink text="Changer le mot de passe" id="cl1"
+                      action="versChangerMDP"/>
+      <af:commandLink text="Changer les infos nominales" id="cl2"
+                      action="versInfoPersonnelles"/>
+      <af:commandLink text="Inscription aux ateliers" id="cl3"
+                      action="versInscriptiom"/>
+      <af:commandLink text="Évaluation des ateliers" id="cl4"
+                      action="versEvaluationAteliers"/>
+      <af:commandLink text="Devenir juge" id="cl5"
+                      action="versDevenirJuge"/>
+    </af:panelList>
+  </af:panelFormLayout>
+</ui:composition>
