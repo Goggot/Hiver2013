@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="infoPersonnelPageDef"
+                Package="menuAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PauditeurCoord3" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PauditeurCoord3Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="PauditeurCoord3Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -67,7 +67,7 @@
          <hash>
             <hash n="dependable">
                <url n="sourceOwnerURL" path="../LabFinal.jws"/>
-               <url n="sourceURL" protocol="file" path="/D:/PROJET_ADF_PHASE1_AUGUSTIN_PAIEMENT/Model/Model.jpr"/>
+               <url n="sourceURL" path="../../../../PROJET_ADF_PHASE1_AUGUSTIN_PAIEMENT/Model/Model.jpr"/>
             </hash>
             <value n="recognizerId" v="oracle.jdeveloper.library"/>
          </hash>
@@ -351,6 +351,14 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -376,14 +384,6 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Security"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Security"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -481,6 +481,14 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -506,14 +514,6 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Security"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="BC4J Security"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

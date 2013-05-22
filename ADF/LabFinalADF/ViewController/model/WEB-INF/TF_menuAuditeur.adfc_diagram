@@ -17,9 +17,9 @@
       <property
          name="y">340.24707</property>
       <property
-         name="x">345.0</property>
-      <property
          name="pageFragment">true</property>
+      <property
+         name="x">345.0</property>
    </View>
    <View
       id="View3">
@@ -34,9 +34,9 @@
       <property
          name="y">74.19531</property>
       <property
-         name="x">480.0</property>
-      <property
          name="pageFragment">true</property>
+      <property
+         name="x">480.0</property>
    </View>
    <View
       id="View4">
@@ -51,9 +51,9 @@
       <property
          name="y">331.14355</property>
       <property
-         name="x">660.0</property>
-      <property
          name="pageFragment">true</property>
+      <property
+         name="x">660.0</property>
    </View>
    <View
       id="View5">
@@ -68,9 +68,9 @@
       <property
          name="y">599.49414</property>
       <property
-         name="x">348.0</property>
-      <property
          name="pageFragment">true</property>
+      <property
+         name="x">348.0</property>
    </View>
    <View
       id="View6">
@@ -85,9 +85,9 @@
       <property
          name="y">85.896484</property>
       <property
-         name="x">120.0</property>
-      <property
          name="pageFragment">true</property>
+      <property
+         name="x">120.0</property>
    </View>
    <View
       id="View7">
@@ -102,9 +102,9 @@
       <property
          name="y">338.49414</property>
       <property
-         name="x">68.0</property>
-      <property
          name="pageFragment">true</property>
+      <property
+         name="x">68.0</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -124,7 +124,7 @@
       <property
          name="fromOutcome">versInfoPersonnelles</property>
       <property
-         name="sdm:polyPoints">T56,348.5,285.89648,483.5,130.44354,B56</property>
+         name="sdm:polyPoints">T67,355.5,285.89648,483.5,130.33902,B56</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

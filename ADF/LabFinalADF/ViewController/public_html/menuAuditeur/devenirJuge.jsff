@@ -2,7 +2,6 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
-    <f:facet name="footer"/>
     <af:outputText value="Candidature Juge" id="ot1"/>
     <af:panelFormLayout id="pfl2">
       <f:facet name="footer">

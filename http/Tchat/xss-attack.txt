@@ -3,4 +3,8 @@
 http://ostermiller.org/calc/encode.html
 
 Moinstre Spaguettit Volant
-<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD53aW5kb3cubG9jYXRpb249Imh0dHA6Ly9zYWludGVnbGlzZWR1bW9uc3RyZWVuc3BhZ2hldHRpdm9sYW50LmJsb2dzcG90LmNhLyI8L3NjcmlwdD4=">
+<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD53aW5kb3cubG9jYXRpb24gPSAiaHR0cDovL3d3dy5zYWludGVnbGlzZWR1bW9uc3RyZWVuc3BhZ2hldHRpdm9sYW50LmJsb2dzcG90LmNhLyI8L3NjcmlwdD4=">
+
+<img src="data:text/html; base64,PHNjcmlwdD5kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYm9keScpLmlubmVySFRNTCArPSAiV0Fa
+QUFBQUFBQUFBQUFBQUFBICEhISI8L3NjcmlwdD4=" />
+<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYm9keScpLmlubmVySFRNTCArPSAiU1VQRVIgWFNTIFdBWkFBQUFBQUFBQUFBQUFBQSAhISEiPC9zY3JpcHQ+" />

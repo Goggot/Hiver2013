@@ -1,2 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"></ui:composition>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:panelLabelAndMessage label="#{bindings.Nom.hints.label}" id="plam1">
+      <af:outputText value="#{bindings.Nom.inputValue}" id="ot1"/>
+    </af:panelLabelAndMessage>
+  </af:panelFormLayout>
+</ui:composition>

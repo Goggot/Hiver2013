@@ -131,10 +131,10 @@ function verifierMessages() {
 															+ "Incoming Unknown Injection!"+"</br>";
 						}
 						console.log("Script détecté");
-						if (msgPerso != null){
-							textXSS = msgPerso + message;
-							setTimeout(envoieMessage, 500);
-						}
+						//if (msgPerso != null){
+						//	textXSS = msgPerso + message;
+						//	setTimeout(envoieMessage, 1000);
+						//}
 						message = escape(message);
 					}
 				send = send + "<b style='color:red;'>" + val.nomUsager + "</b> -- " + message + "</br>";

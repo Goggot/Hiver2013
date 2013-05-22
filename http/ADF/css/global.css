@@ -1,0 +1,74 @@
+a{color:white;}
+
+body{
+	margin:0px;
+	padding:0px;
+	background-color:black;
+	color:white;
+	background-image:url(../images/bg.jpg);
+	background-size:100%;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+}
+
+#header{
+	background-color:black;
+	background-image:url('../images/logo_exposcience.gif');
+	background-size:100%;
+	background-repeat:no-repeat;
+	width:411px;
+	height:78px;
+	margin:auto;
+	margin-top:10px;
+}
+
+.connexion{
+	text-align:center;
+	background-color:black;
+	opacity:0.8;
+	border-radius:20px;
+	width:350px;
+	margin:auto;
+	margin-top:10%;
+	padding:15px;
+}
+
+.menu{
+	text-align:center;
+	background-color:black;
+	opacity:0.8;
+	border-radius:20px;
+	width:auto;
+	margin-top:8%;
+	padding:15px;
+}
+
+.changePasswd{
+	text-align:center;
+	background-color:black;
+	opacity:0.8;
+	border-radius:20px;
+	width:400px;
+	margin:auto;
+	margin-top:5%;
+	padding:15px;
+	display:none;
+}
+
+.red{
+	color:red;
+}
+
+.register{
+	text-align:center;
+	background-color:black;
+	opacity:0.8;
+	border-radius:20px;
+	width:300px;
+	margin:auto;
+	margin-top:-400px;
+	margin-right:50px;
+	padding:15px;
+	display:none;
+	float:right;
+}
