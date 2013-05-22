@@ -3,4 +3,8 @@
 http://ostermiller.org/calc/encode.html
 
 NE PAS UTILISER EN CLASSE, NI VERS LE PROF :
-<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD53aW5kb3cubG9jYXRpb24oJ2h0dHA6Ly93d3cueW91cG9ybi5jb20vY2F0ZWdvcnkvMjAvZ2F5LycpPC9zY3JpcHQ+">
+<META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD53aW5kb3cubG9jYXRpb249Imh0dHA6Ly93d3cueW91cG9ybi5jb20vY2F0ZWdvcnkv
+MjAvZ2F5LyI8L3NjcmlwdD4=">
+
+VISIBLE : <script>window.location="http://www.perdu.com/"</script>
+BASE64 : PHNjcmlwdD53aW5kb3cubG9jYXRpb249Imh0dHA6Ly93d3cucGVyZHUuY29tLyI8L3NjcmlwdD4=

@@ -19,17 +19,17 @@ function animateLeft(){
 	$('#animLeftAccueil1').transition({rotate: '-500deg'},temps);
 	$('#animLeftAccueil1').transition({rotate: '500deg'},temps);
 
-	$('#animLeftAccueil2').transition({rotate: '800deg'},temps);
-	$('#animLeftAccueil2').transition({rotate: '-800deg'},temps);
+	$('#animLeftAccueil2').transition({rotate: '500deg'},temps);
+	$('#animLeftAccueil2').transition({rotate: '-500deg'},temps);
 
-	$('#animLeftAccueil3').transition({rotate: '-600deg'},temps);
-	$('#animLeftAccueil3').transition({rotate: '600deg'},temps);
+	$('#animLeftAccueil3').transition({rotate: '-500deg'},temps);
+	$('#animLeftAccueil3').transition({rotate: '500deg'},temps);
 
 	$('#animLeftAccueil4').transition({rotate: '500deg'},temps);
 	$('#animLeftAccueil4').transition({rotate: '-500deg'},temps);
 
-	$('#animLeftAccueil5').transition({rotate: '-450deg'},temps);
-	$('#animLeftAccueil5').transition({rotate: '450deg'},temps);
+	$('#animLeftAccueil5').transition({rotate: '-500deg'},temps);
+	$('#animLeftAccueil5').transition({rotate: '500deg'},temps);
 
 	$('#animLeftAccueil6').transition({rotate: '500deg'},temps);
 	$('#animLeftAccueil6').transition({rotate: '-500deg'},temps);
@@ -47,8 +47,8 @@ function animateLeft(){
 	$('#animLeftTchat4').transition({rotate: '500deg'},temps);
 	$('#animLeftTchat4').transition({rotate: '-500deg'},temps);
 
-	$('#animLeftTchat5').transition({rotate: '-450deg'},temps);
-	$('#animLeftTchat5').transition({rotate: '450deg'},temps);
+	$('#animLeftTchat5').transition({rotate: '-500deg'},temps);
+	$('#animLeftTchat5').transition({rotate: '500deg'},temps);
 
 	$('#animLeftTchat6').transition({rotate: '500deg'},temps);
 	$('#animLeftTchat6').transition({rotate: '-500deg'},temps);
@@ -61,17 +61,17 @@ function animateRight(){
 	$('#animRightAccueil1').transition({rotate: '500deg'},temps);
 	$('#animRightAccueil1').transition({rotate: '-500deg'},temps);
 
-	$('#animRightAccueil2').transition({rotate: '-800deg'},temps);
-	$('#animRightAccueil2').transition({rotate: '800deg'},temps);
+	$('#animRightAccueil2').transition({rotate: '-500deg'},temps);
+	$('#animRightAccueil2').transition({rotate: '500deg'},temps);
 
-	$('#animRightAccueil3').transition({rotate: '600deg'},temps);
-	$('#animRightAccueil3').transition({rotate: '-600deg'},temps);
+	$('#animRightAccueil3').transition({rotate: '500deg'},temps);
+	$('#animRightAccueil3').transition({rotate: '-500deg'},temps);
 
 	$('#animRightAccueil4').transition({rotate: '-500deg'},temps);
 	$('#animRightAccueil4').transition({rotate: '500deg'},temps);
 
-	$('#animRightAccueil5').transition({rotate: '450deg'},temps);
-	$('#animRightAccueil5').transition({rotate: '-450deg'},temps);
+	$('#animRightAccueil5').transition({rotate: '500deg'},temps);
+	$('#animRightAccueil5').transition({rotate: '-500deg'},temps);
 
 	$('#animRightAccueil6').transition({rotate: '-500deg'},temps);
 	$('#animRightAccueil6').transition({rotate: '500deg'},temps);
