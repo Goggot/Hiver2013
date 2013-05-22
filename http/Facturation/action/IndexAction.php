@@ -28,7 +28,7 @@
 					$_SESSION["loggedIn"] = $userInfo["visibility"];
 					$_SESSION["username"] = $userInfo["real_name"];
 					
-					header("location:client.php");
+					header("location:accueil.php");
 					exit;
 				}
 				else{
