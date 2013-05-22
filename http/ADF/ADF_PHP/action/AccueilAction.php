@@ -1,6 +1,5 @@
 <?php 
 	require_once("action/CommonAction.php");
-	require_once("action/DAO/OperationsDAO.php");
 	
 	class AccueilAction extends CommonAction{
 		public function __construct() {
