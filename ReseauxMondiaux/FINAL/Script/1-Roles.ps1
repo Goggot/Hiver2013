@@ -1,4 +1,9 @@
-﻿##### 1 - Rôles et services serveur perso #####
+﻿###########################################
+#####         Erwan Palanque          #####
+#####          15 mai 2013            #####
+##### 	  Configuration des rôles 	  #####
+#####        Serveur : 407PF4         #####
+###########################################
 
 Rename-Computer -NewName "407PF4"
 

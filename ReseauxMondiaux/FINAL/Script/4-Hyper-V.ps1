@@ -1,4 +1,9 @@
-﻿##### 3 - Hyper-V serveur perso #####
+﻿###########################################
+#####         Erwan Palanque          #####
+#####          15 mai 2013            #####
+##### 	  		 Hyper-V 	  		  #####
+#####        Serveur : 407PF4         #####
+###########################################
 
 ## Configurer le chemin des disques et des ordis virtuels
 Set-VMHost -VirtualHardDiskPath C:\_VirDisque -VirtualMachinePath C:\_VirOrdi

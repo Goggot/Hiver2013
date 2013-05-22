@@ -1,4 +1,9 @@
-##### Jonction DM et création Admin perso #####
+###########################################
+#####         Erwan Palanque          #####
+#####          15 mai 2013            #####
+##### 	 Jonctions DM + Admin perso   #####
+#####        Serveur : 407PF4         #####
+###########################################
 
 ##### Rejoindre le Controleur de domaine #####
 Add-Computer -DomainName THETHRONE.PRO -ComputerName 407PF4
