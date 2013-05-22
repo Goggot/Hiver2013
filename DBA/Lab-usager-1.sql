@@ -1,0 +1,3 @@
+
+CREATE TABLESPACE ACME_APP DATAFILE 'C:\Oracle\oradata\b55\acmapp01.dbf' SIZE 150M;
+CREATE TABLESPACE ACME_ADMIN DATAFILE 'C:\Oracle\oradata\b55\acmadmin01.dbf' SIZE 150M;

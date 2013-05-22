@@ -3,7 +3,7 @@
 
     class Transaction{
 		public static function getMembres($key){
-			$soapClient = new nusoap_client('http://b63server.notes-de-cours.com/services.php', false);
+			$soapClient = new nusoap_client('http://apps-de-cours.com/web-chat/server/services.php', false);
 			$error = $soapClient->getError();
 			$liste = null;
 			
@@ -18,7 +18,7 @@
 		}
 		
 		public static function getMessages($key){
-			$soapClient = new nusoap_client('http://b63server.notes-de-cours.com/services.php', false);
+			$soapClient = new nusoap_client('http://apps-de-cours.com/web-chat/server/services.php', false);
 			$error = $soapClient->getError();
 			$liste = null;
 			
@@ -33,7 +33,7 @@
 		}
 		
 		public static function envoieMessage($key, $message){
-			$soapClient = new nusoap_client('http://b63server.notes-de-cours.com/services.php', false);
+			$soapClient = new nusoap_client('http://apps-de-cours.com/web-chat/server/services.php', false);
 			$error = $soapClient->getError();
 			
 			if (empty($error)) {

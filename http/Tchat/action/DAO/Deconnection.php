@@ -3,7 +3,7 @@
 
     class Deconnection{
 		public static function getDeconnected($clef){
-			$soapClient = new nusoap_client('http://b63server.notes-de-cours.com/services.php', false);
+			$soapClient = new nusoap_client('http://apps-de-cours.com/web-chat/server/services.php', false);
 			$error = $soapClient->getError();
 			$key = null;
 			
