@@ -41,27 +41,21 @@ foreach($item in $fcsv)
 	
 	if(($count -ge 0) -and ($count -lt 13)){
 		$chemin = "OU=PRODUCTION;OU=DIRECTEURS,OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"
-        $groupe = "ART_PRODUCTION"
     }
 	elseif (($count -ge 13) -and ($count -lt 25)){
 		$chemin = "OU=GRAPHIQUE;OU=DIRECTEURS,OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"
-        $groupe = "ART_GRAPHIQUE"
     }
 	elseif(($count -ge 25) -and ($count -lt 33)){
 		$chemin = "OU=SFX,OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"
-        $groupe = "ART_SFX"
     }
 	elseif(($count -ge 33) -and ($count -lt 44)){
 		$chemin = "OU=SCENARIOS,OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"
-        $groupe = "ART_SCENARIOS"
     }
 	elseif(($count -ge 44) -and ($count -lt 58)){
 		$chemin = "OU=TEXTURE,OU=DESIGNERS,OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"
-        $groupe = "ART_TEXTURE"
     }
 	elseif(($count -ge 58) -and ($count -lt 75)){
 		$chemin = "OU=AUDIO,OU=DESIGNERS,OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"
-        $groupe = "ART_AUDIO"
     }
 	else {
 		$chemin = "OU=ARTISTIQUE,DC=THETHRONE,DC=PRO"

@@ -9,13 +9,9 @@
 /* -------------------------------------------------------------------- */
 /* Généralité                                                          */
 /* -------------------------------------------------------------------- */
-a{text-decoration:none;}
 
 body{
 margin:auto;
-background-color:#666666;
-width:auto;
-height:auto;
 }
 
 * {
@@ -88,29 +84,12 @@ a:hover {
 .site-container {
 }
 
-#boxA{
-	position:absolute; 
-	width: 755px;
-	height:548px;
-	border:solid 2px green;
-	background-color:#333333;
-	opacity: 0.9;
-	z-index:1;
-	display:none;
-}
-.col_l{
-
-	margin-left:40px;
-	margin-top:120px;
-	float:left;
-}
-
 .page-container {
 	min-height:610px;
 	width:864px;
 	background-repeat:no-repeat;
-	margin:0 auto;
-	border:outset 2px white;
+	padding:20px;
+	margin:20px auto;
 }
 
 .page-content {
@@ -141,14 +120,14 @@ a:hover {
 }
 
 .bandeDuBas{
-width:860px;
-height:80px;
+width:1000px;
+height:65px;
 background-image:url(../images/bande_marge_bas.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
 position:relative;
-bottom:126px;
+bottom:-50px;
 }
 .iPad_Bas200{
 margin-top:185px;
@@ -169,36 +148,12 @@ margin-left:150px;
 margin-top:50px;
 }
 .elem_menuR{
-width:80px;
-height:25px;
+width:76.28px;
+height:35.96px;
 background-image:url(../images/rapport/bckg_boutonMenu.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-padding-top:5px;
-text-align:center;
-}
-.elemP{
-	float:left;
-	margin-top:25px;
-}
-
-.elemD{
-
-	margin-top:15px;
-}
-.formAjout
-{
-	margin-right:100px;
-	float:right;
-	display:block;
-	width:75px;
-}
-.formDebut{
-float:left;
-display:block;
-width:75px;
-margin-left:40px;
 }
 .iPad_1menu{
 margin-left:150px;
@@ -220,18 +175,18 @@ background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
 width:100%;
-height:900px;
+height:1000px;
 }
 .bckg_pan_login{
-width:360px;
-height:220px;
+width:365.318px;
+height:220.454px;
 background-image:url(../images/login/bckg_1.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
 position:relative;
-top:346px;
-left:250px;
+top:385px;
+left:307px;
 }
 #login_title{
 position:relative;
@@ -257,24 +212,6 @@ margin-top:50px;
 .gr_submit{ 
 margin:50px 100px ; 
 }
-#mdpf{
-	color:#181818 ;
-}
-#reco_email{
-	text-align:center;
-	margin-left:20px;
-	margin-top:10px;
-	width:300px;
-	height:90px;
-	padding:5px;
-	display:none;
-	color:white;
-	background-color:#383838;
-	border-radius:10px;
-}
-#resultat{
-	color:red;
-}
 
 /* -------------------------------------------------------------------- */
 /* Page Accueil                                                         */
@@ -285,8 +222,8 @@ background-image:url(../images/main_bckg.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-width:100%; 
-height:900px;
+width:1000px; 
+height:1500px;
 
 }
 .frame_bck2{
@@ -294,30 +231,30 @@ background-image:url(../images/Accueil/bckg_pano_Home.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-width:550px;
-height:550px;
+width:786.3px;
+height:959.5px;
 position:relative;
-top:100px;
-left:185px;
+top:220px;
+left:145px;
 }
 .frame_bck3
 {
 background-image:url(../images/Accueil/bckg_ficheAccueil.gif);
 background-position:center;
 background-repeat:no-repeat;
-background-size:85%;
-width:400px;
-height:350px;
+background-size:100%;
+width:500px;
+height:300px;
 position:absolute; 
-top:90px;
-left:80px;
+top:350px;
+left:140px;
+
 }
-.statsAccueil{font-size:10px; font-family:arial; font-weight:bolder; }
-.stats{font-size:10px; font-family:arial; font-style:oblique;  }
+
 .mainTitre{
 position:relative;
-top: 10px;
-left:50px;
+top:75px;
+left:100px;
 }
 .them_titre_template
 {
@@ -328,18 +265,18 @@ font-weight:bolder;
 width:150px;
 height:auto;
 position:relative;
-bottom:285px;
-left:25px;
+bottom:350px;
+left:0px;
 }
 .bckg_CF{ 
 background-image:url(../images/autre/bckg_Principal_CF.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-width:760px;
-height:550px;
+width:900px;
+height:928px;
 margin-left:50px;
-margin-top:80px;
+margin-top:220px;
 }
 .bckg_info_Clients
 {
@@ -347,11 +284,10 @@ background-image:url(../images/autre/bckg_fiche2.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-width: 400px;
-height:275px;
-margin-top:10px;
-padding-top:20px;
-margin-left:45px;
+width: 503px;
+height:412px;
+margin-top:35px;
+margin-left:75px;
 float:left;
 }
 .elementMenu{
@@ -362,117 +298,82 @@ border-bottom:solid 6px  #FFFFFF;
 margin:10px 10px;
 padding-top:0.1px;
 }
-.elem_option_CF{width:100px; background-color:#CCCCCC; margin:20px 46px; text-align:center;padding:10px 0 ; border-radius:2px; font-size:10px;}
-.option_CF{float:right; margin-top:-5px; margin-right:20px;}
-#reply{ color:red;}
-#bckg_resultat_CF{ 
-width:650px; 
-height:180px;
-margin-left:-8px;
-margin-top:-8px;
-border:solid 10px #CCCCCC;
-background-image:url(../images/autre/metal.jpg);
+.elem_option_CF{width:200px; background-color:#CCCCCC; margin:20px; text-align:center;padding:20px 0 ; border-radius:2px;}
+.option_CF{float:right; margin:20px 35px;}
+.bckg_resultat_CF{ 
+width:780px; 
+height:350px;
+position:relative;
+top:485px;
+left:75px;
+background-image:url(../images/autre/bckg_fiche3.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-opacity:0.2px;
-}
-#container{
-border:solid 10px #CCCCCC;
-width:650px; 
-height:180px;
-border:solid 10px #CCCCCC;
-position:relative;
-top:310px;
-left:45px;
-}
-.popup{
-	width: 400px;
-	height:275px;
-	opacity:0.5px;
-	background-color:#666666;
-	z-index:5;
-	display:none;
-	border:solid 3px red;
-}
-.elemC{ float:left;}
-
-.columnFix{
-	width: auto; 
-	height:auto;
-	padding:10px 50px;
-	margin-top:15px;
 }
 
-.elmTitre{}
-.reponse{
-	border:solid 1px green;
-	color:green;
-	float:right;
-	width:150px;
-	height:25px;
-	margin-top:-20px;
-	margin-right:20px;
-	padding-top:10px;
-	text-align:center;
-}
-.groupFormClient{margin-left:30px;}
 /*
 *OPTION DE PADDING
 */
-.iPad_titre_CF{ position:relative; top:20px; left:45px;}
+.iPad_titre_CF{ position:relative; top:20px; left:75px;}
 .iPad_Top10{margin-top:10px;}
-.iPad_Top65{margin-top:100px;}
 
 /* -------------------------------------------------------------------- */
 /* Rapport page                                                           */
 /* -------------------------------------------------------------------- */
 #bandeMenu{ 
-width:865px; 
+width:1000px; 
 height:100px; 
 border-top: solid 3px white;
 border-bottom:solid 3px white;
 position:relative;
-top:50px;
+top:150px;
 }
-.menuG{width:700px; height:40px;  position:relative; top:0px; float:left; left:50px;}
 .box_rapport{
 background-image:url(../images/rapport/bckg_pano_rapport.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-width:840px;
-height:490px;
+width:900px;
+height:850px;
 position:relative;
-top:60px;
-left:10px;
+top:190px;
+left:50px;
 }
 #bande_rapport{
 background-image:url(../images/rapport/bckg_bande_haut.gif);
 background-position:center;
 background-repeat:no-repeat;
 background-size:100%;
-width:838px;
+width:900px;
 height:100px;
 position:relative;
 top:60px;
-left:2px;
 }
-#boxR{
-margin-left:43px;
-display:none;
-width:750px;
-height:250px;
+.boxR{
+background-image:url(../images/rapport/bckg_fiche.gif);
+background-position:center;
+background-repeat:no-repeat;
+background-size:100%;
+width:400px; 
+height:600px;
 position:relative;
-top:100px;
+top:25px;
 }
+.marginL_15{margin-left:20px;}
+.marginR_15{margin-right:20px;}
+.margin_both15{
+margin-left:15px;
+margin-right:15px;
+}
+
 #ligneR{
 width: 750px;
 height:auto;
-border:solid 2px #CCCCCC;
+border:solid 2px #CCCCCC; 
 position:relative;
-top: 370px;
-left:40px;
+top: 600px;
+left:75px;
 }
 #boutonMenu{
 background-image:url(../images/rapport/bckg_fiche.gif);
@@ -482,30 +383,8 @@ background-size:100%;
 width:85px;
 height:50px;
 }
-.iPad_tt{padding-top:15px;}
 .iPad_BR{padding-top:25px;}
-.iPad_L50{margin-top:100px; margin-left:50px;}
-.iPad_10T{margin-left:50px ; margin-top:25px; }
-.iPad_10T2{margin-top: 25px; margin-right:150px; }
-.grMenu{ margin:40px 125px; }
-
-.col_r{
-	
-	display:none;
-
-}
-.col_PR{
-	width: 340px;
-	height:300px;
-	border:solid 5px black;
-	float:right;
-	margin-top: 9px;
-	margin-right:40px;
-	background-image:url(../images/autre/planB.jpg);
-	background-repeat:no-repeat; 
-	background-size: 150%;
-	background-position: center;
-}
+.grMenu{ }
 /* -------------------------------------------------------------------- */
 /*                                                            */
 /* -------------------------------------------------------------------- */
@@ -556,4 +435,3 @@ height:50px;
 	padding-right:300px;
 	height:350px;
 }
-.floatRight{float:right;}

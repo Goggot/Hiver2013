@@ -13,19 +13,12 @@
 	require_once("action/DAO/ClientDAO.php");
     
 	class ClientAction extends CommonAction{
-		private $infoClient;
-		private $infoMessage;
-
 		public function __construct(){
 			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
 		}
 		
 		protected function executeAction(){
-			$this->infoClient = array(); 
 			
-			
-
-				//return $this->infoClient;
 		}
 		
 		public function ajoutClient(){
@@ -41,10 +34,5 @@
 				header("location:client.php");
 				exit;
 			}
-		}
-
-		public function getMessage()
-		{ 
-			return $this->infoMessage;
 		}
     }
