@@ -13,3 +13,6 @@ class Projectile():
             self.position[1] += self.vitesse
         if self.position[1] > self.robot.parent.fred.position[1]:
             self.position[1] -= self.vitesse
+
+    def clone(self):
+        return self.position

@@ -2,6 +2,7 @@ import pygame
 import random
 from Projectile import *
 from threading import *
+print("ROBOTS")
 
 
 class Robot():

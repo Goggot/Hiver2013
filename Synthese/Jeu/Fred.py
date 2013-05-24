@@ -1,10 +1,9 @@
 import pygame
 from pygame.locals import *
-
+print("FRED")
 
 class Fred():
     def __init__(self, parent):
-        print("FRED")
         self.parent = parent
         self.vie = 20
         self.direction = 'G'
@@ -49,7 +48,7 @@ class Fred():
         dict = []
         dict.append(self.position[:])
         dict.append(self.direction[:])
-        dict.append(self.etat[:])
-        dict.append(self.vie[:])
+        dict.append(self.etat)
+        dict.append(self.vie)
         dict.append(self.objectList[:])
         return dict

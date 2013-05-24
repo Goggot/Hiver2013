@@ -1,6 +1,7 @@
 import Modele
 import Vue
 from Robots import *
+print("CONTROLEUR")
 
 
 class Controleur():

@@ -1,6 +1,7 @@
 import pygame
 import pygame.mixer
 from pygame.locals import *
+print("VUE")
 
 pygame.init()
 pygame.mixer.init(44100)
@@ -13,8 +14,10 @@ class Vue():
         self.listImgEnnemis = {"camera": [], "droneS": [], "droneA": [], "projectile": []}
         self.robotList = self.parent.modele.prison.robotList
         self.projectilList = self.parent.modele.prison.projectilList
+
         self.fenetre = pygame.display.set_mode((1230, 820), RESIZABLE)
-        self.fond = pygame.image.load("img/falcon.bmp").convert()
+        self.fond = pygame.image.load("img/falcon.jpg").convert()
+
         self.solo = pygame.image.load("img/han-solo75.png").convert_alpha()
         self.posSolo = self.solo.get_rect()
         self.droneS = pygame.image.load("img/jabba100.png").convert_alpha()
@@ -39,7 +42,7 @@ class Vue():
 
     def refresh(self):
         #self.robotList = self.parent.modele.prison.robotList
-        self.pause = self.parent.pause
+        #self.pause = self.parent.pause
         self.fenetre.blit(self.fond, (0, 0))
         posSolo = self.parent.modele.fred.position
         self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))

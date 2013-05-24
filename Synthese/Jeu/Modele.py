@@ -1,7 +1,6 @@
 import Fred
 import Prison
-import copy
-
+print("MODELE")
 
 class Modele():
     def __init__(self, parent):
@@ -13,7 +12,7 @@ class Modele():
         self.projectilList = self.prison.projectilList
 
     def tickGeneral(self):
-        self.listeEvenement.append([0, copy.copy(self.fred)])
+        self.listeEvenement.append([0, self.fred.clone()])
         self.fred.tick()
         for key in self.robotList:
             for item in self.robotList[key]:
@@ -21,27 +20,20 @@ class Modele():
                     if key is not "camera":
                         self.listeEvenement.append([key, item[1].clone(), item[0]])
                     item[1].tick()
-        #for item in self.projectilList:
-            #self.listeEvenement.append(["projectile", item[1].clone()])
-            #item[1].tick()
+        for item in self.projectilList:
+            self.listeEvenement.append(["projectile", item[1].clone()])
+            item[1].tick()
 
     def backToTheFuture(self, count):
-    	### FAIRE UNE LISTE PAR CLASSE, CONTENANT UNE COPIE [:] DE TOUTES LES VARIABLES,
-        ### ET LES RENVOYÉS DANS CHAQUE CLASSES DEJA PRÉSENTE DANS LA LISTE D'ENNEMIS
-        ### dict {position ; direction ; etat}
-        ###### Fred {vie ; objectList}
-        ######### droneA {alert}
-
         eve = self.listeEvenement.pop(500-count)
         print(eve)
 
         if eve[0] == 0:
-            #self.fred.vie = eve[1][3]
-            #self.fred.objectList = eve[1][4]
-            #self.fred.position = eve[1][0]
-            #self.fred.direction = eve[1][1]
-            #self.fred.etat = eve[1][2]
-            pass
+            self.fred.vie = eve[1][3]
+            self.fred.objectList = eve[1][4]
+            self.fred.position = eve[1][0]
+            self.fred.direction = eve[1][1]
+            self.fred.etat = eve[1][2]
         else:
             self.robotList[eve[0]][eve[2]][1].position = eve[1][0][:]
             self.robotList[eve[0]][eve[2]][1].direction = eve[1][1][:]
