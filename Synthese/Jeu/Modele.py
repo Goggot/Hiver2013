@@ -25,7 +25,7 @@ class Modele():
             item[1].tick()
 
     def backToTheFuture(self, count):
-        eve = self.listeEvenement.pop(500-count)
+        eve = self.listeEvenement.pop(count)
         print(eve)
 
         if eve[0] == 0:
@@ -35,10 +35,15 @@ class Modele():
             self.fred.direction = eve[1][1]
             self.fred.etat = eve[1][2]
         else:
-            self.robotList[eve[0]][eve[2]][1].position = eve[1][0][:]
-            self.robotList[eve[0]][eve[2]][1].direction = eve[1][1][:]
+            self.robotList[eve[0]][eve[2]][1].position = eve[1][0]
+            self.robotList[eve[0]][eve[2]][1].direction = eve[1][1]
             self.robotList[eve[0]][eve[2]][1].etat = eve[1][2]
             if eve[0] == 'droneA':
                 self.robotList[eve[0]][eve[2]][1].alert = eve[1][3]
+
+        if count == 0:
+            self.listeEvenement = None;
+
+        count-=1;
 
         print("YAHOUUU ! BACK TO THE FUTUUURE !")

