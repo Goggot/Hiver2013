@@ -6,10 +6,18 @@
 ###########################################
 
 $fcsv = import-csv -path "C:\Hiver2013\ReseauxMondiaux\FINAL\Script\UO.csv" -delimiter ";"
+$count = 0
 
 foreach($item in $fcsv)
 {
+    if ($count -eq 0){
+        $path = "DC=THETHRONE,DC=PRO"
+    }
+    else{
+        $path = $item.aPath + ",DC=THETHRONE,DC=PRO"
+    }
     New-ADOrganizationalUnit `
         -Name $item.aOU `
-        -Path $item.aPath `        -ProtectedFromAccidentalDeletion $false    Write-Host Création de $item.aOU
+        -Path $path `        -ProtectedFromAccidentalDeletion $false    $count++    Write-Host Création de $item.aOU
 }
+Write-host $count UO créé.
