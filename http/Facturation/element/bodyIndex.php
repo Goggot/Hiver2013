@@ -17,6 +17,14 @@
                 <div class="block clear gr_submit">
                     <input type="submit" value="confirmation" />
                 </div>
+
+                <a href="JavaScript:void(0);" id="mdpf" onclick="recover(event)">Mot de passe oublié</a>
+                <div id="reco_email">
+                    <p>Votre email : </p>
+                    <input type="text" id="mail">
+                    <button type="button" onclick="recover(event)" id="bf">Valider</button>
+                    <p id="resultat"></p>
+                </div>
             </form>
         </div>
     </div>

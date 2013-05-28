@@ -25,3 +25,7 @@
 		}
 		echo $valid;
 	}
+
+	if (isset($_POST["titre"])){
+		echo ClientDAO::rechercheAvancee($_POST["date"], $_POST["langue"], $_POST["titre"], 'Any');
+	}

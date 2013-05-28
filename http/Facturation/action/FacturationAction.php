@@ -14,7 +14,7 @@
 
 	class FacturationAction extends CommonAction{
 		public function __construct(){
-			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
+			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
 		}
 		
 		protected function executeAction(){

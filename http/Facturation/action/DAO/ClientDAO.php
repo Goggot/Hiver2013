@@ -9,9 +9,12 @@
  *--------------------------------------------------- */
 
 
-	class ClientDAO {
-		public static function authenticate($username, $password){
+	class ClientDAO 
+	{
+		public static function authenticate($username, $password)
+		{
 			$connection = Connection::getConnection();
+			echo $username . "</br>" . $password . "</br>";
 			$query = "SELECT * FROM EA_ADMIN WHERE USERNAME = :pUsername AND MDP = :pPassword";
 			$statement = oci_parse($connection, $query);
 			
@@ -20,7 +23,6 @@
 			oci_execute($statement);
 			
 			$userInfo = null;
-			echo oci_fetch_array($statement);
 			if ($row = oci_fetch_array($statement)) {
 				echo "Reussi";
 				$userInfo = array();
@@ -31,23 +33,22 @@
 			
 			return $userInfo;
 		}
-		
-		public static function ajoutClient($password, $pseudo, $nom, $prenom, $adresse, $compagnie){
+	
+		public static function ajouterUnClient( $username, $nom, $prenom, $adresse, $nomcompagnie, $mail){
 			$connection = Connection::getConnection();
 			$query = "INSERT INTO EA_CLIENTS 
-						VALUES(EA_CLIENTS_SEQ.nextVal, :pseudo, :nom, :prenom, :adresse, :compagnie, :mdp, :visibility)";
+						VALUES(EA_CLIENTS_SEQ.nextVal, :username, :nom, :prenom, :adresse, :nomcompagnie, :mail)";
 			$statement = oci_parse($connection, $query);
-			
-			oci_bind_by_name($statement, ":pseudo", $pseudo);
+			$visib = 1;
+			oci_bind_by_name($statement, ":username", $username);
 			oci_bind_by_name($statement, ":nom", $nom);
 			oci_bind_by_name($statement, ":prenom", $prenom);
-			oci_bind_by_name($statement, ":adresse", $dresse);
-			oci_bind_by_name($statement, ":compagnie", $compagnie);
-			oci_bind_by_name($statement, ":mdp", $password);
-			oci_bind_by_name($statement, ":visibility", 1);
+			oci_bind_by_name($statement, ":adresse", $adresse);
+			oci_bind_by_name($statement, ":nomcompagnie", $nomcompagnie);
+			oci_bind_by_name($statement, ":mail", $mail);
 			oci_execute($statement);
+			return $statement;
 		}
-
 		public static function getClientList(){
 			$connection = Connection::getConnection();
 			
@@ -64,54 +65,59 @@
 		}
 
 		public static function findVisibility($key){
-			$valid = [FALSE, 0];
+			echo $key;
+			$valid = array();
 			$connection = Connection::getConnection();
-			$query = "SELECT * FROM EA_CLIENTS WHERE recovery_key = :reco";
+			$query = "SELECT * FROM EA_USERS WHERE RECOVER_KEY = :reco";
 			$statement = oci_parse($connection, $query);
 			oci_bind_by_name($statement, ":reco", $key);
 			oci_execute($statement);
 
 			if ($row = oci_fetch_array($statement)) {
-				$valid[0] = $row["VISIBILITY"];
-				$valid[1] = $row["USERNAME"];
+				$valid[] = $row["VISIBILITY"];
+				$valid[] = $row["USERNAME"];
 			}
 			return $valid;
 		}
 
 		public static function recoverPasswd($password, $username){
+			$null = null;
 			$connection = Connection::getConnection();
-			$query = "UPDATE EA_CLIENTS SET MDP = :passwd, RECOVER_KEY =  WHERE username = :username";
+			$query = "UPDATE EA_USERS SET MDP = :passwd, RECOVER_KEY = :reco WHERE username = :username";
 			$statement = oci_parse($connection, $query);
 			oci_bind_by_name($statement, ":passwd", $password);
 			oci_bind_by_name($statement, ":username", $username);
-			oci_bind_by_name($statement, ":reco", "");
+			oci_bind_by_name($statement, ":reco", $null);
 			oci_execute($statement);
 		}
 
 		public static function forgotPasswd($email){
-			$message = "Un message de réinitialisation de mot de passe à été envoyé à votre adresse email";
+			echo $email . "</br>";
+			$message = "Un message de réinitialisation de mot de passe a été envoyé à votre adresse email";
 			$connection = Connection::getConnection();
-			$query = "SELECT * FROM EA_CLIENTS WHERE email = :email";
+
+			$query = "SELECT * FROM EA_USERS WHERE MAIL = :email";
 			$statement = oci_parse($connection, $query);
 			oci_bind_by_name($statement, ":email", $email);
 			oci_execute($statement);
 
-			if ($row = oci_fetch_array($statement)) {
-				$key = encrypt();
+			$row = oci_fetch_array($statement);
 
-				$queryTemp = "UPDATE EA_CLIENTS SET recover_key = :key WHERE email = :email";
+			if ($row) {
+				$key = ClientDAO::encrypt();
+				$queryTemp = "UPDATE EA_USERS SET RECOVER_KEY = :key WHERE MAIL = :email";
 				$statementTemp = oci_parse($connection, $queryTemp);
 				oci_bind_by_name($statementTemp, ":email", $email);
 				oci_bind_by_name($statementTemp, ":key", $key);
 				oci_execute($statementTemp);
 
 				$url = "localhost/recover.php?forgot_key=" . $key;
-				$msg = "Bonjour,<br>
+				$msg = "Bonjour,
 				Une demande a été envoyée récemment pour modifier le mot de passe de votre compte.<br>
-				Si vous avez demandé cette modification de mot de passe,</br>
-				définissez un nouveau mot de passe en suivant le lien ci-dessous : <br>" . $url
-				. "<br>Si vous ne souhaitez pas modifier votre mot de passe, ignorez simplement ce message. ";
-				$valid = mail($row["EMAIL"], 'Confirmation de la réinitialisation du mot de passe', $msg);
+				Si vous avez demandé cette modification de mot de passe,
+				définissez un nouveau mot de passe en suivant le lien ci-dessous : " . $url
+				. "Si vous ne souhaitez pas modifier votre mot de passe, ignorez simplement ce message. ";
+				$valid = mail($row["MAIL"], 'Confirmation de la réinitialisation du mot de passe', $msg);
 				if (!$valid)
 					$message = "Erreur système :(";
 			}
@@ -131,4 +137,158 @@
 			}
 			return $key;
 		}
+
+	public static function rechercheClientID($id)
+	{
+		$connection = Connection::getConnection();
+		$query = "SELECT * FROM EA_CLIENTS WHERE ID = :id";
+		$statement = oci_parse($connection, $query);
+		oci_bind_by_name($statement, ":id", $id);
+		oci_execute($statement);
+		$infoClients = null;
+		if($row = oci_fetch_array($statement)) 
+		{
+			//echo "Reussi: recherche client par id";
+			$infoClients = array();
+			$infoClients["NOM"] = $row["NOM"];
+			$infoClients["PRENOM"] = $row["PRENOM"];
+			$infoClients["USERNAME"] = $row["USERNAME"];
+			$infoClients["ADRESSE"] = $row["ADRESSE"];
+			$infoClients["NOMCOMPAGNIE"] = $row["NOMCOMPAGNIE"];
+			$infoClients["MAIL"] = $row["MAIL"];
+		}
+		return json_encode($infoClients);
 	}
+	/*public static function rechercheClientNom( $nom)
+	{
+		
+		$connection = Connection::getConnection();
+		$query = "SELECT * FROM EA_CLIENTS WHERE NOM = :nom";
+		$statement = oci_parse($connection, $query);
+		oci_bind_by_name($statement, ":nom", $nom);
+		oci_execute($statement);
+		$infoClients = null;
+			if ($row = oci_fetch_array($statement)) 
+			{
+				//echo "Reussi: recherche client par nom";
+				$infoClients = array();
+				$infoClients["ID"] = $row["ID"];
+				$infoClients["NOM"] = $row["NOM"] . " " . $row["PRENOM"];
+				$infoClients["USERNAME"] = $row["USERNAME"];
+				$infoClients["ADRESSE"] = $row["ADRESSE"];
+				$infoClients["NOMCOMPAGNIE"] = $row["NOMCOMPAGNIE"];
+				$infoClients["MAIL"] = $row["MAIL"];
+			}
+
+		return json_encode($infoClients);
+	}*/
+	public static function rechercheClientNom( $nom)
+	{
+		
+		$connection = Connection::getConnection();
+		$query = "SELECT * FROM EA_CLIENTS WHERE NOM = :nom";
+		$statement = oci_parse($connection, $query);
+		oci_bind_by_name($statement, ":nom", $nom);
+		oci_execute($statement);
+		$infoClients = null;
+			if ($row = oci_fetch_array($statement)) 
+			{
+				//echo "Reussi: recherche client par nom";
+				$infoClients = array();
+				$infoClients["ID"] = $row["ID"];
+				$infoClients["NOM"] = $row["NOM"] . " " . $row["PRENOM"];
+				$infoClients["USERNAME"] = $row["USERNAME"];
+				$infoClients["ADRESSE"] = $row["ADRESSE"];
+				$infoClients["NOMCOMPAGNIE"] = $row["NOMCOMPAGNIE"];
+				$infoClients["MAIL"] = $row["MAIL"];
+			}
+
+		return json_encode($infoClients);
+	}
+	public static function optionClient( $nom , $reponse , $option, $idClient)
+	{
+		$connection = Connection::getConnection();
+		$name = strtoupper($nom);
+		 if( $option == "modifier")
+		{
+			$query = "UPDATE  EA_CLIENTS SET :name = :rep WHERE ID = :idCLient";
+			$statement = oci_parse($connection, $query);
+			oci_bind_by_name($statement, ":name", $name);
+			oci_bind_by_name($statement, ":rep", $reponse);
+		}
+		else if ($option == "supprimer")
+		{
+			$query = "DELETE FROM EA_CLIENTS WHERE ID = :idCLient";
+			$statement = oci_parse($connection, $query);
+			oci_bind_by_name($statement, ":id", $idClient);
+		}
+
+	
+		oci_execute($statement);
+		
+		return $statement ;
+		
+	
+	}
+	public static function  optionModifierClient( $tab , $id)
+	{
+		$connection = Connection::getConnection();
+		$tablo = array();
+		$tablo= json_decode($tab);
+		$username = $tablo[0];
+		$nom = $tablo[1];
+		$prenom = $tablo[2];
+		$adresse = $tablo[3];
+		$nomcompagnie = $tablo[4];
+		$mail = $tablo[5];
+		$idClient=$id;
+
+		$query = "UPDATE EA_CLIENTS SET username = :rep1, nom = :rep2, prenom = :rep3, adresse = :rep4, nomcompagnie = :rep5, mail = :rep6  WHERE id = :idClient";
+		$statement = oci_parse($connection, $query);
+		oci_bind_by_name($statement, ":rep1", $username);
+		oci_bind_by_name($statement, ":rep2", $nom);
+		oci_bind_by_name($statement, ":rep3", $prenom);
+		oci_bind_by_name($statement, ":rep4", $adresse);
+		oci_bind_by_name($statement, ":rep5", $nomcompagnie);
+		oci_bind_by_name($statement, ":rep6", $mail);
+		oci_bind_by_name($statement, ":idClient", $idClient);
+		oci_execute($statement);
+	}
+	public static function ajouterClient( $idClient, $nom, $prenom, $username,$nomcompagnie, $adresse, $email )
+	{
+			$connection = Connection::getConnection();
+
+			$firstname = strtoupper($nom);
+			$lastname = strtoupper($prenom);
+			$user = strtoupper($username);
+			$adress = strtoupper($adresse);
+			$courriel = strtoupper($email);
+			$compagny = strtoupper($nomcompagnie);
+
+			$query = "INSERT INTO  EA_CLIENTS SET (IDCLIENT, NOM, PRENOM, USERNAME, NOMCOMPAGNIE , ADRESSE,EMAIL ) VALUES (:id , :nom , :prenom , :username , :nomcompagnie , :adresse , :email)";
+			$statement = oci_parse($connection, $query);
+			oci_bind_by_name($statement, ":id", $name);
+			oci_bind_by_name($statement, ":nom", $name);
+			oci_bind_by_name($statement, ":prenom", $name);
+			oci_bind_by_name($statement, ":username", $username);
+			oci_bind_by_name($statement, ":nomcompagnie", $nomcompagnie);
+			oci_bind_by_name($statement, ":adresse", $adresse);
+			oci_bind_by_name($statement, ":email", $email);	
+		    oci_execute($statement);
+
+			return $statement ;
+
+	}
+	public static function deleteClient($id)
+	{
+		$connection = Connection::getConnection();
+		$query1 = "DELETE FROM EA_CLIENTS WHERE ID = :id1";
+		$statement1 = oci_parse($connection, $query1);
+		oci_bind_by_name($statement1,":id1", $id);
+		oci_execute($statement1);
+
+		return $statement1;
+	}
+
+
+}

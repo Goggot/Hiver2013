@@ -1,10 +1,10 @@
-a{color:white;}
+a{color:orange;}
 
 body{
 	margin:0px;
 	padding:0px;
 	background-color:black;
-	color:white;
+	color:orange;
 	background-image:url(../images/bg.jpg);
 	background-size:100%;
 	background-attachment:fixed;
@@ -44,6 +44,18 @@ body{
 }
 
 .changePasswd{
+	text-align:center;
+	background-color:black;
+	opacity:0.8;
+	border-radius:20px;
+	width:400px;
+	margin:auto;
+	margin-top:5%;
+	padding:15px;
+	display:none;
+}
+
+.research{
 	text-align:center;
 	background-color:black;
 	opacity:0.8;

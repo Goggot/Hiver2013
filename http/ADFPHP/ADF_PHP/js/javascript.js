@@ -1,5 +1,6 @@
 var passwdHidden = true;
 var registerHidden = true;
+var researchHidden = true;
 
 function changePassword(){
 	var aMdp = $('#aMdp').val();
@@ -55,6 +56,33 @@ function register(){
 		document.getElementById('reponseRegister').innerHTML = "Mot de passe ou code postal trop long";
 }
 
+function research(){
+	var titre = $('#titre').val();
+	var date = $('#date').val();
+	var langue = $('#langue').val();
+
+	$.ajax({
+			url: 'ajax.php',
+			type: 'POST',
+			data: 'titre='+ titre + '&date=' + date + '&langue='+ langue,
+			success: function(data){
+				console.log(data);
+				var titre;
+				var noatel; 
+				var duree;
+				data  = JSON.parse(data);
+				/*$.each(data, function(i,val){
+					console.log(val);
+					titre =  val.TITRE;
+					noatel = val.NOATEL;
+					duree = val.DATEATEL;
+					document.getElementById('reponseResearch').innerHTML = data[]+ " " + noatel +" " + duree + "</br>";
+				});*/
+				document.getElementById('reponseResearch').innerHTML = data["TITRE"]+ " " + data["NOATEL"] +" " + data["DATEATEL"] + "</br>";
+			}
+		});
+}
+
 function fenetrePasswd(){
 	if (passwdHidden){
 		$(".changePasswd").fadeIn("normal");
@@ -79,5 +107,17 @@ function fenetreRegister(){
 		$(".register").fadeOut("normal");
 		registerHidden = true;
 		document.getElementById('reponseRegister').innerHTML = "";
+	}
+}
+
+function fenetreResearch(){
+	if (researchHidden){
+		$(".research").fadeIn("normal");
+		registerHidden = false;
+	}
+	else{
+		$(".research").fadeOut("slow");
+		researchHidden = true;
+		document.getElementById('reponseReasearch').innerHTML = "";
 	}
 }

@@ -56,7 +56,7 @@ class OperationsDAO
 	public static function getCompteRecevoir()
 	{
 		$connection = Connection::getConnection();
-		$query = "SELECT SUM(comptRecevoir) FROM EA_FACTURES";
+		$query = "SELECT SUM(compte_recevoir) FROM EA_FACTURES";
 		$statement = oci_parse($connection, $query);
 		oci_execute($statement);
 		$ComptRecevoir = null;

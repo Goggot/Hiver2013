@@ -14,7 +14,7 @@
 
 	class RecoverAction extends CommonAction {
 		public function __construct(){
-			#getSession();
+			$this->getSession();
 			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
 		}
 		
@@ -23,7 +23,7 @@
 				if ($_POST["newPasswd"] === $_POST["newPasswd2"]){
 					$passwd = sha1($_POST["newPasswd"] . GUERANDE);
 					ClientDAO::recoverPasswd($passwd, $_SESSION["usernameRecover"]);
-					header('location:index.php&logout=true');
+					header('location:index.php?logout=true');
 					echo "Changement réussi !";
 					exit;
 				}
