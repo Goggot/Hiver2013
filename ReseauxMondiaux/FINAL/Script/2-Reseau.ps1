@@ -13,11 +13,12 @@ $pref = 20
 $p = "IPv4"
 $c1 = "SEGA"
 $c2 = "OnBoard"
-
+$n1 = "Ethernet"
+$n2 = "Ethernet 2"
 
 ##### Renommer les cartes réseau #####
-Rename-NetAdapter -Name Ethernet -NewName $c2
-Rename-NetAdapter -Name "Ethernet 2" -NewName $c
+Rename-NetAdapter -Name $n1 -NewName $c1
+Rename-NetAdapter -Name $n2 -NewName $c2
 
 ##### Attribuer les adresses #####
 New-NetIPAddress -InterfaceAlias $c1 -IPAddress $ipPrincipal -AddressFamily $p -DefaultGateway $ipRoot -PrefixLength $pref

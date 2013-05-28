@@ -52,4 +52,3 @@ Get-ItemProperty *
 
 #donne tous les configrations au niveau «IIS:\Sites»
 Get-Item 'Default Web Site' | Select-Object *
-

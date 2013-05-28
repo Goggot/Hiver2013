@@ -5,7 +5,7 @@
 #####        Serveur : 407PF4         #####
 ###########################################
 
-$fcsv = import-csv -path "C:\Hiver2013\ReseauxMondiaux\FINAL\Script\UO.csv" -delimiter ";"
+$fcsv = import-csv -path "C:\ReseauxMondiaux\FINAL\Script\UO.csv" -delimiter ";"
 $count = 0
 
 foreach($item in $fcsv)

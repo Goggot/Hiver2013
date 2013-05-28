@@ -5,7 +5,7 @@
 #####        Serveur : 407PF4         #####
 ###########################################
 
-$groupecsv = import-csv -path "C:\Hiver2013\ReseauxMondiaux\FINAL\Script\Groupes.csv" -delimiter ";"
+$groupecsv = import-csv -path "C:\ReseauxMondiaux\FINAL\Script\Groupes.csv" -delimiter ";"
 $count = 0
 
 foreach($item in $groupecsv)

@@ -6,6 +6,9 @@
 ###########################################
 Set-ExecutionPolicy unrestricted
 
+mount-vol D: /D
+mount-vol E: /D
+mount-vol F: /D
 Rename-Computer -NewName "407PF4"
 
 Install-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools

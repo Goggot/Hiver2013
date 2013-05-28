@@ -9,6 +9,10 @@ New-NetIPAddress -InterfaceAlias WAN -IPAddress 172.24.48.1 -AddressFamily IPv4 
 Set-DnsClientServerAddress -InterfaceAlias WAN -ServerAddresses 172.24.48.2
 
 New-NetIPAddress -InterfaceAlias OnBoard -IPAddress 10.57.61.1 -AddressFamily IPv4 -PrefixLength 16 -DefaultGateway 10.57.1.1
+New-NetIPAddress -InterfaceAlias OnBoard -IPAddress 10.57.61.2 -AddressFamily IPv4 -PrefixLength 16 -DefaultGateway 10.57.1.1
+New-NetIPAddress -InterfaceAlias OnBoard -IPAddress 10.57.61.3 -AddressFamily IPv4 -PrefixLength 16 -DefaultGateway 10.57.1.1
+New-NetIPAddress -InterfaceAlias OnBoard -IPAddress 10.57.61.4 -AddressFamily IPv4 -PrefixLength 16 -DefaultGateway 10.57.1.1
+New-NetIPAddress -InterfaceAlias OnBoard -IPAddress 10.57.61.5 -AddressFamily IPv4 -PrefixLength 16 -DefaultGateway 10.57.1.1
 Set-DnsClientServerAddress -InterfaceAlias OnBoard -ServerAddresses 10.57.4.28,10.57.4.29
 
 ##### Rejoindre le CD #####

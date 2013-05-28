@@ -11,6 +11,8 @@
 
 $fcsv = import-csv -path "C:\Hiver2013\ReseauxMondiaux\FINAL\Script\Usagers_ART.csv" -delimiter ";"
 $count = 0;
+$gest = 0;
+$var = $Null;
 
 foreach($item in $fcsv)
 {
@@ -44,11 +46,25 @@ foreach($item in $fcsv)
 		$chemin = "OU=PRODUCTION,OU=DIRECTEURS"+$DOM
         $g1 = "ART_DIRECTEURS"
         $g2 = "ART_PRODUCTION"
+		if ($var -eq $Null){
+			$gest = 3
+			$var = "prod"
+		}
+		elseif ($gest -gt 0 -And $var -eq "prod"){
+			$gest--
+		}
     }
 	elseif (($count -ge 13) -and ($count -lt 25)){
 		$chemin = "OU=GRAPHIQUE,OU=DIRECTEURS"+$DOM
         $g1 = "ART_DIRECTEURS"
         $g2 = "ART_GRAPHIQUE"
+		if ($var -eq "prod"){
+			$gest = 3
+			$var = "graph"
+		}
+		elseif ($gest -gt 0 -And $var -eq "graph"){
+			$gest--
+		}
     }
 	elseif(($count -ge 25) -and ($count -lt 33)){
 		$chemin = "OU=SFX"+$DOM
@@ -57,11 +73,25 @@ foreach($item in $fcsv)
 	elseif(($count -ge 33) -and ($count -lt 44)){
 		$chemin = "OU=SCENARIOS"+$DOM
         $g1 = "ART_SCENARIOS"
+		if ($var -eq "graph"){
+			$gest = 4
+			$var = "scenar"
+		}
+		elseif ($gest -gt 0 -And $var -eq "scenar"){
+			$gest--
+		}
     }
 	elseif(($count -ge 44) -and ($count -lt 58)){
 		$chemin = "OU=TEXTURE,OU=DESIGNERS"+$DOM
         $g1 = "ART_DESIGNERS"
         $g2 = "ART_TEXTURE"
+		if ($var -eq "scenar"){
+			$gest = 3
+			$var = "text"
+		}
+		elseif ($gest -gt 0 -And $var -eq "text"){
+			$gest--
+		}
     }
 	elseif(($count -ge 58) -and ($count -lt 75)){
 		$chemin = "OU=AUDIO,OU=DESIGNERS"+$DOM
@@ -69,7 +99,7 @@ foreach($item in $fcsv)
         $g2 = "ART_AUDIO"
     }
 	else {
-		$chemin = $DOM
+		$chemin = "OU=ARTISTIQUE,DC=FUCKING,DC=WINDOWS"
     }
     
     $User = Get-ADUser -Filter {SamAccountName -eq $login}
@@ -108,11 +138,18 @@ foreach($item in $fcsv)
         -Path $chemin
 
     Add-ADGroupMember -Identity "ARTISTIQUE" -Members $login
-    Add-ADGroupMember -Identity $g1 -Members $login
+
+    if ($g1){
+        Add-ADGroupMember -Identity $g1 -Members $login
+    }
 
     if ($g2){
         Add-ADGroupMember -Identity $g2 -Members $login
     }
+	
+	if ($gest -gt 0){
+		Add-ADGroupMember -Identity "ART_GESTIONNAIRE" -Members $login
+	}
 
 	$count++
     Write-Host Création de $login
