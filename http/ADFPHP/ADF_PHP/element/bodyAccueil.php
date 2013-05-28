@@ -18,6 +18,6 @@
     <input type="password" name="mdpLogin" id="nMdp"/></br></br>
     <label for="mdpLogin">Retapez le nouveau mot de passe : </label>
     <input type="password" name="mdpLogin" id="rMdp"/></br></br>
-    <button onclick="changePassword()">Connection</button>
+    <button onclick="changePassword()">Changer</button>
     <p id="reponseMDP" class="red"></p>
 </div>

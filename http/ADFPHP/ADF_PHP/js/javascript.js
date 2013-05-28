@@ -14,6 +14,8 @@ function changePassword(){
 				data: 'aMdp='+ aMdp + '&nMdp=' + nMdp,
 				success: function(data){
 					document.getElementById('reponseMDP').innerHTML = data;
+					if (data == "Mot de passe changé avec succès !")
+						setTimeout(fenetrePasswd,1000);
 				}
 			});
 		else
@@ -59,9 +61,12 @@ function fenetrePasswd(){
 		passwdHidden = false;
 	}
 	else{
-		$(".changePasswd").fadeOut("normal");
+		$(".changePasswd").fadeOut("slow");
 		passwdHidden = true;
 		document.getElementById('reponseMDP').innerHTML = "";
+		document.getElementById('aMdp').value = "";
+		document.getElementById('nMdp').value = "";
+		document.getElementById('rMdp').value = "";
 	}
 }
 

@@ -1,18 +1,7 @@
 <?php
-
-
-/* ---------------------------------------------------
- *					                  
- *    Projet synthèse : H2013		        
- *    Fait Par : Erwan Palanque & Augustin Paiement 			        
- *					                   
- *--------------------------------------------------- */
-
-
 	class ClientDAO {
 		public static function authenticate($username, $password){
 			$connection = Connection::getConnection();
-			echo $username . "</br>" . $password . "</br>";
 			$query = "SELECT * FROM P_AUDITEUR WHERE CODEAUDITEUR = :pUsername AND MOTDEPASSE = :pPassword";
 			$statement = oci_parse($connection, $query);
 			
@@ -22,7 +11,6 @@
 			
 			$userInfo = null;
 			if ($row = oci_fetch_array($statement)) {
-				echo "Reussi";
 				$userInfo = array();
 				$userInfo["codeauditeur"] = $row["CODEAUDITEUR"];
 				$userInfo["visibility"] = $row["ADMIN"];
@@ -32,8 +20,7 @@
 		}
 
 
-		public static function changePasswd($codeauditeur, $password)
-		{
+		public static function changePasswd($codeauditeur, $password){
 			$connection = Connection::getConnection();
 			$query = "UPDATE P_AUDITEUR SET MOTDEPASSE = :mdp WHERE CODEAUDITEUR = :code";
 			$statement = oci_parse($connection, $query);
@@ -45,8 +32,7 @@
 		}
 
 
-		public static function rechercheAvancee($date, $langue, $titre, $any)		## tab = {$titre, $langue}
-		{
+		public static function rechercheAvancee($date, $langue, $titre, $any){
 			$connection = Connection::getConnection();
 			if ($any){
 				if (isset($date) && !isset($titre) && !isset($langue)){
@@ -69,8 +55,7 @@
 					$query = "SELECT * FROM P_AUDITEUR WHERE LANGUE = :langue OR TITRE = :titre";
 					$statement = oci_parse($connection, $query);
 					oci_bind_by_name($statement, ":langue", $langue);
-					oci_bind_by_name($statement, ":titre", $titre);.
-					0
+					oci_bind_by_name($statement, ":titre", $titre);
 				}
 				if (!isset($date) && !isset($titre) && isset($langue))
 					$query = "SELECT * FROM P_AUDITEUR WHERE ID = :id";
@@ -79,7 +64,7 @@
 				if (isset($date) && isset($titre) && isset($langue))
 					$query = "SELECT * FROM P_AUDITEUR WHERE ID = :id";
 			}
-			else{
+			else {
 				if (isset($date) && !isset($titre) && !isset($langue))
 					$query = "SELECT * FROM P_AUDITEUR WHERE ID = :id";
 				if (isset($date) && isset($titre) && !isset($langue))
@@ -98,8 +83,7 @@
 			
 			oci_execute($statement);
 			$infoClients = null;
-			if ($row = oci_fetch_array($statement))
-			{
+			if ($row = oci_fetch_array($statement)){
 				//echo "Reussi: recherche client par id";
 				$infoClients = array();
 				$infoClients["ID"] = $row["ID"];
