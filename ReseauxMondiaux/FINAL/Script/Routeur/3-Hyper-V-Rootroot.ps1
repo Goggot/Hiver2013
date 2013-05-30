@@ -13,7 +13,7 @@ $disque = "Windows Serveur 2012.vhdx"
 $proc = 1
 $memDebut = 1024MB
 $minRAM = 1024MB
-$maxRAM = 1024MB
+$maxRAM = 2048MB
 
 New-VM -name $name -VHDPath ($chemin+"\Windows Serveur 2012\"+$disque) -MemoryStartupBytes $memDebut -BootDevice IDE
 Set-VMBios -VMName $name -EnableNumLock

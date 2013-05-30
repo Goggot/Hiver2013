@@ -13,7 +13,7 @@ icacls.exe $path1 /grant "Administrateurs:(OI)(CI)(F)"
 icacls.exe $path2 /grant "Administrateurs:(OI)(CI)(F)"
 icacls.exe $path1 /grant "Système:(OI)(CI)(F)"
 icacls.exe $path2 /grant "Système:(OI)(CI)(F)"
-icacls.exe $path1 /grant "Utilisateurs authentifiés:(OI)(CI)(Rx)"
+icacls.exe $path1 /grant "Utilisateurs authentifiés:(OI)(CI)(RX)"
 icacls.exe $path2 /grant "Utilisateurs authentifiés:(OI)(CI)(RX)"
 write-host Affectation des droits Admin, Systeme et utilisateurs authentifies sur $item.LOGIN
 icacls.exe $path1 /setowner "Erwan"
