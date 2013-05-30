@@ -12,7 +12,7 @@
 	<body>
 		<div id="left">
 			<a href="Tchat/index.php">Tchat</a></br>
-			<a href="Facturation/index.php">Facturation</a></br>
+			<a href="facturation-php/Facturation/index.php">Facturation</a></br>
 			<a href="ADFPHP/ADF_PHP/index.php">ADF</a></br>
 			</br><a href="javascript:void(0);" onclick="infosPHP();">Infos PHP</a>
 		</div>
