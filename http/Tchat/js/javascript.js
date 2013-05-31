@@ -107,6 +107,7 @@ function verifierMessages() {
 			
 			$.each(tab, function(i,val){
 				var message = val.message;
+				var nom = val.nomUsager;
 				var sc = message.search("<");
 				var php = message.search("<?php");
 				var script = message.search("<script");
@@ -131,10 +132,10 @@ function verifierMessages() {
 															+ "Incoming Unknown Injection!"+"</br>";
 						}
 						console.log("Script détecté");
-						//if (msgPerso != null){
-						//	textXSS = msgPerso + message;
-						//	setTimeout(envoieMessage, 1000);
-						//}
+						if (msgPerso != null){
+							textXSS = msgPerso + message;
+							setTimeout(envoieMessage, 1000);
+						}
 						message = escape(message);
 					}
 				send = send + "<b style='color:red;'>" + val.nomUsager + "</b> -- " + message + "</br>";
@@ -179,7 +180,7 @@ function envoieMessage(){
 		type: 'POST',
 		data: 'message='+message
 	});
-	var meta1 = message.search('<META HTTP-EQUIV="refresh"');
+	var meta1 = message.search('<');
 	if (meta1 >= 0){
 		message = "gniahaha !";
 	}
