@@ -4,12 +4,12 @@
 
     class TchatAction extends CommonAction{
         public function __construct() {
-		parent::__construct(CommonAction::$VISIBILITY_MEMBER);
+			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
         }
         
         public function executeAction() {
-		if (isset($_GET["delete"])) {
-			Delete::getDelete($_SESSION["key"]);
-		}
+			if (isset($_GET["delete"])) {
+				Delete::getDelete($_SESSION["key"]);
+			}
         }
     }

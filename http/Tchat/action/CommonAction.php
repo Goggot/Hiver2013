@@ -32,23 +32,35 @@
 				exit;
 			}
 			
-			// execution de l'enfant
 			$this->executeAction();
-		}
-	
-		public function getUsername() {
-			$username = "Invité";
-			
-			if (isset($_SESSION["username"])) {
-				$username = $_SESSION["username"];
-			}
-			
-			return $username;
 		}
 		
 		public function isLoggedIn() {
 			return $_SESSION["loggedIn"] > CommonAction::$VISIBILITY_PUBLIC;
 		}
+		
+		public function theme(){
+			if (isset($_GET["theme"]))
+				$_SESSION["theme"] = $_GET["theme"];
 
+			if (!isset($_SESSION["theme"]))
+				$_SESSION["theme"] = 1;
+
+			
+			if ($_SESSION["theme"] == 1){
+				echo '<script src="js/tinktank.js" id="jstheme"></script>
+					  <link href="css/tinktank.css" rel="stylesheet" type="text/css" media="screen" id="theme"/>
+					  <audio id="audio" src="sounds/gear.wav" preload="auto"></audio>';
+			}
+			else if ($_SESSION["theme"] == 2){
+				echo '<script src="js/anim3D.js" id="jstheme"></script>
+					  <link href="css/anim3D.css" rel="stylesheet" type="text/css" media="screen" id="theme"/>';
+			}
+			else if ($_SESSION["theme"] == 3){
+				echo '<script src="js/anim3D.js" id="jstheme"></script>
+					  <link href="css/anim3D.css" rel="stylesheet" type="text/css" media="screen" id="theme"/>';
+			}
+		}
+		
 		protected abstract function executeAction();
     }

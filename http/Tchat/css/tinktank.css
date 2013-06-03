@@ -24,6 +24,7 @@ body{
     margin-bottom:20px;
 	padding:20px;
     display:none;
+	z-index: 10;
 }
 
 #footer{
@@ -35,8 +36,15 @@ body{
     display:none;
 }
 
-#themes{
-
+.register{
+	background-color:black;
+	width:300px;
+	margin:auto;
+	margin-top:-70px;
+	padding:10px;
+	opacity:0.9;
+	border-radius:10px;
+	display:none;
 }
 
 #connection{
@@ -68,7 +76,8 @@ body{
 	clear:both;
 	background-color:#111111;
 	padding:10px;
-    z-index:2;
+	position:relative;
+    z-index: 10;
 }
 
 #tchat{
@@ -95,7 +104,6 @@ body{
 	width:auto;
     text-align:center;
 }
-
 
 
 /*////////////////////////////////////////*/
