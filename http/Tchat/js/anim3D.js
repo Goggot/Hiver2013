@@ -3,9 +3,12 @@ var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight,
 	windowHalfX = window.innerWidth / 2,
 	windowHalfY = window.innerHeight / 2,
 	camera, scene, renderer, l1,l2,l3,l4,l5,l6,l7,l8,l9,
-	compteur = 5;
+	compteur = 4;
 var tabLigne = [l1,l2,l3,l4,l5,l6,l7,l8,l9];
-	
+var geometry;
+var sens = 'up';
+var color = 0;
+var i = 0;
 
 window.onload = function(){
 	init();
@@ -13,24 +16,43 @@ window.onload = function(){
 	console.log(tabLigne[5]);
 	$('#main').fadeIn("slow");
 	$('#footer').fadeIn("slow");
-	//$('div').fadeIn('normal');
 }
 
-function morph(){
-	if (compteur < 10) {
-		tabLigne[compteur].material.visible=true;
-		compteur++;
+function morph(event){
+	if (event == 'XSS'){
+		for (i = 0; i < 9; i++){
+			tabLigne[i].material.color.setHex(0xFF0000);
+		}
+		setTimeout(originalColor,1000);
 	}
 	else{
-		tabLigne[5].material.visible=false;
-		tabLigne[6].material.visible=false;
-		tabLigne[7].material.visible=false;
-		tabLigne[8].material.visible=false;
-		tabLigne[9].material.visible=false;
-		compteur = 5;
+		if (compteur < 9 && sens == 'up') {
+			compteur++;
+			tabLigne[compteur].material.visible=true;
+			if (compteur == 8){
+				sens = 'down';
+			}
+		}
+		else if (compteur >= 5 && sens == 'down'){
+			tabLigne[compteur].material.visible=false;
+			compteur--;
+			if (compteur == 5){
+				sens = 'up';
+			}
+		}
 	}
-	
-	//tabLigne[1].geometry.morphTargets()
+}
+
+function originalColor(){
+	tabLigne[0].material.color.setHex(0xFF0000);
+	tabLigne[1].material.color.setHex(0xff6600);
+	tabLigne[2].material.color.setHex(0xff8800);
+	tabLigne[3].material.color.setHex(0xffff00);
+	tabLigne[4].material.color.setHex(0xa5ef00);
+	tabLigne[5].material.color.setHex(0x00CC00);
+	tabLigne[6].material.color.setHex(0x1040AB);
+	tabLigne[7].material.color.setHex(0x3914AF);
+	tabLigne[8].material.color.setHex(0x7109AA);
 }
 
 function init() {
@@ -46,10 +68,9 @@ function init() {
 	scene = new THREE.Scene();
 
 	var i, vertex1, vertex2, material, p,
-		parameters = [ [ 0.25, 0xff0000, 1, 2 ], [ 0.5, 0xff6600, 1, 1 ], [ 0.75, 0xff8800, 0.75, 1 ], [ 1, 0xffaa00, 0.5, 1 ], [ 1.25, 0xffffff, 0.8, 1 ],
-					[ 3.0, 0xff0000, 0.75, 2 ], [ 3.5, 0xff0000, 0.5, 1 ], [ 4.5, 0xff0000, 0.25, 1 ], [ 5.5, 0xff0000, 0.125, 1 ] ],
-		geometry = new THREE.Geometry();
-
+		parameters = [ [ 0.25, 0xff0000, 1, 2 ], [ 0.5, 0xff6600, 1, 1 ], [ 0.75, 0xff8800, 0.75, 1 ], [ 1, 0xffff00, 0.5, 1 ], [ 1.25, 0xa5ef00, 0.8, 1 ],
+					[ 3.0, 0x00CC00, 0.75, 2 ], [ 3.5, 0x1040AB, 0.5, 1 ], [ 4.5, 0x3914AF, 0.25, 1 ], [ 5.5, 0x7109AA, 0.125, 1 ] ];
+	geometry = new THREE.Geometry();
 
 	for ( i = 0; i < 1500; i ++ ) {
 		var vertex1 = new THREE.Vector4();
@@ -75,6 +96,8 @@ function init() {
 		tabLigne[i].originalScale = p[ 0 ];
 		tabLigne[i].rotation.y = Math.random() * Math.PI;
 		tabLigne[i].updateMatrix();
+		tabLigne[i].dynamic = true;
+
 		if (i >= 5){
 			tabLigne[i].material.visible=false;
 		}
@@ -85,7 +108,13 @@ function init() {
 	renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
 	container.appendChild( renderer.domElement );
 
+	window.addEventListener('mousemove', onMouseMove, false);
 	window.addEventListener( 'resize', onWindowResize, false );
+}
+
+function onMouseMove(event) {
+	mouseX = event.clientX - windowHalfX;
+	mouseY = event.clientY - windowHalfY;
 }
 
 function onWindowResize() {
@@ -104,8 +133,9 @@ function animate() {
 }
 
 function render() {
+	camera.position.x += ( - mouseX + 200 - camera.position.x ) * .05;
+	camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
 	camera.lookAt( scene.position );
-
 	renderer.render( scene, camera );
 
 	var time = Date.now() * 0.0001;

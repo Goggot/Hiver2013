@@ -74,7 +74,7 @@ function verifierMessages() {
 				
 				if (script >= 0 || scNom >= 0 || php >= 0 || sc >=0 || uni1 >= 0 || uni2 >= 0 || meta >= 0)
 					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
-						if (script >= 0)
+						if (script >= 0 || scNom >= 0 || sc >= 0 )
 							msgPerso = "Incoming XSS Injection : ";
 						else if (php >= 0)
 							msgPerso = "Incoming PHP Injection : ";
@@ -90,6 +90,7 @@ function verifierMessages() {
 						}
 						console.log("Script détecté");
 						if (msgPerso != null){
+							morph('XSS');
 							textXSS = msgPerso + message;
 							setTimeout(envoieMessage, 1000);
 						}

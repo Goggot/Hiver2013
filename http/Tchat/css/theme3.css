@@ -1,0 +1,107 @@
+a{
+	color:orange;
+}
+
+body{
+	background-color:black;
+	overflow:hidden;
+	color:white;
+    text-align:center;
+    font-size:small;
+}
+
+.spanim{
+	display:none;
+}
+
+#div{
+	display:none;
+}
+
+#main{
+    margin:auto;
+    width:auto;
+    height:780px;
+    border-radius:10px;
+    margin-top:-920px;
+    margin-bottom:20px;
+	padding:20px;
+	z-index: 10;
+	position: relative;
+}
+
+#footer{
+    margin:auto;
+    width:400px;
+    background-color:#222222;
+	opacity:0.7;
+    border-radius:10px;
+    padding:5px;
+}
+
+#connection{
+    position:relative;
+    width:350px;
+    margin:auto;
+	opacity:0.8;
+    border-radius:10px;
+    background-color:#111111;
+    padding:10px;
+	margin-top:300px;
+	margin-bottom:120px;
+}
+
+.register{
+	background-color:black;
+	width:300px;
+	margin:auto;
+	margin-top:-70px;
+	padding:10px;
+	opacity:0.8;
+	border-radius:10px;
+	display:none;
+}
+
+
+#liste{
+	border-radius:10px;
+	float:right;
+	width:150px;
+	height:auto;
+	margin:10px;
+	clear:both;
+	background-color:#111111;
+	opacity:0.7;
+	padding:10px;
+    z-index: 10;
+}
+
+#tchat{
+	width:800px;
+	margin-left:17%;
+	z-index: 10;
+}
+
+#conv{
+	width:300px;
+	z-index: 10;
+}
+
+#text{
+	border-radius:10px;
+	margin:10px;
+	height:700px;
+	padding:10px;
+	text-align:left;
+	background-color:#111111;
+	opacity:0.7;
+	overflow-y:auto;
+	overflow-x:auto;
+	z-index: 10;
+}
+
+#messages{
+	width:auto;
+    text-align:center;
+	z-index: 10;
+}
