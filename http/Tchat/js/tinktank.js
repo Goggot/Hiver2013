@@ -49,7 +49,6 @@ function animateLeft(){
 	setTimeout(animateLeft, 10000);
 }
 
-
 function animateRight(){
 	$('#animRightAccueil1').transition({rotate: '500deg'},tempsMachine);
 	$('#animRightAccueil1').transition({rotate: '-500deg'},tempsMachine);
@@ -89,4 +88,18 @@ function animateRight(){
 	$('#animRightTchat6').transition({rotate: '500deg'},tempsMachine);
 
 	setTimeout(animateRight, 10000);
+}
+
+function react() {
+	console.log("REACT");
+	var chem1 = document.createElement('div');
+	chem1.setAttribute('class', 'chem');
+	chem1.setAttribute('id', "chem1");
+	
+	var chem2 = document.createElement('div');
+	chem2.setAttribute('class', 'chem');
+	chem2.setAttribute('id', "chem2");
+	
+	$('body').append(chem1);
+	$('body').append(chem2);
 }

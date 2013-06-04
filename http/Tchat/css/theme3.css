@@ -4,7 +4,12 @@ a{
 
 body{
 	background-color:black;
-	overflow:hidden;
+	background-image:url('../images/electro.jpg');
+	background-attachment:fixed;
+	background-size:100%;
+	background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
 	color:white;
     text-align:center;
     font-size:small;
@@ -14,20 +19,16 @@ body{
 	display:none;
 }
 
-#div{
-	display:none;
-}
-
 #main{
     margin:auto;
     width:auto;
     height:780px;
     border-radius:10px;
-    margin-top:-920px;
     margin-bottom:20px;
 	padding:20px;
 	z-index: 10;
 	position: relative;
+	display:none;
 }
 
 #footer{
@@ -37,6 +38,7 @@ body{
 	opacity:0.7;
     border-radius:10px;
     padding:5px;
+	display:none;
 }
 
 #connection{
@@ -61,7 +63,6 @@ body{
 	border-radius:10px;
 	display:none;
 }
-
 
 #liste{
 	border-radius:10px;
@@ -104,4 +105,13 @@ body{
 	width:auto;
     text-align:center;
 	z-index: 10;
+}
+
+.point{
+	width:5px;
+	height:5px;
+	box-shadow: 0px 0px 30px;
+	background-color:white;
+	border-radius:50px;
+	position:absolute;
 }

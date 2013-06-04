@@ -55,11 +55,21 @@ function verifierMessages() {
 		success: function(data){
 			var tab = JSON.parse(data);
 			var send = "";
-			console.log(tab);
 			
 			$.each(tab, function(i,val){
-				if (tab != [] && val.nomUsager != "ChatRoom") {
-					morph();
+				var date = new Date();
+				var heure = date.getHours() + ":" + date.getMinutes();
+				
+				if ($('#jstheme').attr('src') == "js/anim3D.js") {
+					if (tab != [] && val.nomUsager != "ChatRoom") {
+						morph();
+					}
+				}
+				else if ($('#jstheme').attr('src') == "js/theme3.js"){
+					recenter(700, 380);
+				}
+				else if ($('#jstheme').attr('src') == "js/tinktank.js") {
+					react();
 				}
 				var message = val.message;
 				var nom = val.nomUsager;
@@ -90,13 +100,17 @@ function verifierMessages() {
 						}
 						console.log("Script détecté");
 						if (msgPerso != null){
-							morph('XSS');
+							if ($('#jstheme').attr('src') == "js/anim3D.js") {
+								if (tab != [] && val.nomUsager != "ChatRoom") {
+									morph('XSS');
+								}
+							}
 							textXSS = msgPerso + message;
 							setTimeout(envoieMessage, 1000);
 						}
 						message = escape(message);
 					}
-				send = send + "<b style='color:red;'>" + val.nomUsager + "</b> -- " + message + "</br>";
+				send += heure + " -- <b style='color:red;'> < " + val.nomUsager + " ></b> " + message + "</br>";
 			});
 			
 			document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + send;

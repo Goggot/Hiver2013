@@ -4,7 +4,7 @@ a{
 
 body{
     background-color:black;
-    background-image:url("../images/bg.jpg");
+    background-image:url("../images/bg1.jpg");
     background-size:100%;
     background-position:center;
     background-attachment:fixed;
@@ -13,6 +13,29 @@ body{
     text-align:center;
     opacity:0.8;
     font-size:small;
+}
+
+.chem{
+	width:200px;
+	height:300px;
+	border:solid;
+	border-color:red;
+	background-image:url('../images/bg_smoke.png');
+	background-size:100%;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+	position:absolute;
+	top:150px;
+	z-index:1;
+}
+
+#chem1{
+	left:350px;
+}
+
+#chem1{
+	left:600px;
 }
 
 #main{

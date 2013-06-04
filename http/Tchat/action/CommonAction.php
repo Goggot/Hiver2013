@@ -57,8 +57,8 @@
 					  <link href="css/anim3D.css" rel="stylesheet" type="text/css" media="screen" id="theme"/>';
 			}
 			else if ($_SESSION["theme"] == 3){
-				echo '<script src="js/anim3D.js" id="jstheme"></script>
-					  <link href="css/anim3D.css" rel="stylesheet" type="text/css" media="screen" id="theme"/>';
+				echo '<script src="js/theme3.js" id="jstheme"></script>
+					  <link href="css/theme3.css" rel="stylesheet" type="text/css" media="screen" id="theme"/>';
 			}
 		}
 		
