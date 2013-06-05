@@ -16,6 +16,10 @@ window.onload = function(){
 	console.log(tabLigne[5]);
 	$('#main').fadeIn("slow");
 	$('#footer').fadeIn("slow");
+	$('#main').animate({top: 0},"slow");
+	$('#main').animate({left: SCREEN_WIDTH-(SCREEN_WIDTH/2)},"slow");
+	$('#footer').animate({top: SCREEN_HEIGHT},"slow");
+	$('#footer').animate({left: SCREEN_WIDTH/3},"slow");
 }
 
 function morph(event){

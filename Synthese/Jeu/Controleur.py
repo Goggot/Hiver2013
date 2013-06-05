@@ -6,6 +6,7 @@ print("CONTROLEUR")
 
 class Controleur():
     def __init__(self):
+        self.clock = pygame.time.Clock()
             # Pour acceder aux modeles et vues,
             # utiliser ces deux variable comportant le self du controleur pour un transit dans les deux sens
         self.modele = Modele.Modele(self)
@@ -40,9 +41,9 @@ class Controleur():
             self.modele.tickGeneral()
             if self.count < 500:
                 self.count += 1
-
+        self.clock.tick(60)
         self.vue.refresh()
-        Timer(0.0030, self.partie).start()
+        self.partie()
 
 
 if __name__ == '__main__':

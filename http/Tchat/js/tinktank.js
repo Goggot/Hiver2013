@@ -6,6 +6,7 @@ window.onload = function(){
 	animateLeft();
 	animateRight();
 	play();
+	document.onclick = react();
 }
 
 function animateLeft(){

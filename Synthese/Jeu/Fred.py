@@ -13,20 +13,33 @@ class Fred():
         self.objectList = []
 
     def bouge(self, event):
-        if event.key == K_UP or event.key == K_SPACE:
+        if event.key == pygame.K_UP or event.key == K_SPACE:
             self.position[1] -= self.vitesse
-        elif event.key == K_DOWN:
+        elif event.key == pygame.K_DOWN:
             self.position[1] += self.vitesse
-        elif event.key == K_LEFT:
+        elif event.key == pygame.K_LEFT:
             self.position[0] -= self.vitesse
-        elif event.key == K_RIGHT:
+        elif event.key == pygame.K_RIGHT:
             self.position[0] += self.vitesse
+        elif event.key == pygame.ALT:
+            attaque()
 
     def changerEtat(self):
         pass
 
     def attaque(self):
-        pass
+        for key, item in parent.robotList:
+            if (self.item.position[0] - 120) <= (self.position[0] + 30) and (self.item.position[0] + 120) >= (self.position[0]-30):
+                if (self.item.position[1] - 120) <= (self.position[1] + 30) and (self.item.position[1] + 120) >= (self.position[1]-30):
+                    pass
+        if self.direction == 'G':
+            pass
+        elif self.direction == 'D':
+            pass
+        elif self.direction == 'H':
+            pass
+        elif self.direction == 'B':
+            pass
 
     def mourrir(self):
         pass
