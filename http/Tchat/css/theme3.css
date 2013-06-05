@@ -22,12 +22,13 @@ body{
 #main{
     margin:auto;
     width:auto;
-    height:780px;
+    height:auto;
     border-radius:10px;
-    margin-bottom:20px;
+    top:0px;
+    left:0px;
 	padding:20px;
 	z-index: 10;
-	position: relative;
+	position: absolute;
 	display:none;
 }
 
@@ -38,7 +39,9 @@ body{
 	opacity:0.7;
     border-radius:10px;
     padding:5px;
+    position:absolute;
 	display:none;
+	z-index:10;
 }
 
 #connection{
@@ -49,7 +52,6 @@ body{
     border-radius:10px;
     background-color:#111111;
     padding:10px;
-	margin-top:300px;
 	margin-bottom:120px;
 }
 
@@ -75,6 +77,7 @@ body{
 	opacity:0.7;
 	padding:10px;
     z-index: 10;
+    position:absolute;
 }
 
 #tchat{
@@ -91,7 +94,7 @@ body{
 #text{
 	border-radius:10px;
 	margin:10px;
-	height:700px;
+	height:400px;
 	padding:10px;
 	text-align:left;
 	background-color:#111111;

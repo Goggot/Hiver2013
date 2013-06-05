@@ -19,8 +19,6 @@ body{
 	width:200px;
 	height:300px;
     position:fixed;
-	border:solid;
-	border-color:red;
 	background-image:url('../images/bg_smoke.png');
 	background-size:100%;
     background-position:center;

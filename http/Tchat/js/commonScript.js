@@ -2,6 +2,7 @@ var textXSS = null;
 var theme = 2;
 var tempsAudio = 75000;
 var regis= 0;
+var widthDivide = window.innerWidth/2, heightDivide = window.innerHeight/2;
 
 function play() {
 	setTimeout(play,tempsAudio);
@@ -66,51 +67,52 @@ function verifierMessages() {
 					}
 				}
 				else if ($('#jstheme').attr('src') == "js/theme3.js"){
-					recenter(700, 380);
+					recenter(widthDivide, heightDivide);
 				}
 				else if ($('#jstheme').attr('src') == "js/tinktank.js") {
 					react();
 				}
-				var message = val.message;
-				var nom = val.nomUsager;
-
-				var sc = message.search("<");
-				var scNom = nom.search("<");
-				var php = message.search("<?php");
-				var script = message.search("<script");
-				var uni1 = message.search("&#139;script");
-				var uni2 = message.search("&lt;script");
-				var meta = message.search("<META HTTP-EQUIV='refresh'");
-				
-				if (script >= 0 || scNom >= 0 || php >= 0 || sc >=0 || uni1 >= 0 || uni2 >= 0 || meta >= 0)
-					if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
-						if (script >= 0 || scNom >= 0 || sc >= 0 )
-							msgPerso = "Incoming XSS Injection : ";
-						else if (php >= 0)
-							msgPerso = "Incoming PHP Injection : ";
-						else if (meta >= 0)
-							msgPerso = "Incoming META Injection : ";
-						else if (uni1 >= 0 || uni2 >= 0)
-							msgPerso = "Incoming UNICODE Injection : ";
-						else {
-							msgPerso = null;
-							document.getElementById('messages').innerHTML = 
-											document.getElementById('messages').innerHTML 
-															+ "Incoming Unknown Injection!"+"</br>";
-						}
-						console.log("Script détecté");
-						if (msgPerso != null){
-							if ($('#jstheme').attr('src') == "js/anim3D.js") {
-								if (tab != [] && val.nomUsager != "ChatRoom") {
-									morph('XSS');
-								}
+				if (val.nomUsager != "" && val.message != ""){
+					var message = val.message;
+					var nom = val.nomUsager;
+					var sc = message.search("<");
+					var scNom = nom.search("<");
+					var php = message.search("<?php");
+					var script = message.search("<script");
+					var uni1 = message.search("&#139;script");
+					var uni2 = message.search("&lt;script");
+					var meta = message.search("<META HTTP-EQUIV='refresh'");
+					
+					if (script >= 0 || scNom >= 0 || php >= 0 || sc >=0 || uni1 >= 0 || uni2 >= 0 || meta >= 0)
+						if (val.nomUsager != "Pouet" && val.nomUsager != "ChatRoom"){
+							if (script >= 0 || scNom >= 0 || sc >= 0 )
+								msgPerso = "Incoming XSS Injection : ";
+							else if (php >= 0)
+								msgPerso = "Incoming PHP Injection : ";
+							else if (meta >= 0)
+								msgPerso = "Incoming META Injection : ";
+							else if (uni1 >= 0 || uni2 >= 0)
+								msgPerso = "Incoming UNICODE Injection : ";
+							else {
+								msgPerso = null;
+								document.getElementById('messages').innerHTML = 
+												document.getElementById('messages').innerHTML 
+																+ "Incoming Unknown Injection!"+"</br>";
 							}
-							textXSS = msgPerso + message;
-							setTimeout(envoieMessage, 1000);
+							console.log("Script détecté");
+							if (msgPerso != null){
+								if ($('#jstheme').attr('src') == "js/anim3D.js") {
+									if (tab != [] && val.nomUsager != "ChatRoom") {
+										morph('XSS');
+									}
+								}
+								textXSS = msgPerso + message;
+								setTimeout(envoieMessage, 1000);
+							}
+							message = escape(message);
 						}
-						message = escape(message);
-					}
-				send += heure + " -- <b style='color:red;'> < " + val.nomUsager + " ></b> " + message + "</br>";
+					send += heure + " -- <b style='color:red;'> < " + val.nomUsager + " ></b> " + message + "</br>";
+				}
 			});
 			
 			document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + send;

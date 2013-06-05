@@ -1,9 +1,17 @@
 var matrix = new Array();
 var center = 0;
+var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
 
 window.onload = function(){
 	$('#main').fadeIn("slow");
 	$('#footer').fadeIn("slow");
+	$('#connection').animate({top: SCREEN_HEIGHT/3},"slow");
+	$('#connection').animate({left: SCREEN_WIDTH/3},"slow");
+	$('#footer').animate({top: SCREEN_HEIGHT-50},"slow");
+	$('#footer').animate({left: SCREEN_WIDTH/3},"slow");
+	$('#text').animate({height: SCREEN_HEIGHT-200},"slow");
+	$('#text').animate({width: SCREEN_WIDTH-500},"slow");
+	$('#liste').animate({left: SCREEN_WIDTH/1.3},"slow");
 	init();
 	tick();
 }
@@ -46,7 +54,7 @@ function points(id) {
 	this.pts.setAttribute('class', 'point');
 	this.pts.setAttribute('id', id);
 	
-	this.pts.setAttribute('style', 'left:700px; top:380px;');
+	this.pts.setAttribute('style', 'left:'+SCREEN_WIDTH/2+'px; top:'+SCREEN_HEIGHT/2+'px;');
 	
 	$('body').append(this.pts);
 	

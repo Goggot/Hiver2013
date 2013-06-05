@@ -1,4 +1,5 @@
 var tempsMachine = 30000;
+var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
 
 window.onload = function(){
 	$('#main').fadeIn("slow");
@@ -103,4 +104,15 @@ function react() {
 	
 	$('body').append(chem1);
 	$('body').append(chem2);
+
+	$('#chem1').animate({top: -100},2000);
+	$('#chem2').animate({top: -100},2000);
+	setTimeout(function(){
+		$('#chem1').fadeOut('slow');
+		$('#chem2').fadeOut('slow');
+		setTimeout(function(){
+			$('#chem1').remove();
+			$('#chem2').remove();
+		}, 1500);
+	}, 2000);
 }

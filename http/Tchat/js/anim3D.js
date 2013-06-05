@@ -16,10 +16,15 @@ window.onload = function(){
 	console.log(tabLigne[5]);
 	$('#main').fadeIn("slow");
 	$('#footer').fadeIn("slow");
-	$('#main').animate({top: 0},"slow");
-	$('#main').animate({left: SCREEN_WIDTH-(SCREEN_WIDTH/2)},"slow");
-	$('#footer').animate({top: SCREEN_HEIGHT},"slow");
+	$('#main').animate({height: SCREEN_HEIGHT},"slow");
+	$('#main').animate({width: SCREEN_WIDTH},"slow");
+	$('#connection').animate({top: SCREEN_HEIGHT/3},"slow");
+	$('#connection').animate({left: SCREEN_WIDTH/3},"slow");
+	$('#footer').animate({top: SCREEN_HEIGHT-50},"slow");
 	$('#footer').animate({left: SCREEN_WIDTH/3},"slow");
+	$('#text').animate({height: SCREEN_HEIGHT-200},"slow");
+	$('#text').animate({width: SCREEN_WIDTH-500},"slow");
+	$('#liste').animate({left: SCREEN_WIDTH/1.3},"slow");
 }
 
 function morph(event){
