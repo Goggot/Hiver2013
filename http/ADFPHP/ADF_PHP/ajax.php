@@ -1,7 +1,6 @@
 <?php
 	require_once("action/CommonAction.php");
 	require_once("action/DAO/ClientDAO.php");
-	require_once("action/DAO/AtelierDAO.php");
 
 	$valid = null;
 
@@ -28,5 +27,5 @@
 	}
 
 	if (isset($_POST["titre"])){
-		echo AtelierDAO::rechercheAvancee($_POST["date"], $_POST["langue"], $_POST["titre"], 'Any');
+		echo ClientDAO::rechercheAvancee($_POST["date"], $_POST["langue"], $_POST["titre"], 'Any');
 	}
