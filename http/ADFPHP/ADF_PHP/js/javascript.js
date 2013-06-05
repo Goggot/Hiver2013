@@ -71,13 +71,13 @@ function research(){
 				var noatel; 
 				var duree;
 				data  = JSON.parse(data);
-				/*$.each(data, function(i,val){
+				$.each(data, function(i,val){
 					console.log(val);
 					titre =  val.TITRE;
 					noatel = val.NOATEL;
 					duree = val.DATEATEL;
-					document.getElementById('reponseResearch').innerHTML = data[]+ " " + noatel +" " + duree + "</br>";
-				});*/
+					document.getElementById('reponseResearch').innerHTML = noatel + " " + duree + "</br>";
+				});
 				document.getElementById('reponseResearch').innerHTML = data["TITRE"]+ " " + data["NOATEL"] +" " + data["DATEATEL"] + "</br>";
 			}
 		});

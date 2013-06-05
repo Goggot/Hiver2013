@@ -41,10 +41,11 @@ class Controleur():
             self.modele.tickGeneral()
             if self.count < 500:
                 self.count += 1
+                
         self.clock.tick(60)
         self.vue.refresh()
         self.partie()
-
+        
 
 if __name__ == '__main__':
     c = Controleur()
