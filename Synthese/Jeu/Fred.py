@@ -45,17 +45,7 @@ class Fred():
         pass
 
     def tick(self):
-        self.ev = 0
-        for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
-            if event.type == QUIT:              # Si un de ces evenements est de type QUIT
-                exit()                          # On arrete la boucle
-            else:
-                if event.type == KEYDOWN:       # si une touche du clavier est appuyee
-                    #print(event.key)
-                    if event.key == K_UP or event.key == K_SPACE or event.key == K_DOWN or event.key == K_LEFT or event.key == K_RIGHT:
-                        self.bouge(event)
-                    elif event.key == 304:
-                        self.parent.parent.pause = True
+        pass
 
     def clone(self):
         dict = []
