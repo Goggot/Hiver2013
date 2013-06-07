@@ -1,10 +1,11 @@
 import Fred
 import Prison
+import Projectile
 print("MODELE")
 
 class Modele():
     def __init__(self, parent):
-        self.parent = parent
+        self.controleur = parent
         self.maxCount = 0
         self.listeEvenement = [self.maxCount * [2]]
         self.fred = Fred.Fred(self)
@@ -22,12 +23,11 @@ class Modele():
                         self.listeEvenement.insert(self.count, [key, item[1].clone(), item[0]])
                     item[1].tick()
                     self.count+=1
-                    print(self.count)
-        #for item in self.projectilList:
-        #    self.listeEvenement.insert(0, ["projectile", item[1].clone()])
-        #    item[1].tick()
+        for item in self.projectilList:
+            #self.listeEvenement.insert(0, ['P', item[1].clone(), item[0]])
+            item[1].tick()
+
         self.listeEvenement.insert(0, ['F', self.fred.clone()])
-        print(self.listeEvenement[0]+self.listeEvenement[1]+self.listeEvenement[2]+self.listeEvenement[3]+self.listeEvenement[4])
 
     def backToTheFuture(self, count):
         eve = self.listeEvenement.pop(self.maxCount - count)

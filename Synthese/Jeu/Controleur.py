@@ -35,6 +35,9 @@ class Controleur():
             for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
                 if event.type == pygame.QUIT:              # Si un de ces evenements est de type QUIT
                     exit()                                         # On arrete la boucle
+                elif event.type == pygame.KEYDOWN:
+                    if event.key == 304:
+                        self.pause = False
 
             self.modele.backToTheFuture(self.count)
             self.count -= 1
@@ -51,12 +54,17 @@ class Controleur():
             for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
                 if event.type == pygame.QUIT:              # Si un de ces evenements est de type QUIT
                     exit()                          # On arrete la boucle
-                else:
-                    if event.type == pygame.KEYDOWN:       # si une touche du clavier est appuyee
+                elif event.type == pygame.KEYDOWN:       # si une touche du clavier est appuyee
                         if event.key == pygame.K_UP or event.key == pygame.K_SPACE or event.key == pygame.K_DOWN or event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                             self.modele.fred.bouge(event)
                         elif event.key == 304:
                             self.pause = True
+                        elif event.key == 306:
+                            self.modele.fred.attaque()
+                            self.vue.ajoutProjectile()
+                        else:
+                            print(event.key)
+                        
         
     def tick(self):
         self.vue.refresh()

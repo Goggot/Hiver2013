@@ -10,21 +10,30 @@ pygame.key.set_repeat(15, 15)
 
 class Vue():
     def __init__(self, parent):
-        self.parent = parent
-        self.listImgEnnemis = {"camera": [], "droneS": [], "droneA": [], "projectile": []}
-        self.robotList = self.parent.modele.prison.robotList
-        self.projectilList = self.parent.modele.prison.projectilList
+        self.controleur = parent
 
+    #### Creation d'une liste d'objets "image" pour chaque liste d'objets "classe" ####
+        self.listImgEnnemis = {"camera": [], "droneS": [], "droneA": []}
+        self.listImgProjectile = []
+
+    #### Liens vers les listes d'objets "class" ####
+        self.robotList = self.controleur.modele.prison.robotList
+        self.projectilList = self.controleur.modele.prison.projectilList
+
+    #### Creation du canvas ####
         self.fenetre = pygame.display.set_mode((1230, 820), RESIZABLE)
         self.fond = pygame.image.load("img/falcon.jpg").convert()
 
+    #### Creation et liaisons des objets "image" ####
         self.solo = pygame.image.load("img/han-solo75.png").convert_alpha()
         self.posSolo = self.solo.get_rect()
         self.droneS = pygame.image.load("img/jabba100.png").convert_alpha()
         self.droneA = pygame.image.load("img/ackbar70.png").convert_alpha()
         self.camera = pygame.image.load("img/r2d100.png").convert_alpha()
-        self.projectile = pygame.image.load("img/energy.png").convert_alpha()
+        self.laserRed = pygame.image.load("img/laser-red.png").convert_alpha()
+        self.laserGreen = pygame.image.load("img/laser-green.png").convert_alpha()
 
+#### Remplissage de la liste d'objet "image" a partir de la liste d'objet "class" des ennemis ####
     def initGraph(self):
         for key in self.robotList:
             for item in self.robotList[key]:
@@ -36,17 +45,28 @@ class Vue():
                     elif key == "camera":
                         self.listImgEnnemis.get("camera").append([item[0], self.camera])
 
-    def ajoutProjectile(self):
-        for item in self.projectilList:
-            self.listImgEnnemis.get("projectile").append([item[0], self.projectile])
 
+#### Remplissage de la liste d'objet "image" a partir de la liste d'objet "class" des projectiles ####
+    def ajoutProjectile(self):
+        self.listImgProjectile = []
+        for item in self.projectilList:
+            print(item[1].__class__.__name__)
+            if item[1].__class__.__name__ == "ProjectileRobot":
+                self.listImgProjectile.append([item[0], self.laserRed])
+            else:
+                self.listImgProjectile.append([item[0], self.laserGreen])
+
+    def suppProjectile(self, index):
+        del self.listImgProjectile[index]
+
+
+#### Refresh du canvas complet ####
     def refresh(self):
-        #self.robotList = self.parent.modele.prison.robotList
-        #self.pause = self.parent.pause
+        #self.robotList = self.controleur.modele.prison.robotList
+        #self.pause = self.controleur.pause
         self.fenetre.blit(self.fond, (0, 0))
-        posSolo = self.parent.modele.fred.position
+        posSolo = self.controleur.modele.fred.position
         self.fenetre.blit(self.solo, (posSolo[0], posSolo[1]))
-        #print(self.robotList)
         for key in self.listImgEnnemis:
             if key == "droneA":
                 for item1 in self.listImgEnnemis[key]:
@@ -69,13 +89,20 @@ class Vue():
                         if item2[0] == item1[0]:
                             posCamera = item2[1].position
                     self.fenetre.blit(item1[1], (posCamera[0], posCamera[1]))
-            elif key == "projectile":
-                for item1 in self.listImgEnnemis[key]:
-                    self.projectile = item1[1].get_rect()
-                    for item2 in self.projectilList:
-                        if item2[0] == item1[0]:
-                            posProjectile = item2[1].position
-                    self.fenetre.blit(item1[1], (posProjectile[0], posProjectile[1]))
-                    print("PROJECTILE AFFICHE")
+
+        for item in self.listImgProjectile:
+            self.projectile = item[1].get_rect()
+            for item2 in self.projectilList:
+                if item2[0] == item[0]:
+                    posProjectile = item2[1].position
+            self.fenetre.blit(item[1], (posProjectile[0], posProjectile[1]))
+            print("PROJECTILE AFFICHE")
 
         pygame.display.flip()
+
+    """def fire(self):
+            color = (255,0,0)
+            posSoloX = self.controleur.modele.fred.position[0]
+            posSoloY = self.controleur.modele.fred.position[1]
+            pygame.draw.aaline(self.fenetre, color, (posSoloX, posSoloY), (posSoloX+50, posSoloY))
+            pygame.display.flip()"""

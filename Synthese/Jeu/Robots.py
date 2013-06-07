@@ -9,12 +9,11 @@ class Robot():
     def __init__(self):
         self.id = 0
         self.direction = "H"
-        
 
     def detection(self):
         alert = False
-        if (self.position[0] - 120) <= (self.parent.fred.position[0] + 30) and (self.position[0] + 120) >= (self.parent.fred.position[0]-30):
-            if (self.position[1] - 120) <= (self.parent.fred.position[1] + 30) and (self.position[1] + 120) >= (self.parent.fred.position[1]-30):
+        if (self.position[0] - 120) <= (self.modele.fred.position[0] + 30) and (self.position[0] + 120) >= (self.modele.fred.position[0]-30):
+            if (self.position[1] - 120) <= (self.modele.fred.position[1] + 30) and (self.position[1] + 120) >= (self.modele.fred.position[1]-30):
                 alert = True
                 self.etat = True
         return alert
@@ -22,7 +21,7 @@ class Robot():
 
 class camera(Robot):
     def __init__(self, parent, pos):
-        self.parent = parent
+        self.modele = parent
         self.portee = 30
         self.position = pos
         self.audio = False
@@ -55,7 +54,7 @@ class droneS(Robot):
     def __init__(self, parent, pos, direction):
         self.position = pos
         self.direction = direction
-        self.parent = parent
+        self.modele = parent
         self.etat = 0     # Etat d'alerte -> false=RAS, true=alert
         self.energie = 5
         self.portee = 20
@@ -101,7 +100,7 @@ class droneS(Robot):
 
 class droneA(Robot):
     def __init__(self, parent, pos, direction):
-        self.parent = parent
+        self.modele = parent
         self.position = pos
         self.direction = direction
         self.etat = 0     # Etat d'alerte -> false=RAS, true=alert
@@ -126,18 +125,19 @@ class droneA(Robot):
                 else:
                     self.position[0] += self.vitesse
 
-    def attaque(self):
-        taille = len(self.parent.prison.projectilList) + 1
-        self.parent.prison.projectilList.append([taille, Projectile(self, self.position[:])])
+    def attaque(self):      ## Ajout d'un projectile dans la liste de projectile, ainsi que d'une image dans la liste visuelle
+        index = len(self.modele.prison.projectilList)
+        self.modele.prison.projectilList.append([index, ProjectileRobot(self, self.position[:], index)])
+        self.modele.controleur.vue.ajoutProjectile()
 
     def poursuivre(self):
-        if self.position[0] < self.parent.fred.position[0]:
+        if self.position[0] < self.modele.fred.position[0]:
             self.position[0] += self.vitesse
-        if self.position[0] > self.parent.fred.position[0]:
+        if self.position[0] > self.modele.fred.position[0]:
             self.position[0] -= self.vitesse
-        if self.position[1] < self.parent.fred.position[1]:
+        if self.position[1] < self.modele.fred.position[1]:
             self.position[1] += self.vitesse
-        if self.position[1] > self.parent.fred.position[1]:
+        if self.position[1] > self.modele.fred.position[1]:
             self.position[1] -= self.vitesse
 
     def mourrir(self):
