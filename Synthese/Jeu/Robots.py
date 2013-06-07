@@ -31,7 +31,6 @@ class camera(Robot):
 
     def tick(self):
         if self.detection():
-            print("DETECTE")
             if not self.audio:
                 self.audio = True
                 song = random.randrange(1, 4)
@@ -83,7 +82,6 @@ class droneS(Robot):
     def tick(self):
         self.bouge()
         if self.detection():
-            print("DETECTE")
             if not self.audio:
                 self.audio = True
                 pygame.mixer.music.load('music/jabba.mp3')
@@ -111,6 +109,7 @@ class droneA(Robot):
         self.degats = 1
         self.audio = False
         self.tirer = False
+        self.indexProj = self.modele.indexProj
 
     def bouge(self):        # position[0] = axe Y
         if not self.alert:
@@ -126,9 +125,10 @@ class droneA(Robot):
                     self.position[0] += self.vitesse
 
     def attaque(self):      ## Ajout d'un projectile dans la liste de projectile, ainsi que d'une image dans la liste visuelle
-        index = len(self.modele.prison.projectilList)
-        self.modele.prison.projectilList.append([index, ProjectileRobot(self, self.position[:], index)])
-        self.modele.controleur.vue.ajoutProjectile()
+        newProj = ProjectileRobot(self, self.position[:], self.indexProj)
+        self.modele.prison.projectilList.append([self.indexProj, newProj])
+        self.modele.controleur.vue.ajoutProjectile(newProj, "red")
+        self.indexProj+=1
 
     def poursuivre(self):
         if self.position[0] < self.modele.fred.position[0]:
@@ -152,7 +152,6 @@ class droneA(Robot):
     def tick(self):
         self.bouge()
         if self.detection():
-            print("DETECTE")
             self.poursuivre()
             self.alert = True
 

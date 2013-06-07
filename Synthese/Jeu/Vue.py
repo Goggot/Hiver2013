@@ -47,16 +47,14 @@ class Vue():
 
 
 #### Remplissage de la liste d'objet "image" a partir de la liste d'objet "class" des projectiles ####
-    def ajoutProjectile(self):
-        self.listImgProjectile = []
-        for item in self.projectilList:
-            print(item[1].__class__.__name__)
-            if item[1].__class__.__name__ == "ProjectileRobot":
-                self.listImgProjectile.append([item[0], self.laserRed])
-            else:
-                self.listImgProjectile.append([item[0], self.laserGreen])
+    def ajoutProjectile(self, item, color):
+        if color is "red":
+            self.listImgProjectile.append([item, self.laserRed])
+        else:
+            self.listImgProjectile.append([item, self.laserGreen])
 
     def suppProjectile(self, index):
+        print("TAILLE LISTE IMAGE : ", index)
         del self.listImgProjectile[index]
 
 
@@ -92,11 +90,8 @@ class Vue():
 
         for item in self.listImgProjectile:
             self.projectile = item[1].get_rect()
-            for item2 in self.projectilList:
-                if item2[0] == item[0]:
-                    posProjectile = item2[1].position
+            posProjectile = item[0].position
             self.fenetre.blit(item[1], (posProjectile[0], posProjectile[1]))
-            print("PROJECTILE AFFICHE")
 
         pygame.display.flip()
 

@@ -61,7 +61,6 @@ class Controleur():
                             self.pause = True
                         elif event.key == 306:
                             self.modele.fred.attaque()
-                            self.vue.ajoutProjectile()
                         else:
                             print(event.key)
                         

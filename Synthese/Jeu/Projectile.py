@@ -10,16 +10,16 @@ class ProjectileRobot():
     def tick(self):
         if self.position[0] < self.posFred[0]:
             self.position[0] += self.vitesse
-        if self.position[0] > self.posFred[0]:
+        elif self.position[0] > self.posFred[0]:
             self.position[0] -= self.vitesse
-        if self.position[1] < self.posFred[1]:
+        elif self.position[1] < self.posFred[1]:
             self.position[1] += self.vitesse
-        if self.position[1] > self.posFred[1]:
+        elif self.position[1] > self.posFred[1]:
             self.position[1] -= self.vitesse
-
-        if self.position[0] == self.posFred[0] and self.position[1] == self.posFred[1]:
+        else:
             self.robot.modele.controleur.vue.suppProjectile(self.index)
             del self.projectilList[self.index]
+            self.robot.modele.indexProj -= 1
 
     def clone(self):
         return self.position
@@ -51,6 +51,7 @@ class ProjectileFred():
         if destroy is True:
             self.fred.modele.controleur.vue.suppProjectile(self.index)
             del self.projectilList[self.index]
+            self.fred.modele.indexProj -= 1
 
     def clone(self):
         return self.position

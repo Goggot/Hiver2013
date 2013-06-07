@@ -12,6 +12,7 @@ class Modele():
         self.prison = Prison.Prison(self)
         self.robotList = self.prison.robotList
         self.projectilList = self.prison.projectilList
+        self.indexProj = 0
 
     def tickGeneral(self):
         self.fred.tick()
