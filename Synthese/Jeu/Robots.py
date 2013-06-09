@@ -9,6 +9,7 @@ class Robot():
     def __init__(self):
         self.id = 0
         self.direction = "H"
+        self.tabLimite = self.modele.controleur.tabLimite
 
     def detection(self):
         alert = False
@@ -59,7 +60,7 @@ class droneS(Robot):
         self.portee = 20
         self.audio = False
         self.posInitial = pos[:]
-        self.vitesse = 0.2
+        self.vitesse = 1
 
     def bouge(self):
         if self.direction == "H":
@@ -102,14 +103,14 @@ class droneA(Robot):
         self.position = pos
         self.direction = direction
         self.etat = 0     # Etat d'alerte -> false=RAS, true=alert
-        self.vitesse = 0.5
+        self.vitesse = 1
         self.portee = 10
         self.alert = False
         self.posInitial = pos[:]
         self.degats = 1
         self.audio = False
         self.tirer = False
-        self.indexProj = self.modele.indexProj
+        self.indexProj = 0
 
     def bouge(self):        # position[0] = axe Y
         if not self.alert:
@@ -125,7 +126,8 @@ class droneA(Robot):
                     self.position[0] += self.vitesse
 
     def attaque(self):      ## Ajout d'un projectile dans la liste de projectile, ainsi que d'une image dans la liste visuelle
-        newProj = ProjectileRobot(self, self.position[:], self.indexProj)
+        pos = [self.position[0], self.position[1]+50]
+        newProj = ProjectileRobot(self, pos, self.direction, self.indexProj)
         self.modele.prison.projectilList.append([self.indexProj, newProj])
         self.modele.controleur.vue.ajoutProjectile(newProj, "red")
         self.indexProj+=1
