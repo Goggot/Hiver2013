@@ -14,7 +14,7 @@ class Vue():
         self.map_x = -1300
         self.map_y = -850
         self.window_width = 1200
-        self.window_height = 700
+        self.window_height = 654
         self.map_width = 3845
         self.map_height = 2425
 
@@ -50,6 +50,11 @@ class Vue():
 
     def pause(self):
         pause = pygame.image.load("img/pause.png").convert()
+        self.fenetre.blit(pause, (0,0))
+        pygame.display.flip()
+
+    def win(self):
+        pause = pygame.image.load("img/win.png").convert()
         self.fenetre.blit(pause, (0,0))
         pygame.display.flip()
 

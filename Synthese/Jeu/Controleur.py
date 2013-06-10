@@ -129,11 +129,14 @@ class Controleur():
             self.vue.refreshJeu()
             self.partie()
 
-        if self.pause:
+        elif self.pause:
             self.vue.pause()
 
-        if self.fin:
+        elif self.fin:
             self.vue.failed()
+
+        elif self.win:
+            self.vue.win()
 
     # LINUX :
         Timer(0.01, self.tick).start()
