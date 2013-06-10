@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Codeauditeur.inputValue}"
+                  label="#{bindings.Codeauditeur.hints.label}"
+                  required="#{bindings.Codeauditeur.hints.mandatory}"
+                  columns="#{bindings.Codeauditeur.hints.displayWidth}"
+                  maximumLength="#{bindings.Codeauditeur.hints.precision}"
+                  shortDesc="#{bindings.Codeauditeur.hints.tooltip}"
+                  id="it13">
+      <f:validator binding="#{bindings.Codeauditeur.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Motdepasse.inputValue}"
+                  label="#{bindings.Motdepasse.hints.label}"
+                  required="#{bindings.Motdepasse.hints.mandatory}"
+                  columns="#{bindings.Motdepasse.hints.displayWidth}"
+                  maximumLength="#{bindings.Motdepasse.hints.precision}"
+                  shortDesc="#{bindings.Motdepasse.hints.tooltip}"
+                  id="it12" secret="true">
+      <f:validator binding="#{bindings.Motdepasse.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Prenom.inputValue}"
+                  label="#{bindings.Prenom.hints.label}"
+                  required="#{bindings.Prenom.hints.mandatory}"
+                  columns="#{bindings.Prenom.hints.displayWidth}"
+                  maximumLength="#{bindings.Prenom.hints.precision}"
+                  shortDesc="#{bindings.Prenom.hints.tooltip}" id="it9">
+      <f:validator binding="#{bindings.Prenom.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Nom.inputValue}"
+                  label="#{bindings.Nom.hints.label}"
+                  required="#{bindings.Nom.hints.mandatory}"
+                  columns="#{bindings.Nom.hints.displayWidth}"
+                  maximumLength="#{bindings.Nom.hints.precision}"
+                  shortDesc="#{bindings.Nom.hints.tooltip}" id="it10">
+      <f:validator binding="#{bindings.Nom.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Rue.inputValue}"
+                  label="#{bindings.Rue.hints.label}"
+                  required="#{bindings.Rue.hints.mandatory}"
+                  columns="#{bindings.Rue.hints.displayWidth}"
+                  maximumLength="#{bindings.Rue.hints.precision}"
+                  shortDesc="#{bindings.Rue.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Rue.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Ville.inputValue}"
+                  label="#{bindings.Ville.hints.label}"
+                  required="#{bindings.Ville.hints.mandatory}"
+                  columns="#{bindings.Ville.hints.displayWidth}"
+                  maximumLength="#{bindings.Ville.hints.precision}"
+                  shortDesc="#{bindings.Ville.hints.tooltip}" id="it5">
+      <f:validator binding="#{bindings.Ville.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.CodePostal.inputValue}"
+                  label="#{bindings.CodePostal.hints.label}"
+                  required="#{bindings.CodePostal.hints.mandatory}"
+                  columns="#{bindings.CodePostal.hints.displayWidth}"
+                  maximumLength="#{bindings.CodePostal.hints.precision}"
+                  shortDesc="#{bindings.CodePostal.hints.tooltip}" id="it4">
+      <f:validator binding="#{bindings.CodePostal.validator}"/>
+    </af:inputText>
+    <af:selectOneChoice value="#{bindings.Noregion1.inputValue}"
+                        label="#{bindings.Noregion1.label}"
+                        required="#{bindings.Noregion1.hints.mandatory}"
+                        shortDesc="#{bindings.Noregion1.hints.tooltip}"
+                        id="soc1">
+      <f:selectItems value="#{bindings.Noregion1.items}" id="si1"/>
+    </af:selectOneChoice>
+    <af:inputText value="#{bindings.Telephone.inputValue}"
+                  label="#{bindings.Telephone.hints.label}"
+                  required="#{bindings.Telephone.hints.mandatory}"
+                  columns="#{bindings.Telephone.hints.displayWidth}"
+                  maximumLength="#{bindings.Telephone.hints.precision}"
+                  shortDesc="#{bindings.Telephone.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Telephone.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Cell.inputValue}"
+                  label="#{bindings.Cell.hints.label}"
+                  required="#{bindings.Cell.hints.mandatory}"
+                  columns="#{bindings.Cell.hints.displayWidth}"
+                  maximumLength="#{bindings.Cell.hints.precision}"
+                  shortDesc="#{bindings.Cell.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.Cell.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Courriel.inputValue}"
+                  label="#{bindings.Courriel.hints.label}"
+                  required="#{bindings.Courriel.hints.mandatory}"
+                  columns="#{bindings.Courriel.hints.displayWidth}"
+                  maximumLength="#{bindings.Courriel.hints.precision}"
+                  shortDesc="#{bindings.Courriel.hints.tooltip}" id="it7">
+      <f:validator binding="#{bindings.Courriel.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Statut.inputValue}"
+                  label="#{bindings.Statut.hints.label}"
+                  required="#{bindings.Statut.hints.mandatory}"
+                  columns="#{bindings.Statut.hints.displayWidth}"
+                  maximumLength="#{bindings.Statut.hints.precision}"
+                  shortDesc="#{bindings.Statut.hints.tooltip}" id="it8">
+      <f:validator binding="#{bindings.Statut.validator}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:commandButton actionListener="#{bindings.Commit.execute}"
+                    text="Enregistrer" disabled="#{!bindings.Commit.enabled}"
+                    id="cb1" action="terminernew"/>
+  <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                    text="Annuler" disabled="#{!bindings.Rollback.enabled}"
+                    immediate="true" id="cb2" action="annuler">
+    <af:resetActionListener/>
+  </af:commandButton>
+  <af:commandButton text="Réinitialiser" id="cb3"/>
+</ui:composition>

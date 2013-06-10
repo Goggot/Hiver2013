@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <f:facet name="footer"/>
+    <af:panelGroupLayout id="pgl1">
+      <af:inputText value="#{bindings.Prenom.inputValue}" simple="true"
+                    required="#{bindings.Prenom.hints.mandatory}"
+                    columns="#{bindings.Prenom.hints.displayWidth}"
+                    maximumLength="#{bindings.Prenom.hints.precision}"
+                    shortDesc="#{bindings.Prenom.hints.tooltip}" id="it1"
+                    readOnly="true">
+        <f:validator binding="#{bindings.Prenom.validator}"/>
+      </af:inputText>
+      <af:inputText value="#{bindings.Nom.inputValue}" simple="true"
+                    required="#{bindings.Nom.hints.mandatory}"
+                    columns="#{bindings.Nom.hints.displayWidth}"
+                    maximumLength="#{bindings.Nom.hints.precision}"
+                    shortDesc="#{bindings.Nom.hints.tooltip}" id="it2"
+                    readOnly="true">
+        <f:validator binding="#{bindings.Nom.validator}"/>
+      </af:inputText>
+    </af:panelGroupLayout>
+    <af:panelList id="pl1" inlineStyle="list-style-type:circle;">
+      <af:commandLink text="Changer mot de passe" id="cl1"
+                      action="menuVSmdp"/>
+      <af:commandLink text="Changer informations nominales" id="cl2"
+                      action="menuVSinfo"/>
+      <af:commandLink text="Inscription aux ateliers" id="cl3"
+                      action="menuVSInsc"/>
+      <af:commandLink text="Évaluation des ateliers" id="cl4"
+                      action="menuVSeval"/>
+      <af:commandLink text="Devenir juge" id="cl5" action="menuVSdevenir"/>
+    </af:panelList>
+  </af:panelFormLayout>
+</ui:composition>

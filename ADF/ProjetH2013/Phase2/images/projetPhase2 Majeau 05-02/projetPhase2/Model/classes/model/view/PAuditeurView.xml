@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PAuditeurView"
+  Version="11.1.2.60.81"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  ComponentClass="model.view.PAuditeurViewImpl"
+  RowClass="model.view.PAuditeurViewRowImpl"
+  RowInterface="model.view.common.PAuditeurViewRow"
+  ClientRowProxyName="model.view.client.PAuditeurViewRowClient">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Variable
+    Name="nomUsager"
+    Kind="where"
+    Type="java.lang.String"/>
+  <Variable
+    Name="motPasse"
+    Kind="where"
+    Type="java.lang.String"/>
+  <SQLQuery><![CDATA[SELECT PAuditeur.NOAUDITEUR, 
+       PAuditeur.CODEAUDITEUR, 
+       PAuditeur.MOTDEPASSE, 
+       PAuditeur.NOM, 
+       PAuditeur.PRENOM, 
+       PAuditeur.NOCOORD, 
+       PAuditeur.JUGE, 
+       PAuditeur.STATUT, 
+       PAuditeur.CANDIDATJUGE, 
+       PAuditeur.ADMIN
+FROM P_AUDITEUR PAuditeur
+where PAuditeur.CODEAUDITEUR = :nomUsager and
+PAuditeur.MOTDEPASSE = :motPasse]]></SQLQuery>
+  <EntityUsage
+    Name="PAuditeur"
+    Entity="model.entity.PAuditeur"/>
+  <ViewAttribute
+    Name="Noauditeur"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Noauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="NOAUDITEUR"
+    IsUpdateable="while_insert"/>
+  <ViewAttribute
+    Name="Codeauditeur"
+    PrecisionRule="true"
+    EntityAttrName="Codeauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="CODEAUDITEUR"/>
+  <ViewAttribute
+    Name="Motdepasse"
+    PrecisionRule="true"
+    EntityAttrName="Motdepasse"
+    EntityUsage="PAuditeur"
+    AliasName="MOTDEPASSE"/>
+  <ViewAttribute
+    Name="Nom"
+    PrecisionRule="true"
+    EntityAttrName="Nom"
+    EntityUsage="PAuditeur"
+    AliasName="NOM"/>
+  <ViewAttribute
+    Name="Prenom"
+    PrecisionRule="true"
+    EntityAttrName="Prenom"
+    EntityUsage="PAuditeur"
+    AliasName="PRENOM"/>
+  <ViewAttribute
+    Name="Nocoord"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PAuditeur"
+    AliasName="NOCOORD"/>
+  <ViewAttribute
+    Name="Juge"
+    PrecisionRule="true"
+    EntityAttrName="Juge"
+    EntityUsage="PAuditeur"
+    AliasName="JUGE"/>
+  <ViewAttribute
+    Name="Statut"
+    PrecisionRule="true"
+    EntityAttrName="Statut"
+    EntityUsage="PAuditeur"
+    AliasName="STATUT"/>
+  <ViewAttribute
+    Name="Candidatjuge"
+    PrecisionRule="true"
+    EntityAttrName="Candidatjuge"
+    EntityUsage="PAuditeur"
+    AliasName="CANDIDATJUGE"/>
+  <ViewAttribute
+    Name="Admin"
+    PrecisionRule="true"
+    EntityAttrName="Admin"
+    EntityUsage="PAuditeur"
+    AliasName="ADMIN"/>
+  <ViewLinkAccessor
+    Name="PEvaluationView"
+    ViewLink="model.view.link.PEvaluationAudjugeFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PInscriptionView"
+    ViewLink="model.view.link.PInscriptionAuditeurFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ClientRowInterface>
+    <Method
+      Name="rentrerMDP"
+      MethodName="rentrerMDP">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientRowInterface>
+</ViewObject>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.2.60.81" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/home.jsf" usageId="view_homePageDef"/>
+    <page path="/loginAuditeur/enregistrement.jsff"
+          usageId="view_enregistrementPageDef"/>
+    <page path="/WEB-INF/TF_loginAuditeur.xml#TF_loginAuditeur@auditeurConnecte1"
+          usageId="view_TF_loginAuditeur_TF_loginAuditeur_auditeurConnecte1PageDef"/>
+    <page path="/WEB-INF/TF_loginAuditeur.xml#TF_loginAuditeur@CreateInsert1"
+          usageId="view_TF_loginAuditeur_TF_loginAuditeur_CreateInsert1PageDef"/>
+    <page path="/menuAuditeur/menu.jsff" usageId="view_menuPageDef"/>
+    <page path="/menuAuditeur/changeMotDePasse.jsff"
+          usageId="view_changeMotDePassePageDef"/>
+    <page path="/menuAuditeur/devenirjuge.jsff"
+          usageId="view_devenirjugePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_homePageDef" path="view.pageDefs.homePageDef"/>
+    <page id="view_enregistrementPageDef"
+          path="loginAuditeur.enregistrementPageDef"/>
+    <page id="view_TF_loginAuditeur_TF_loginAuditeur_auditeurConnecte1PageDef"
+          path="view.pageDefs.TF_loginAuditeur_TF_loginAuditeur_auditeurConnecte1PageDef"/>
+    <page id="view_TF_loginAuditeur_TF_loginAuditeur_CreateInsert1PageDef"
+          path="view.pageDefs.TF_loginAuditeur_TF_loginAuditeur_CreateInsert1PageDef"/>
+    <page id="view_menuPageDef" path="menuAuditeur.menuPageDef"/>
+    <page id="view_changeMotDePassePageDef"
+          path="menuAuditeur.changeMotDePassePageDef"/>
+    <page id="view_devenirjugePageDef"
+          path="menuAuditeur.devenirjugePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model.appMod"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

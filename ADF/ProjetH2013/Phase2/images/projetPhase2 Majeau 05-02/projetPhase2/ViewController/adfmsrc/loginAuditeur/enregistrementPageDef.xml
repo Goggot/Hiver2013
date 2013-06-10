@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="enregistrementPageDef"
+                Package="loginAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PauditeurCooord3" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PauditeurCooord3Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="PauditeurCooord3Iterator"
+                     id="Codeauditeur">
+      <AttrNames>
+        <Item Value="Codeauditeur"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Motdepasse">
+      <AttrNames>
+        <Item Value="Motdepasse"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Prenom">
+      <AttrNames>
+        <Item Value="Prenom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Statut">
+      <AttrNames>
+        <Item Value="Statut"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="CodePostal">
+      <AttrNames>
+        <Item Value="CodePostal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Courriel">
+      <AttrNames>
+        <Item Value="Courriel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Noregion">
+      <AttrNames>
+        <Item Value="Noregion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Rue">
+      <AttrNames>
+        <Item Value="Rue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Telephone">
+      <AttrNames>
+        <Item Value="Telephone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator" id="Ville">
+      <AttrNames>
+        <Item Value="Ville"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PauditeurCooord3Iterator"
+                     id="Candidatjuge">
+      <AttrNames>
+        <Item Value="Candidatjuge"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true"
+            Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction"
+            DataControl="AppModuleDataControl"/>
+    <list IterBinding="PauditeurCooord3Iterator" StaticList="false"
+          Uses="LOV_Noregion" id="Noregion1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

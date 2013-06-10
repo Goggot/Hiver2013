@@ -1,0 +1,437 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">aad65d56-defc-44e8-8b58-524ebf304331</identifier>
+  </ID>
+  <name>P_SUIVI_ATELIER</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e227c5ed-0d52-4e7c-9376-55590f35bf30</identifier>
+      </ID>
+      <name>NO_SUIVI_ATEL</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">b3d8ef7f-b665-4109-815e-c5366e9e7f71</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">4</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>NO_SUIVI_ATEL</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_SUIVI_ATELIER</name>
+                  <identifier class="java.math.BigDecimal">371213</identifier>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NO_SUIVI_ATEL</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_SUIVI_ATELIER</name>
+              <identifier class="java.math.BigDecimal">371213</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">119159f8-5b10-4441-bea2-44ae0e5fdc86</identifier>
+      </ID>
+      <name>NO_ATEL</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">96ace8a5-46a2-457b-8717-12930e4bed15</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">4</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>NO_ATEL</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_SUIVI_ATELIER</name>
+                  <identifier class="java.math.BigDecimal">371213</identifier>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NO_ATEL</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_SUIVI_ATELIER</name>
+              <identifier class="java.math.BigDecimal">371213</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">cabf6a33-51b9-43de-a671-5dee8d132243</identifier>
+      </ID>
+      <name>NO_ANCIEN_LOCAL</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e624b771-f7cc-406a-aae5-318cd71feb0e</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>NO_ANCIEN_LOCAL</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_SUIVI_ATELIER</name>
+                  <identifier class="java.math.BigDecimal">371213</identifier>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NO_ANCIEN_LOCAL</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_SUIVI_ATELIER</name>
+              <identifier class="java.math.BigDecimal">371213</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">042c06db-989e-4f84-b8ae-4a16eff4cca5</identifier>
+      </ID>
+      <name>P_SUIVI_ATELIER_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NO_SUIVI_ATEL</name>
+          <identifier class="java.lang.String">e227c5ed-0d52-4e7c-9376-55590f35bf30</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>P_SUIVI_ATELIER</name>
+            <identifier class="java.lang.String">aad65d56-defc-44e8-8b58-524ebf304331</identifier>
+            <schemaName>H12MAJEAMA</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>H12MAJEAMA</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>P_SUIVI_ATELIER_PK</name>
+        <identifier class="java.lang.String">0100ffa8-2778-47df-a771-fb3374a22cb5</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>P_SUIVI_ATELIER</name>
+          <identifier class="java.lang.String">aad65d56-defc-44e8-8b58-524ebf304331</identifier>
+          <schemaName>H12MAJEAMA</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>H12MAJEAMA</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>P_SUIVI_ATELIER_PK</name>
+            <childObjectNames>
+              <childObjectName>NO_SUIVI_ATEL</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_SUIVI_ATELIER</name>
+              <identifier class="java.math.BigDecimal">371213</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">0100ffa8-2778-47df-a771-fb3374a22cb5</identifier>
+      </ID>
+      <name>P_SUIVI_ATELIER_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">9d619ca3-878f-4264-ac1a-13ed1fbcb732</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">eda1fabd-a2a5-4f74-adfc-88955bcaf603</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>NO_SUIVI_ATEL</name>
+              <identifier class="java.lang.String">e227c5ed-0d52-4e7c-9376-55590f35bf30</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>P_SUIVI_ATELIER</name>
+                <identifier class="java.lang.String">aad65d56-defc-44e8-8b58-524ebf304331</identifier>
+                <schemaName>H12MAJEAMA</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>P_SUIVI_ATELIER_PK</name>
+                      <identifier class="java.math.BigDecimal">371214</identifier>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <name>P_SUIVI_ATELIER</name>
+                        <identifier class="java.math.BigDecimal">371213</identifier>
+                        <schemaName>H12MAJEAMA</schemaName>
+                        <type>TABLE</type>
+                      </parent>
+                      <schemaName>H12MAJEAMA</schemaName>
+                      <type>INDEX</type>
+                    </parent>
+                    <type>IndexObject</type>
+                  </parent>
+                  <type>SQLFragment</type>
+                </value>
+              </entry>
+            </properties>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_SUIVI_ATELIER_PK</name>
+                  <identifier class="java.math.BigDecimal">371214</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>P_SUIVI_ATELIER</name>
+                    <identifier class="java.math.BigDecimal">371213</identifier>
+                    <schemaName>H12MAJEAMA</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>P_SUIVI_ATELIER_PK</name>
+            <identifier class="java.math.BigDecimal">371214</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_SUIVI_ATELIER</name>
+              <identifier class="java.math.BigDecimal">371213</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>H12MAJEAMA</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">be8e3468-1f31-40e6-ad91-97a02536b9e4</identifier>
+            </ID>
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>2147483645</maxExtent>
+            <minExtent>1</minExtent>
+            <nextExtent>1048576</nextExtent>
+            <percentFree>10</percentFree>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>P_SUIVI_ATELIER_PK</name>
+                    <identifier class="java.math.BigDecimal">371214</identifier>
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>P_SUIVI_ATELIER</name>
+                      <identifier class="java.math.BigDecimal">371213</identifier>
+                      <schemaName>H12MAJEAMA</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>H12MAJEAMA</schemaName>
+                    <type>INDEX</type>
+                  </parent>
+                  <type>OracleStorageProperties</type>
+                </value>
+              </entry>
+            </properties>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>H12</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>H12MAJEAMA</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">Connection</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>P_SUIVI_ATELIER</name>
+        <identifier class="java.math.BigDecimal">371213</identifier>
+        <schemaName>H12MAJEAMA</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">fe4c61d2-ddd9-4fda-a259-631590f92951</identifier>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <minExtent>1</minExtent>
+        <nextExtent>1048576</nextExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>P_SUIVI_ATELIER</name>
+                <identifier class="java.math.BigDecimal">371213</identifier>
+                <schemaName>H12MAJEAMA</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>H12</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>H12MAJEAMA</name>
+  </schema>
+</table>

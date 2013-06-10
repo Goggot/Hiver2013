@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PAuditeur"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="P_AUDITEUR"
+  AliasName="PAuditeur"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  RowClass="model.entity.PAuditeurImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="Seq_coord1"
+    ViewObjectName="model.view.lecture.Seq_coord"
+    RowLevelBinds="true"/>
+  <Attribute
+    Name="Noauditeur"
+    Precision="4"
+    Scale="0"
+    ColumnName="NOAUDITEUR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_AUDITEUR"
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    IsUpdateable="while_insert"/>
+  <Attribute
+    Name="Codeauditeur"
+    Precision="7"
+    ColumnName="CODEAUDITEUR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_AUDITEUR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Motdepasse"
+    Precision="7"
+    ColumnName="MOTDEPASSE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_AUDITEUR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nom"
+    Precision="60"
+    ColumnName="NOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_AUDITEUR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Prenom"
+    Precision="40"
+    ColumnName="PRENOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_AUDITEUR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="40"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nocoord"
+    Precision="5"
+    Scale="0"
+    ColumnName="NOCOORD"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_AUDITEUR"/>
+  <Attribute
+    Name="Juge"
+    ColumnName="JUGE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="P_AUDITEUR"/>
+  <Attribute
+    Name="Statut"
+    Precision="1"
+    ColumnName="STATUT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="P_AUDITEUR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Candidatjuge"
+    ColumnName="CANDIDATJUGE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="P_AUDITEUR"/>
+  <Attribute
+    Name="Admin"
+    Precision="1"
+    Scale="0"
+    ColumnName="ADMIN"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="P_AUDITEUR"/>
+  <AccessorAttribute
+    Name="PCoordonnees"
+    Association="model.entity.assoc.PAuditeurCoordonneesFkAssoc"
+    AssociationEnd="model.entity.assoc.PAuditeurCoordonneesFkAssoc.PCoordonnees"
+    AssociationOtherEnd="model.entity.assoc.PAuditeurCoordonneesFkAssoc.PAuditeur"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PEvaluation"
+    Association="model.entity.assoc.PEvaluationAudjugeFkAssoc"
+    AssociationEnd="model.entity.assoc.PEvaluationAudjugeFkAssoc.PEvaluation"
+    AssociationOtherEnd="model.entity.assoc.PEvaluationAudjugeFkAssoc.PAuditeur"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="PInscription"
+    Association="model.entity.assoc.PInscriptionAuditeurFkAssoc"
+    AssociationEnd="model.entity.assoc.PInscriptionAuditeurFkAssoc.PInscription"
+    AssociationOtherEnd="model.entity.assoc.PInscriptionAuditeurFkAssoc.PAuditeur"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PAuditeurNoPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="P_AUDITEUR_NO_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.PAuditeur.Noauditeur"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PAuditeurCoordonneesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="P_COORDONNÉES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="P_AUDITEUR_COORDONNEES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.PAuditeur.Nocoord"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

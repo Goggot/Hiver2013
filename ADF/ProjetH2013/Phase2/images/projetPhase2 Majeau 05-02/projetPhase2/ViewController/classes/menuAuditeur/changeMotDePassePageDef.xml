@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="changeMotDePassePageDef"
+                Package="menuAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PAuditeurView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PAuditeurView1Iterator"/>
+    <iterator Binds="PAuditeur1" RangeSize="10"
+              DataControl="AppModuleDataControl" id="PAuditeur1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Motdepasse">
+      <AttrNames>
+        <Item Value="Motdepasse"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Prenom">
+      <AttrNames>
+        <Item Value="Prenom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="PAuditeurView1Iterator" id="rentrerMDP"
+                  InstanceName="bindings.PAuditeurView1Iterator.currentRow"
+                  DataControl="AppModuleDataControl"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="rentrerMDP" IsViewObjectMethod="false"
+                  IsLocalObjectReference="true">
+      <NamedData NDName="value"
+                 NDValue="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.champConfirme.value}"
+                 NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PExpoView"
+  Version="11.1.2.60.81"
+  SelectList="PExpo.NOEXPO, 
+       PExpo.DATE_DEBUT, 
+       PExpo.DATE_FIN, 
+       PExpo.NOMHOTEL, 
+       PExpo.NOCOORD, 
+       PExpo.CREEPAR"
+  FromList="P_EXPO PExpo"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="PExpo"
+    Entity="model.entity.PExpo"/>
+  <ViewAttribute
+    Name="Noexpo"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Noexpo"
+    EntityUsage="PExpo"
+    AliasName="NOEXPO"/>
+  <ViewAttribute
+    Name="DateDebut"
+    PrecisionRule="true"
+    EntityAttrName="DateDebut"
+    EntityUsage="PExpo"
+    AliasName="DATE_DEBUT"/>
+  <ViewAttribute
+    Name="DateFin"
+    PrecisionRule="true"
+    EntityAttrName="DateFin"
+    EntityUsage="PExpo"
+    AliasName="DATE_FIN"/>
+  <ViewAttribute
+    Name="Nomhotel"
+    PrecisionRule="true"
+    EntityAttrName="Nomhotel"
+    EntityUsage="PExpo"
+    AliasName="NOMHOTEL"/>
+  <ViewAttribute
+    Name="Nocoord"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PExpo"
+    AliasName="NOCOORD"/>
+  <ViewAttribute
+    Name="Creepar"
+    PrecisionRule="true"
+    EntityAttrName="Creepar"
+    EntityUsage="PExpo"
+    AliasName="CREEPAR"/>
+  <ViewLinkAccessor
+    Name="PAtelierView"
+    ViewLink="model.view.link.PAtelierExpoFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PLocalView"
+    ViewLink="model.view.link.PLocalRegionFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="loginAuditeur">
+    <default-activity>login</default-activity>
+    <view id="login">
+      <page>/loginAuditeur/login.jsff</page>
+    </view>
+    <view id="enregistrement">
+      <page>/loginAuditeur/enregistrement.jsff</page>
+    </view>
+    <router id="décisionconnecte">
+      <case id="__15">
+        <expression>#{pageFlowScope.varresult eq '0'}</expression>
+        <outcome>echec</outcome>
+      </case>
+      <case id="__16">
+        <expression>#{pageFlowScope.varresult eq '1'}</expression>
+        <outcome>auditeur</outcome>
+      </case>
+      <case id="__17">
+        <expression>#{pageFlowScope.varresult eq '2'}</expression>
+        <outcome>admin</outcome>
+      </case>
+      <default-outcome>echec</default-outcome>
+    </router>
+    <method-call id="CreateInsert1">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="auditeurConnecte">
+      <method>#{bindings.auditeurConnecte.execute}</method>
+      <return-value>#{pageFlowScope.varresult}</return-value>
+      <outcome>
+        <fixed-outcome>decision</fixed-outcome>
+      </outcome>
+    </method-call>
+    <task-flow-call id="TF_MenuAuditeur">
+      <task-flow-reference>
+        <document>/WEB-INF/TF_MenuAuditeur.xml</document>
+        <id>TF_MenuAuditeur</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="TF_MenuAdmin">
+      <task-flow-reference>
+        <document>/WEB-INF/TF_MenuAdmin.xml</document>
+        <id>TF_MenuAdmin</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>login</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>newAuditeur</from-outcome>
+        <to-activity-id>CreateInsert1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__2">
+        <from-outcome>connecte</from-outcome>
+        <to-activity-id>auditeurConnecte</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>décisionconnecte</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>echec</from-outcome>
+        <to-activity-id>login</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__18">
+        <from-outcome>auditeur</from-outcome>
+        <to-activity-id>TF_MenuAuditeur</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__10">
+        <from-outcome>admin</from-outcome>
+        <to-activity-id>TF_MenuAdmin</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>enregistrement</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>annuler</from-outcome>
+        <to-activity-id>login</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>terminernew</from-outcome>
+        <to-activity-id>login</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__13">
+      <from-activity-id>CreateInsert1</from-activity-id>
+      <control-flow-case id="__14">
+        <from-outcome>CreateInsert</from-outcome>
+        <to-activity-id>enregistrement</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>auditeurConnecte</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>decision</from-outcome>
+        <to-activity-id>décisionconnecte</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

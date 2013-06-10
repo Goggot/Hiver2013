@@ -1,0 +1,378 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">f2b35291-b8bb-4faa-8e9a-e5083e4c5641</identifier>
+  </ID>
+  <name>P_CRITERE</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">8e8a886d-8c48-4b90-9a9a-ae9c502c2f83</identifier>
+      </ID>
+      <name>NOCRITERE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">5ae1c65f-6ae6-46a3-a196-4dada9ccd39a</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">2</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>NOCRITERE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_CRITERE</name>
+                  <identifier class="java.math.BigDecimal">371221</identifier>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NOCRITERE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_CRITERE</name>
+              <identifier class="java.math.BigDecimal">371221</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">28d2ffd2-20ae-42ce-9221-e4dce41cbb09</identifier>
+      </ID>
+      <name>NOMCRITERE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">69149e7d-be27-4b21-802c-21ddf58b8caf</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">25</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>NOMCRITERE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_CRITERE</name>
+                  <identifier class="java.math.BigDecimal">371221</identifier>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NOMCRITERE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_CRITERE</name>
+              <identifier class="java.math.BigDecimal">371221</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">f140ab40-dc42-4b6a-bef0-fae496f93b94</identifier>
+      </ID>
+      <name>P_CRITERE_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NOCRITERE</name>
+          <identifier class="java.lang.String">8e8a886d-8c48-4b90-9a9a-ae9c502c2f83</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>P_CRITERE</name>
+            <identifier class="java.lang.String">f2b35291-b8bb-4faa-8e9a-e5083e4c5641</identifier>
+            <schemaName>H12MAJEAMA</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>H12MAJEAMA</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>P_CRITERE_PK</name>
+        <identifier class="java.lang.String">e8287952-b0a5-4492-96e9-5651270dbd51</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>P_CRITERE</name>
+          <identifier class="java.lang.String">f2b35291-b8bb-4faa-8e9a-e5083e4c5641</identifier>
+          <schemaName>H12MAJEAMA</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>H12MAJEAMA</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>P_CRITERE_PK</name>
+            <childObjectNames>
+              <childObjectName>NOCRITERE</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_CRITERE</name>
+              <identifier class="java.math.BigDecimal">371221</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e8287952-b0a5-4492-96e9-5651270dbd51</identifier>
+      </ID>
+      <name>P_CRITERE_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">8ba7336b-1948-4240-93c3-8f86bd76b574</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">cc1f94bd-0b0d-4d5e-8b6b-1b55674bc242</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>NOCRITERE</name>
+              <identifier class="java.lang.String">8e8a886d-8c48-4b90-9a9a-ae9c502c2f83</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>P_CRITERE</name>
+                <identifier class="java.lang.String">f2b35291-b8bb-4faa-8e9a-e5083e4c5641</identifier>
+                <schemaName>H12MAJEAMA</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>P_CRITERE_PK</name>
+                      <identifier class="java.math.BigDecimal">371222</identifier>
+                      <parent class="oracle.javatools.db.ReferenceID">
+                        <name>P_CRITERE</name>
+                        <identifier class="java.math.BigDecimal">371221</identifier>
+                        <schemaName>H12MAJEAMA</schemaName>
+                        <type>TABLE</type>
+                      </parent>
+                      <schemaName>H12MAJEAMA</schemaName>
+                      <type>INDEX</type>
+                    </parent>
+                    <type>IndexObject</type>
+                  </parent>
+                  <type>SQLFragment</type>
+                </value>
+              </entry>
+            </properties>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>P_CRITERE_PK</name>
+                  <identifier class="java.math.BigDecimal">371222</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>P_CRITERE</name>
+                    <identifier class="java.math.BigDecimal">371221</identifier>
+                    <schemaName>H12MAJEAMA</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>H12MAJEAMA</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>P_CRITERE_PK</name>
+            <identifier class="java.math.BigDecimal">371222</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>P_CRITERE</name>
+              <identifier class="java.math.BigDecimal">371221</identifier>
+              <schemaName>H12MAJEAMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>H12MAJEAMA</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">fe864445-0635-43dd-bf25-cb0fef315127</identifier>
+            </ID>
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>2147483645</maxExtent>
+            <minExtent>1</minExtent>
+            <nextExtent>1048576</nextExtent>
+            <percentFree>10</percentFree>
+            <properties>
+              <entry>
+                <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+                <value class="oracle.javatools.db.ReferenceID">
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>P_CRITERE_PK</name>
+                    <identifier class="java.math.BigDecimal">371222</identifier>
+                    <parent class="oracle.javatools.db.ReferenceID">
+                      <name>P_CRITERE</name>
+                      <identifier class="java.math.BigDecimal">371221</identifier>
+                      <schemaName>H12MAJEAMA</schemaName>
+                      <type>TABLE</type>
+                    </parent>
+                    <schemaName>H12MAJEAMA</schemaName>
+                    <type>INDEX</type>
+                  </parent>
+                  <type>OracleStorageProperties</type>
+                </value>
+              </entry>
+            </properties>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>H12</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>H12MAJEAMA</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">Connection</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>P_CRITERE</name>
+        <identifier class="java.math.BigDecimal">371221</identifier>
+        <schemaName>H12MAJEAMA</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">97170c10-f4da-4c2d-b6d3-f2a446172a51</identifier>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <minExtent>1</minExtent>
+        <nextExtent>1048576</nextExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>P_CRITERE</name>
+                <identifier class="java.math.BigDecimal">371221</identifier>
+                <schemaName>H12MAJEAMA</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>H12</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>H12MAJEAMA</name>
+  </schema>
+</table>

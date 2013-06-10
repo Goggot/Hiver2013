@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="TF_MenuAuditeur">
+    <default-activity>menu</default-activity>
+    <managed-bean id="__17">
+      <managed-bean-name>beannewmdp</managed-bean-name>
+      <managed-bean-class>view.bean</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="menu">
+      <page>/menuauditeur/menu.jsff</page>
+    </view>
+    <view id="evaluationAtelier">
+      <page>/menuauditeur/evaluationAtelier.jsff</page>
+    </view>
+    <view id="devenirJuge">
+      <page>/menuauditeur/devenirJuge.jsff</page>
+    </view>
+    <view id="infoPersonnel">
+      <page>/menuauditeur/infoPersonnel.jsff</page>
+    </view>
+    <view id="changerMDP">
+      <page>/menuauditeur/changerMDP.jsff</page>
+    </view>
+    <view id="ajoutAtelier">
+      <page>/menuauditeur/ajoutAtelier.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>menu</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>changerMDP</from-outcome>
+        <to-activity-id>changerMDP</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>evaluation</from-outcome>
+        <to-activity-id>evaluationAtelier</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>juge</from-outcome>
+        <to-activity-id>devenirJuge</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__16">
+        <from-outcome>infoperso</from-outcome>
+        <to-activity-id>infoPersonnel</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>ajoutatelier</from-outcome>
+        <to-activity-id>ajoutAtelier</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>changerMDP</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>retour</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>evaluationAtelier</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>retour</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>devenirJuge</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>retour</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__13">
+      <from-activity-id>infoPersonnel</from-activity-id>
+      <control-flow-case id="__14">
+        <from-outcome>retour</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>ajoutAtelier</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome>retour</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+  <af:panelFormLayout id="pfl1"
+                      binding="#{backingBeanScope.backing_loginAuditeur_login2.pfl1}">
+    <f:facet name="footer"/>
+    <af:inputText label="Code Usager" id="codeUsage"
+                  binding="#{backingBeanScope.backing_loginAuditeur_login2.codeUsage}"
+                  value="#{pageFlowScope.codeUsagerLu}"/>
+    <af:inputText label="Mot de passe" id="mdp"
+                  binding="#{backingBeanScope.backing_loginAuditeur_login2.mdp}"
+                  value="#{pageFlowScope.codeMDPLu}"/>
+    <af:panelGroupLayout id="pgl1"
+                         binding="#{backingBeanScope.backing_loginAuditeur_login2.pgl1}"
+                         layout="horizontal">
+      <af:commandButton text="Login" id="boutonLogin"
+                        binding="#{backingBeanScope.backing_loginAuditeur_login2.boutonLogin}"
+                        action="loginVSac"/>
+      <h:commandLink value="S'enregistrer" id="enregistrer"
+                     binding="#{backingBeanScope.backing_loginAuditeur_login2.enregistrer}"
+                     action="loginVSnouveau"/>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl2"
+                         binding="#{backingBeanScope.backing_loginAuditeur_login2.pgl2}"
+                         layout="horizontal">
+      <af:outputText value="Code ou mot de passe invalide" id="messageErreur"
+                     binding="#{backingBeanScope.backing_loginAuditeur_login2.messageErreur}"
+                     inlineStyle="font-size:medium;"
+                     rendered="#{pageFlowScope.retour eq '3'}"/>
+    </af:panelGroupLayout>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_loginAuditeur_login2-->
+</ui:composition>

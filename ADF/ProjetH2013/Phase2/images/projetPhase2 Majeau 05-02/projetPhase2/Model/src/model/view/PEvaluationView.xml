@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PEvaluationView"
+  Version="11.1.2.60.81"
+  SelectList="PEvaluation.NOEVAL, 
+       PEvaluation.NOAUDITEUR, 
+       PEvaluation.NOATEL, 
+       PEvaluation.NOCRITERE, 
+       PEvaluation.COTE"
+  FromList="P_EVALUATION PEvaluation"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="PEvaluation"
+    Entity="model.entity.PEvaluation"/>
+  <ViewAttribute
+    Name="Noeval"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Noeval"
+    EntityUsage="PEvaluation"
+    AliasName="NOEVAL"/>
+  <ViewAttribute
+    Name="Noauditeur"
+    PrecisionRule="true"
+    EntityAttrName="Noauditeur"
+    EntityUsage="PEvaluation"
+    AliasName="NOAUDITEUR"/>
+  <ViewAttribute
+    Name="Noatel"
+    PrecisionRule="true"
+    EntityAttrName="Noatel"
+    EntityUsage="PEvaluation"
+    AliasName="NOATEL"/>
+  <ViewAttribute
+    Name="Nocritere"
+    PrecisionRule="true"
+    EntityAttrName="Nocritere"
+    EntityUsage="PEvaluation"
+    AliasName="NOCRITERE"/>
+  <ViewAttribute
+    Name="Cote"
+    PrecisionRule="true"
+    EntityAttrName="Cote"
+    EntityUsage="PEvaluation"
+    AliasName="COTE"/>
+</ViewObject>

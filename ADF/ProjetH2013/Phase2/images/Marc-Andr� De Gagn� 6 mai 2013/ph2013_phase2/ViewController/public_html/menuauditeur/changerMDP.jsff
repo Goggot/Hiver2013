@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1"
+                      binding="#{backingBeanScope.backing_menuauditeur_changerMDP.pfl1}">
+    <f:facet name="footer"/>
+    <af:inputText label="Mot de Passe actuel : " id="it1"
+                  binding="#{backingBeanScope.backing_menuauditeur_changerMDP.it1}" secret="true"/>
+    <af:inputText label="Nouveau mot de Passe : " id="it2"
+                  binding="#{backingBeanScope.backing_menuauditeur_changerMDP.it2}"
+                  secret="true"/>
+    <af:inputText label="Confirmer mot de passe :" id="it3"
+                  binding="#{backingBeanScope.backing_menuauditeur_changerMDP.it3}"
+                  secret="true"/>
+    <af:commandButton text="Appliquer" id="cb1"
+                      binding="#{backingBeanScope.backing_menuauditeur_changerMDP.cb1}"
+                      action="#{backingBeanScope.backing_menuauditeur_changerMDP.cb1_action}"/>
+    <af:commandButton text="Retour" id="cb2"
+                      binding="#{backingBeanScope.backing_menuauditeur_changerMDP.cb2}"
+                      action="retour"/>
+    <af:outputLabel value="outputLabel1" id="ol1"
+                    binding="#{backingBeanScope.backing_menuauditeur_changerMDP.ol1}"
+                    visible="false"/>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_menuauditeur_changerMDP-->
+</ui:composition>

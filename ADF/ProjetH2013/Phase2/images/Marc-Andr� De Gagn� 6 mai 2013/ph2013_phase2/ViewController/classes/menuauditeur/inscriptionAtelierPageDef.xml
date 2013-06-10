@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="inscriptionAtelierPageDef"
+                Package="menuauditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PAtelierView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PAtelierView1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="PAtelierView1Iterator"
+                  id="ImplicitViewCriteriaQuery"/>
+    <iterator Binds="PInscriptionView4" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PInscriptionView4Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="PAtelierView1Iterator" id="PAtelierView1">
+      <nodeDefinition DefName="model.view.PAtelierView"
+                      Name="PAtelierView10">
+        <AttrNames>
+          <Item Value="Noatel"/>
+          <Item Value="Noexpo"/>
+          <Item Value="Titre"/>
+          <Item Value="Langue"/>
+          <Item Value="AcetateElec"/>
+          <Item Value="Portable"/>
+          <Item Value="Duree"/>
+          <Item Value="Nbmaximum"/>
+          <Item Value="Noexposant"/>
+          <Item Value="Nocategorie"/>
+          <Item Value="Notype"/>
+          <Item Value="Nolocal"/>
+          <Item Value="Dateatel"/>
+          <Item Value="Creepar"/>
+          <Item Value="Datecreation"/>
+          <Item Value="Coutetudiant"/>
+          <Item Value="Coutregulier"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="PInscriptionView4Iterator" id="PInscriptionView4">
+      <nodeDefinition DefName="model.view.PInscriptionView"
+                      Name="PInscriptionView40">
+        <AttrNames>
+          <Item Value="Noauditeur"/>
+          <Item Value="Noatel"/>
+          <Item Value="Dateinscription"/>
+          <Item Value="ModePaiement"/>
+          <Item Value="NoCarte"/>
+          <Item Value="NoCheque"/>
+          <Item Value="DateExpire"/>
+          <Item Value="Acquitter"/>
+          <Item Value="Confirmationenvoyee"/>
+          <Item Value="Creepar"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

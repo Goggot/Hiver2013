@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PAtelierTypeFkLink"
+  Version="11.1.2.60.81"
+  EntityAssociation="model.entity.assoc.PAtelierTypeFkAssoc">
+  <ViewLinkDefEnd
+    Name="PTypeView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.view.PTypeView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="PTypeView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.PTypeView.Notype"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="PAtelierView"
+    Cardinality="-1"
+    Owner="model.view.PAtelierView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="PAtelierView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.PAtelierView.Notype"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

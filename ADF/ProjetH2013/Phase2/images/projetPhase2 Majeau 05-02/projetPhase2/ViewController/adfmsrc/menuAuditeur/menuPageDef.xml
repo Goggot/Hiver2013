@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="menuPageDef"
+                Package="menuAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PAuditeurView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PAuditeurView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Prenom">
+      <AttrNames>
+        <Item Value="Prenom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

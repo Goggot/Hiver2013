@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PAuditeur_Coord"
+  Version="11.1.2.60.81"
+  SelectList="PAuditeur.ADMIN, 
+       PAuditeur.CANDIDATJUGE, 
+       PAuditeur.CODEAUDITEUR, 
+       PAuditeur.JUGE, 
+       PAuditeur.MOTDEPASSE, 
+       PAuditeur.NOAUDITEUR, 
+       PAuditeur.NOCOORD, 
+       PAuditeur.NOM, 
+       PAuditeur.PRENOM, 
+       PAuditeur.STATUT, 
+       PCoordonnees.CELL, 
+       PCoordonnees.CODE_POSTAL, 
+       PCoordonnees.COURRIEL, 
+       PCoordonnees.NOCOORD AS NOCOORD1, 
+       PCoordonnees.NOREGION, 
+       PCoordonnees.RUE, 
+       PCoordonnees.TELEPHONE, 
+       PCoordonnees.VILLE"
+  FromList="P_AUDITEUR PAuditeur, P_COORDONNEES PCoordonnees"
+  Where="PAuditeur.NOCOORD = PCoordonnees.NOCOORD"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="model.view.PAuditeur_CoordRowImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.view.PAuditeur_Coord_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ListBinding
+    Name="LOV_Noregion"
+    ListVOName="PRegionView1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Noregion"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Noregion"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomregion"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="PAuditeur"
+    Entity="model.entity.PAuditeur"/>
+  <EntityUsage
+    Name="PCoordonnees"
+    Entity="model.entity.PCoordonnees"
+    Association="model.entity.assoc.PAuditeurCoordonneesFkAssoc"
+    AssociationEnd="model.entity.assoc.PAuditeurCoordonneesFkAssoc.PCoordonnees"
+    SourceUsage="model.view.PAuditeur_Coord.PAuditeur"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.entity.PAuditeur.Nocoord"/>
+      </AttrArray>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.entity.PCoordonnees.Nocoord"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="Admin"
+    PrecisionRule="true"
+    EntityAttrName="Admin"
+    EntityUsage="PAuditeur"
+    AliasName="ADMIN"/>
+  <ViewAttribute
+    Name="Candidatjuge"
+    PrecisionRule="true"
+    EntityAttrName="Candidatjuge"
+    EntityUsage="PAuditeur"
+    AliasName="CANDIDATJUGE"/>
+  <ViewAttribute
+    Name="Codeauditeur"
+    PrecisionRule="true"
+    EntityAttrName="Codeauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="CODEAUDITEUR"/>
+  <ViewAttribute
+    Name="Juge"
+    PrecisionRule="true"
+    EntityAttrName="Juge"
+    EntityUsage="PAuditeur"
+    AliasName="JUGE"/>
+  <ViewAttribute
+    Name="Motdepasse"
+    PrecisionRule="true"
+    EntityAttrName="Motdepasse"
+    EntityUsage="PAuditeur"
+    AliasName="MOTDEPASSE"/>
+  <ViewAttribute
+    Name="Noauditeur"
+    IsUpdateable="while_insert"
+    PrecisionRule="true"
+    EntityAttrName="Noauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="NOAUDITEUR"/>
+  <ViewAttribute
+    Name="Nocoord"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PAuditeur"
+    AliasName="NOCOORD"/>
+  <ViewAttribute
+    Name="Nom"
+    PrecisionRule="true"
+    EntityAttrName="Nom"
+    EntityUsage="PAuditeur"
+    AliasName="NOM"/>
+  <ViewAttribute
+    Name="Prenom"
+    PrecisionRule="true"
+    EntityAttrName="Prenom"
+    EntityUsage="PAuditeur"
+    AliasName="PRENOM"/>
+  <ViewAttribute
+    Name="Statut"
+    PrecisionRule="true"
+    EntityAttrName="Statut"
+    EntityUsage="PAuditeur"
+    AliasName="STATUT"/>
+  <ViewAttribute
+    Name="Cell"
+    PrecisionRule="true"
+    EntityAttrName="Cell"
+    EntityUsage="PCoordonnees"
+    AliasName="CELL"/>
+  <ViewAttribute
+    Name="CodePostal"
+    PrecisionRule="true"
+    EntityAttrName="CodePostal"
+    EntityUsage="PCoordonnees"
+    AliasName="CODE_POSTAL"/>
+  <ViewAttribute
+    Name="Courriel"
+    PrecisionRule="true"
+    EntityAttrName="Courriel"
+    EntityUsage="PCoordonnees"
+    AliasName="COURRIEL"/>
+  <ViewAttribute
+    Name="Nocoord1"
+    IsUpdateable="while_insert"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PCoordonnees"
+    AliasName="NOCOORD1"/>
+  <ViewAttribute
+    Name="Noregion"
+    PrecisionRule="true"
+    EntityAttrName="Noregion"
+    EntityUsage="PCoordonnees"
+    AliasName="NOREGION"
+    LOVName="LOV_Noregion">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Rue"
+    PrecisionRule="true"
+    EntityAttrName="Rue"
+    EntityUsage="PCoordonnees"
+    AliasName="RUE"/>
+  <ViewAttribute
+    Name="Telephone"
+    PrecisionRule="true"
+    EntityAttrName="Telephone"
+    EntityUsage="PCoordonnees"
+    AliasName="TELEPHONE"/>
+  <ViewAttribute
+    Name="Ville"
+    PrecisionRule="true"
+    EntityAttrName="Ville"
+    EntityUsage="PCoordonnees"
+    AliasName="VILLE"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

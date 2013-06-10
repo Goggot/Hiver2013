@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PAtelierTypeFkAssoc"
+  Version="11.1.2.60.81">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="PType"
+    Cardinality="1"
+    Source="true"
+    Owner="model.entity.PType">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="PType"/>
+      <Attr Name="_foreignKey" Value="model.entity.PType.PTypePk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.PType.Notype"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="PAtelier"
+    Cardinality="-1"
+    Owner="model.entity.PAtelier">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="PAtelier"/>
+      <Attr Name="_foreignKey"
+        Value="model.entity.PAtelier.PAtelierTypeFk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.PAtelier.Notype"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="auditeurInscription"
+  Version="11.1.2.60.81">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.view.link.auditeurInscription_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="PAuditeurLogIn"
+    Cardinality="1"
+    Source="true"
+    Owner="model.view.PAuditeurLogIn">
+    <DesignTime>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="PAuditeurLogIn"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.PAuditeurLogIn.Noauditeur"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="PInscriptionView"
+    Cardinality="-1"
+    Owner="model.view.PInscriptionView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="PInscriptionView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.PInscriptionView.Noauditeur"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

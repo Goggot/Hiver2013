@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="TF_loginAuditeur">
+    <default-activity>login</default-activity>
+    <managed-bean id="__15">
+      <managed-bean-name>backing_loginAuditeur_login</managed-bean-name>
+      <managed-bean-class>view.backing.loginAuditeur.Login</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1loginAuditeur/login.jsff-->
+    </managed-bean>
+    <managed-bean id="__16">
+      <managed-bean-name>backing_loginAuditeur_enregistrement</managed-bean-name>
+      <managed-bean-class>view.backing.loginAuditeur.Enregistrement</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1loginAuditeur/enregistrement.jsff-->
+    </managed-bean>
+    <managed-bean id="__17">
+      <managed-bean-name>backing_loginAuditeur_login2</managed-bean-name>
+      <managed-bean-class>view.backing.loginAuditeur.Login</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1loginAuditeur/login.jsff-->
+    </managed-bean>
+    <managed-bean id="__27">
+      <managed-bean-name>backing_enregistrement</managed-bean-name>
+      <managed-bean-class>view.backing.loginAuditeur.Enregistrement</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1loginAuditeur/enregistrement.jsff-->
+    </managed-bean>
+    <router id="decisionConnecte">
+      <case id="__5">
+        <expression>#{pageFlowScope.retour eq '1'}</expression>
+        <outcome>cdVSmenuA</outcome>
+      </case>
+      <case id="__6">
+        <expression>#{pageFlowScope.retour eq '2'}</expression>
+        <outcome>cdVSadmin</outcome>
+      </case>
+      <case id="__7">
+        <expression>#{pageFlowScope.retour eq '3'}</expression>
+        <outcome>echec</outcome>
+      </case>
+      <default-outcome>echec</default-outcome>
+    </router>
+    <task-flow-call id="TF_menuAuditeur">
+      <task-flow-reference>
+        <document>/WEB-INF/menu_Auditeur.xml</document>
+        <id>menu_Auditeur</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="TF_menuAdministrateur"></task-flow-call>
+    <view id="login">
+      <page>/loginAuditeur/login.jsff</page>
+    </view>
+    <view id="enregistrement">
+      <page>/loginAuditeur/enregistrement.jsff</page>
+    </view>
+    <method-call id="auditeurConnecte1">
+      <method>#{bindings.auditeurConnecte.execute}</method>
+      <return-value>#{pageFlowScope.retour}</return-value>
+      <outcome>
+        <fixed-outcome>acVSdecision</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="CreateInsert1">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>createVSenreg</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__11">
+      <from-activity-id>decisionConnecte</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>cdVSmenuA</from-outcome>
+        <to-activity-id>TF_menuAuditeur</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>cdVSadmin</from-outcome>
+        <to-activity-id>TF_menuAdministrateur</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__26">
+        <from-outcome>echec</from-outcome>
+        <to-activity-id>login</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__20">
+      <from-activity-id>login</from-activity-id>
+      <control-flow-case id="__21">
+        <from-outcome>loginVSnouveau</from-outcome>
+        <to-activity-id>CreateInsert1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__25">
+        <from-outcome>loginVSac</from-outcome>
+        <to-activity-id>auditeurConnecte1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__22">
+      <from-activity-id>enregistrement</from-activity-id>
+      <control-flow-case id="__23">
+        <from-outcome>annuler</from-outcome>
+        <to-activity-id>login</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__24">
+        <from-outcome>terminerNouveau</from-outcome>
+        <to-activity-id>login</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>auditeurConnecte1</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>acVSdecision</from-outcome>
+        <to-activity-id>decisionConnecte</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>CreateInsert1</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>createVSenreg</from-outcome>
+        <to-activity-id>enregistrement</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

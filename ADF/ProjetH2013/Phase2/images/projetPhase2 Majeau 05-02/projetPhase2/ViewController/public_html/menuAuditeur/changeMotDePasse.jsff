@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout id="pgl1"
+                       binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.pgl1}">
+    <af:outputText value="#{bindings.Prenom.inputValue}" id="ot1"
+                   binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.ot1}"/>
+     
+    <af:outputText value="#{bindings.Nom.inputValue}" id="ot2"
+                   binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.ot2}"/>
+  </af:panelGroupLayout>
+  <af:panelFormLayout id="pfl1"
+                      binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.pfl1}">
+    <f:facet name="footer"/>
+    <af:inputText value="#{bindings.Motdepasse.inputValue}"
+                  label="Mot de passe actuel"
+                  required="#{bindings.Motdepasse.hints.mandatory}"
+                  columns="#{bindings.Motdepasse.hints.displayWidth}"
+                  maximumLength="#{bindings.Motdepasse.hints.precision}"
+                  shortDesc="#{bindings.Motdepasse.hints.tooltip}"
+                  id="champActuel"
+                  binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.champActuel}"
+                  readOnly="true">
+      <f:validator binding="#{bindings.Motdepasse.validator}"/>
+    </af:inputText>
+    <af:inputText label="Nouveau mot de passe: " id="champNouveau"
+                  binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.champNouveau}"/>
+    <af:inputText label="Confirmer mot de passe: " id="champConfirme"
+                  binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.champConfirme}"/>
+    <af:outputText value="Mot de passe enregistré" id="ot3"
+                   binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.ot3}"
+                   rendered="false"/>
+    <af:panelGroupLayout id="pgl2"
+                         binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.pgl2}">
+      <af:commandButton
+                        text="Appliquer"
+                        id="cb1"
+                        binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.cb1}"
+                        action="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.cb1_action}"/>
+      <af:commandButton text="Retour" id="cb2"
+                        binding="#{backingBeanScope.backing_menuAuditeur_changeMotDePasse.cb2}"
+                        action="mdpVSmenu"/>
+    </af:panelGroupLayout>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_menuAuditeur_changeMotDePasse-->
+</ui:composition>

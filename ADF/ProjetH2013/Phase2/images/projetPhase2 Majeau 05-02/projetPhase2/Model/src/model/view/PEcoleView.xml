@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PEcoleView"
+  Version="11.1.2.60.81"
+  SelectList="PEcole.NOECOLE, 
+       PEcole.NOMECOLE, 
+       PEcole.TUTEUR, 
+       PEcole.NOCOORD"
+  FromList="P_ECOLE PEcole"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="PEcole"
+    Entity="model.entity.PEcole"/>
+  <ViewAttribute
+    Name="Noecole"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Noecole"
+    EntityUsage="PEcole"
+    AliasName="NOECOLE"/>
+  <ViewAttribute
+    Name="Nomecole"
+    PrecisionRule="true"
+    EntityAttrName="Nomecole"
+    EntityUsage="PEcole"
+    AliasName="NOMECOLE"/>
+  <ViewAttribute
+    Name="Tuteur"
+    PrecisionRule="true"
+    EntityAttrName="Tuteur"
+    EntityUsage="PEcole"
+    AliasName="TUTEUR"/>
+  <ViewAttribute
+    Name="Nocoord"
+    PrecisionRule="true"
+    EntityAttrName="Nocoord"
+    EntityUsage="PEcole"
+    AliasName="NOCOORD"/>
+  <ViewLinkAccessor
+    Name="PExposantView"
+    ViewLink="model.view.link.PExposantEcoleFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

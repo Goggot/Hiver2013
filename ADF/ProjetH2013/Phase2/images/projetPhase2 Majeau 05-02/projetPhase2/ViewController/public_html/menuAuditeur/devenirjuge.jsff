@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:outputText value="Candidature Juge" id="ot3"
+                   binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.ot3}"/>
+    <af:panelGroupLayout id="pgl4"
+                         binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.pgl4}">
+      <af:outputText value="#{bindings.Prenom.inputValue}" id="ot2"
+                     binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.ot2}"/>
+        
+      <af:outputText value="#{bindings.Nom.inputValue}" id="ot1"
+                     binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.ot1}"/>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl1"
+                         binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.pgl1}"
+                         layout="horizontal"
+                         rendered="#{(bindings.Juge.inputValue!=null) &amp;&amp; (bindings.Candidatjuge.inputValue!=null)}">
+      <af:inputDate value="#{bindings.Juge.inputValue}"
+                    required="#{bindings.Juge.hints.mandatory}"
+                    columns="#{bindings.Juge.hints.displayWidth}"
+                    shortDesc="#{bindings.Juge.hints.tooltip}" id="id1"
+                    label="Assignation en tant que juge en date du: ">
+        <f:validator binding="#{bindings.Juge.validator}"/>
+        <af:convertDateTime pattern="#{bindings.Juge.format}"/>
+      </af:inputDate>
+      <af:commandButton actionListener="#{bindings.annulerJuge.execute}"
+                        text="annulerJuge"
+                        disabled="#{!bindings.annulerJuge.enabled}"
+                        id="cb2"
+                        binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.cb2}"/>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl2"
+                         binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.pgl2}"
+                         layout="horizontal"
+                         rendered="#{(bindings.Candidatjuge.inputValue!=null) &amp;&amp; (bindings.Juge.inputValue==null)}">
+      <af:inputDate value="#{bindings.Candidatjuge.inputValue}"
+                    label="Votre traitement en date du: "
+                    required="#{bindings.Candidatjuge.hints.mandatory}"
+                    columns="#{bindings.Candidatjuge.hints.displayWidth}"
+                    shortDesc="#{bindings.Candidatjuge.hints.tooltip}"
+                    id="id2">
+        <f:validator binding="#{bindings.Candidatjuge.validator}"/>
+        <af:convertDateTime pattern="#{bindings.Candidatjuge.format}"/>
+      </af:inputDate>
+      <af:commandButton actionListener="#{bindings.annulerCandi.execute}"
+                        text="annulerCandi"
+                        disabled="#{!bindings.annulerCandi.enabled}"
+                        id="cb3"
+                        binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.cb3}"/>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl3"
+                         binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.pgl3}">
+      <af:commandButton actionListener="#{bindings.soumettreCandi.execute}"
+                        text="soumettreCandi"
+                        disabled="#{!bindings.soumettreCandi.enabled}"
+                        id="cb5"
+                        binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.cb5}"/>
+      <af:commandButton text="retour" id="cb4"
+                        binding="#{backingBeanScope.backing_menuAuditeur_devenirjuge.cb4}"
+                        action="devenirVSmenu"/>
+    </af:panelGroupLayout>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_menuAuditeur_devenirjuge-->
+</ui:composition>

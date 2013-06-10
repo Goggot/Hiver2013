@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PSuiviAtelierView"
+  Version="11.1.2.60.81"
+  SelectList="PSuiviAtelier.NO_SUIVI_ATEL, 
+       PSuiviAtelier.NO_ATEL, 
+       PSuiviAtelier.NO_ANCIEN_LOCAL"
+  FromList="P_SUIVI_ATELIER PSuiviAtelier"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="PSuiviAtelier"
+    Entity="model.entity.PSuiviAtelier"/>
+  <ViewAttribute
+    Name="NoSuiviAtel"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="NoSuiviAtel"
+    EntityUsage="PSuiviAtelier"
+    AliasName="NO_SUIVI_ATEL"/>
+  <ViewAttribute
+    Name="NoAtel"
+    PrecisionRule="true"
+    EntityAttrName="NoAtel"
+    EntityUsage="PSuiviAtelier"
+    AliasName="NO_ATEL"/>
+  <ViewAttribute
+    Name="NoAncienLocal"
+    PrecisionRule="true"
+    EntityAttrName="NoAncienLocal"
+    EntityUsage="PSuiviAtelier"
+    AliasName="NO_ANCIEN_LOCAL"/>
+</ViewObject>

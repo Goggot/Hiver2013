@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PAuditeurLogIn"
+  Version="11.1.2.60.81"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  ComponentClass="model.view.PAuditeurLogInImpl"
+  RowClass="model.view.PAuditeurLogInRowImpl"
+  ComponentInterface="model.view.common.PAuditeurLogIn"
+  ClientProxyName="model.view.client.PAuditeurLogInClient"
+  RowInterface="model.view.common.PAuditeurLogInRow"
+  ClientRowProxyName="model.view.client.PAuditeurLogInRowClient">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|Prog|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.view.PAuditeurLogIn_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="code"
+    Kind="where"
+    Type="java.lang.String"/>
+  <Variable
+    Name="mdp"
+    Kind="where"
+    Type="java.lang.String"/>
+  <SQLQuery><![CDATA[SELECT PAuditeur.MOTDEPASSE, 
+       PAuditeur.NOAUDITEUR, 
+       PAuditeur.CODEAUDITEUR,
+       PAuditeur.ADMIN
+FROM P_AUDITEUR PAuditeur
+where pauditeur.codeauditeur=:code and pauditeur.motdepasse=:mdp]]></SQLQuery>
+  <EntityUsage
+    Name="PAuditeur"
+    Entity="model.entity.PAuditeur"/>
+  <ViewAttribute
+    Name="Motdepasse"
+    PrecisionRule="true"
+    EntityAttrName="Motdepasse"
+    EntityUsage="PAuditeur"
+    AliasName="MOTDEPASSE"/>
+  <ViewAttribute
+    Name="Noauditeur"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Noauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="NOAUDITEUR"
+    IsUpdateable="while_insert"/>
+  <ViewAttribute
+    Name="Codeauditeur"
+    PrecisionRule="true"
+    EntityAttrName="Codeauditeur"
+    EntityUsage="PAuditeur"
+    AliasName="CODEAUDITEUR"/>
+  <ViewAttribute
+    Name="Admin"
+    PrecisionRule="true"
+    EntityAttrName="Admin"
+    EntityUsage="PAuditeur"
+    AliasName="ADMIN1"/>
+  <ViewLinkAccessor
+    Name="PInscriptionView"
+    ViewLink="model.view.link.auditeurInscription"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+  <ClientInterface>
+    <Method
+      Name="auditeurConnecte"
+      MethodName="auditeurConnecte">
+      <Return
+        Type="int"/>
+      <Parameter
+        Name="paramCode"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="paramMotDePasse"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+  <ClientRowInterface>
+    <Method
+      Name="verifierMDP"
+      MethodName="verifierMDP">
+      <Return
+        Type="boolean"/>
+      <Parameter
+        Name="mdp"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="nouveauMDP"
+      MethodName="nouveauMDP">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientRowInterface>
+</ViewObject>

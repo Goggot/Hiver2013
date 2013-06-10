@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="devenirjugePageDef"
+                Package="menuAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PAuditeurView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PAuditeurView1Iterator"/>
+    <iterator Binds="PAuditeur1" RangeSize="25"
+              DataControl="AppModuleDataControl" id="PAuditeur1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Juge">
+      <AttrNames>
+        <Item Value="Juge"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Candidatjuge">
+      <AttrNames>
+        <Item Value="Candidatjuge"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="PAuditeur1Iterator" id="soumettreCandi"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="soumettreCandi" IsViewObjectMethod="false"
+                  DataControl="AppModuleDataControl"
+                  InstanceName="bindings.PAuditeur1Iterator.currentRow"
+                  IsLocalObjectReference="true"/>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurView1Iterator" id="Prenom">
+      <AttrNames>
+        <Item Value="Prenom"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="PAuditeur1Iterator" id="annulerCandi"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="annulerCandi" IsViewObjectMethod="false"
+                  DataControl="AppModuleDataControl"
+                  InstanceName="bindings.PAuditeur1Iterator.currentRow"
+                  IsLocalObjectReference="true"/>
+    <methodAction IterBinding="PAuditeur1Iterator" id="annulerJuge"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="annulerJuge" IsViewObjectMethod="false"
+                  DataControl="AppModuleDataControl"
+                  InstanceName="bindings.PAuditeur1Iterator.currentRow"
+                  IsLocalObjectReference="true"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81"
+                id="TF_loginAuditeur_TF_loginAuditeur_CreateInsert1PageDef"
+                Package="view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="PauditeurCooord3" RangeSize="10"
+              DataControl="AppModuleDataControl"
+              id="PauditeurCooord3Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="PauditeurCooord3Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"
+            InstanceName="AppModuleDataControl.PauditeurCooord3"
+            DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

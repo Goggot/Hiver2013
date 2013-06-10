@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="menu_Auditeur">
+    <default-activity>menu</default-activity>
+    <managed-bean id="__15">
+      <managed-bean-name>backing_evaluationsAtelier</managed-bean-name>
+      <managed-bean-class>view.backing.EvaluationsAtelier</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1evaluationsAtelier.jsff-->
+    </managed-bean>
+    <managed-bean id="__16">
+      <managed-bean-name>backing_menuAuditeur_infopersonelles</managed-bean-name>
+      <managed-bean-class>view.backing.menuAuditeur.Infopersonelles</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1menuAuditeur/infopersonelles.jsff-->
+    </managed-bean>
+    <managed-bean id="__17">
+      <managed-bean-name>backing_menuAuditeur_changeMotDePasse</managed-bean-name>
+      <managed-bean-class>view.backing.menuAuditeur.ChangeMotDePasse</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1menuAuditeur/changeMotDePasse.jsff-->
+    </managed-bean>
+    <managed-bean id="__18">
+      <managed-bean-name>backing_menuAuditeur_evaluationsAtelier</managed-bean-name>
+      <managed-bean-class>view.backing.menuAuditeur.EvaluationsAtelier</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1menuAuditeur/evaluationsAtelier.jsff-->
+    </managed-bean>
+    <managed-bean id="__19">
+      <managed-bean-name>backing_menuAuditeur_devenirjuge</managed-bean-name>
+      <managed-bean-class>view.backing.menuAuditeur.Devenirjuge</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1menuAuditeur/devenirjuge.jsff-->
+    </managed-bean>
+    <view id="menu">
+      <page>/menuAuditeur/menu.jsff</page>
+    </view>
+    <view id="inscription">
+      <page>/menuAuditeur/inscription.jsff</page>
+    </view>
+    <view id="infopersonelles">
+      <page>/menuAuditeur/infopersonelles.jsff</page>
+    </view>
+    <view id="changeMotDePasse">
+      <page>/menuAuditeur/changeMotDePasse.jsff</page>
+    </view>
+    <view id="devenirjuge">
+      <page>/menuAuditeur/devenirjuge.jsff</page>
+    </view>
+    <view id="evaluationsAtelier">
+      <page>/menuAuditeur/evaluationsAtelier.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>menu</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>menuVSInsc</from-outcome>
+        <to-activity-id>inscription</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>menuVSinfo</from-outcome>
+        <to-activity-id>infopersonelles</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>menuVSmdp</from-outcome>
+        <to-activity-id>changeMotDePasse</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>menuVSeval</from-outcome>
+        <to-activity-id>evaluationsAtelier</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>menuVSdevenir</from-outcome>
+        <to-activity-id>devenirjuge</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>inscription</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>inscVSmenu</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>infopersonelles</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>infoVSmenu</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>changeMotDePasse</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>mdpVSmenu</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>evaluationsAtelier</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>evalVSmenu</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__20">
+      <from-activity-id>devenirjuge</from-activity-id>
+      <control-flow-case id="__21">
+        <from-outcome>devenirVSmenu</from-outcome>
+        <to-activity-id>menu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
