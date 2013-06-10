@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="ajoutAtelierPageDef"
+                Package="menuauditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PInscriptionView4" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PInscriptionView4Iterator"/>
+  </executables>
+  <bindings>
+    <navigationlist IterBinding="PInscriptionView4Iterator"
+                    ListOperMode="navigation"
+                    ListIter="PInscriptionView4Iterator"
+                    id="PInscriptionView4" DTSupportsMRU="false">
+      <AttrNames>
+        <Item Value="Noauditeur"/>
+        <Item Value="Noatel"/>
+        <Item Value="Dateinscription"/>
+        <Item Value="ModePaiement"/>
+        <Item Value="NoCarte"/>
+        <Item Value="NoCheque"/>
+        <Item Value="DateExpire"/>
+        <Item Value="Acquitter"/>
+        <Item Value="Confirmationenvoyee"/>
+        <Item Value="Creepar"/>
+      </AttrNames>
+    </navigationlist>
+  </bindings>
+</pageDefinition>

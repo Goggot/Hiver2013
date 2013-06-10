@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout id="pgl1"
+                       binding="#{backingBeanScope.backing_menuauditeur_ajoutAtelier.pgl1}">
+    <af:selectOneChoice id="nl1" autoSubmit="true"
+                        value="#{bindings.PInscriptionView4.inputValue}"
+                        label="#{bindings.PInscriptionView4.label}"
+                        binding="#{backingBeanScope.backing_menuauditeur_ajoutAtelier.nl1}">
+      <f:selectItems value="#{bindings.PInscriptionView4.items}" id="si1"
+                     binding="#{backingBeanScope.backing_menuauditeur_ajoutAtelier.si1}"/>
+    </af:selectOneChoice>
+    <af:panelHeader text="Details" partialTriggers="nl1" id="ph1"
+                    binding="#{backingBeanScope.backing_menuauditeur_ajoutAtelier.ph1}"/>
+  </af:panelGroupLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_menuauditeur_ajoutAtelier-->
+</ui:composition>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="changerMDPPageDef"
+                Package="menuauditeur">
+  <parameters/>
+  <executables>
+    <iterator Binds="PAuditeurLogIn1" RangeSize="10"
+              DataControl="AppModuleDataControl"
+              id="PAuditeurLogIn1Iterator"/>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction IterBinding="PAuditeurLogIn1Iterator" id="verifierMDP"
+                  InstanceName="bindings.PAuditeurLogIn1Iterator.currentRow"
+                  DataControl="AppModuleDataControl"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="verifierMDP" IsViewObjectMethod="false"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.AppModuleDataControl.methodResults.verifierMDP_verifierMDP_verifierMDP_result">
+      <NamedData NDName="mdp" NDValue="" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction IterBinding="PAuditeurLogIn1Iterator" id="nouveauMDP"
+                  InstanceName="bindings.PAuditeurLogIn1Iterator.currentRow"
+                  DataControl="AppModuleDataControl"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="nouveauMDP" IsViewObjectMethod="false"
+                  IsLocalObjectReference="true">
+      <NamedData NDName="value" NDValue="" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

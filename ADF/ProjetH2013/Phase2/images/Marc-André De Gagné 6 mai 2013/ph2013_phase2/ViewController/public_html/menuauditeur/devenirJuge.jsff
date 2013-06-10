@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelLabelAndMessage label="Candidat Juge" id="plam1"
+                           inlineStyle="font-style:normal; font-size:25pt;"/>
+  <af:commandButton text="Soumettre ma candidature" id="cb1"/>
+  <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                    text="Retour"
+                    immediate="true" id="cb2" action="retour">
+    <af:resetActionListener/>
+  </af:commandButton>
+</ui:composition>

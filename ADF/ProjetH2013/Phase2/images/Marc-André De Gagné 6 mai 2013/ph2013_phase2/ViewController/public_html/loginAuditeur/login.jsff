@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+  <af:panelFormLayout id="pfl2">
+    <af:inputText label="code : " id="it1"
+                  value="#{pageFlowScope.varcode}"/>
+    <af:inputText label="Mot de Passe :" id="it2"
+                  value="#{pageFlowScope.varmdp}" secret="true"/>
+    <af:commandButton text="Log in" id="cb1" action="connecte"/>
+    <h:commandLink value="s'enregistrer" id="cl1" action="newAuditeur"/>
+  </af:panelFormLayout>
+</ui:composition>

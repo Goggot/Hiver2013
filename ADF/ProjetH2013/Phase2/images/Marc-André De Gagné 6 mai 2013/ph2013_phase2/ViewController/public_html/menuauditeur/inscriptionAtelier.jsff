@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout layout="vertical" id="pgl1">
+    <af:panelHeader text="Liste des Ateliers" id="ph1">
+      <af:query id="qryId1" headerText="Search" disclosed="true"
+                value="#{bindings.ImplicitViewCriteriaQuery.queryDescriptor}"
+                model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}"
+                queryOperationListener="#{bindings.ImplicitViewCriteriaQuery.processQueryOperation}"
+                resultComponentId="::resId1"/>
+    </af:panelHeader>
+    <af:table value="#{bindings.PAtelierView1.collectionModel}" var="row"
+              rows="#{bindings.PAtelierView1.rangeSize}"
+              emptyText="#{bindings.PAtelierView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+              fetchSize="#{bindings.PAtelierView1.rangeSize}"
+              rowBandingInterval="0" id="resId1">
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Noatel.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Noatel.label}"
+                 id="resId1c1">
+        <af:outputText value="#{row.Noatel}" id="ot1">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Noatel.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Noexpo.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Noexpo.label}"
+                 id="resId1c2">
+        <af:outputText value="#{row.Noexpo}" id="ot2">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Noexpo.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Titre.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Titre.label}"
+                 id="resId1c3">
+        <af:outputText value="#{row.Titre}" id="ot3"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Langue.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Langue.label}"
+                 id="resId1c4">
+        <af:outputText value="#{row.Langue}" id="ot4"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.AcetateElec.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.AcetateElec.label}"
+                 id="resId1c5">
+        <af:outputText value="#{row.AcetateElec}" id="ot5">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.AcetateElec.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Portable.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Portable.label}"
+                 id="resId1c6">
+        <af:outputText value="#{row.Portable}" id="ot6">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Portable.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Duree.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Duree.label}"
+                 id="resId1c7">
+        <af:outputText value="#{row.Duree}" id="ot7">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Duree.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Nbmaximum.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Nbmaximum.label}"
+                 id="resId1c8">
+        <af:outputText value="#{row.Nbmaximum}" id="ot8">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Nbmaximum.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Noexposant.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Noexposant.label}"
+                 id="resId1c9">
+        <af:outputText value="#{row.Noexposant}" id="ot9">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Noexposant.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Nocategorie.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Nocategorie.label}"
+                 id="resId1c10">
+        <af:outputText value="#{row.Nocategorie}" id="ot10">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Nocategorie.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Notype.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Notype.label}"
+                 id="resId1c11">
+        <af:outputText value="#{row.Notype}" id="ot11">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PAtelierView1.hints.Notype.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Nolocal.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Nolocal.label}"
+                 id="resId1c12">
+        <af:outputText value="#{row.Nolocal}" id="ot12"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Dateatel.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Dateatel.label}"
+                 id="resId1c13">
+        <af:outputText value="#{row.Dateatel}" id="ot13">
+          <af:convertDateTime pattern="#{bindings.PAtelierView1.hints.Dateatel.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Creepar.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Creepar.label}"
+                 id="resId1c14">
+        <af:outputText value="#{row.Creepar}" id="ot14"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Datecreation.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Datecreation.label}"
+                 id="resId1c15">
+        <af:outputText value="#{row.Datecreation}" id="ot15">
+          <af:convertDateTime pattern="#{bindings.PAtelierView1.hints.Datecreation.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Coutetudiant.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Coutetudiant.label}"
+                 id="resId1c16">
+        <af:outputText value="#{row.Coutetudiant}" id="ot16"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.PAtelierView1.hints.Coutregulier.name}"
+                 sortable="false"
+                 headerText="#{bindings.PAtelierView1.hints.Coutregulier.label}"
+                 id="resId1c17">
+        <af:outputText value="#{row.Coutregulier}" id="ot17"/>
+      </af:column>
+    </af:table>
+    <af:commandButton text="Ajouter l'atelier" id="cb2"/>
+    <af:table value="#{bindings.PInscriptionView4.collectionModel}"
+              var="row" rows="#{bindings.PInscriptionView4.rangeSize}"
+              emptyText="#{bindings.PInscriptionView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+              fetchSize="#{bindings.PInscriptionView4.rangeSize}"
+              rowBandingInterval="0" id="t1">
+      <af:column sortProperty="#{bindings.PInscriptionView4.hints.Noauditeur.name}"
+                 sortable="false"
+                 headerText="#{bindings.PInscriptionView4.hints.Noauditeur.label}"
+                 id="c1" width="105">
+        <af:inputText value="#{row.bindings.Noauditeur.inputValue}"
+                      label="#{bindings.PInscriptionView4.hints.Noauditeur.label}"
+                      required="#{bindings.PInscriptionView4.hints.Noauditeur.mandatory}"
+                      columns="#{bindings.PInscriptionView4.hints.Noauditeur.displayWidth}"
+                      maximumLength="#{bindings.PInscriptionView4.hints.Noauditeur.precision}"
+                      shortDesc="#{bindings.PInscriptionView4.hints.Noauditeur.tooltip}"
+                      id="it1">
+          <f:validator binding="#{row.bindings.Noauditeur.validator}"/>
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PInscriptionView4.hints.Noauditeur.format}"/>
+        </af:inputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PInscriptionView4.hints.Noatel.name}"
+                 sortable="false"
+                 headerText="#{bindings.PInscriptionView4.hints.Noatel.label}"
+                 id="c2" width="105">
+        <af:inputText value="#{row.bindings.Noatel.inputValue}"
+                      label="#{bindings.PInscriptionView4.hints.Noatel.label}"
+                      required="#{bindings.PInscriptionView4.hints.Noatel.mandatory}"
+                      columns="#{bindings.PInscriptionView4.hints.Noatel.displayWidth}"
+                      maximumLength="#{bindings.PInscriptionView4.hints.Noatel.precision}"
+                      shortDesc="#{bindings.PInscriptionView4.hints.Noatel.tooltip}"
+                      id="it2">
+          <f:validator binding="#{row.bindings.Noatel.validator}"/>
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.PInscriptionView4.hints.Noatel.format}"/>
+        </af:inputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.PInscriptionView4.hints.Dateinscription.name}"
+                 sortable="false"
+                 headerText="#{bindings.PInscriptionView4.hints.Dateinscription.label}"
+                 id="c3" width="106">
+        <af:inputDate value="#{row.bindings.Dateinscription.inputValue}"
+                      label="#{bindings.PInscriptionView4.hints.Dateinscription.label}"
+                      required="#{bindings.PInscriptionView4.hints.Dateinscription.mandatory}"
+                      columns="#{bindings.PInscriptionView4.hints.Dateinscription.displayWidth}"
+                      shortDesc="#{bindings.PInscriptionView4.hints.Dateinscription.tooltip}"
+                      id="id1">
+          <f:validator binding="#{row.bindings.Dateinscription.validator}"/>
+          <af:convertDateTime pattern="#{bindings.PInscriptionView4.hints.Dateinscription.format}"/>
+        </af:inputDate>
+      </af:column>
+    </af:table>
+    <af:commandButton text="Effacer" id="cb1"/>
+  </af:panelGroupLayout>
+</ui:composition>

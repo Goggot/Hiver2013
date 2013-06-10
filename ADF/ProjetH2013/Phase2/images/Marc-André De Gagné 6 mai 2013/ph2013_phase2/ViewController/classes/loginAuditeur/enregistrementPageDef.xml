@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="enregistrementPageDef"
+                Package="loginAuditeur">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PAuditeurCoord1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="PAuditeurCoord1Iterator"/>
+    <iterator Binds="PRegionView1" RangeSize="-1"
+              DataControl="AppModuleDataControl" id="PRegionView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Rue">
+      <AttrNames>
+        <Item Value="Rue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Cell">
+      <AttrNames>
+        <Item Value="Cell"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Telephone">
+      <AttrNames>
+        <Item Value="Telephone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="CodePostal">
+      <AttrNames>
+        <Item Value="CodePostal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Ville">
+      <AttrNames>
+        <Item Value="Ville"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Courriel">
+      <AttrNames>
+        <Item Value="Courriel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Statut">
+      <AttrNames>
+        <Item Value="Statut"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Prenom">
+      <AttrNames>
+        <Item Value="Prenom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator" id="Motdepasse">
+      <AttrNames>
+        <Item Value="Motdepasse"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PAuditeurCoord1Iterator"
+                     id="Codeauditeur">
+      <AttrNames>
+        <Item Value="Codeauditeur"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true"
+            Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction"
+            DataControl="AppModuleDataControl"/>
+    <list IterBinding="PAuditeurCoord1Iterator" id="Noregion1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="PRegionView1Iterator">
+      <AttrNames>
+        <Item Value="Noregion"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="Noregion"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Nomregion"/>
+      </ListDisplayAttrNames>
+    </list>
+  </bindings>
+</pageDefinition>
