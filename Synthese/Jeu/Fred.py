@@ -135,24 +135,20 @@ class Fred():
             if self.direction is 'G':                                   # Si Fred va vers la gauche
                 if self.position[1] >= p1[1] and self.position[1] <= p2[1] and self.position[0]-self.largeurImage >= p1[0]:   # S'il se trouve en face de CE mur
                     if self.position[0]-self.largeurImage-self.Xfactor <= p1[0]:                   # Si un pas de plus lui fait franchir le mur
-                        print "Mur a gauche a moins de 5 px", self.position, p1, p2
                         valid = False
 
             elif self.direction is 'D':                                 # Si Fred va vers la droite
                 if self.position[1] >= p1[1] and self.position[1] <= p2[1] and self.position[0]+self.largeurImage <= p1[0]:
                     if self.position[0]+self.largeurImage+self.Xfactor >= p1[0]:
-                        print "Mur a droite a moins de 5 px"
                         valid = False
 
             elif self.direction is 'H':                                 # Si Fred va vers le haut
                 if self.position[0] >= p1[0] and self.position[0] <= p2[0]  and self.position[1]-self.hauteurImage >= p1[1]:
                     if self.position[1]-self.hauteurImage-self.Yfactor <= p1[1]:
-                        print "Mur en haut a moins de 5 px"
                         valid = False
 
             elif self.direction is 'B':                                 # Si Fred va vers le bas
                 if self.position[0] >= p1[0] and self.position[0] <= p2[0] and self.position[1]+self.hauteurImage <= p1[1]:
                     if self.position[1]+self.hauteurImage+self.Yfactor >= p1[1]:
-                        print "Mur en bas a moins de 5 px"
                         valid = False
         return valid

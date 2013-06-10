@@ -139,11 +139,11 @@ class Controleur():
             self.vue.win()
 
     # LINUX :
-        Timer(0.01, self.tick).start()
+        #Timer(0.01, self.tick).start()
 
     # WINDOWS :
-        #sleep(0.03)
-        #self.tick()
+        sleep(0.01)
+        self.tick()
 
 if __name__ == '__main__':
     c = Controleur()
