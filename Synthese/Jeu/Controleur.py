@@ -14,108 +14,126 @@ class Controleur():
         self.vue = Vue.Vue(self)
         self.rep = 1
         self.init = True
+        self.retour = False
         self.pause = False
+        self.fin = False
+        self.win = False
         self.count = 0
-        self.Xfactor = 20
-        self.Yfactor = 20
-
-##### Tableaux de limites de niveaux
-##### 2 niveaux : le premier contient tous les murs
-#####             le deuxieme les coordonnees X,Y des deux points du mur
-#####  Les coordonnees doivent etres prises de gauche a droite sur mur horizontal et de haut en bas sur un mur vertical
-
-##### Tableau des limites au centre
-        self.tabLimiteCentre = [ [ [1680,1000],[1680,1370] ] , [ [1680,1370],[2100,1370] ] , [ [1680,1000],[1837,1000] ] , [ [1950,1000],[2097,1000] ] , [ [2097,1000],[2100,1370] ] , [ [1300,950],[1300,1450] ] , [ [1300,770],[2315,770] ] , [ [2315,770],[2320,1130] ] , [ [2315,1230],[2315,1450] ] , [ [2315,1130],[2400,1130] ] ]
-
-##### Tableau des limites en bas au milieu
-        self.tabLimiteMB = [ [ [1620,1540],[2120,1540] ] , [ [1570,2190],[1750,2190] ] , [ [1980,2190],[2160,2190] ] , [ [2120,1500],[2120,2190] ] , [ [1620,1500],[1620,2190] ] , [ [1375,1450],[1375,2025] ] , [ [2300,1540],[2300,2100] ] , [ [2300,2100],[2400,2100] ] ,  [ [2300,1550],[2400,1550] ] ]
-
-##### Tableau des limites en bas a gauche
-        self.tabLimiteGB = [ [ [1220,2020],[1375,2020] ] , [ [1220,2020],[1220,2200] ] , [ [1000,2200],[1220,2200] ] , [ [1000,2130],[1000,2200] ] , [ [1000,2130],[1140,2130] ] , [ [1140,1975],[1140,2130] ] , [ [1140,1000],[1280,1000] ] , [ [1280,1400],[1280,2080] ] , [ [900,1615],[940,1615] ] , [ [940,1615],[940,1800] ] , [ [640,1800],[940,1800] ] , [ [640,1400],[640,1800] ] , [ [900,1615],[900,1720] ] , [ [700,1720],[900,1720] ] , [ [690,1400],[700,1720] ] , [ [900,1400],[900,1290] ] , [ [900,1290],[940,1290] ] , [ [940,1400],[940,1290] ] , [ [210,1910],[450,1910] ] , [ [450,1420],[450,1910] ] , [ [210,1850],[210,1910] ] , [ [210,1850],[400,1850] ] , [ [400,1490],[400,1850] ] , [ [275,1490],[400,1490] ] , [ [275,1490],[275,1785] ] , [ [210,1785],[275,1785] ] , [ [210,1420],[210,1785] ] , [ [210,1420],[450,1420] ] ]
-
-##### Tableau des limites au milieu a gauche
-        self.tabLimiteCG = [ [ [650,700],[650,1200] ] , [ [1280,1000],[1280,1400] ] , [ [1140,950],[1140,1000] ] , [ [1140,930],[1300,950] ] , [ [640,1310],[640,1400] ] , [ [640,1310],[890, 1310] ] , [ [890,690],[890,1310] ] , [ [890,690],[1300,690] ] , [ [700,1390],[700,1400] ] , [ [700,1390],[890,1390] ] , [ [890,1390],[890,1400] ] , [ [890,700],[1300,650] ] , [ [450,700],[450,890] ] , [ [220,890],[450,890] ] , [ [220,700],[220,890] ] , [ [260,700],[260,830] ] , [ [260,830],[400,830] ] , [ [400,450],[400,700] ]]
-
-##### Tableau des limites en haut a gauche
-        self.tabLimiteHG = [ [ [880,700],[1300,700] ] , [ [660,530],[660,700] ] , [ [400,700],[400,830] ] , [ [660,530],[1300,530] ] , [ [220,390],[450,390] ] , [ [450,390],[450,700] ] , [ [220,520],[220,700] ] , [ [220,550],[270,550] ] , [ [260,520],[260,700] ] , [ [220,450],[400,450] ] , [ [220,390],[220,450] ] , [ [670,200],[670,390] ] , [ [670,200],[1140,200] ] ]
-
-##### Tableau des limites au milieu en haut
-        self.tabLimiteHC = [ [ [1300,570],[1650,570] ] , [ [1300,200],[1650,200] ] , [ [1650,200],[1650,570] ] , [ [1300,720],[2400,720] ] , [ [1850,250],[1850,720] ] , [ [1850,250],[2000,250] ] , [ [2250,250],[2400,250] ] , [ [2400,250],[2400,700] ] ]
-
-##### Tableau des limites au milieu a droite
-        self.tabLimiteCD = [ [ [2400,700],[2400,1050] ] , [ [2400,1050],[2940,1050] ] , [ [2950,880],[2950,930] ] , [ [2950,1020],[2950,1130] ] , [ [2950,880],[3000,890] ] , [ [3090,890],[3230,890] ] , [ [3230,700],[3230,1130] ] , [ [2400,1130],[3230,1130] ] , [ [2400,1250],[2890,1250] ] , [ [2890,1250],[2890,1320] ] , [ [2770,1320],[2890,1320] ] , [ [2770,1320],[2770,1450] ] , [ [2770,1450],[2810,1450] ] , [ [2850,1450],[3100,1450] ] , [ [3100,1320],[3100,1450] ] , [ [3000,1320],[3100,1320] ] , [ [3000,1250],[3000,1320] ] , [ [3000,1250],[3240,1250] ] , [ [3240,1250],[3240,1250] ] , [ [3450,700],[3450,1450] ] , [ [3610,700],[3610,1450] ] ]
-
-##### Tableau des limites en haut a droite
-        self.tabLimiteHD = [ [ [3150,230],[3150,700] ] , [ [3150,230],[3230,230] ] , [ [3230,230],[3230,700] ] , [ [3450,190],[3450,700] ] , [ [3450,190],[3610,190] ] , [ [3610,190],[3610,700] ] , [ [2400,250],[2400,700] ] ]
-
-##### Tableau des limites en bas a droite
-        self.tabLimiteBD = [ [ [2400,2100],[3240,2100] ] , [ [3240,1450],[3240,2100] ] , [ [2400,1550],[2450,1550] ] , [ [2570,1450],[2570,1750] ] , [ [2450,1550],[2450,1870] ] , [ [2450,1870],[2910,1870] ] , [ [2910,1870],[2910,2000] ] , [ [2910,2000],[2120,2000] ] , [ [3130,1500],[3130,2000] ] , [ [2910,1500],[2910,1750] ] , [ [2570,1730],[2920,1730] ] , [ [2910,1500],[3130,1500] ] , [ [2910,2000],[3130,2000] ] , [ [2650,1470],[2650,1580] ] , [ [2650,1470],[2810,1470] ] , [ [2850,1470],[2870,1470] ] , [ [2650,1580],[2870,1580] ] , [ [2810,1440],[2810,1470] ] , [ [2850,1440],[2850,1470] ] , [ [3440,1450],[3440,2180] ] , [ [3440,2180],[3610,2180] ] , [ [3610,1450],[3610,2180] ] ]
-
+        self.camXfactor = 20
+        self.camYfactor = 20
 
     def initPartie(self):
-    # Ajout des ennemis
-        self.robotList.get("droneA").append([0, droneA(self.modele, [1500, 40], 'G')])
+    # Ajout des ennemis, les index doivent etre unique
 
-        self.robotList.get("droneS").append([0, droneS(self.modele, [950, 380], 'H')])
-        self.robotList.get("droneS").append([1, droneS(self.modele, [650, 380], 'B')])
+    ### 1ere reserve de garde ### Drone 1 a 16 ###
+        self.robotList.get("droneA").append([1, droneA(self.modele, [1940, 350], 'G', False, 1)])
+        self.robotList.get("droneA").append([2, droneA(self.modele, [2030, 350], 'G', False, 2)])
+        self.robotList.get("droneA").append([3, droneA(self.modele, [2120, 350], 'G', False, 3)])
+        self.robotList.get("droneA").append([4, droneA(self.modele, [2210, 350], 'G', False, 4)])
+        self.robotList.get("droneA").append([5, droneA(self.modele, [1940, 450], 'G', False, 5)])
+        self.robotList.get("droneA").append([6, droneA(self.modele, [2030, 450], 'G', False, 6)])
+        self.robotList.get("droneA").append([7, droneA(self.modele, [2120, 450], 'G', False, 7)])
+        self.robotList.get("droneA").append([8, droneA(self.modele, [2210, 450], 'G', False, 8)])
+        self.robotList.get("droneA").append([9, droneA(self.modele, [1940, 550], 'G', False, 9)])
+        self.robotList.get("droneA").append([10, droneA(self.modele, [2030, 550], 'G', False, 10)])
+        self.robotList.get("droneA").append([11, droneA(self.modele, [2120, 550], 'G', False, 11)])
+        self.robotList.get("droneA").append([12, droneA(self.modele, [2210, 550], 'G', False, 12)])
+        self.robotList.get("droneA").append([13, droneA(self.modele, [1940, 650], 'G', False, 13)])
+        self.robotList.get("droneA").append([14, droneA(self.modele, [2030, 650], 'G', False, 14)])
+        self.robotList.get("droneA").append([15, droneA(self.modele, [2120, 650], 'G', False, 15)])
+        self.robotList.get("droneA").append([16, droneA(self.modele, [2210, 650], 'G', False, 16)])
+    ###############################################
 
-        self.robotList.get("camera").append([0, camera(self.modele, [600, 500])])
-        self.robotList.get("camera").append([1, camera(self.modele, [450, 300])])
+    ### 2eme reserve de garde ### Drone 17 a 32 ###
+        self.robotList.get("droneA").append([17, droneA(self.modele, [1730, 2050], 'G', False, 17)])
+        self.robotList.get("droneA").append([18, droneA(self.modele, [1840, 2050], 'G', False, 18)])
+        self.robotList.get("droneA").append([19, droneA(self.modele, [1950, 2050], 'G', False, 19)])
+        self.robotList.get("droneA").append([20, droneA(self.modele, [1730, 1950], 'G', False, 20)])
+        self.robotList.get("droneA").append([21, droneA(self.modele, [1840, 1950], 'G', False, 21)])
+        self.robotList.get("droneA").append([22, droneA(self.modele, [1950, 1950], 'G', False, 22)])
+        self.robotList.get("droneA").append([23, droneA(self.modele, [1730, 1850], 'G', False, 23)])
+        self.robotList.get("droneA").append([24, droneA(self.modele, [1840, 1850], 'G', False, 24)])
+        self.robotList.get("droneA").append([25, droneA(self.modele, [1950, 1850], 'G', False, 25)])
+        self.robotList.get("droneA").append([26, droneA(self.modele, [1730, 1750], 'G', False, 26)])
+        self.robotList.get("droneA").append([27, droneA(self.modele, [1840, 1750], 'G', False, 27)])
+        self.robotList.get("droneA").append([28, droneA(self.modele, [1950, 1750], 'G', False, 28)])
+        self.robotList.get("droneA").append([29, droneA(self.modele, [1730, 1650], 'G', False, 29)])
+        self.robotList.get("droneA").append([30, droneA(self.modele, [1840, 1650], 'G', False, 30)])
+        self.robotList.get("droneA").append([31, droneA(self.modele, [1950, 1650], 'G', False, 31)])
+    ###############################################
 
-        self.vue.initGraph()
+    ### Gardes en fonction ###
+        self.robotList.get("droneA").append([0, droneA(self.modele, [1170, 400], 'G', True, 0)])
+        self.robotList.get("droneA").append([32, droneA(self.modele, [1600, 850], 'D', True, 32)])
+        self.robotList.get("droneA").append([33, droneA(self.modele, [2070, 1450], 'G', True, 33)])
+        self.robotList.get("droneA").append([34, droneA(self.modele, [2760, 2230], 'D', True, 34)])
+        self.robotList.get("droneA").append([35, droneA(self.modele, [2800, 550], 'G', True, 35)])
+
+        self.robotList.get("droneS").append([0, droneS(self.modele, [1730, 450], 'H', 36)])
+        self.robotList.get("droneS").append([1, droneS(self.modele, [2470, 1650], 'B', 37)])
+        self.robotList.get("droneS").append([2, droneS(self.modele, [3000, 1750], 'H', 38)])
+        self.robotList.get("droneS").append([3, droneS(self.modele, [1150, 1200], 'B', 39)])
+        self.robotList.get("droneS").append([4, droneS(self.modele, [1000, 1700], 'H', 40)])
+        self.robotList.get("droneS").append([5, droneS(self.modele, [2700, 300], 'B', 41)])
+        self.robotList.get("droneS").append([6, droneS(self.modele, [2620, 900], 'H', 42)])
+        self.robotList.get("droneS").append([7, droneS(self.modele, [3710, 1200], 'B', 43)])
+        self.robotList.get("droneS").append([8, droneS(self.modele, [350, 1150], 'H', 44)])
+
+        self.robotList.get("camera").append([0, camera(self.modele, [1210, 40], 45)])
+        self.robotList.get("camera").append([1, camera(self.modele, [120, 2290], 46)])
+    ##########################
+
+        self.vue.initGraphJeu()
         self.tick()
 
     def partie(self):
-        if self.pause:
-            for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
-                if event.type == pygame.QUIT:              # Si un de ces evenements est de type QUIT
-                    exit()                                         # On arrete la boucle
-                elif event.type == pygame.KEYDOWN:
-                    if event.key == 304:
-                        self.pause = False
-
+        if self.retour:
             self.modele.backToTheFuture(self.count)
             self.count -= 1
-            
             if self.count == 0:
-                self.pause = False
-            print(self.count)
-
+                self.retour = False
         else:
-            self.modele.tickGeneral()
             if self.count < 2000:
                 self.count += 1
                 self.modele.maxCount = self.count
-            for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
-                if event.type == pygame.QUIT:              # Si un de ces evenements est de type QUIT
-                    exit()                          # On arrete la boucle
-                elif event.type == pygame.KEYDOWN:       # si une touche du clavier est appuyee
-                    if event.key == pygame.K_a or event.key == pygame.K_SPACE or event.key == pygame.K_w or event.key == pygame.K_d or event.key == pygame.K_s:
-                        self.modele.fred.bouge(event)
-
-                ## YAHOUUU ! BACK TO THE FUTUUURE !
-                    elif event.key == pygame.K_LSHIFT:
-                        self.pause = True
-
-                ## Deplacement de la camera sur la carte ##
-                    elif event.key == pygame.K_LCTRL:
-                        self.modele.fred.attaque()
-                    elif event.key == pygame.K_LEFT:
-                        self.vue.map_x -= -self.Xfactor
-                    elif event.key == pygame.K_RIGHT:
-                        self.vue.map_x -= self.Xfactor
-                    elif event.key == pygame.K_UP:
-                        self.vue.map_y -= -self.Yfactor
-                    elif event.key == pygame.K_DOWN:
-                        self.vue.map_y -= self.Yfactor
-
-                ## Impression de la touche si elle n'est pas utilise
-                    else:
-                        print(event.key)
+            self.modele.tickGeneral()
         
     def tick(self):
-        self.vue.refresh()
-        self.partie()
+        for event in pygame.event.get():        # On parcours la liste de tous les evenements recus
+            if event.type == pygame.QUIT:
+                exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    if self.pause is False:
+                        self.pause = True
+                    else:
+                        self.pause = False
+
+                ## Action Fred
+                elif event.key == pygame.K_a or event.key == pygame.K_d or event.key == pygame.K_w or event.key == pygame.K_s or event.key == pygame.K_SPACE:
+                    self.modele.fred.bouge(event)
+                elif event.key == pygame.K_LSHIFT:
+                    self.retour = True
+
+                ## Deplacement de la camera sur la carte ##
+                if event.key == pygame.K_LEFT:
+                    self.vue.map_x -= -self.camXfactor
+                elif event.key == pygame.K_RIGHT:
+                    self.vue.map_x -= self.camXfactor
+                elif event.key == pygame.K_UP:
+                    self.vue.map_y -= -self.camYfactor
+                elif event.key == pygame.K_DOWN:
+                    self.vue.map_y -= self.camYfactor
+                           
+        if self.fin is False and self.win is False and self.pause is False:
+            self.vue.refreshJeu()
+            self.partie()
+
+        if self.pause:
+            self.vue.pause()
+
+        if self.fin:
+            self.vue.failed()
 
     # LINUX :
         Timer(0.01, self.tick).start()
@@ -126,4 +144,13 @@ class Controleur():
 
 if __name__ == '__main__':
     c = Controleur()
-    c.initPartie()
+    start = False
+    while start is False:
+        c.vue.initAccueil()
+        for event in pygame.event.get(): 
+            if event.type == pygame.QUIT:
+                exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    start = True
+                    c.initPartie()
