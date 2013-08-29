@@ -8,20 +8,14 @@ class Fred():
     def __init__(self, parent):
         self.modele = parent
         self.vie = 20
-        self.direction = 'D'
-        self.directionLaser = 'D'
-        self.etat = 0        # 0=Debout, 1=baisse, 2=en saut
+        self.direction = self.directionLaser = 'D'
+        self.etat = self.fire = self.indexProj = 0        # Etat : 0=Debout, 1=baisse, 2=en saut
         self.position = [1790, 1150]
-        self.posTemp = []
-        self.objectList = []
-        self.indexProj = 0
-        self.saut = False
-        self.fire = 0
-        self.Xfactor = 5
-        self.Yfactor = 5
+        self.posTemp = self.objectList = []
+        self.saut = self.mourru = False
+        self.Xfactor = self.Yfactor = 5
         self.hauteurImage = 37
         self.largeurImage = 15
-        self.mourru = False
 
     def bouge(self, event):
         if self.vie > 0:

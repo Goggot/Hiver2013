@@ -92,8 +92,6 @@ class Vue():
 
 #### Refresh du canvas complet ####
     def refreshJeu(self):
-        #self.robotList = self.controleur.modele.prison.robotList
-        #self.pause = self.controleur.pause
         if self.map_x > 0:
             self.map_x = 0
         if self.map_x < -(self.map_width-self.window_width):

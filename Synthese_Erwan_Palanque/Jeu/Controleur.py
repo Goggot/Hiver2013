@@ -23,7 +23,7 @@ class Controleur():
         self.camYfactor = 20
 
     def initPartie(self):
-    # Ajout des ennemis, les index doivent etre unique
+    ## Ajout des ennemis, les index doivent etre unique ##
 
     ### 1ere reserve de garde ### Drone 1 a 16 ###
         self.robotList.get("droneA").append([1, droneA(self.modele, [1940, 350], 'G', False, 1)])
@@ -109,13 +109,13 @@ class Controleur():
                     else:
                         self.pause = False
 
-                ## Action Fred
+                ## Action Fred ##
                 elif event.key == pygame.K_a or event.key == pygame.K_d or event.key == pygame.K_w or event.key == pygame.K_s or event.key == pygame.K_SPACE:
                     self.modele.fred.bouge(event)
                 elif event.key == pygame.K_LSHIFT:
                     self.retour = True
 
-                ## Deplacement de la camera sur la carte ##
+                ## Deplacement de la camera sur la carte avec les fleches ##
                 if event.key == pygame.K_LEFT:
                     self.vue.map_x -= -self.camXfactor
                 elif event.key == pygame.K_RIGHT:
@@ -139,11 +139,11 @@ class Controleur():
             self.vue.win()
 
     # LINUX :
-        #Timer(0.01, self.tick).start()
+        Timer(0.01, self.tick).start()
 
     # WINDOWS :
-        sleep(0.01)
-        self.tick()
+        #sleep(0.01)
+        #self.tick()
 
 if __name__ == '__main__':
     c = Controleur()

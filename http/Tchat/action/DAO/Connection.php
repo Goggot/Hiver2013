@@ -1,5 +1,5 @@
 <?php
-    require_once('action/lib/nusoap.php');
+    require_once('action/lib/Connection.php');
 
     class Connection{
 		public static function getConnection($login, $passwd){
